@@ -1,0 +1,472 @@
+$blue: #BADFD6;
+$pink: #F3C9BB;
+$text: rgba(51, 51, 51, 0.9);
+$title: #333;
+
+@import "fonts";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: $text;
+}
+li {
+	list-style: none;
+}
+.btn {
+	display: inline-block;
+	font-size: 19px;
+	padding: 19px 35px 21px;
+	border-radius: 35px;
+	border: 2px solid $blue;
+	line-height: 1;
+}
+body {
+	font-size: 19px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.4;
+	overflow-x: hidden;
+	font-family: Playfair;
+	color: $text;
+}
+.container {
+	width: 100%;
+	max-width: 1045px;
+	margin: 0 auto;
+}
+.header {
+	padding: 31px 20px;
+	&__container {
+		max-width: 1360px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	.flex {
+		display: flex;
+		align-items: center;
+		p {
+			font-family: 'Heebo';
+			font-size: 12px;
+			line-height: 1;
+			margin-left: 25px;
+		}
+	}
+	&__nav {
+		span {
+			content: '';
+			width: 14px;
+			height: 2px;
+			background: $blue;
+			display: inline-block;
+			position: relative;
+			bottom: 5px;
+			margin-left: 4px;
+		}
+		a {
+			font-size: 17px;
+			display: inline-flex;
+			align-items: flex-end;
+			margin-left: 16px;
+			position: relative;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			overflow: hidden;
+			
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				height: 7px;
+				width: 100%;
+				background: $blue;
+				bottom: 0;
+				left: 0;
+				transform: translateX(100%);
+				transition: .3s ease;
+			}
+			&::before {
+				transform: translateX(-100%);
+				transition: 0s;
+			}
+			&:hover {
+				&::before {
+					transform: translateX(0%);
+					transition: .3s ease;
+				}
+				&::after {
+					transform: translateX(0%);
+					transition: 0s .3s;
+				}
+			}
+		}
+	}
+}
+.banner {
+	margin-top: 104px;
+	text-align: center;
+	margin-bottom: 80px;
+	&__title {
+		font-size: 129px;
+		color: $title;
+		font-weight: 400;
+		line-height: .87;
+		display: inline-block;
+		position: relative;
+		&::after {
+			content: 'Winston Churchill';
+			font-size: 18px;
+			position: absolute;
+			right: 65px;
+			bottom: -70px;
+			color: $text;
+		}
+	}
+	&__slider {
+		width: 100%;
+		max-width: 745px;
+		margin: -105px auto 0;
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+	&__arrow {
+		display: block;
+		margin: 47px auto 50px;
+	}
+	span {
+		font-size: 45px;
+	}
+}
+.text-block {
+	padding: 0 20px;
+	margin-bottom: 116px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		max-width: 1080px;
+	}
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 72px;
+		justify-content: space-between;
+		h2 {
+			font-size: 82px;
+			font-weight: 400;
+			position: relative;
+			display: inline;
+			line-height: .86;
+			color: $blue;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 51px;
+				height: 2px;
+				bottom: 0;
+				right: -60px;
+				background: $blue;
+			}
+		}
+		p {
+			width: 100%;
+			max-width: 763px;
+			font-size: 16px;
+			line-height: 1.22;
+			margin-bottom: -2px;
+		}
+	}
+	&__content {
+		width: 100%;
+		max-width: 763px;
+		align-self: flex-end;
+		i {
+			display: block;
+			font-size: 20px;
+			margin-bottom: 44px;
+		}
+		ul {
+			margin-bottom: 48px;
+			max-width: 700px;
+		}
+		li {
+			color: rgba(51, 51, 51, 0.7);
+			position: relative;
+			padding-left: 36px;
+			margin-bottom: 11px;
+			line-height: 1.24;
+			&::before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 15px;
+				top: 7px;
+				width: 13px;
+				height: 12px;
+				background: url('../img/heart-b.svg') no-repeat center center/ contain;
+			}
+		}
+		.btn {
+			margin-left: 36px;
+		}
+	}
+	&__gaps {
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			width: 92px;
+			height: 92px;
+			position: absolute;
+			left: 3px;
+			bottom: -166px;
+			background: url('../img/gap.png') no-repeat center center/ contain;
+		}
+	}
+	&__specialize {
+		&::after {
+			display: none;
+		}
+		span {
+			position: relative;
+			display: inline-block;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 51px;
+				height: 2px;
+				bottom: 0;
+				right: -60px;
+				background: $pink;
+			}
+		}
+	}
+	&.pink {
+		h2 {
+			color: $pink;
+			&::after {
+				background: $pink;
+			}
+		}
+		.btn {
+			border-color: $pink;
+		}
+		li::before {
+			background: url('../img/heart-p.svg') no-repeat center center/ contain;
+		}
+	}
+}
+.insurance {
+	margin-top: -15px;
+	margin-bottom: 172px;
+	.container {
+		max-width: 1080px;
+	}
+	&__line {
+		font-size: 20px;
+		position: relative;
+		margin-bottom: 238px;
+		&::after {
+			content: '';
+			max-width: 413px;
+			width: 100%;
+			display: inline-block;
+			height: 1px;
+			background: rgba(51, 51, 51, 0.3);
+			margin-left: 18px;
+		}
+	}
+	&__flex {
+		display: flex;
+		padding-left: 44px;
+		align-items: flex-start;
+		position: relative;
+		margin-bottom: 220px;
+		&::after {
+			content: '';
+			width: 2px;
+			height: 199px;
+			background: $pink;
+			display: block;
+			position: absolute;
+			bottom: -135px;
+			left: 50%;
+			z-index: 3;
+		}
+		img {
+			position: relative;
+			z-index: 1;
+			width: 50%;
+			transform-origin: 0 100%;
+			transform: scale(1.14);
+		}
+	}
+	&__content {
+		margin-top: -30px;
+		width: 50%;
+		position: relative;
+		z-index: 2;
+		background: #fff;
+		padding: 58px 0 70px 65px;
+		h3 {
+			font-size: 69px;
+			line-height: .86;
+			font-weight: 400;
+			position: relative;
+			color: #333;
+			padding-bottom: 70px;
+			margin-bottom: 18px;
+			&::after {
+				content: '';
+				position: absolute;
+				left: -11%;
+				bottom: 0;
+				width: 100%;
+				height: 99px;
+				background: url('../img/signature.svg') no-repeat center center/ contain;
+			}
+		}
+		p {
+			line-height: 1.2;
+			font-size: 33px;
+			margin-bottom: 50px;
+		}
+		.btn {
+			border-color: $pink;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	&__quote {
+		font-size: 98px;
+		line-height: 0.86;
+		color: #333;
+		display: block;
+		text-align: center;
+		span {
+			display: block;
+			font-size: 18px;
+			color: $text;
+			margin-top: 52px;
+		}
+	}
+}
+.contact {
+	padding-bottom: 134px;
+	&__text {
+		text-align: center;
+		font-size: 52px;
+		line-height: 1.14;
+		margin-bottom: 110px;
+		a {
+			color: $blue;
+			position: relative;
+			&::after {
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 1px;
+				background: $blue;
+				left: 0;
+				bottom: 7px;
+			}
+		}
+	}
+	&__form {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		input, textarea, button {
+			-webkit-appearance: none;
+			border: 2px solid $blue;
+			font-family: 'Playfair';
+			font-size: 25px;
+			color: $text;
+			line-height: 1.19;
+			&::placeholder {
+				opacity: 1;
+				color: $text;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		input,textarea {
+			width: 100%;
+			resize: none;
+			padding: 21px 30px 23px;
+			margin-bottom: 19px;
+		}
+		textarea {
+			height: 333px;
+		}
+		.half {
+			width: calc(50% - 10px);
+		}
+		.btn {
+			padding: 21px 81px 25px;
+			border-radius: 50px;
+			cursor: pointer;
+		}
+	}
+}
+.footer {
+	padding: 40px 20px;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__line {
+		&::before {
+			display: inline-block;
+			background: #000;
+			content: '';
+			width: 66px;
+			height: 1px;
+			margin: 0 9px 0 6px;
+		}
+	}
+	p:first-child {
+		font-size: 16px;
+	}
+	p:last-child {
+		font-size: 20px;
+		a {
+			font-size: 25px;
+			color: #76AB9E;
+			margin-left: 5px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media";
