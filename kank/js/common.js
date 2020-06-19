@@ -99,7 +99,7 @@ $(function() {
 		// if (window.location.hash.indexOf('art')) {}
 
 	});
-
+	window.dispatchEvent(new Event("hashchange"));
 	function imageExists(image_url){
 
 	    var http = new XMLHttpRequest();
@@ -164,8 +164,8 @@ $(function() {
 		$('.img-wrap').trigger('to.owl.carousel', [pos]);
 	})
 	$('form').submit(function(e) {
- 		e.preventDefault();
- 		formSubmit($(this));
+ 		// e.preventDefault();
+ 		// formSubmit($(this));
  	});
 	$('.header__banner').owlCarousel({
 		autoplaySpeed: 1200,
@@ -178,24 +178,21 @@ $(function() {
 		responsiveClass:true,
 		autoplayHoverPause: true
 	})
-	setTimeout(function() {
-		$('.second').css({'display': 'block'});
-	}, 5000)
 	
- 	function formSubmit(form) {
-			var $form = form,
-	    	url = 'https://script.google.com/macros/s/AKfycbzbbKUQBzMNmTtZqQMyTOHI1zSNj1sXBPKY2u_0lDUdgaev_8Jp/exec';
-			$.ajax({
-			    url: url,
-			    method: "GET",
-			    dataType: "json",
-			    data: $form.serialize(),
-			    success: function(response) {
-					$('.order__form button').addClass('sent');
-					setTimeout(function() {
-						$('.order__form button').removeClass('sent');
-					}, 8000)
-			    }
-			})	
- 	}
+ 	// function formSubmit(form) {
+		// 	var $form = form,
+	 //    	url = 'https://script.google.com/macros/s/AKfycbzbbKUQBzMNmTtZqQMyTOHI1zSNj1sXBPKY2u_0lDUdgaev_8Jp/exec';
+		// 	$.ajax({
+		// 	    url: url,
+		// 	    method: "GET",
+		// 	    dataType: "json",
+		// 	    data: $form.serialize(),
+		// 	    success: function(response) {
+		// 			$('.order__form button').addClass('sent');
+		// 			setTimeout(function() {
+		// 				$('.order__form button').removeClass('sent');
+		// 			}, 8000)
+		// 	    }
+		// 	})	
+ 	// }
 });

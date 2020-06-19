@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "summer-loot",
+  "private_key_id": "e5c35f5a6ba9b17cb4744dac165348da28a25af0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/szSmld4RQi2g\n1oFi2J0SmMTdTihIh38JcakcgLZgEflmWJUyGqu/oUArJPWXvXZkGwmNJaW7u7et\nf8oTrHjdnvNkqnByYhRS3LejxDPdbLNHBBlq3AOLQOf3sNYdgpg6wVdyS4qXi0qI\niJWf77BPm9U8T2nzf7EUOweI3Di0TYqkWOSJ9nDKO60U9lG0cameGdwXQ/zsNAz8\n01k4zGFl2lLU8g5OPiG5dvVRPu1BN9cq5+3poh5Et5Gvl60Kt15jgsUGY8rzapXe\nwTbjiHhxqm3mjYGqsRsglqxccg8W3MnkjEDtiQNKYnWp3frZBLo7abjkOozgov/5\nDp4mWK7tAgMBAAECggEAUK0domH+FCtSwpaj2zKoYBQ0/aIP5/5GI3ZXImy01Bec\na0sqduysjThSphWm2hZdReHvEhze8/QbaAQYylDSiQqFCj+ElU7bmMfU7TH8VdqS\nVHfQLp2rTCajuSUN51t3r3qAz9Qk3oQ7eNxqg+W+wLInens9bsG1h3sUP6/WmWIw\ngTc78pRkBy/1mT3WGJ5Cpt/S/wW/RKKmOM560m9mRb8VYxCuUD6f/ljy3rZTUkEF\nrmXK4cprkvMSqs0sW3jr/055N2igQhwv83PUZkSSpu1kVDWUGmVEV/Ca/GIdyACa\n7mKAUHhIfLF9TpF8WjaNcrgFuOSqJRHFv+2ch51z7QKBgQD+9eRx6gN+5EuG/wqR\nhtUI40HJ5g2ETzw1ThXkji5way3aWFzrkeL2W8qj4jVf1bb9bO9Hy10HeGYH0mF9\nWhx6V17Cd14uSMngYbAaJe+VY1o+CU7jNN5SaUZsChpQnVUfGX01gywnKiNwGFxe\neUK88nXE6ltbqzsYLOTp3QtJ3wKBgQDAe0l4wwMnjPacYTN+2Vbo/K8yB7KohaJz\no75zy3aIoeP0qnPNKKDaxdCd9KV1K63GW54Q0Nt1ltcgBCQMW4aiOBg8YpUVRqsf\nXAteRNUlEobYRqroAlO846Ji2/GbKnSCnzLPWoEDP68GT3WSuUy6FSNJLu6Zfddo\nqKqH3Jz4swKBgQD1PBTg0SNNoU9YaOaEdblhlB3KkmI7+m7CIvqB3ZSjgyQWmdm+\nqJMzPbVbDxEhvhIGDwrU9rHjppYVPfGRveQYdQNrb5+CS3cKQUw+ynB5M5gwhYmA\nl3CkuigHcWxAUCT5Be5eU25buXdesb/fCyn7TgejQXxgXwI3Ta9dlsTt5wKBgFts\nM4GAXscyVRABuwvM/1K6chw5O8p/bqGubI9jXHGZM0TKkSYo3f4LZwMfaFc239sP\nOQyTpyk69ALo9JZKArCaJCjKSjVI046ZkWy9FN/+5L1lE1gPguZ82GxMO32PtLc2\nFlQWkKCSZveAVj/Sc3cPAyuHdxzAgMfdFOJjDsuxAoGABwb1b2Or6qNI2AYOxffd\n0YbZzYVNEgI2qQjToyTlJ0TNVW0S0FSxMGFH2hwrXq5uMo/DD4HVR9gTGCGMKM2N\n5RX/cggy6j+sEvzybIxmnFzEbCehgnfpbmeT1/XLoGGVS0wCdTRHexqQ6RGsTb0D\nfcxin3FfM8+/BslrgFHuHiw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-acc-summer@summer-loot.iam.gserviceaccount.com",
+  "client_id": "111748595255530798812",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-acc-summer%40summer-loot.iam.gserviceaccount.com"
+}
