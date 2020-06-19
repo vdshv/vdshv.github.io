@@ -1,14 +1,5 @@
 $(function() {
 	$('.loading').addClass('hidden');
-	// $('a[href*="#"]').click(function(e) {
-	// 	e.preventDefault();
-	// 	var src = $(this).attr('href')
-	// 	$('body,html').animate({
-	// 		scrollTop: $(src).offset().top
-	// 	},500)
-	// })
-	/*! lazysizes - v5.2.0 */
-	
 	
 	var height;
 	$('.clothes__categories a').click(function(e) {
@@ -16,136 +7,114 @@ $(function() {
         $('html, body').animate({
                 'scrollTop' : st
         }, 200);
-		// $('body,html').scrollTop($('.categories__nav').offset().top);
-		// e.preventDefault();
-		// var src = $(this).attr('href');
-		// var category = $(this).attr('data-category');
-		// height = $('.categories > li').eq($(this).parent().index()).css('height');
-		// window.location.href = window.location.href + '#' + category;
-		// console.log(height);
-		// $('.categories > li').eq($(this).index()).addClass('active').siblings().removeClass('active');
 
-		// $('.clothes__categories').removeClass('active');
-		// $('.categories').addClass('active');
-		
-		// gtag('event', 'click', {
-		//   'event_category' : 'Категория товара',
-		//   'event_label' : category
-		// });
-		// dataLayer.push({'event': 'event-to-ga', 'eventCategory' : 'Jobs', 'eventAction' : 'clicked'});
 	})
+	var item;
+	$('.categories .flex-category li').click(function() {
+		item = $(this).index();
+		console.log($(this).index());
+		window.location.hash = window.location.hash + '-' + item;
+	})
+
+	var titles = ['Рюкзак Fjallraven Kanken Classic', 'Рюкзак Fjallraven Kanken Art', 'Рюкзак Fjallraven Kanken Mini', 'Поясная сумка Fjallraven Ulvo Hip Pack Medium', 'Пенал Fjallraven', 'Брелок Fjallraven'];
+	var descr = ['Рюкзак вместителен, имеет 4 отделения: основное с внутренним защищенным карманом для ноутбука до 13" или документов формата А4, внешний карман для телефона и два боковых.', 'Рюкзак вместителен, имеет 4 отделения: основное с внутренним защищенным карманом для ноутбука до 13" или документов формата А4, внешний карман для телефона и два боковых.', 'Рюкзак вместителен, имеет 4 отделения: основное с внутренним защищенным карманом, внешний карман для телефона и два боковых.', 'Основное отделение дополнено небольшим защитным карманом на обратной стороне сумки, а также под сумкой есть компрессионные ремни с помощью которых можно прикрепить куртку или что-то подобное к сумке. Идеально подходит для коротких походов и путешествий.', 'Пенал вместителен, основное отделение на молнии, подходит для ручек длинной 18 см, рефлективный логотип.', 'Брелок для ключей с петлей из тесьмы, как в рюкзаке Kånken. Станет отличным дополнением и стильным аксесуаром.'];
+	var info = [
+		['Материал: Vinylon-F','Производитель: Китай','Замеры: 35 х 28 х 11','Объем: 16 л'],
+		['Материал: Vinylon-F','Производитель: Китай','Замеры: 35 х 28 х 11','Объем: 16 л'],
+		['Материал: Vinylon-F', 'Производитель: Китай.','Замеры: 29 х 20 х 13 см.','Объем: 7 л.'],
+		['Материал: 100% polyamide.','Производитель: Китай.','Замеры: 28 x 12 x 10 см.','Объем: 2 л.'],
+		['Материал: Vinylon-F.','Производитель: Китай.','Замеры: 19 х 2 х 7.'],
+		['Материал: 100% polypropylene.','Замеры: 2 х 9,5 см.','Вес: 10 г.']
+	];
+	var prices = [649, 649, 599, 449, 299, 99];
+
+	
 	window.addEventListener("hashchange", function(){
 		var st = $('.categories__nav').offset().top;
         $('html, body').animate({
                 'scrollTop' : st
         }, 200);
-		var hash = location.hash;
-		// $('body,html').animate({
-		// 	scrollTop: $('.categories__nav').offset().top
-		// },300)
-		// $('body,html').scrollTop($('.categories__nav').offset().top);
 
+        $('.categories__nav div').empty();
+
+		var hash = window.location.hash;
 
 		if (!hash) {
 			$('.clothes__categories').addClass('active').siblings().removeClass('active');
-			$('.clothes .wrapper').css({
-				// "height": $('.clothes__categories').height() + 'px'
-			})
-		} else {
+		} else if(hash.split('-').length == 1) {
 			$(window.location.hash).addClass('active').siblings().removeClass('active');
 			$(window.location.hash).parents('.outer').addClass('active').siblings().removeClass('active');
-			$('.clothes .wrapper').css({
-				// "height": $(window.location.hash).height() + 'px'
-			})
+			
+			$('.categories__nav div').append(
+				'<a>> ' + $('a[href="' + window.location.hash + '"]').find('h3').text() + '</a>'
+			)
+		} else if (hash.split('-').length == 2) {
+			var cat = $(hash.split('-')[0]).index();
+			var catName = hash.split('-')[0].slice(1, hash.split('-')[0].length);
+			var item = hash.split('-')[1];
+
+			$('.categories__nav div').append(
+				'<a href="#' + catName + '">> ' + $('a[href="#' + catName + '"]').find('h3').text() + '</a>'
+			)
+			$('.categories__nav div').append(
+				'<a>> ' + (+item+1) + '</a>'
+			)
+
+			$('.items').addClass('active').siblings().removeClass('active');
+			$('.items__info h3').html(titles[cat]);
+			$('.items__info .price').html(prices[cat] + ' ГРН');
+			$('.items__info .sizes').html(descr[cat]);
+			$('.items__info .button').attr('data-item', hash);
+			$('.items__parameters').empty();
+			for (var i = 0; i < info[cat].length; i++) {
+				$('.items__parameters').append(
+					'<li class="flex">' +
+						'<span>' + info[cat][i].split(':')[0] + '</span>' +
+						'<span>' + info[cat][i].split(':')[1] + '</span>' +
+					'</li>');
+			}
+			$('.img-wrap, .img-thumbs').empty();
+			for (var i = 0; i < 5; i++) {
+				
+				var imgUrl = 'img/' + catName + '/' + (+item+1) + '/' + (i+1) + '.jpg';
+				if (!imageExists(imgUrl)) break;
+				$('.img-wrap, .img-thumbs').append(
+						'<img src="' + imgUrl + '" alt="">'
+					);
+
+			}
+			
+			$('.img-wrap').trigger('destroy.owl.carousel');
+			$('.img-wrap').owlCarousel({
+			    loop:true,
+			    // autoplay: true,
+			    dots: false,
+			    center: true,
+			    items: 1,
+			    autoplayHoverPause: true
+			});
+
 		}
 
 		// if (window.location.hash.indexOf('art')) {}
 
 	});
 
+	function imageExists(image_url){
 
-	// // $('.back-to-category').click(function() {
-	// // 	height = $('.clothes__categories').css("height");
-	// // 	$('.clothes__categories').addClass('active')
-	// // 	$('.categories, .categories > li, .items, .items li').removeClass('active');
-	// // 	$('.clothes .container').css({
-	// // 		"height": height
-	// // 	})
-	// // })
-	// var itemIndex,
-	// 	categIndex;
+	    var http = new XMLHttpRequest();
 
-	// $('.categories .flex-category li').click(function() {
-	// 	itemIndex = $(this).index();
-	// 	categIndex = $(this).parents('li').index();
-	// 	height = $('.items > li').eq(categIndex).find('.items__list > li').eq(itemIndex).css('height');
+	    http.open('HEAD', window.location.origin + '/' + image_url, false);
+	    http.send();
 
-	// 	$('.clothes__categories, .categories').removeClass('active');
-	// 	$('.items').addClass('active');
-	// 	$('.items > li').eq(categIndex).addClass('active').siblings().removeClass('active');
-	// 	$('.items > li').eq(categIndex).find('.items__list > li').eq(itemIndex).addClass('active').siblings().removeClass('active');
-	// 	$('.clothes .container').css({
-	// 		"height": height
-	// 	})
-	// })
+	    return http.status != 404;
 
-	// $('.back').click(function() {
-	// 	height = $('.categories > li').eq(categIndex).css('height');
-	// 	$('.items, .items li').removeClass('active');
-	// 	$('.categories').addClass('active');
-	// 	$('.categories > li').eq(categIndex).addClass('active').siblings().removeClass('active');
-	// 	$('.clothes .container').css({
-	// 		"height": height
-	// 	})
-	// });
-	var cats = ["art", "classic", "mini", "bag", "case", "keyring"];
-	for (var i = 0; i < $('.items > li').length; i++) {
-
-		var a = $($('.items > li')[i]).find('.items__list > li');
-
-		for (var k = 0; k < a.length; k++) {
-			var b = $(a[k]).find('.img-wrap li');
-			
-			for (var j = 0; j < b.length; j++) {
-				var itemIndex = k + 1;
-				var imageIndex = j + 1;
-				var bg = "url('img/" + cats[i] + "/" + itemIndex + "/" + imageIndex + ".jpg') center center/cover";
-
-				$($(b[j])[0]).css({
-					"background": bg
-				})
-			}
-		}
-		
 	}
-	// $('.img-wrap').owlCarousel({
-	//     loop:true,
-	//     // autoplay: true,
-	//     dots: true,
-	//     center: true,
-	//     items: 1,
-	//     autoplayHoverPause: true
-	// });
+	$('.back-to-category').click(function() {
+		$('.clothes__categories').addClass('active').siblings().removeClass('active');
+		window.location.hash = '';
+	})
 
-	// $('.items1, .items2').owlCarousel({
-	//     loop:true,
-	//     autoplay: true,
-	//     nav: true,
-	//     dots: false,
-	//     center: true,
-	//     items: 1,
-	//     autoplayHoverPause: true,
-	//     responsiveClass:true,
-	//     responsive:{
-	//     	0: {
-	//     		items: 1,
-	//     		autoplay: false
-	//     	},
-	//     	768: {
-	//     		autoplay: true
-	//     	}
-	//     }
-	// });
 	
 	$('.reviews ul').owlCarousel({
 	    loop:true,
@@ -179,11 +148,20 @@ $(function() {
 	    delimeters: [' ', ' ', '-', '-'],
 	   
 	});
-	$('.items__info .button').click(function () {
-		$('.form-item').val($(this).attr('data-item'));
+	$('.header__text .button').click(function() {
 		$('body,html').animate({
-			scrollTop: $('.header__order').offset().top
+			scrollTop: $('.categories__nav').offset().top
 		},500)
+	})
+	$(document).on('click', '.items__info .button', function () {
+		$('.form-item').val(window.location.hash);
+		$('body,html').animate({
+			scrollTop: $('.header__promo').offset().top
+		},500)
+	})
+	$(document).on('click', '.img-thumbs img', function () {
+		var pos = $(this).index();
+		$('.img-wrap').trigger('to.owl.carousel', [pos]);
 	})
 	$('form').submit(function(e) {
  		e.preventDefault();

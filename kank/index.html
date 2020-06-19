@@ -9,15 +9,16 @@
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<link rel="icon" href="" type="image/x-icon">
 
-	<link rel="preload" as="font" href="fonts/GothamPro-Black.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="fonts/Montserrat-Regular.woff2" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" as="image" href="img/banner1.jpg">
 
 	<style>
 
 		.loading{background:#000;position:relative;position:fixed;width:100%;height:100%;top:0;left:0;z-index:100}.loading::before{width:100%;height:100%;background:#000;position:absolute}.loading::after{position:fixed;display:block;content:'';width:40px;height:40px;border-radius:50%;border:2px solid #fff;border-right:0;top:50%;left:50%;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0);-webkit-animation:rotate 1.5s infinite;animation:rotate 1.5s infinite}@-webkit-keyframes rotate{0%{-webkit-transform:translate3d(-50%,-50%,0) rotate(0);transform:translate3d(-50%,-50%,0) rotate(0)}100%{-webkit-transform:translate3d(-50%,-50%,0) rotate(360deg);transform:translate3d(-50%,-50%,0) rotate(360deg)}}@keyframes rotate{0%{-webkit-transform:translate3d(-50%,-50%,0) rotate(0);transform:translate3d(-50%,-50%,0) rotate(0)}100%{-webkit-transform:translate3d(-50%,-50%,0) rotate(360deg);transform:translate3d(-50%,-50%,0) rotate(360deg)}}
 		.loading.hidden{opacity:0;visibility:hidden;-webkit-transition:.6s;-o-transition:.6s;transition:.6s}
-		@font-face{font-family:gotham;font-weight:500;font-style:normal;unicode-range:U+000-5FF;src:local("GothamPro-Black"),url(fonts/GothamPro-Black.woff2) format("woff2"),url(fonts/GothamPro-Black.woff) format("woff"),url(fonts/GothamPro-Black.ttf) format("ttf"),url(fonts/GothamPro-Black.eot) format("eot");font-display:swap}
-		*{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0}a{text-decoration:none;color:#000}a:hover{text-decoration:none}li{list-style:none}body{font-size:16px;min-width:320px;position:relative;line-height:1.65;overflow-x:hidden;font-family:gotham;text-transform:uppercase;letter-spacing:1px}.overflow{position:relative;width:100%;display:block;overflow-x:hidden}.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row nowrap;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.container{max-width:1150px;margin:0 auto}.button{font-weight:700;color:#000;padding:15px 30px;background:rgba(255,255,255,.85);-webkit-transition:.3s;-o-transition:.3s;transition:.3s;font-size:18px;font-family:gotham;letter-spacing:1px;text-transform:uppercase}.button:focus{outline:0}.button:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header{position:relative;padding:0;z-index:5;overflow:hidden;height:100vh;min-height:400px}.header__top{position:absolute;z-index:3;max-width:1300px;width:100%;top:0;left:50%;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0);margin:0 auto;padding-top:15px;color:#1a1a1a}.header__top-logo{display:block;position:relative;text-transform:lowercase;color:#fff;font-size:40px}.header__contacts{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}.header__contacts a{font-size:15px;font-weight:600;position:relative;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;padding:10px;color:#fff;display:block;position:relative;padding-right:35px}.header__contacts .inst{display:inline-block;position:absolute;width:25px;height:25px;top:8px;right:0;margin-left:3px;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;background:url(img/insta.svg) no-repeat center center/contain}.header__text{position:absolute;z-index:2;width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;top:0;left:0}.header__text h1,.header__text h2{font-size:65px;font-weight:700;margin-bottom:20px;color:#fff;line-height:1.1}.header__text .accent{font-size:20px}.header__banner{position:relative;z-index:2;text-align:center;min-height:400px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row;-ms-flex-flow:row;flex-flow:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.header__banner-item{height:100vh;min-height:400px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:#fff;-o-object-fit:cover;object-fit:cover}.header__banner-item.first{background:url(img/banner1.jpg) center center/cover}.header__banner-item::before{position:absolute;content:'';width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,.5);z-index:1}.header__banner-item::after{display:none}.header__banner-item.lazyloaded{opacity:1;-webkit-transition:opacity 1s;-o-transition:opacity 1s;transition:opacity 1s}
+		@font-face{font-family:montserrat;font-weight:700;font-style:normal;unicode-range:U+000-5FF;src:local("Montserrat-Bold"),url(fonts/Montserrat-Bold.woff2) format("woff2"),url(fonts/Montserrat-Bold.woff) format("woff"),url(fonts/Montserrat-Bold.ttf) format("ttf"),url(fonts/Montserrat-Bold.eot) format("eot");font-display:swap}
+		@font-face{font-family:montserrat;font-weight:400;font-style:normal;unicode-range:U+000-5FF;src:local("Montserrat-Regular"),url(fonts/Montserrat-Regular.woff2) format("woff2"),url(fonts/Montserrat-Regular.woff) format("woff"),url(fonts/Montserrat-Regular.ttf) format("ttf"),url(fonts/Montserrat-Regular.eot) format("eot");font-display:swap}
+		*{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0}a{text-decoration:none;color:#000}a:hover{text-decoration:none}li{list-style:none}body{font-size:16px;min-width:320px;position:relative;line-height:1.65;overflow-x:hidden;font-family:montserrat;text-transform:uppercase;letter-spacing:1px}.overflow{position:relative;width:100%;display:block;overflow-x:hidden}.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row nowrap;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.container{max-width:1150px;margin:0 auto}.button{font-weight:700;color:#000;padding:15px 30px;background:rgba(255,255,255,.85);-webkit-transition:.3s;-o-transition:.3s;transition:.3s;font-size:18px;letter-spacing:1px;text-transform:uppercase}.button:focus{outline:0}.button:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1);-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.header{position:relative;padding:0;z-index:5;overflow:hidden;height:100vh;min-height:400px}.header__top{position:absolute;z-index:3;max-width:1300px;width:100%;top:0;left:50%;-webkit-transform:translate3d(-50%,0,0);transform:translate3d(-50%,0,0);margin:0 auto;padding-top:15px;color:#1a1a1a}.header__top-logo{display:block;position:relative;text-transform:lowercase;color:#fff;font-size:40px;letter-spacing: -3.5px}.header__contacts{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center}.header__contacts a{font-size:15px;font-weight:600;position:relative;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;padding:10px;color:#fff;display:block;position:relative;padding-right:35px}.header__contacts .inst{display:inline-block;position:absolute;width:25px;height:25px;top:8px;right:0;margin-left:3px;-webkit-transition:.5s;-o-transition:.5s;transition:.5s;background:url(img/insta.svg) no-repeat center center/contain}.header__text{position:absolute;z-index:2;width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;top:0;left:0}.header__text h1,.header__text h2{font-size:65px;font-weight:700;margin-bottom:20px;color:#fff;line-height:1.1}.header__text .accent{font-size:20px}.header__banner{position:relative;z-index:2;text-align:center;min-height:400px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row;-ms-flex-flow:row;flex-flow:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.header__banner-item{height:100vh;min-height:400px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;color:#fff;-o-object-fit:cover;object-fit:cover}.header__banner-item.first{background:url(img/banner1.jpg) center center/cover}.header__banner-item::before{position:absolute;content:'';width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,.5);z-index:1}.header__banner-item::after{display:none}.header__banner-item.lazyloaded{opacity:1;-webkit-transition:opacity 1s;-o-transition:opacity 1s;transition:opacity 1s}
 	</style>
 	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
@@ -43,12 +44,12 @@
 				</div>
 					
 				<div class="header__banner-item second">
-					<img class="lazyload" data-src="img/banner2.jpg">			
+					<img src="img/banner2.jpg">			
 				</div>	
 			</div>
 			<div class="header__text">
 				<h1>Fjällräven Kånken</h1>
-				<a class="button" href="#clothes">Ассортимент</a>
+				<span class="button">Ассортимент</span>
 			</div>
 		</header>
 		
@@ -56,8 +57,8 @@
 			<h2>ACCOPтимент</h2>
 			<div class="container">
 				<div class="categories__nav">
-					<span class="active back-to-category">Категории ></span>
-					<span>Обувь</span>
+					<span class="active back-to-category">Категории</span>
+					<div></div>
 				</div>
 			</div>
 			<div class="container wrapper">
@@ -221,601 +222,37 @@
 					</li>
 				</ul>
 				
-				
-				<!-- <ul class="items outer">
-					<li>
-						<ul class="items__list">
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Куртки ></span>
-									<span>Куртка Reebok</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									
-									<div class="items__info">
-										<h3>Куртка Reebok</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Куртка Reebok">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Куртки ></span>
-									<span>Куртка Nike</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Куртка Nike</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Куртка Nike">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Куртки ></span>
-									<span>Куртка Adidas </span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Куртка Adidas</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Куртка Adidas">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<ul class="items__list">
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Обувь ></span>
-									<span>Кроссовки Nike</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Кроссовки Nike</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Кроссовки Nike">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от 36 до 44</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Обувь ></span>
-									<span>Ботинки Native</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Ботинки Native</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Ботинки Native">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от 36 до 44</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Обувь ></span>
-									<span>Ботинки Native</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Ботинки Native</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Ботинки Native">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от 36 до 44</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<ul class="items__list">
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Кофты ></span>
-									<span>Кофта Puma зеленая</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Кофта Puma зеленая</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Кофта Puma зеленая">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Кофты ></span>
-									<span>Кофта Puma черная</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Кофта Puma черная</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Кофта Puma черная">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Кофты ></span>
-									<span>Кофта Puma красная</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Кофта Puma красная</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Кофта Puma красная">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<ul class="items__list">
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные штаны ></span>
-									<span>Спортивные штаны Stussy</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивные штаны Stussy</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивные штаны Stussy">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные штаны ></span>
-									<span>Спортивные штаны Fila</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивные штаны Fila</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивные штаны Fila">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные штаны ></span>
-									<span>Спортивные штаны Adidas</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивные штаны Adidas</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивные штаны Adidas">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные штаны ></span>
-									<span>Спортивные штаны Supreme</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивные штаны Supreme</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивные штаны Supreme">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<ul class="items__list">
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Шапки ></span>
-									<span>Шапка Fila</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Шапка Fila</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Шапка Fila">Заказать</a>
-										</div>
-										<p class="sizes">В наличии размеры M и L</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Шапки ></span>
-									<span>Шапка Carhatt </span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Шапка Carhatt</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Шапка Carhatt">Заказать</a>
-										</div>
-										<p class="sizes">В наличии размеры M и L</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Шапки ></span>
-									<span>Шапка Jordan</span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Шапка Jordan</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Шапка Jordan">Заказать</a>
-										</div>
-										<p class="sizes">В наличии размеры M и L</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Шапки ></span>
-									<span>Шапка Champion </span>
-								</div>
-								<div class="flex">
-									<ul class="img-wrap">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-									<div class="items__info">
-										<h3>Шапка Champion</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Шапка Champion">Заказать</a>
-										</div>
-										<p class="sizes">В наличии размеры M и L</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<ul class="items__list">
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные Костюмы ></span>
-									<span>Спортивный Костюм Stussy</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивный Костюм Stussy</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивный Костюм Stussy">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные Костюмы ></span>
-									<span>Спортивный Костюм Fila</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивный Костюм Fila</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивный Костюм Fila">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные Костюмы ></span>
-									<span>Спортивный Костюм Adidas</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивный Костюм Adidas</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивный Костюм Adidas">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="categories__nav">
-									<span class="active back-to-category">Категории ></span>
-									<span class="active back">Спортивные Костюмы ></span>
-									<span>Спортивный Костюм Supreme</span>
-								</div>
-								<div class="flex">
-									<div class="img"></div>
-									<div class="items__info">
-										<h3>Спортивный Костюм Suoreme</h3>
-										<div class="flex">
-											<span class="price old">500 грн</span>
-											<span class="price new">335 грн</span>
-											<a class="button" data-item="Спортивный Костюм Supreme">Заказать</a>
-										</div>
-										<p class="sizes">В наличии все размеры от S до XL</p>
-										<ul class="items__parameters">
-											<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
-											<li class="flex"><span>Производитель</span><span>Китай</span></li>
-											<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
-										</ul>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</li>
-				</ul> -->
+				<div class="items">
+					<div class="flex">
+						<div class="img">
+							<div class="img-wrap">
+								<img src="img/keyring/5/1.jpg" alt="">
+								<img src="img/keyring/5/2.jpg" alt="">
+								<img src="img/keyring/5/3.jpg" alt="">
+							</div>
+							<div class="img-thumbs">
+								<img src="img/keyring/5/1.jpg" alt="">
+								<img src="img/keyring/5/2.jpg" alt="">
+								<img src="img/keyring/5/3.jpg" alt="">
+							</div>
+						</div>
+						
+
+						<div class="items__info">
+							<h3>Куртка Adidas</h3>
+							<div class="flex">
+								<span class="price new">335 грн</span>
+								<a class="button" data-item="Куртка Adidas">Заказать</a>
+							</div>
+							<p class="sizes">Основное отделение дополнено небольшим защитным карманом на обратной стороне сумки, а также под сумкой есть компрессионные ремни с помощью которых можно прикрепить куртку или что-то подобное к сумке. Идеально подходит для коротких походов и путешествий.</p>
+							<ul class="items__parameters">
+								<li class="flex"><span>Материал</span><span>100% хлопок</span></li>
+								<li class="flex"><span>Производитель</span><span>Китай</span></li>
+								<li class="flex"><span>Температурный режим</span><span>-20&#176;C</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	<div class="header__promo">
@@ -832,7 +269,7 @@
 			</div>
 			<div class="header__order" id="order">
 				
-				<p class="data">Пожалуйста, оставьте данные и мы свяжемся с Вами для подтверждения заказа.</p>
+				<p class="data">Пожалуйста, оставьте данные для заказа и мы свяжемся с Вами для подтверждения.</p>
 				<form class="order__form" action="/post2sheet.php" method="POST">
 					<label for="name1">Имя
 						<input id="name1" name="имя" type="text" required>
