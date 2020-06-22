@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
+    $(window).load(function() {
+    	$('html').css({"transition": ".3s"}).removeClass('async-hide');
+    })
     PostAffTracker.setAccountId('default1');
     try {
     PostAffTracker.disableTrackingMethod('F');
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
      
     } catch (err) { }
 
-    
+
 	var ck = "https://www.typesy.com/";
 
 	jQuery(document).ready(function(){    
