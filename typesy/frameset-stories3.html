@@ -1,0 +1,542 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Typesy Help</title>
+    <link href="site-assets/css/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="site-assets/css/styles2.css" />
+    <link rel="stylesheet" href="site-assets/mdl/material.min.css" />
+	<link rel="preload" href="site-assets/css/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!--link rel="preload" href="site-assets/css/MaterialIcons-Regular.woff" as="font" type="font/woff" crossorigin-->
+ 	<link rel="preload" href="site-assets/css/MaterialIcons-Regular.ttf" as="font" type="font/ttf" crossorigin>	
+ 		    <!-- Syntax Highlighter -->
+  <!--link href="site-assets/css/shCore.css" rel="stylesheet" type="text/css" />
+  <link href="site-assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <!-- Demo CSS 
+	<link rel="stylesheet" href="site-assets/css/demo.css" type="text/css" media="screen" /-->
+	<link rel="stylesheet" href="site-assets/css/flexslider.css" type="text/css" media="screen" />
+
+
+	
+	<style>
+
+ 
+::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow:     inset 0 0 6px rgba(0,0,0,0.1);*/
+	background-color:       #fff;
+	border-radius:          8px;
+    position:               absolute;
+}
+
+
+::-webkit-scrollbar
+{
+	width:                  8px;
+	background-color:       #fff;
+    position:               absolute;
+}
+
+
+::-webkit-scrollbar-thumb
+{
+	border-radius:          8px;
+	background-color:       #fff;
+	background-image:       -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#9b9b9b),
+									   to(#9b9b9b),
+									   color-stop(.6,#9b9b9b))
+}	  
+	
+html{
+			
+	overflow-y: hidden;
+	
+}
+		
+.white-section{
+	padding-top:20px;
+}
+		
+.stratheadline{
+	margin: 15px 0px 10px 0px;
+}
+		
+.flexslider{
+	height: 330px;
+	background: transparent;
+	border: none;
+	margin-top: 20px;
+}
+		
+.flex-control-paging li a{
+	background: rgba(0, 0, 0, 0.3);
+}
+		
+.flex-direction-nav a {
+	opacity: 1;
+			
+}
+		
+.flex-direction-nav .flex-next {
+    right: -30px !important;  	
+}
+		
+.flex-direction-nav .flex-prev{
+	left: -30px !important;
+}
+		
+.storiesdiv{
+	width: 33%;
+}	
+
+.slides li{
+	width: 1100px !important;
+	margin-right: 0px !important;
+}
+		
+.storiesbub {
+	width: 350px;
+	height: 310px;
+	margin: 0px 8px;
+}
+		
+.storiesschool {
+	padding-left: 15px;
+}
+
+.schoolicon {
+	zoom: .6;
+	-moz-transform: scale(0.6);
+	-moz-transform-origin: 0 0;
+}
+
+.storiesinfo {
+	padding-top: 0px;
+}
+
+.storiesp{
+	margin-left: 0px !important;
+	padding: 0px !important;
+	height: 100px;
+    padding-top: 10px !important;
+}
+		
+.storiesbub p {
+	height: 180px;
+}
+		
+.page-content{
+	width: 1100px;
+}
+		
+.flex-pauseplay{
+	display: none !important;
+}
+		
+	
+.flex-direction-nav a:before{
+	margin-top: 10px;
+}
+		
+.flex-control-paging li a {
+	width: 9px;
+	height: 9px;
+}
+
+.flex-control-nav li {
+	margin: 0 3px;
+}
+		
+.storiesbub{
+	background: #fff;
+}
+		
+		@media (max-width: 1150px){
+			
+			.page-content {
+				width: 900px;
+			}
+
+			.flexslider {
+				height: 350px;
+			}
+
+			.storiesbub {
+				width: 280px;
+				height: 350px;
+				margin: 0px 8px;
+			}
+
+			.slides li {
+				width: 900px !important;
+			}
+
+			p.storiesp {
+				margin-left: 20px !important;
+				width: 250px;
+				height: 80px;
+			}
+		}
+		
+		@media (max-width: 950px){
+			
+			.page-content {
+				width: 800px;
+			}
+
+			.flexslider {
+				height: 380px;
+			}
+
+			.storiesbub {
+				width: 250px;
+				height: 370px;
+				margin: 0px 8px;
+			}
+
+			.slides li {
+				width: 800px !important;
+			}
+
+			.storiesbub p {
+    				height: 200px;
+			}
+
+			.storiesschool{
+				width: 30% !important;
+				height: 70px;
+			}
+	
+			p.storiesp {
+				margin-left: 20px !important;
+				width: 250px;
+				height: 80px;
+			}
+		}
+		
+		@media (max-width: 850px){
+			
+			.page-content {
+				width: 600px;
+			}
+
+			.flexslider {
+				height: 560px;
+			}
+			
+			.storiesdiv {
+    				width: 100%;
+    				margin-bottom: 0px;
+    				height: 190px;
+			}
+
+			.storiesbub {
+    				width: 580px;
+    				height: 180px;
+    				margin: 0px 8px;
+			}
+
+			.slides li {
+				width: 600px !important;
+			}
+
+			.storiesbub p {
+    				height: 90px;
+			}
+
+			.storiesschool{
+				width: 10% !important;
+			}
+	
+			p.storiesp {
+				margin-left: 20px !important;
+				width: 350px;
+				height: 80px;
+			}
+		}
+		
+		@media (max-width: 700px){
+			
+			.page-content {
+				width: 450px;
+			}
+
+			.flexslider {
+				height: 630px;
+			}
+			
+			.storiesdiv {
+    				
+    				height: 210px;
+			}
+
+			.storiesbub {
+    				width: 430px;
+    				height: 200px;
+			}
+
+			.slides li {
+				width: 450px !important;
+			}
+
+			.storiesbub p {
+    				height: 110px;
+			}
+
+			.storiesschool{
+				width: 15% !important;
+			}
+	
+			p.storiesp {
+				width: 320px;
+			}
+		}
+		
+		@media (max-width: 580px){
+			
+			.page-content {
+				width: 380px;
+			}
+
+			.flexslider {
+				height: 680px;
+			}
+			
+			.storiesdiv {
+    				
+    				height: 230px;
+			}
+
+			.storiesbub {
+    				width: 360px;
+    				height: 220px;
+			}
+
+			.slides li {
+				width: 380px !important;
+			}
+
+			.storiesbub p {
+    				height: 130px;
+			}
+
+			.storiesschool{
+				width: 15% !important;
+			}
+	
+			p.storiesp {
+				width: 320px;
+			}
+		}
+		
+		@media (max-width: 350px){
+			
+			.page-content {
+				width: 280px;
+			}
+
+			.flexslider {
+				height: 920px;
+			}
+			
+			.storiesdiv {
+    				
+    				height: 310px;
+			}
+
+			.storiesbub {
+    				width: 260px;
+    				height: 300px;
+			}
+
+			.slides li {
+				width: 280px !important;
+			}
+
+			.storiesbub p {
+    			height: 170px;
+				font-size: 12px;
+			}
+
+			.storiesschool{
+				width: 100% !important;
+				height: 40px;
+			}
+	
+			p.storiesp {
+				width: 320px;
+			}
+			
+			.schoolicon {
+				zoom: .40;
+				-moz-transform: scale(0.4);
+				-moz-transform-origin: 0 0;
+			}
+			
+			.schoolspan1 {
+				font-size: 15px;
+			}
+
+			.addspan1 {
+				font-size: 12px;
+			}
+		}
+		
+</style>
+	
+	
+</head>
+<body>
+  
+
+   
+	 
+        <div class="page-content center-items">
+        	 
+        		 <section class="slider">
+        <div class="flexslider carousel">
+          <ul class="slides">
+            	
+            		
+						
+  	    	
+  	    	<li>
+  	    			
+  	    			<div class="storiesdiv">
+					<div class="storiesbub mdl-shadow--2dp">
+					<p>&#8220;Its a very good program to use especially for individuals and those comfortable with computers.&#8221;</p>
+								<div class="storiesschool">
+								<div id="school22" class="schoolicon">
+								</div>
+								</div>
+								<div class="storiesinfo">
+								<p class="storiesp">
+												  <span class="schoolspan1">Beth Entz</span><br />
+												  <span class="addspan1">Systems Support Specialist</span><br />
+												  <span class="addspan1">Lethbridge Public Library</span>
+										</p>
+								</div>
+					</div>
+
+					</div>
+
+
+						<div class="storiesdiv">
+				<div class="storiesbub mdl-shadow--2dp">
+				<p>&#8220;Everything about Typesy has been working great. I have been telling other departments and other companies of your great software platform. I hope to add more licenses in the near future.&#8221;</p>
+
+							<div class="storiesschool">
+							<div id="school43" class="schoolicon">
+							</div>
+							</div>
+							<div class="storiesinfo">
+							<p class="storiesp">
+											  <span class="schoolspan1">Joshua Nevala</span><br />
+											  <span class="addspan1">IT Manager</span><br />
+											  <span class="addspan1">Immigrant &#038; Refugee Community Organization</span>
+									</p>
+							</div>
+				</div>
+
+				</div>
+					
+				<div class="storiesdiv">
+				<div class="storiesbub mdl-shadow--2dp">
+				<p>&#8220;Typesy is an excellent typing software to improve your speed. It is easy to use and offers great tools for tracking your progress!&#8221;</p>
+
+							<div class="storiesschool">
+							<div id="school50" class="schoolicon">
+							</div>
+							</div>
+							<div class="storiesinfo">
+							<p class="storiesp">
+											  <span class="schoolspan1">Daniela Sandoval</span><br />
+											  <span class="addspan1">Training Assistant</span><br />
+											  <span class="addspan1">Grace Institute</span>
+									</p>
+							</div>
+				</div>
+
+				</div>
+		</li>
+		
+		
+        		
+      
+         	
+         <li>
+         		
+
+
+
+
+				
+        
+        		<div class="storiesdiv">
+				<div class="storiesbub mdl-shadow--2dp">
+				<p>&#8220;The Typesy software is really very good. It helps us in learning typing from beginner level to expert level.&#8221;</p>
+
+							<div class="storiesschool">
+							<div id="school56" class="schoolicon">
+							</div>
+							</div>
+							<div class="storiesinfo">
+							<p class="storiesp">
+											  <span class="schoolspan1">Shatabdi Mandal</span><br />
+											  <span class="addspan1">Employee</span><br />
+											  <span class="addspan1">MEDITAB</span>
+									</p>
+							</div>
+				</div>
+
+				</div>
+         </li>
+         	
+         	
+		
+
+				
+          </ul>
+        </div>
+      </section>
+        
+        </div><!-- end grid -->
+ 
+           
+</body>
+
+  <script type="text/javascript" src="site-assets/mdl/material.min.js"></script>
+  <script src="site-assets/js/ninja-slider.js" type="text/javascript"></script>
+  <script type="text/javascript" src="site-assets/js/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="site-assets/js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 1100,
+        itemMargin: 0,
+        minItems: 1,
+        maxItems: 1,
+		pausePlay: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
+
+  <!-- Optional FlexSlider Additions -->
+  <script src="site-assets/js/jquery.easing.js"></script>
+  <script src="site-assets/js/jquery.mousewheel.js"></script>
+  <script defer src="site-assets/js/demo.js"></script>
+</html>

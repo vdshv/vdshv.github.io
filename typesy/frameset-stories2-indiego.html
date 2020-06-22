@@ -1,0 +1,2378 @@
+<html data-wf-page="5dd6415f8990fd44c20ea71a" data-wf-site="5dd6415f8990fdf2bf0ea683" data-wf-status="1" class="mdl-js"><head>
+<title>Typesy Help</title>
+    <link href="site-assets/css/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="site-assets/css/styles2-b.css" />
+    <link rel="stylesheet" href="site-assets/mdl/material.min.css" />
+	<link rel="preload" href="site-assets/css/MaterialIcons-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!--link rel="preload" href="site-assets/css/MaterialIcons-Regular.woff" as="font" type="font/woff" crossorigin-->
+ 	<link rel="preload" href="site-assets/css/MaterialIcons-Regular.ttf" as="font" type="font/ttf" crossorigin>	
+ 		    <!-- Syntax Highlighter -->
+  <!--link href="site-assets/css/shCore.css" rel="stylesheet" type="text/css" />
+  <link href="site-assets/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <!-- Demo CSS 
+	<link rel="stylesheet" href="site-assets/css/demo.css" type="text/css" media="screen" /-->
+	<link rel="stylesheet" href="site-assets/css/flexslider.css" type="text/css" media="screen" />
+
+
+	</head>
+	<style>
+
+ 
+::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow:     inset 0 0 6px rgba(0,0,0,0.1);*/
+	background-color:       #fff;
+	border-radius:          8px;
+    position:               absolute;
+}
+
+
+::-webkit-scrollbar
+{
+	width:                  8px;
+	background-color:       #fff;
+    position:               absolute;
+}
+
+
+::-webkit-scrollbar-thumb
+{
+	border-radius:          8px;
+	background-color:       #fff;
+	background-image:       -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#9b9b9b),
+									   to(#9b9b9b),
+									   color-stop(.6,#9b9b9b))
+}	  
+	
+html{
+			
+	overflow-y: hidden;
+	
+}
+		
+		@media (max-width: 820px) {
+			.slider-arrow-icon {
+				width: 70% !important;
+			}
+			
+			.slider-arrow {
+				width: 20px !important;
+				height: 20px !important;
+			}
+			
+		
+		}
+		
+		@media (max-width: 620px) {
+			.testimonials-v2 {
+				width: 360px !important;
+			}
+			.wrapper {
+				padding-right: 0px !important;
+				padding-left: 0px !important;
+			}
+		}
+		
+		@media (max-width: 540px) {
+			.slider-arrow.right {
+				right: -20px !important;
+			}
+			.w-slider-arrow-left {
+				left: -20px !important;
+			}
+			
+			.testimonials-v2 {
+				width: 280px !important;
+			}
+			
+			.wrapper {
+				padding-right: 0px !important;
+				padding-left: 0px !important;
+			}
+		
+		}
+		
+	/* indiego testimonial css */	
+		
+	.wrapper {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		max-width: 1220px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 10px;
+		padding-left: 10px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		background-color: transparent;
+	}
+		
+			
+	.w-slider {
+		position: relative;
+		height: 300px;
+		text-align: center;
+		background: #dddddd;
+		clear: both;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		tap-highlight-color: rgba(0,0,0,0);
+	}
+		
+	.testimonials-v2 {
+		height: 440px;
+		max-width: 1100px;
+		margin-right: auto;
+		margin-left: auto;
+		
+		/*background-color: #9165f7;
+		background-image: -webkit-gradient(linear, left top, right top, from(#b87df9), to(#6a4ee1));
+		background-image: linear-gradient(90deg, #b87df9, #6a4ee1);*/
+		background: transparent;
+	}
+
+	.w-slider-mask {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		height: 100%;
+		white-space: nowrap;
+	}
+		
+	.w-slide {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		height: 100%;
+		white-space: normal;
+		text-align: left;
+	}
+		
+	.review-v2 {
+		position: relative;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: inline-flex;
+		height: 380px;
+		padding-right: 0%;
+		padding-bottom: 8px;
+		padding-left: 0%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		color: #fff;
+		width: 32%;
+    	margin: 0% .5%;
+		background: #65a0f8;
+		/*background: rgb(71,158,219);
+        background: linear-gradient(90deg, rgba(71,158,219,1) 0%, rgba(10,111,182,1) 55%, rgba(10,111,182,1) 100%);
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);*/
+		border-radius: 12px;
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+	}
+		
+	.review-v2-content {
+		position: relative;
+		z-index: 1;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		text-align: center;
+	}
+		
+	.review-v2-avatar {
+		margin-right: auto;
+		margin-bottom: 16px;
+		margin-left: auto;
+		border-radius: 50%;
+		zoom: .6;
+	}
+		
+	img {
+		max-width: 100%;
+		vertical-align: middle;
+		display: inline-block;
+	}
+		
+	.review-v2-text {
+		margin-top: 8px;
+		margin-bottom: 20px;
+		font-size: 13px;
+		line-height: 18px;
+		padding: 0px 10px;
+		text-align: center;
+		height: 120px;
+	}
+		
+	.review-v2-author {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		height: auto;
+		padding: 4px 12px;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-radius: 4px;
+		background-color: hsla(0, 0%, 100%, 0.1);
+		-webkit-transition: background-color 400ms ease;
+		transition: background-color 400ms ease;
+		color: #fff;
+		font-size: 11px;
+		line-height: 20px;
+		font-weight: 500;
+		letter-spacing: 1.5px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.w-inline-block {
+		max-width: 100%;
+		display: inline-block;
+	}
+		
+	
+	.review-v2-quote {
+		position: absolute;
+		width: 40px;
+	}
+		
+	.review-v2-quote.right {
+		left: auto;
+		top: auto;
+		right: 20px;
+		bottom: 84px;
+	}
+		
+	.review-v2-quote.left {
+		left: 20px;
+		top: 84px;
+		right: auto;
+		bottom: auto;
+	}
+		
+	.reviiew-v2-circle-small {
+		position: absolute;
+		left: auto;
+		top: -7%;
+		right: 4%;
+		bottom: auto;
+		width: 100px;
+		opacity: 0.08;
+	}
+	
+	.reviiew-v2-circle-big {
+		position: absolute;
+		left: auto;
+		top: auto;
+		right: 17%;
+		bottom: -24%;
+		width: 205px;
+		opacity: 0.08;
+	}
+		
+	.review-v2-dots {
+		position: absolute;
+		left: 15%;
+		top: auto;
+		right: auto;
+		bottom: -3%;
+		width: 129px;
+		height: 140px;
+		background-image: url("site-assets/css/images/circle-pattern-white.svg");
+		background-position: 0px 0px;
+		background-size: 12px;
+		opacity: 0.12;
+	}
+		
+	
+		
+
+	.w-slider-arrow-left, .w-slider-arrow-right {
+		position: absolute;
+		width: 80px;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		cursor: pointer;
+		overflow: hidden;
+		color: white;
+		font-size: 40px;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		tap-highlight-color: rgba(0,0,0,0);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+		
+	.w-slider-arrow-left {
+		z-index: 3;
+		right: auto;
+	}
+		
+	.w-slider-arrow-right {
+		z-index: 4;
+		left: auto;
+	}
+	.slider-arrow.right {
+		left: auto;
+		right: -45px;
+	}
+	
+	.slider-arrow {
+		left: -45px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		width: 30px;
+		height: 30px;
+		padding: 8px;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: #fff;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededff));
+		background-image: linear-gradient(180deg, #fff, #ededff);
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+		-webkit-transition: box-shadow 400ms ease, -webkit-transform 400ms ease;
+		transition: box-shadow 400ms ease, -webkit-transform 400ms ease;
+		transition: box-shadow 400ms ease, transform 400ms ease;
+		transition: box-shadow 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
+	}
+		
+	.slider-arrow-icon {
+		width: 100%;
+		opacity: 1;
+	}
+		
+	.w-slider-nav {
+		position: absolute;
+		z-index: 2;
+		top: auto;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		padding-top: 10px;
+		height: 40px;
+		text-align: center;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		tap-highlight-color: rgba(0,0,0,0);
+	}
+		
+	.testimonials-v2-nav {
+		font-size: 8px;
+		line-height: 16px;
+	}
+		
+	.w-slider-dot {
+		position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: rgba(10,111,182,.4);
+		cursor: pointer;
+		margin: 0 3px .5em;
+		transition: background-color 100ms,color 100ms;
+	}
+		
+	.w-slider-dot.w-active {
+		background-color: rgba(10,111,182,1);
+	}
+		
+	.w-slider-nav.w-round>div {
+		border-radius: 100%;
+	}
+		
+	.slider-arrow:hover {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+		-webkit-transform: scale(1.12);
+		-ms-transform: scale(1.12);
+		transform: scale(1.12);
+	}
+		
+	.review-v2-dots {
+		position: absolute;
+		left: 15%;
+		top: auto;
+		right: auto;
+		bottom: -3%;
+		width: 129px;
+		height: 140px;
+		background-image: url(site-assets/css/images/circle-pattern-white.svg);
+		background-position: 0px 0px;
+		background-size: 12px;
+		opacity: 0.12;
+	}
+		
+	.reviewer{
+		font-size: 13px;
+	}
+		
+	.w-webflow-badge{
+		display: none;
+	}
+		
+	@media (max-width: 1250px){
+		
+		.wrapper{
+			  max-width: 850px;
+		}
+		.testimonials-v2{
+			  max-width: 850px;
+		}
+		
+		.review-v2-author{
+			font-size: 9px;
+		}
+		
+		.review-v2-avatar{
+			zoom: .4;
+		}
+		
+		.review-v2-text{
+			height: 170px;
+		}
+		
+		.review-v2-quote{
+			width: 30px;
+		}
+		
+		.review-v2-quote.left{
+			top: 44px;
+		}
+		
+		.reviewer {
+			font-size: 12px;
+		}
+	}
+		
+	@media (max-width: 950px){
+		
+		.wrapper{
+			  max-width:650px;
+		}
+		.testimonials-v2{
+			  max-width: 650px;
+		}
+		
+		.review-v2{
+			height: 400px;
+			margin: 0% .4%;
+		}
+		
+		.review-v2-quote{
+			width: 25px;
+		}
+		
+		.review-v2-quote.left{
+			top: 30px;
+		}
+		
+		.review-v2-author{
+			font-size: 8px;
+		}
+		
+		.reviewer {
+			font-size: 11px;
+		}
+		
+		.review-v2-quote.right {
+			right: 20px;
+			bottom: 114px;
+		}
+		
+		.review-v2-author{
+			padding: 4px 8px;
+		}
+		
+		.w-slider-nav{
+			padding-top: 50px;
+		}
+		
+		.w-slider-nav{
+			top: unset;
+			bottom: -20px;
+		}
+		
+		.review-v2-author {
+			height: 90px;
+		}
+	}
+		
+	@media (max-width: 750px){
+		
+		
+
+		.wrapper{
+			  max-width:450px;
+		}
+		
+		.testimonials-v2{
+			  max-width: 450px;
+			 height: 750px;
+		}
+		
+		.review-v2 {
+			height: 230px;
+			margin: 2px 0%;
+			width: 100%;
+		}
+		
+		.review-v2-avatar {
+			margin-top: 30px;
+		}
+		
+		.review-v2-quote.right {
+			bottom: 84px;
+		}
+		
+		.review-v2-text {
+			height: 80px;
+		}
+		.review-v2-author {
+			height: auto;
+		}
+	}
+	</style>
+<body>		
+     <div class="popup-wrap">    <div class="wrapper">
+          
+          <div data-infinite="1" style="opacity: 1;" class="testimonials-v2 w-slider">
+          
+          <div class="w-slider-mask">
+          
+          <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          			
+          					
+          					<div id="school45" class="schoolicon review-v2-avatar" sizes="88px" ></div>	
+          						
+          						<div class="review-v2-text">“Our deparment is very happy with Typesy. Typesy has met all our expectations regarding lessons, reinforcements, skill levels, typing challenges, and feedback.”</div>
+          						
+          						
+          							<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Cathy Cummings</span>
+          							    <div>Adviser</div>
+          							    <div>Center Joint Unified School District</div>
+          							</div>
+          							
+          						
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          					 	<div id="school33" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is a cloud-based app that allowed our class typing in under 1 hour. It’s effortless to monitor progress of all students real time. I’ve seen the future of education applications!”</div>
+          						
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Mark Rau</span>
+          							    <div>Instructor</div>
+          							    <div>Treasure Valley Baptist School</div>
+          						</div>
+          							
+          						
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+         						
+          						<div id="school31" class="schoolicon  review-v2-avatar"></div>
+          						
+          						
+          						<div class="review-v2-text">“The Typesy program is going well. Students really enjoy it and one is now competing with the school office staff. His original score was 24 wpm. Updated score is 55 wpm in 6 weeks!”</div>
+          						
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Donna Griffiths</span>
+          							    <div>Staff/Instructor</div>
+          							    <div>Kowhai Intermediate School</div>
+          						</div>
+          							
+          						
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          
+          </div>
+          
+         <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school1" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Ease of use and effectiveness define this excellent typing software and make Typesy ideal for learning how to touch type.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">John Carlsen</span>
+          							    <div>Reviewer</div>
+          							    <div>Top Ten Reviews</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school2" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is by far the best typing tutor software on the market today…guarantees to be a helpful aid to your typing skills.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Software Review Boffin</span>
+          							    <div>Head Reviewer</div>
+          							    <div>Typing Category</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school3" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“With Typesy the whole family can enjoy the benefits of amazing typing skills together. It’s Cloud and Social.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Educents</span>
+          							    <div>Head Reviewer</div>
+          							    <div>Typing Category</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		
+          
+          </div>
+          
+          <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          
+          
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school4" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“One of the best typing software on the market as it comes with the largest video database. Every lesson is clearly explained.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Mark Herre</span>
+          							    <div>Founder</div>
+          							    <div>Typing Lounge</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school5" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Uses video lessons, online demonstrations, interactive lesson suggestions, and fun games to teach basic and advanced touch typing skills —and it works for all ages.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Ann Simpson</span>
+          							    <div>Regional Advertising Manager</div>
+          							    <div>Homeschool.com</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school6" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Teaches students basic typing skills as well as advanced typing skills through a unique blend of instructional videos, scientifically-designed lessons, and entertaining games.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Scott Patterson</span>
+          							    <div>Assistant Editor</div>
+          							    <div>Education Technology</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          
+          </div>
+          
+          <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+          
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school7" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The more I explored and tried Typesy, the more I enjoyed it and got value from it. My favorite part of Typesy comes near the end, the typing games.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Troy Simpson</span>
+          							    <div>Founder</div>
+          							    <div>English-Language-Skills</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school8" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Speeds up the students’ overall educational progress as it helps them increase their typing speed…an easy-to-use interface that makes this program an outstanding tool.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Michael Karlin</span>
+          							    <div>Founder</div>
+          							    <div>Ed Tech Roundup</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school38" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is an interactive application that enables you to improve your typing speed and accuracy using a plethora of fun activities, games and courses.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Alexandra Sava</span>
+          							    <div>Reviewer</div>
+          							    <div>Softpedia</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          
+          </div>
+          
+          <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school9" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Our students have found Typesy very easy to use and our teachers have seen big improvements in the student’s typing skills in a short amount of time.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">David Hurley</span>
+          							    <div>School Teacher</div>
+          							    <div>Eureka Secondary School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school10" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy’s cloud based design provides great flexibility for classroom organization…very simple to implement and has not burdened our network resources.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Mark Nowak</span>
+          							    <div>Technical Director</div>
+          							    <div>Bethany Christian School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school11" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“After I unwrapped Typesy, I instantly saw the superior quality. There is just no comparison to other programs I have used over the years.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Tina Roberton</span>
+          							    <div>Founder</div>
+          							    <div>Tina’s Dynamic Homeschool</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school12" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy gives students a more challenging typing experience than what we were previously using. There is lots of practice that helps to cement the key locations into the mind.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Jason Strack</span>
+          							    <div>Computer Teacher</div>
+          							    <div>Spencerville Adventist Academy</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school13" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“After using the trial, and consulting with the eReflect staff it was an easy decision that I do not regret. Pupils aged 12 – 16 are making fantastic and measurable progress.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Shaun Johnston</span>
+          							    <div>Technology Teacher</div>
+          							    <div>Manningtree High School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school14" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I’m delighted to say that the program is excellent and the students enjoy using it. We are impressed with eReflect’s response to our queries and needs.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Rosanna Sofoulis</span>
+          							    <div>Business & IT Teacher</div>
+          							    <div>Cyril Jackson Senior Campus</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school15" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I had used the free version of your product previously and decided it would be a good fit for our needs.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Eric Hevland</span>
+          							    <div>Assistant Principal</div>
+          							    <div>East Valley Central</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school17" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The purchase of your software has been to provide additional services for those disadvantaged clients. We had hoped to teach essential touch typing skills for their goal of finding employment.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Michael Batira</span>
+          							    <div>Staff Specialist</div>
+          							    <div>Dutchess Boces</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school18" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The ease of use on any device and the ability to practice at home. The interface for making users and managing users is easy along with the reports and real time access you have to the students.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Charlene Wasson</span>
+          							    <div>Technology Coordinator</div>
+          							    <div>Whitewater School District</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school19" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We bought it based on the variety of interactive material.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Bobbie Hyndman</span>
+          							    <div>Director of Technology</div>
+          							    <div>Ascension Academy</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school20" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“This is the first year we will be using your product. It doesn’t have ads and distracting graphics like the ones on the freeware site. I like the clean and straightforward layout of your product.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Sarah Lesko</span>
+          							    <div>Technology Coordinator</div>
+          							    <div>James River Day School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school21" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The students find the site and program very easy to navigate. The videos are informative and they help to scaffold the activities in a way that my students can understand.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Marcus Berryman</span>
+          							    <div>Physical Education Teacher</div>
+          							    <div>The Woden School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school22" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Its a very good program to use especially for individuals and those comfortable with computers.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Beth Entz</span>
+          							    <div>Systems Support Specialist</div>
+          							    <div>Lethbridge Public Library</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school23" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I began researching online for something that was widely used and tested, and that also had a great support team. I found your software and after establishing contact, I was provided with a demo version and offered a reasonable price.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">John L’Hirondelle</span>
+          							    <div>Support Technician</div>
+          							    <div>Grande Prairie Regional College</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school24" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Our 2nd-5th graders have been using Typesy with great success. Students love the activities and are motivated to improve their keyboarding performance. The tech team at Typesy has been very responsive to any/all concerns.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Patrick Golub</span>
+          							    <div>STEM/TECH Instructor</div>
+          							    <div>Millington Elementary</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school25" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I’ve had the pleasure of trying out Typesy, One word: Wow. I’ve tried several commercial typing programs over the years, but none offers the ease, efficiency, and fun that Typesy does.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Secular Homeschool</span>
+          							    <div>Head Reviewer</div>
+          							    <div>Typing Category</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school26" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy offers you an attractive and clean application with video tutorials and statistics charts to help you go through the different learning levels in probably the most efficient, flexible, and comfortable way possible.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Francisco Martinez</span>
+          							    <div>Senior Editor</div>
+          							    <div>software.informer.com</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school28" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The Typesy program is easy for my students to use. The support team is responsive and efficient.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Nancy Pollak</span>
+          							    <div>Founder</div>
+          							    <div>PC Keyboarding</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+          
+          <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school29" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We used Typesy for the first time this year. The students enjoyed the program and liked being able to access it from any device. As the instructor, I like the videos and the visual assistance of the keyboard strokes below the practice pages.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Karre Sloan</span>
+          							    <div>Instructor</div>
+          							    <div>Oak Hill School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school30" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is a great program and our students enjoy using it. From the IT standpoint, it was a breeze to set up. Once they had our information we were up and going before the end of the day. This is a program we will be using for a long time!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Julie Johnson</span>
+          							    <div>Technology Director</div>
+          							    <div>Cave City School District</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school32" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Things are going great! The students love the trainer and are making great progress every day.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Gayle Morris</span>
+          							    <div>Instructor/Aide</div>
+          							    <div>Klondike Independent School District</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school34" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy works as a great “Do Now” for every class period. Students have no confusion about what to do when they come in to class, which allows us to have a productive session.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Matthew Duncan</span>
+          							    <div>School Activities Coordinator/Teacher</div>
+          							    <div>Synergy Quantum Academy</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school35" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The students are loving the freedom that Typesy offers! They understand the concepts and work toward their goals like little adults. They look forward to typing class and enjoy the variety of ways to master their skill at the keyboard.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Naomi Josephson</span>
+          							    <div>Instructor</div>
+          							    <div>Bastrop Independent Christian Co-op</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school36" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is a wonderful program. The students have taken to it very well especially with the variety of different activities that they can go to. Works great!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Keith Burkett</span>
+          							    <div>Technology Director</div>
+          							    <div>Saint Margaret School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school37" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I am pleased with the program. It has been a great teaching tool in my classroom and has caused students to become more aware of the functions of the keyboard.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Adrian Rice</span>
+          							    <div>Computer Teacher</div>
+          							    <div>Mobile County Public Schools</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school39" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy has been a great addition in our classroom. The program enables teachers to individualize instruction and each student is able to progress at their own pace. The progress monitoring are reinforcing students and provide valuable data for staff.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Cheryl Kimberly</span>
+          							    <div>Instructor</div>
+          							    <div>The Glenholme School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school40" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy has served our class well and the students have enjoyed practicing word processing. Their skills have improved as a result of Typesy Program.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Micah Lewis</span>
+          							    <div>Teacher</div>
+          							    <div>Montessori de Terra Linda</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+          
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school41" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is an impressive classroom program. The program’s depth and versatility has the ability to reach students at all levels. Typesy is a great tool for any teacher wanting to improve their students’ typing skills.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Noah Schumacher</span>
+          							    <div>Technology Coordinator</div>
+          							    <div>NYC Department of Education</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school42" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“This program has been a great asset to our schools and students. It helps our students prepare for the assessments which are mandatory by our school district.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Adrian L. Rice</span>
+          							    <div>Computer Teacher</div>
+          							    <div>Orchard Elementary</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school43" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Everything about Typesy has been working great. I have been telling other departments and other companies of your great software platform. I hope to add more licenses in the near future.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Joshua Nevala</span>
+          							    <div>IT Manager</div>
+          							    <div>Immigrant & Refugee Community Organization</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school44" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We enjoy Typesy’s self-paced learning without the need for further instruction. It has the ability to track, report and provide encouragement for adult learners at a pace that suits them. A fabulous addition to our learning tools!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Training Team</span>
+          							    <div>Victoria State Government</div>
+          							    <div>Deparment of Health and Human Services</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school46" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Bought almost 300 licenses. We’ve been satisfied with TYPESY and look forward to using it again next year.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Kathleen Denaro</span>
+          							    <div>Chief of Operations and Academics</div>
+          							    <div>Rochester Career Mentoring Charter School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school47" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We were able to install “Typesy” on our server with no trouble at all. With out State Education Department moving to all computer based testing “Typesy” has become an invaluable tool for increasing all our students keyboarding skills.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Jack Hausman</span>
+          							    <div>ICT Consultant</div>
+          							    <div>St. Joseph University</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school48" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Our students have really enjoyed using Typesy. It was incredibly easy to set up and get operational. The technical support response time is phenomenal. I sent them out student names in excel file and they were imported the very same day.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Paula Habrial</span>
+          							    <div>Assistant Administrator</div>
+          							    <div>North River Christian Academy</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school49" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy has been used at our college for nearly 2 years for our Secretarial students. The students do really well in developing their touch typing techniques and speed. The support received from eReflect has been very quick. A great product and a great team.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Penny Lewis Cert Ed</span>
+          							    <div>Assistant Administrator</div>
+          							    <div>Principal, Mentor, Careers Adviser</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school50" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is an excellent typing software to improve your speed. It is easy to use and offers great tools for tracking your progress!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Daniela Sandoval</span>
+          							    <div>Training Assistant</div>
+          							    <div>Grace Institute</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+          
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school51" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Very pleased with the product…it’s exactly what we were after.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">James Kilburn</span>
+          							    <div>Educator</div>
+          							    <div>Dongara District High School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school52" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We used Typesy for the first time in the 2015-2016 school year. It is a great program because it provides flexibility for the students to work at their own pace. Students who already had good typing skills were able to increase speed and accuracy.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Heather Arietta</span>
+          							    <div>Faculty</div>
+          							    <div>Helper Middle School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school53" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I like Typesy and my students like the program also. I love the way the program gives the graph of progress and Group Report for each student.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Steve Clark</span>
+          							    <div>Teacher</div>
+          							    <div>Campbell County Public Schools</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school54" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We have several students using the program successfully!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Jason Winningham</span>
+          							    <div>Principal</div>
+          							    <div>Logos Public Charter School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school55" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I love Typesy because my students can come into the lab each week and very easily complete a lesson, and I can just as easily pull reports to track their progress. I also like that my students can use it at home or school. The students love it because they can pick up where they left off last class, it gives tutorials, and they love to play the games. ”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Kim Hunter</span>
+          							    <div>Technology Educator</div>
+          							    <div>Notre Dame De Lourdes</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school56" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The Typesy software is really very good. It helps us in learning typing from beginner level to expert level.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Shatabdi Mandal</span>
+          							    <div>Employee</div>
+          							    <div>MEDITAB</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school57" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“It goes without saying that this is probably one of the best pieces of software to improve your typing skills. The software is incredibly easy to use and navigate and the content is truly vast.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Educational App Store</span>
+          							    <div>Teacher Reviewer</div>
+          							    <div>educationalappstore.com</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school58" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is one of the BEST keyboarding program around! My students find it easy to use and navigate through. Because Typesy is web-based, students are thrilled to be able to access the program from anywhere. Thank you for your oustanding customer service and your extraordinary keyboarding program.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Nicole Hibner</span>
+          							    <div>Instructor</div>
+          							    <div>Tri-Community Adult Education</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school59" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I really like the fact that I have the choice between the classic curriculum and interactive curriculum. I prefer the interactive because it encourages my progress and it is fun. Very good course!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Marie Jennifer E. Petit Frere</span>
+          							    <div>Sr. Admin. Assistant</div>
+          							    <div>Compassion International</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school60" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Games are engaging and motivate students to type longer passages.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Natalie Kiser</span>
+          							    <div>Instructor</div>
+          							    <div>Fortuna Middle School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school61" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We have been using Typesy for about 6 weeks now and we could not be happier with the program. Our students enjoy the program and show great enthusiasm when they pass a course. It is a great tool for life skill building.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Adriana Ramirez</span>
+          							    <div>Teacher</div>
+          							    <div>Dades School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school62" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“It's a program every child should have access to. Well structured, engaging and tracked with instant feedback and progress updates. My students are developing essential keyboarding skills thanks to the program!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Jessica Lim</span>
+          							    <div>SERC/SERT</div>
+          							    <div>St. Elizabeth Seton School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school63" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“As a busy teacher the prompt support and response to the Typesy team is both welcome and appreciated. The program is very reliable, simple and straightforward to use. Our students love it so much that they have spread the word to other students..so much so that we have had to increase our licenses this year.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Julia Cook</span>
+          							    <div>Head of Learning Support</div>
+          							    <div>Ardingly College</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school64" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“So far we have been happy with the Typesy program and it is fitting our needs well.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Kathleen Wilkinson</span>
+          							    <div>Occupational Therapist</div>
+          							    <div>May Institute</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school65" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“My teachers and students are really enjoying Typesy! The program itself has been great and the teachers appreciate how easy it is to get progress on each student!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Kelly McGowan</span>
+          							    <div>Associate Head of School</div>
+          							    <div>Monarch Christian School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school66" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Our Instructor is very pleased with the Typesy software.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Karon Jackson</span>
+          							    <div>Administrative Assistant</div>
+          							    <div>Lamar State College</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school67" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“My keyboarding teachers are really enjoying the program with the students.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Adam Priestley</span>
+          							    <div>Secondary Principal</div>
+          							    <div>Mancos HS</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school68" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“It's working out alright, the students' typing skills are developing. I like the courses, the layout is easy for them to understand, a lot of them really enjoy the games.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Ms. Virginia Gillespie</span>
+          							    <div>Teacher</div>
+          							    <div>KEYS of Arizona Inc.</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school69" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“I’m just grateful that I’m getting such good feedback from the students -3rd grade and middle school – they are all communicating with me and say they love Typesy, compared to Mavis Beacon. Typesy is very intuitive for them.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Carolyn Rehbaum</span>
+          							    <div>Computer teacher</div>
+          							    <div>Trinity Christian School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school70" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“So far so good. My students really enjoy using Typesy.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Kim Ornelas</span>
+          							    <div>Lead Computer Applications Teacher</div>
+          							    <div>Chaffey Adult School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school71" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“It's going well and my teachers and students seem to like it!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Jamie Shaffer</span>
+          							    <div>Director of Learning</div>
+          							    <div>Cumberland School District</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school72" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy has helped our students become more familiar with the keyboard and typing and it has proved to help them be more efficient in sharing their ideas! The customer service is very friendly and quickly resolves any issues! We are adding the program to our grade 3-5 building as well!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Kyle Ackman</span>
+          							    <div>Principal</div>
+          							    <div>Rock Falls Middle School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school73" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Due to the user friendly nature of Typesy and the rapid progress the students experienced, motivation to use the product has remained high. We will continue to work with Typesy in order to deliver the positive outcomes we have experienced during the past academic year.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Chris Heslip</span>
+          							    <div>Educator</div>
+          							    <div>Swalcliffe Park School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school74" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“The students tend to enjoy the program and some of them use it quite often!”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Matt Robbins</span>
+          							    <div>School Teacher</div>
+          							    <div>Forest Bluff School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school75" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We enjoyed using the program. I think it went well. Hope to incorporate more time on the program next year.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Sammie Beene</span>
+          							    <div>District Technology Facilitator</div>
+          							    <div>Nemo Vista School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school76" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“It is going good. Typesy continues to get better! ”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Richard Sullenger</span>
+          							    <div>Educator</div>
+          							    <div>Templeton Unified School District</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school77" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“We love it. Our kids are much further along in typing than at any time in recent years. ”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Dennis Berger</span>
+          							    <div>Elementary Principal</div>
+          							    <div>Meadow ISD</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+			  <div class="w-slide" style="transform: translateX(0px); opacity: 1;">
+         		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school78" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“All is going really well at The Thomas Aveling School with the Typsey program. The boys are doing well some have progressed further but they all find the program very good and there is so much to do on the different levels. ”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Louise Tombs</span>
+          							    <div>Teaching Assistant</div>
+          							    <div>The Thomas Aveling School</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school79" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy is one of the best programs we’ve found for working with all of our different groups. Right now, homeless veterans, special needs adults, and underemployed or unemployed individuals are all using Typesy to increase their typing speeds and accuracy for employment, training, and education.”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Brenna Bernardin</span>
+          							    <div>Program Director</div>
+          							    <div>Fast Forward</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          		
+          		<div class="review-v2">
+          				<div class="review-v2-content">
+          				
+          						<div id="school80" class="schoolicon review-v2-avatar"></div>
+          						
+          						<div class="review-v2-text">“Typesy EDU remains a great product. I have been using it, along with my team, to increase my speed and accuracy. Looking forward to another great year of our subscription! ”</div>
+          						
+          						<div class="review-v2-author w-inline-block">
+          								<span class="reviewer">Sherri Fisher Hanna, ENP</span>
+          							    <div>Executive Director</div>
+          							    <div>Obion County Emergency Communications District</div>
+          						</div>
+          				</div>
+          				
+          				<img src="site-assets/images/quote-left-white.svg" alt="" class="review-v2-quote left">
+          				<img src="site-assets/images/quote-right-white.svg" alt="" class="review-v2-quote right">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-small">
+          				<img src="site-assets/images/circle-white.svg" alt="" class="reviiew-v2-circle-big">
+          				<div class="review-v2-dots"></div>
+          		</div>
+          </div>
+			  
+          </div><!-- end -->
+              
+          
+          
+          <div class="slider-arrow w-slider-arrow-left">
+          	<img src="site-assets/images/left-color.svg" alt="" class="slider-arrow-icon">
+          </div>
+          
+          <div class="slider-arrow right w-slider-arrow-right">
+          	<img src="site-assets/images/right-color.svg" alt="" class="slider-arrow-icon">
+          </div>
+          
+          <div class="testimonials-v2-nav w-slider-nav w-round">
+			  <div class="w-slider-dot w-active" data-wf-ignore=""></div>
+			  <div class="w-slider-dot" data-wf-ignore=""></div>
+			  <div class="w-slider-dot" data-wf-ignore=""></div>
+          </div>
+          
+          
+          </div>
+          
+          </div> 
+          
+	</div><!--end wrap-->           
+</body>
+
+  <script type="text/javascript" src="site-assets/mdl/material.min.js"></script>
+  <script src="site-assets/js/ninja-slider.js" type="text/javascript"></script>
+  <script type="text/javascript" src="site-assets/js/jquery.min.js"></script>
+  
+<script type="text/javascript" src="site-assets/js/indiego.js"></script>
+
+
+
+</html>
