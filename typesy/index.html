@@ -27,7 +27,15 @@ Click Here to Download Typesy 2020 Now
 Within 5 minu" />
 <meta property="fb:app_id" content="371445946338839" />
 <meta property="og:locale" content="en_US" />
-<link href="site-assets/css/styles-indiego.css" rel="stylesheet" type="text/css" />
+
+<style>
+  
+</style>
+<link rel="preload" href="site-assets/css/styles-indiego.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="site-assets/css/styles-indiego.css"></noscript>
+<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script> 
+<!-- CRITICAL CSS  -->
+<!-- <link href="site-assets/css/styles-indiego.css" rel="stylesheet" type="text/css" /> -->
 	
     
 <!-- optimize -->    
@@ -265,7 +273,7 @@ src="https://www.facebook.com/tr?id=585436065153430&ev=PageView
        
         </div><!-- end content insde-->
     </div><!-- end wrapper -->
-<div class="section-9 footer" style="background: #242223; padding: 0px;">
+    <div class="section-9 footer" style="background: #242223; padding: 0px;">
             <div class="wrapper footer-wrap">
              
                 <div class="container-12 w-container">
@@ -310,10 +318,11 @@ var google_remarketing_only = true;
 </body>
 	
 	
-	
-	<script src="site-assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="site-assets/js/webflow-indiego.js" type="text/javascript"></script>
-	<script type="text/javascript" src="site-assets/js/jquery-ui.min.js"></script>
+	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+	<script defer src="site-assets/js/jquery.min.js" type="text/javascript"></script>
+    <script defer src="site-assets/js/webflow-indiego.js" type="text/javascript"></script>
+	<script defer type="text/javascript" src="site-assets/js/jquery-ui.min.js"></script>
+  <script defer type="text/javascript" src="site-assets/js/index.js"></script>
     <!--script src="site-assets/js/2.1.1.jquery.min.js"></script--> 
 	<!--script src="site-assets/js/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -323,7 +332,7 @@ var google_remarketing_only = true;
             }
         });
     </script-->
-     
+<!--      
     <script type="text/javascript">// display EDU section and link only on specific countries (AU, US GB, IE ,CA, NZ ,PH)
         ! function(o, c) {
             var n = c.documentElement,
@@ -347,8 +356,8 @@ var google_remarketing_only = true;
             $('.benefits-section').addClass('adjustcol');
         }
     });
-    </script> 
-	<script>
+    </script>  -->
+<!-- 	<script>
 // lozad lazy loading
 // JavaScript Document
 
@@ -366,7 +375,7 @@ n=-1===n.indexOf("url(")?"url("+n+")":n,1===i.length?t.style.backgroundImage=n:t
 <script>
 const observer = lozad();
 observer.observe();	
-</script>
+</script> -->
 
 <script type="text/javascript">// Post Affiliate Pro tracker
 document.write(decodeURI("%3Cscript id='pap_x2s6df8d' src='" + (("https:" == document.location.protocol) ? "https://" : "http://") +  
@@ -380,10 +389,15 @@ PostAffTracker.disableTrackingMethod('F');
 PostAffTracker.track();
  
 } catch (err) { }
+
+function closethis() {
+    var el = document.getElementById("cookie-message");
+    el.style.display = 'none';
+}
 </script>
 	
 
-<script type="text/javascript"> // cookie message prompt
+<!-- <script type="text/javascript"> // cookie message prompt
 var ck = "https://www.typesy.com/";
 
 jQuery(document).ready(function(){    
@@ -713,6 +727,6 @@ function closethis() {
 }
 </script>
 
-	
+	 -->
 
 </html>
