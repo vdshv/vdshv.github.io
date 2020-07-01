@@ -10,12 +10,5 @@ document.addEventListener("DOMContentLoaded", function() {
 	  isTouchDevice = false;
 	 }
 
-	 document.querySelectorAll('.header__nav a').forEach((el) => {
-	 	el.addEventListener('mouseenter', (e) => {
-	 		el.classList.add('hovered');
-	 	});
-	 	el.addEventListener('mouseleave', (e) => {
-	 		el.classList.remove('hovered');
-	 	});
-	 })
+	 
 });
