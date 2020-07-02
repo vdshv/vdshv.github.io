@@ -61,7 +61,8 @@ textarea {
 
 html {
 	font-size: 26px;
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
+	// -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -1994,9 +1995,13 @@ section,header,footer {
 			justify-content: center;
 		}
 		&__info {
-			width: 180%;
-			transform: translateX(-50%);
-			left: 50%;
+			// width: 180%;
+			// transform: translateX(-50%);
+			// left: 50%;
+			width: 100%;
+			left: 0;
+			transform: none;
+			
 			position: relative;
 			max-width: none;
 			margin-top: -62px;

@@ -29,16 +29,22 @@ document.addEventListener("DOMContentLoaded", function() {
 		menu.classList.remove('active');
 	})
 
+	let scrollTo;
 	document.querySelectorAll('a[href*="#"]').forEach((el)=>{
 		el.addEventListener('click', (e)=>{
 			e.preventDefault();
 
 			if (window.outerWidth < 768) menu.classList.remove('active');
-			window.scrollTo({
-				top: document.querySelector(el.attributes.href.value).offsetTop
-			})
+			let scrollTo = document.querySelector(el.attributes.href.value).offsetTop;
+
+			animateScroll(scrollTo);
+			
 		})
 	})
+	
+	function animateScroll(scrollTo) {
+		document.querySelector('html').scrollTop = scrollTo;
+	}
 
 	
 	let parallax = document.querySelector('.parallax'),
@@ -122,7 +128,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				interval = 5000;
 			}
 		}
+
+
 	}
+	
 
 
 	function isInViewport(el) {
