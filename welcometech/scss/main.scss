@@ -2019,8 +2019,8 @@ section,header,footer {
 		&__phone {
 			width: 180%;
 			top: -16px;
-			transform: translateX(-50%);
-			left: 50%;
+			// transform: translateX(-50%);
+			// left: 50%;
 			&::before {
 				top: 9%;
 				left: 12%;
