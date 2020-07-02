@@ -18,7 +18,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	}, 5000)
 
+	let hamb = document.querySelector('.hamburger'),
+		menu = document.querySelector('.header__nav'),
+		close = document.querySelector('.header__nav .close');
 
+	hamb.addEventListener('click', (e)=>{
+		menu.classList.add('active');
+	})
+	close.addEventListener('click', (e)=>{
+		menu.classList.remove('active');
+	})
+
+	document.querySelectorAll('a[href*="#"]').forEach((el)=>{
+		el.addEventListener('click', (e)=>{
+			e.preventDefault();
+
+			if (window.outerWidth < 768) menu.classList.remove('active');
+			window.scrollTo({
+				top: document.querySelector(el.attributes.href.value).offsetTop
+			})
+		})
+	})
+
+	
 	let parallax = document.querySelector('.parallax'),
 		parallaxImg = document.querySelector('.parallax img'),
 		graphs = document.querySelector('.services__graphs'),
@@ -52,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			community.classList.add('active');
 		}
 
+
 		sliderNav.forEach((el) => { 
 			el.addEventListener('click', (e) => {				
 				sliderNav.forEach((el) => { 
@@ -84,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		raf = requestAnimationFrame(loop);
 	}
+	
 	loop();
 
 	function draw(timeFraction) {
