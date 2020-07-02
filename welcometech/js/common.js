@@ -11,7 +11,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
+	document.addEventListener('lazybeforeunveil', function(e){
+	    var bg = e.target.getAttribute('data-bg');
+	    if (window.outerWidth < 768) bg = e.target.getAttribute('data-mob-bg');
+	    if(bg){
+	        e.target.style.backgroundImage = 'url(' + bg + ')';
+	    }
+	});
+
 	let head_slides = document.querySelectorAll('.head__slider-item');
+	head_slides[0].classList.add('active');
 	setInterval(function() {
 		head_slides.forEach((el) => {
 			el.classList.toggle('active');
