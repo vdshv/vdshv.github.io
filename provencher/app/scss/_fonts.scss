@@ -24,13 +24,13 @@
 }
 @font-face { 
    font-family: 'Heebo';  
-   font-weight: 400;  
+   font-weight: 300;  
    font-style: normal;
    unicode-range: U+000-5FF;
-   src: local('Heebo-Regular'),       
-       url('../fonts/Heebo-Regular.woff2') format('woff2'),
-       url('../fonts/Heebo-Regular.woff') format('woff'),
-       url('../fonts/Heebo-Regular.ttf') format('ttf'),
-       url('../fonts/Heebo-Regular.eot') format('eot');
+   src: local('Heebo-Light'),       
+       url('../fonts/Heebo-Light.woff2') format('woff2'),
+       url('../fonts/Heebo-Light.woff') format('woff'),
+       url('../fonts/Heebo-Light.ttf') format('ttf'),
+       url('../fonts/Heebo-Light.eot') format('eot');
    font-display: swap;
 }

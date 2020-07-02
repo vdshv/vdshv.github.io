@@ -59,8 +59,7 @@ body {
 		}
 	}
 	&__nav {
-		span {
-			content: '';
+		> span {
 			width: 14px;
 			height: 2px;
 			background: $blue;
@@ -69,7 +68,7 @@ body {
 			bottom: 5px;
 			margin-left: 4px;
 		}
-		a {
+		> a {
 			font-size: 17px;
 			display: inline-flex;
 			align-items: flex-end;
@@ -210,7 +209,7 @@ body {
 				top: 7px;
 				width: 13px;
 				height: 12px;
-				background: url('../img/heart-b.svg') no-repeat center center/ contain;
+				background: url('./img/heart-b.svg') no-repeat center center/ contain;
 			}
 		}
 		.btn {
@@ -227,7 +226,7 @@ body {
 			position: absolute;
 			left: 3px;
 			bottom: -166px;
-			background: url('../img/gap.png') no-repeat center center/ contain;
+			background: url('./img/gap.png') no-repeat center center/ contain;
 		}
 	}
 	&__specialize {
@@ -385,6 +384,7 @@ body {
 		justify-content: space-between;
 		input, textarea, button {
 			-webkit-appearance: none;
+			background-color: transparent;
 			border: 2px solid $blue;
 			font-family: 'Playfair';
 			font-size: 25px;
