@@ -61,13 +61,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		graphs = document.querySelector('.services__graphs'),
 		graphsContent = document.querySelectorAll('.services__graph-content'),
 		slider = document.querySelector('.slider__wrap'),
+		sliderCont = document.querySelector('.slider'),
 		sliderNav = document.querySelectorAll('.slider__nav li'),
 		community = document.querySelector('.community'),
 		start = false,
 		sliderIndex = 1,
-		interval = 5000;
+		interval = 5000,
+		autoplay;
 	
-	
+	isTouchDevice ? autoplay = false : autoplay = true;
+
 	function loop() {
 		let winOffset = window.pageYOffset,
 			winHeight = window.innerHeight,
@@ -90,16 +93,39 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 
+		
+
+		if (!isTouchDevice && isInViewport(slider)) {
+			window.addEventListener('mousemove', checkIfSliderHovered);
+		} else {
+			window.removeEventListener('mousemove', checkIfSliderHovered);
+		}
+
+		function checkIfSliderHovered(e) {
+			let rect = sliderCont.getBoundingClientRect();
+
+			if(e.clientX >= rect.left &&
+				e.clientX <= rect.right &&
+				e.clientY >= rect.top &&
+				e.clientY <= rect.bottom) {
+
+				autoplay = false;
+				start = performance.now();
+				
+			} else {
+				autoplay = true;
+			}
+		}
+
 		sliderNav.forEach((el) => { 
 			el.addEventListener('click', (e) => {				
-				sliderNav.forEach((el) => { 
-					if (el.classList.contains('active')) el.classList.remove('active'); 
-				})
-				e.target.classList.add('active');
-				
 				sliderIndex = Array.from(sliderNav).indexOf(e.target);
+				if (!autoplay) autoplay = true;
 				start = performance.now();
 				interval = 1;
+
+				activateMenuItem();
+				
 			});
 		});
 
@@ -126,22 +152,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	loop();
 
 	function draw(timeFraction) {
-  		if (timeFraction >= 1) {
+  		if (timeFraction >= 1 && autoplay) {
   			slider.style.transform = 'translate3d(-' + sliderIndex * (100 / 3) + '%, 0, 0)';
-  			sliderNav.forEach((el) => { 
-  				if (el.classList.contains('active')) el.classList.remove('active'); 
-  			})
-  			sliderNav[sliderIndex].classList.add('active');
+  			
+  			activateMenuItem();
 
   			if (interval == 1) {
 				interval = 5000;
 			}
+			if (isTouchDevice) autoplay = false;
 		}
 
 
 	}
 	
-
+	function activateMenuItem(e){
+		sliderNav.forEach((el) => { 
+			if (el.classList.contains('active')) el.classList.remove('active'); 
+		})
+		sliderNav[sliderIndex].classList.add('active');
+	}
 
 	function isInViewport(el) {
 	  var rect = el.getBoundingClientRect();
