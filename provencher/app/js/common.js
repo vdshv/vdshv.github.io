@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
  				submenu.style.opacity = 1;
  				submenu.style.transform = 'scaleY(1)';
  				submenu.style.visibility = 'visible';
- 				submenu.style.height = el.nextElementSibling.scrollHeight + 'px';
+ 				submenu.style.height = el.nextElementSibling.scrollHeight + 50 +  'px';
  				if (el.parentElement.classList.contains('dropdown__wrapper-item')) {
  					el.parentElement.querySelector('.plus').classList.add('rotate');
  				}

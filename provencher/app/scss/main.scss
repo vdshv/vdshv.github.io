@@ -1,9 +1,69 @@
+@font-face { 
+   font-family: 'Playfair';  
+   font-weight: 400;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('PlayfairDisplay-Regular'),       
+       url('/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/PlayfairDisplay-Regular.woff') format('woff'),
+       url('/fonts/PlayfairDisplay-Regular.ttf') format('ttf'),
+       url('/fonts/PlayfairDisplay-Regular.eot') format('eot');
+   font-display: swap;
+}
+@font-face { 
+   font-family: 'Playfair';  
+   font-weight: 400;  
+   font-style: italic;
+   unicode-range: U+000-5FF;
+   src: local('PlayfairDisplay-Italic'),       
+       url('/fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+       url('/fonts/PlayfairDisplay-Italic.woff') format('woff'),
+       url('/fonts/PlayfairDisplay-Italic.ttf') format('ttf'),
+       url('/fonts/PlayfairDisplay-Italic.eot') format('eot');
+   font-display: swap;
+}
+@font-face { 
+   font-family: 'Heebo';  
+   font-weight: 400;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('Heebo-Regular'),       
+       url('/fonts/Heebo-Regular.woff2') format('woff2'),
+       url('/fonts/Heebo-Regular.woff') format('woff'),
+       url('/fonts/Heebo-Regular.ttf') format('ttf'),
+       url('/fonts/Heebo-Regular.eot') format('eot');
+   font-display: swap;
+}
+@font-face { 
+   font-family: 'Heebo';  
+   font-weight: 300;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('Heebo-Light'),       
+       url('/fonts/Heebo-Light.woff2') format('woff2'),
+       url('/fonts/Heebo-Light.woff') format('woff'),
+       url('/fonts/Heebo-Light.ttf') format('ttf'),
+       url('/fonts/Heebo-Light.eot') format('eot');
+   font-display: swap;
+}
+@font-face { 
+   font-family: 'Heebo';  
+   font-weight: 500;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('Heebo-Medium'),       
+       url('/fonts/Heebo-Medium.woff2') format('woff2'),
+       url('/fonts/Heebo-Medium.woff') format('woff'),
+       url('/fonts/Heebo-Medium.ttf') format('ttf'),
+       url('/fonts/Heebo-Medium.eot') format('eot');
+   font-display: swap;
+}
+
 $blue: #BADFD6;
 $pink: #F3C9BB;
 $text: rgba(51, 51, 51, 0.9);
 $title: #333;
 
-@import "fonts";
 
 * {
 	padding: 0;
@@ -209,7 +269,7 @@ body {
 				top: 7px;
 				width: 13px;
 				height: 12px;
-				background: url('./img/heart-b.svg') no-repeat center center/ contain;
+				background: url('../img/heart-b.svg') no-repeat center center/ contain;
 			}
 		}
 		.btn {
@@ -226,7 +286,7 @@ body {
 			position: absolute;
 			left: 3px;
 			bottom: -166px;
-			background: url('./img/gap.png') no-repeat center center/ contain;
+			background: url('../img/gap.png') no-repeat center center/ contain;
 		}
 	}
 	&__specialize {
@@ -287,18 +347,7 @@ body {
 		padding-left: 44px;
 		align-items: flex-start;
 		position: relative;
-		margin-bottom: 220px;
-		&::after {
-			content: '';
-			width: 2px;
-			height: 199px;
-			background: $pink;
-			display: block;
-			position: absolute;
-			bottom: -135px;
-			left: 50%;
-			z-index: 3;
-		}
+		
 		img {
 			position: relative;
 			z-index: 1;
@@ -349,6 +398,19 @@ body {
 		color: #333;
 		display: block;
 		text-align: center;
+		position: relative;
+		padding-top: 215px;
+		&::before {
+			content: '';
+			width: 2px;
+			height: 199px;
+			background: $pink;
+			display: block;
+			position: absolute;
+			top: -70px;
+			left: 50%;
+			z-index: 3;
+		}
 		span {
 			display: block;
 			font-size: 18px;
