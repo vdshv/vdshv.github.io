@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	
-	let parallax = document.querySelector('.parallax'),
-		parallaxImg = document.querySelector('.parallax img'),
+	let parallax = document.querySelectorAll('.parallax'),
+		parallaxY,
 		graphs = document.querySelector('.services__graphs'),
 		graphsContent = document.querySelectorAll('.services__graph-content'),
 		slider = document.querySelector('.slider__wrap'),
@@ -74,15 +74,24 @@ document.addEventListener("DOMContentLoaded", function() {
 	function loop() {
 		let winOffset = window.pageYOffset,
 			winHeight = window.innerHeight,
-			elOffset = parallax.offsetTop,
 			timeFraction;
 
 		if (!start) start = performance.now();
 
-		if(isInViewport(parallax)) {
-			parallaxY = (winOffset + winHeight - elOffset) / 10;
-			parallaxImg.style.transform = "translate3d(0," + parallaxY + "px,0)";
-		}
+		parallax.forEach((el)=>{
+			let img = el.querySelector('img')
+				elOffset = el.offsetTop;
+			if (isInViewport(el)) {
+				parallaxY = (winOffset + winHeight - elOffset) / 7;
+
+				img.style.transform = "translate3d(0," + parallaxY + "px,0)";
+			}
+		})
+		// if(isInViewport(parallax)) {
+		// 	parallaxY = (winOffset + winHeight - elOffset) / 7;
+		// 	parallaxImg.style.transform = "translate3d(0," + parallaxY + "px,0)";
+		// }
+
 		if (isInViewport(graphs)) {
 			graphsContent.forEach((el) => {
 				el.classList.add('active');
