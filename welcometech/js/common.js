@@ -64,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		sliderCont = document.querySelector('.slider'),
 		sliderNav = document.querySelectorAll('.slider__nav li'),
 		community = document.querySelector('.community'),
+		impact = document.querySelector('.impact'),
+		tech = document.querySelector('.tech'),
+		services = document.querySelector('.services'),
 		start = false,
 		sliderIndex = 1,
 		interval = 5000,
@@ -96,9 +99,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			graphsContent.forEach((el) => {
 				el.classList.add('active');
 			})
+		} else {
+			graphsContent.forEach((el) => {
+				el.classList.remove('active');
+			})
+		}
+		if(isInViewport(tech)) {
+			tech.classList.add('active');
+		}
+		if(isInViewport(services)) {
+			services.classList.add('active');
 		}
 		if(isInViewport(community)) {
 			community.classList.add('active');
+		}
+		if(isInViewport(impact)) {
+			impact.classList.add('active');
 		}
 
 
