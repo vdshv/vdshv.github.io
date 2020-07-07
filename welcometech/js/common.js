@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		sliderCont = document.querySelector('.slider'),
 		sliderNav = document.querySelectorAll('.slider__nav li'),
 		community = document.querySelector('.community'),
-		impact = document.querySelector('.impact'),
+		impact = document.querySelector('.impact__list'),
 		tech = document.querySelector('.tech'),
 		services = document.querySelector('.services'),
 		start = false,
