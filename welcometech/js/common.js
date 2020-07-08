@@ -97,9 +97,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			} else {
 				el.classList.remove('active');
 			}
-			
 		})
-		
+
+		if(winOffset + window.innerHeight/2 > impact.offsetTop) {
+			impact.classList.add('animated');
+		}
 		if(isInViewport(tech)) {
 			tech.classList.add('active');
 		}
