@@ -90,20 +90,16 @@ document.addEventListener("DOMContentLoaded", function() {
 				img.style.transform = "translate3d(0," + parallaxY + "px,0)";
 			}
 		})
-		// if(isInViewport(parallax)) {
-		// 	parallaxY = (winOffset + winHeight - elOffset) / 7;
-		// 	parallaxImg.style.transform = "translate3d(0," + parallaxY + "px,0)";
-		// }
 
-		if (isInViewport(graphs)) {
-			graphsContent.forEach((el) => {
+		graphsContent.forEach((el) => {
+			if (isInViewport(el)) {
 				el.classList.add('active');
-			})
-		} else {
-			graphsContent.forEach((el) => {
+			} else {
 				el.classList.remove('active');
-			})
-		}
+			}
+			
+		})
+		
 		if(isInViewport(tech)) {
 			tech.classList.add('active');
 		}
