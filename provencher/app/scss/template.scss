@@ -218,6 +218,58 @@ b {
 		}
 	}
 }
+
+.general-contact {
+	.general_container  {
+		max-width: 1360px;
+		&-img {
+			transform: none;
+			padding: 48% 0 0 ;
+			width: 56%;
+			background: url('../img/nadia.jpg') no-repeat center center/ contain;
+		}
+		&-content {
+			background-color:transparent;
+			img {
+				transform: translateX(-100px);
+				display: block;
+			}
+		}
+	}
+	.general_social {
+		right: -80px;
+		left: auto;
+		bottom: 250px;
+	}
+}
+.title {
+	margin: 100px 0px;
+	&-container {
+		max-width: 1045px;
+		display: block;
+		margin: 0 auto;
+		p {
+			position: relative;
+			font-family: Playfair;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 34px;
+			line-height: 115.8%;
+			color: rgba(51, 51, 51, 0.9);
+			margin-bottom: 10px;
+		}
+		p:last-child::after {
+			content: '';
+			display: block;
+			position: relative;
+			background: url('../img/simple-nadia.png') no-repeat center center/ contain;
+			width: 20%;
+			margin-top: 15px;
+			height: 41px;
+		}
+	}
+}
+
 .quiest {
 	.general_container {
 		max-width: 1120px;
@@ -509,6 +561,26 @@ b {
 		}
 		&-info:first-child {
 
+		}
+	}
+}
+.contact_modified {
+	padding-top: 0;
+	.contact__wrapper {
+		display: flex;
+		&-info:first-child {
+			width: 40%;
+		}
+		&-info:last-child {
+			width: 50%;
+			p {
+				font-family: Playfair;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 21px;
+				line-height: 140.8%;
+				color: rgba(51, 51, 51, 0.9);
+			}
 		}
 	}
 }
