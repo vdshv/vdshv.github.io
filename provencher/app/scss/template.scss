@@ -129,7 +129,7 @@ b {
 			padding: 50px 0px 0px 50px;
 			transform: translateY(100px);
 			h1 {
-				display: inline;
+				display: inline-block;
 				font-family: Playfair;
 				font-style: normal;
 				font-weight: normal;
@@ -142,8 +142,8 @@ b {
 				content: '';
 				display: block;
 				position: absolute;
-				width: 50px;
-				bottom: 15px;
+				width: 35px;
+				bottom: 0px;
 				right: -60px;
 				height: 2px;
 				background-color: #BADFD6;
@@ -434,6 +434,7 @@ b {
 				font-weight: normal;
 				font-size: 25px;
 				line-height: 119.3%;
+				position: relative;
 				color: rgba(51, 51, 51, 0.9);
 			}
 			.plus {
@@ -442,8 +443,9 @@ b {
 				height: 39px;
 				display: block;
 				position: absolute;
-				top: 12px;
-				right: 38px;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0;
 				transition: 1s;
 				&::after, &::before {
 					content: '';
@@ -464,7 +466,7 @@ b {
 					left: 50%;
 				}
 				&.rotate {
-					transform: rotate(450deg);
+					transform: rotate(450deg) translateX(-50%);
 					transition: 1s;
 					&::after {
 						opacity: 0;
@@ -518,6 +520,7 @@ b {
 				text-decoration: none;
 			}
 			span {
+				display: block;
 				font-style: normal;
 				font-weight: normal;
 				font-size: 15px;
@@ -584,11 +587,11 @@ b {
 		color: rgba(51, 51, 51, 0.9);
 	}
 	&__wrapper {
-		max-width: 1045px;
+		max-width: 1230px;
 		margin: 0 auto;
-		
+		padding-left: 40px;
+		padding-right: 40px;
 		h3 {
-			transform: translateX(-50px);
 			margin-bottom: 50px;
 			font-size: 50px;
 			line-height: 85.8%;
@@ -597,6 +600,7 @@ b {
 			font-weight: normal;
 		}
 		&-info {
+			padding-left: 50px;
 			margin-bottom: 50px;
 			h4 {
 				margin-bottom: 20px;
@@ -742,5 +746,290 @@ b {
 	}
 	.hamburger.active .hamburger_button {
 	    background-color: #fff;
-	}			
+	}		
+
+
+
+
+
+@media (min-width: 1600px) {
+	.general {
+		&_container {
+			&-img {
+				transform: translateX(20%);
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.header {
+		display: none;
+	}
+	body {
+		padding: 0px 60px;
+	}
+	.general {
+		&_container {
+			display: block;
+			&-img {
+				transform: none;
+				height: 435px;
+				width: 298px;
+			}
+			&-content {
+				margin-top: 0;
+				width: 100%;
+				padding: 30px 0px 0px 30px;
+				transform: translate3d(45px,-60px,0);
+				h1 {
+					font-size: 58px;
+				}
+				span {
+					display: none;
+				}
+				.italic {
+					display: block;
+					font-size: 18px;
+				}
+				ul {
+					li {
+						padding-left: 15px;
+						p {
+							font-size: 17px;
+						}
+					}
+				}
+			}
+		}
+		&_social {
+			display: none;
+		}
+	}
+	.dropdown {
+		margin-top: 50px;
+		&__wrapper {
+			&-item {
+
+			}
+			&-item:nth-child(2), &-item:nth-child(3) {
+				ul {
+					li {
+						text-indent: 20px;
+					}
+				}
+			}
+		}
+		.tarification {
+			span:last-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.images {
+		padding-top: 130px;
+	}
+
+	.services-quote {
+		.container {
+			.insurance__quote {
+				padding-top: 200px;
+				font-size: 63px;
+				line-height: 85.8%;
+				&::before {
+					top: -49px;
+					height: 199px;
+				}
+				span {
+					margin-top: 22px;
+				}
+			}
+		}
+	}
+	.contact {
+		padding-top: 50px;
+		&__wrapper {
+			h3 {
+				font-size: 37px;
+				transform: none;
+			}
+			&-info {
+				margin-bottom: 25px;
+			}
+			&-info:nth-child(3) {
+				h5 {
+					font-size: 23px;
+				}
+				p {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.general {
+		&_container {
+			display: block;
+			&-img {
+				height: 380px;
+				display: block;
+				width: 100%;
+				margin: 0 auto;
+				transform: none;
+			}
+			&-content {
+				padding: 15px 40px;
+				width: 90%;
+				margin: 0;
+				transform: none;
+				h1 {
+					font-size: 35px;
+					line-height: 85.8%;
+					transform: translateX(-10px);
+					display: inline-block;
+					&::after {
+					    bottom: -1px;
+					    height: 2px;
+					    width: 20px;
+					    right: -30px;
+					}
+				}
+				span {
+					display: none;
+				}
+				.italic {
+					display: block;
+					font-size: 16px;
+					line-height: 85.8%;
+					margin: 25px 0px;
+				}
+				ul {
+					li {
+						margin-left: 10px;
+						p {
+							font-size: 15px;
+							line-height: 124.3%;		
+							&::before {
+								top: 3px;
+							}
+						}
+					}
+				}
+			}
+		}
+		&_social {
+			display: none;
+		}
+	}
+
+	.header {
+		display: none;
+	}
+
+
+	.dropdown {
+		margin: 20px;
+		&__wrapper {
+			&-item {
+				padding: 20px 30px 20px 10px;
+				h3 {
+					font-size: 19px;
+					line-height: 119.3%;
+				}
+				.plus {
+					width: 27px;
+					height: 27px;
+					right: 0;
+				}
+				.menu_container {
+					padding-left: 20px;
+					ul {
+						li {
+							margin-bottom: 10px;
+						}
+						li:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+			&-item:nth-child(2) {
+				.drop-a {
+					padding-right: 20%;
+				}
+			}
+			&-item:nth-child(2), &-item:nth-child(3) {
+				ul {
+					li {
+						text-indent: 20px;
+					}
+				}
+			}
+			.tarification {
+				span:last-of-type {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+
+	.services-quote {
+		.container {
+			.insurance__quote {
+				font-size: 43px;
+				line-height: 85.8%;
+				padding-top: 110px;
+				&::before {
+					top: -49px;
+					height: 128px;
+				}
+				span {
+					margin-top: 22px;
+				}
+			}
+		}
+	}
+
+	.images {
+		margin-top: 50px;
+		padding-top: 80px;
+		img:first-child {
+			width: 75%;
+		}
+		img:nth-child(2) {
+			right: 40px;
+		}
+	}
+
+	.contact {
+		padding-top: 50px;
+		&__wrapper {
+			padding: 0px 40px;
+			h3 {
+				font-size: 31px;
+				transform: none;
+			}
+			&-info {
+				padding-left: 0;
+				margin-bottom: 25px;
+			}
+			&-info:nth-child(3) {
+				h5 {
+					font-size: 19px;
+				}
+				p {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
 
