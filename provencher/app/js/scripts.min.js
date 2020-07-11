@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
  			e.preventDefault();
 
  			let path = e.target.pathname,
- 				cleanPath = path.slice(1, path.length),
- 				submenu = menu.querySelector('a[href=' + cleanPath + ']');
+ 				// cleanPath = path.slice(1, path.length),
+ 				submenu = menu.querySelector('a[href="' + path + '"]');
  			console.log(path);
 
  			if (submenu) {
