@@ -1,0 +1,36 @@
+@font-face { 
+   font-family: 'Playfair';  
+   font-weight: 400;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('PlayfairDisplay-Regular'),       
+       url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-Regular.ttf') format('ttf'),
+       url('../fonts/PlayfairDisplay-Regular.eot') format('eot');
+   font-display: swap;
+}
+@font-face { 
+   font-family: 'Playfair';  
+   font-weight: 400;  
+   font-style: italic;
+   unicode-range: U+000-5FF;
+   src: local('PlayfairDisplay-Italic'),       
+       url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Italic.woff') format('woff'),
+       url('../fonts/PlayfairDisplay-Italic.ttf') format('ttf'),
+       url('../fonts/PlayfairDisplay-Italic.eot') format('eot');
+   font-display: swap;
+}
+@font-face { 
+   font-family: 'Heebo';  
+   font-weight: 400;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('Heebo-Regular'),       
+       url('../fonts/Heebo-Regular.woff2') format('woff2'),
+       url('../fonts/Heebo-Regular.woff') format('woff'),
+       url('../fonts/Heebo-Regular.ttf') format('ttf'),
+       url('../fonts/Heebo-Regular.eot') format('eot');
+   font-display: swap;
+}
