@@ -1046,13 +1046,23 @@ body {
 	margin: 150px auto 50px;
 	h2 {
 		font-family: Playfair;
-		display: block;
+		display: inline-block;
 		margin: 100px 0px 80px;
 		font-style: normal;
 		font-weight: normal;
 		font-size: 50px;
 		line-height: 85.8%;
 		color: #BADFD6;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 51px;
+			height: 2px;
+			bottom: 0;
+			right: -60px;
+			background: $blue;
+		}
 	}
 	p {
 		color: rgba(51, 51, 51, 0.9);
@@ -1473,7 +1483,7 @@ body {
 				transform: translate3d(10px, -35px, 0px);
 				padding: 40px 45px;
 				.mob-only {
-					display: block;
+					display: inline-block;
 					transform: translateX(-15px);
 					font-family: Playfair;
 					margin-bottom: 50px;
@@ -1482,6 +1492,16 @@ body {
 					font-size: 38px;
 					line-height: 85.8%;
 					color: #BADFD6;
+					position: relative;
+					&::after {
+						content: '';
+						position: absolute;
+						width: 51px;
+						height: 2px;
+						bottom: 0;
+						right: -60px;
+						background: $blue;
+					}
 				}
 				.contact__wrapper {
 					&-info {
@@ -1922,6 +1942,15 @@ body {
 		padding: 0px 37px;
 		h2 {
 			font-size: 32px;
+			display: inline;
+			&::after {
+				width: 21px;
+				bottom: 6px;
+				right: -30px;
+			}
+		}
+		p:first-of-type {
+			margin-top: 20px;
 		}
 		p {
 			font-size: 16px;
@@ -1967,6 +1996,10 @@ body {
 				.mob-only {
 					font-size: 32px;
 					transform: none;
+					&::after {
+						width: 21px;
+						right: -25px;
+					}
 				}
 				.contact__wrapper {
 					h5 {
@@ -1989,6 +2022,7 @@ body {
 		padding: 0 20px;
 		margin: 15px 0px;
 		&__wrapper {
+			margin-top: 25px;
 			&-item {
 				padding: 14px 17px 10px 10px;
 				h3 {
