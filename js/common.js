@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	  isTouchDevice = false;
 	 }
 
-	 
+	 document.body.classList.add('loaded');
+
    let	hamburger = document.querySelector('.header__hamb'),
  		menu = document.querySelector('.header__overlay'),
  		head_links = document.querySelectorAll('.header__nav a'),

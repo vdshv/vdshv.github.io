@@ -526,7 +526,7 @@ body {
 	}
 	p:nth-child(2) {
 		font-size: 20px;
-		a {
+		a:last-child {
 			font-size: 25px;
 			color: #76AB9E;
 			margin-left: 6px;
@@ -731,12 +731,13 @@ body {
 			width: 100%;
 			display: flex;
 			margin-top: 50px;
-			a {
+			a,span {
 				font-size: 12px;
 				position: relative;
 				margin-left: 8px;
+				color: #fff;
 			}
-			a:first-child {
+			span {
 				margin-left: 0;
 			}
 			a:last-child::after {
@@ -2092,7 +2093,7 @@ body {
 			}
 			&:nth-child(2) {
 				order: 1;
-				a {
+				a:last-child {
 					display: block;
 					margin-left: 0;
 					&::before {
@@ -2494,15 +2495,26 @@ body {
 		padding: 25px;
 		&__overlay {
 			.to-homepage {
-				font-size: 13px;
+				font-size: 22px;
 			}
 			a {
-				font-size: 28px;
+				font-size: 46px;
 			}
 			.menu_wrapper {
 				a {
-					font-size: 18px;
+					font-size: 22px;
+					line-height: 1.65;
 					padding-left: 14px;
+				}
+			}
+			.social_wrapper {
+				display: block;
+				margin-top: 20px;
+				a,span {
+					line-height: 1.6;
+					display: block;
+					margin: 0;
+					font-size: 22px;
 				}
 			}
 		}
@@ -2527,6 +2539,7 @@ body {
 		&__logo {
 			max-width: 230px;
 		}
+
 	}
 	.banner {
 		margin-top: 26px;
