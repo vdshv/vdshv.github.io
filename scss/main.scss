@@ -859,7 +859,7 @@ body {
 	}
 	&_social {
 		position: fixed;
-		left: -108px;
+		right: -108px;
 		bottom: 210px;
 		transform: rotate(-90deg);
 		a {
@@ -1004,7 +1004,7 @@ body {
 			content: '';
 			display: block;
 			position: relative;
-			background: url('../img/simple-nadia.png') no-repeat center center/ contain;
+			background: url('../img/simple-nadia.svg') no-repeat center center/ contain;
 			width: 20%;
 			margin-top: 15px;
 			height: 41px;
@@ -1662,6 +1662,7 @@ body {
 				width: 50%;
 				padding-right: 10px;
 				p {
+					max-width: 350px;
 					width: 110%;
 					font-size: 19px;
 					line-height: 140.8%;
@@ -2000,7 +2001,7 @@ body {
 			}
 		}
 		&_social {
-			display: none;
+			
 		}
 		&__img {
 			width: 46%;
@@ -2188,6 +2189,9 @@ body {
 			overflow: visible;
 			&-img {
 				width: 100%;
+				max-width: 350px;
+				margin: 0 auto;
+				display: block;
 			}
 			&-content {
 				margin-top: 10px;
@@ -2197,6 +2201,9 @@ body {
 				img {
 					transform: none;
 					width: 110%;
+					max-width: 350px;
+					margin: 0 auto;
+					display: block;
 				}
 			}
 		}
@@ -2239,6 +2246,26 @@ body {
 			&-item:first-child {
 				.drop-a {
 					padding-left: 20px;
+				}
+			}
+			&-item {
+				.imgs {
+					margin-top: 40px;
+					.img-cont {
+						padding-right: 0;
+					}
+					.container {
+						padding: 0px 10px;
+						font-size: 16px;
+						line-height: 100.8%;
+						> p {
+							padding-left:20px;
+							padding-right: 20px !important;
+							br {
+								display: none;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2418,9 +2445,12 @@ body {
 							margin-bottom: 0;
 						}
 					}
-					li, p {
+					li, p, a {
 						line-height:110%;
 						font-size: 16px;
+					}
+					a {
+						display: block;
 					}
 				}
 			}
@@ -2720,7 +2750,7 @@ body {
 		&__line {
 			text-decoration: underline;
 			&::before {
-				width: 26px;
+				content: none;
 			}
 		}
 		p {
