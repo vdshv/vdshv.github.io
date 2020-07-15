@@ -94,7 +94,10 @@
 
 <section class="general general-contact">
 	<div class="general_container">
-		<div class="general_container-img"></div>
+		<picture>
+		 <source srcset="/img/nadia.jpg" media="(min-width: 1366px)" class="general_container-img">
+		 <img src="/img/nadia_mobile.jpg" alt="MDN" class="general_container-img">
+		</picture>
 		<div class="general_container-content">
 			<img src="/img/contact_title.png" alt="">
 		</div>
@@ -119,13 +122,15 @@
 		<div class="contact__wrapper-info">
 			<p>120, boul. St-Luc, St-Jean-sur-Richelieu </p>
 			<p>Tel. : 450 350-0037 </p>	
-			<a href="#">info@nadiaprovencher.ca</a>
+			<a href="mailto:info@nadiaprovencher.ca">info@nadiaprovencher.ca</a>
+			<a href="#" class="button">itinéraire</a>
 		</div>
 		<div class="contact__wrapper-info">
-			<p>Demander une consultation en ligne (par Zoom) <br>  et rester dans le confort de votre maison et ce, partout <br> au Québec, c'est possible!</p>
+			<p>Demander une consultation en ligne <c>(par Zoom)</c> <br>  et rester dans le confort de votre maison et ce, partout <br> au Québec, c'est possible!</p>
 		</div>
 	</div>
 	<div class="container">
+		<h2>N’hésitez pas à communiquer avec moi</h2>
 		<form action="" class="contact__form">
 			<input type="text" name="last name" class="half" placeholder="prénom">
 			<input type="text" name="first name" class="half" placeholder="nom">
@@ -143,7 +148,7 @@
 			<span class="footer__line">Conception</span>
 		</p>
 		<p>
-			info@nadiaprovencher.ca<a href="tel:+4503500037">450 350-0037</a>
+			<a href="mailto:info@nadiaprovencher.ca" class="mail">info@nadiaprovencher.ca</a><a href="tel:+4503500037">450 350-0037</a>
 		</p>
 		<p class="special">Consultation en ligne disponible</p>
 	</div>
