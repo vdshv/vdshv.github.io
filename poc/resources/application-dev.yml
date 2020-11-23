@@ -1,8 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:sqlserver://wiserformsdev1.database.windows.net:1433;database=devdb
-    username: wiserforms
-    password: p6GJQduTb6Vg9tWD
-
-application:
-  url: http://localhost:8080  # once we have an actual Dev environment, will change this to that server name. 
