@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosehill Dental</title>
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/boostrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/main.css}">
+</head>
+
+<body>
+<!-- login -->
+<div class="login">
+    <div class="login-wrapper">
+        <div class="login-logo">
+            <img th:src="@{assets/images/logo.svg}" alt="Logo">
+        </div>
+        <h2>Login to your account</h2>
+        <form th:action="@{/login}" action="login" method='POST'>
+            <div class="input-block">
+                <img th:src="@{assets/images/attherate.svg}" alt="at">
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="input-block">
+                <img th:src="@{assets/images/lock.svg}" alt="lock">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div class="login-action-block">
+                <button type="submit" class="login-btn">login</button>
+            </div>
+            <div class="forgot-password-block">
+                <a th:href="@{/forgetPassword.html}" class="forgot-link">Forgot password?</a>
+            </div>
+            <div th:if="${message != null}" class="alert alert-info" th:text="${message}">message</div>
+            <div th:if="${param.error != null}" th:text="${session[SPRING_SECURITY_LAST_EXCEPTION]}">error</div>
+        </form>
+    </div>
+</div>
+
+</body>
+<script th:src="@{assets/js/jquery.min.js}"></script>
+<script th:src="@{assets/js/popper.min.js}"></script>
+<script th:src="@{assets/js/bootstrap.min.js}"></script>
+<script th:src="@{assets/js/main.js}"></script>
+
+</html>
+

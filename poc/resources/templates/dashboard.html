@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosehill Dental</title>
+  <!--   <link rel="stylesheet" type="text/css" th:href="@{assets/css/boostrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/main.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/datepicker.css}"> -->
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/boostrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/datepicker.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <div class="dashboard__header">
+        <div class="header_wrapper">
+            <div class="dashboard__logo">
+                <a href="#"><img th:src="@{assets/images/logo.svg}" alt="logo"></a>
+            </div>
+            <div class="dasboard__navigation">
+                <ul>
+                    <li><a href="#">Covid-19 Dashboasrd</a></li>
+                    <li class="Profile"><a href="#">Profile</a></li>
+                    <li class="send__form">
+                        <a href="#" data-toggle="modal" data-target="#sendform"><img th:src="@{assets/images/plus_icon.svg}" alt="plus icon"> Send Form</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!--./END header -->
+    <!-- Main -->
+    <main class="main__container">
+        <div class="body__wrapper">
+            <div id="dashboardAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong>
+                <div id="dashboardAlertContent">
+                    You should check in on some of those fields below.
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="title">
+                <h1>Today Summary</h1>
+            </div>
+            <div class="summary__cards">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card__item Scheduled">
+                            <div class="card__title">
+                                <img th:src="@{assets/images/Scheduled.svg}" alt="Scheduled">
+                                <h3>Scheduled</h3>
+                            </div>
+                            <div class="card__result">
+                                <span id="scheduledCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="card__item Pending">
+                            <div class="card__title">
+                                <img th:src="@{assets/images/Pending.svg}" alt="Pending">
+                                <h3>Pending</h3>
+                            </div>
+                            <div class="card__result">
+                                <span id="pendingCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card__item completed">
+                            <div class="card__title">
+                                <img th:src="@{assets/images/Completed.svg}" alt="Completed">
+                                <h3>Completed</h3>
+                            </div>
+                            <div class="card__result">
+                                <span id="completedCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card__item Positive__Screen">
+                            <div class="card__title">
+                                <img th:src="@{assets/images/Positive-screen.svg}" alt="Positive Screen">
+                                <h3>Positive Screen</h3>
+                            </div>
+                            <div class="card__result">
+                                <span id="positiveOutcomeCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- search bar -->
+            <div class="search__container">
+                <input type="text" placeholder="Search by name, email, or phone..." id="filteritems">
+                <button type="button" class="search__btn"><img th:src="@{assets/images/search.svg}" alt="search"></button>
+            </div>
+
+            <!-- Selection section -->
+            <div class="selection__section">
+                <div class="selection__item date">
+                    <h3>Date</h3>
+                    <div class="date-container">
+                        <div class="date_input_block">
+                            <input type="text" class="datepicker date " id="reservationDate">
+                            <img th:src="@{assets/images/calander.svg}" alt="calander">
+                        </div>
+                        -
+                        <div class="date_input_block">
+                            <input type="text" class="datepicker date " id="reservationDate">
+                            <img th:src="@{assets/images/calander.svg}" alt="calander">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="selection__item type">
+                    <h3>Type</h3>
+                    <a href="javascript:void(0)" class="selection ">All</a>
+                    <a href="javascript:void(0)" class="selection ">Staff</a>
+                    <a href="javascript:void(0)" class="selection ">Non Staff</a>
+                </div>
+
+                <div class="selection__item status">
+                    <h3>Status</h3>
+                    <a href="javascript:void(0)" class="selection ">All</a>
+                    <a href="javascript:void(0)" class="selection ">Scheduled</a>
+                    <a href="javascript:void(0)" class="selection ">Pending</a>
+                    <a href="javascript:void(0)" class="selection ">Completed</a>
+                    <a href="javascript:void(0)" class="selection ">Cancelled</a>
+                </div>
+                <div class="selection__item screen">
+                    <h3>Screen</h3>
+                    <a href="javascript:void(0)" class="selection ">All</a>
+                    <a href="javascript:void(0)" class="selection ">Negative</a>
+                    <a href="javascript:void(0)" class="selection ">Positive</a>
+                </div>
+
+                <div class="selection__item contact_trace">
+                    <h3>Contact Trace</h3>
+                    <div class="date-container">
+                        <div class="date_input_block">
+                            <input type="text" class="datepicker date " id="reservationDate" placeholder="MM-dd">
+                            <img th:src="@{assets/images/calander.svg}" alt="calander">
+                        </div>
+                        <input type="text" placeholder="name, email, or phone" id="filteritems2">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- table Data -->
+            <div class="data_table_section">
+                <table class="table" id="datatable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>APPT Time</th>
+                            <th>Contact</th>
+                            <th>Status</th>
+                            <th>Screen</th>
+                            <th>Temp</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Giacomo Guillizzoni</td>
+                            <td>Non-Staff</td>
+                            <td>Nov 6 2020</td>
+                            <td>8:00AM</td>
+                            <td>466-423-5344</td>
+                            <td class="complete">Completed</td>
+                            <td>Negative</td>
+                            <td class="temp"><span>36.7</span></td>
+                            <td>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="show-items" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span></span> <span></span> <span></span>
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="show-items">
+                                        <a class="dropdown-item" href="#"> Resend</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editsendform">View/Edit Covid Form</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#covidform">Edit Appointment</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="height-divider"></tr>
+                        <tr>
+                            <td>Marco Botton</td>
+                            <td>Staff</td>
+                            <td>Nov 6 2020</td>
+                            <td>9:15AM</td>
+                            <td>416-348-4568</td>
+                            <td class="pending">Pending</td>
+                            <td></td>
+                            <td class="temp"><span></span></td>
+                            <td>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="show-items" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span></span> <span></span> <span></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="show-items">
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editsendform">View/Edit Covid Form</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="height-divider"></tr>
+                        <tr>
+                            <td>Debbie Morgan</td>
+                            <td>Non-Staff</td>
+                            <td>Nov 6 2020</td>
+                            <td>10:00AM</td>
+                            <td>416-348-4568</td>
+                            <td class="pending">Pending</td>
+                            <td></td>
+                            <td class="temp"><span></span></td>
+                            <td>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="show-items" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="show-items">
+                                        <a class="dropdown-item" href="#">Resend</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="height-divider"></tr>
+                        <tr>
+                            <td>Bessie Cooper</td>
+                            <td>Staff</td>
+                            <td>Nov 6 2020</td>
+                            <td>11:00AM</td>
+                            <td>416-348-4568</td>
+                            <td class="pending">Pending</td>
+                            <td>Negative</td>
+                            <td class="temp"><span>36.6</span></td>
+                            <td>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="show-items" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span></span> <span></span> <span></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="show-items">
+                                        <a class="dropdown-item" href="#"> Resend</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editsendform">View/Edit Covid Form</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#covidform">Edit Appointment</a>
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="height-divider"></tr>
+                        <tr>
+                            <td>Marvin McKinney</td>
+                            <td>Non-Staff</td>
+                            <td>Nov 6 2020</td>
+                            <td>11:10AM</td>
+                            <td>416-348-4568</td>
+                            <td class="completed">Completed</td>
+                            <td>Negative</td>
+                            <td class="temp"><span>36.7</span></td>
+                            <td>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="show-items" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span></span> <span></span> <span></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="show-items">
+                                        <a class="dropdown-item" href="#"> Resend</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editsendform">View/Edit Covid Form</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#covidform">Edit Appointment</a>
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="height-divider"></tr>
+                        <tr>
+                            <td>Darlene Robertson</td>
+                            <td>Non-Staff</td>
+                            <td>Nov 6 2020</td>
+                            <td>11:30AM</td>
+                            <td>426-565-1638</td>
+                            <td class="cancelled">Cancelled</td>
+                            <td></td>
+                            <td class="temp"><span></span></td>
+                            <td>
+                                <div class="dropdown show">
+                                    <a class=" dropdown-toggle" href="#" role="button" id="show-items" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                        <span></span> <span></span> <span></span>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="show-items">
+                                        <a class="dropdown-item" href="#"> Resend</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editsendform">View/Edit Covid Form</a>
+                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#covidform">Edit Appointment</a>
+
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- Download section -->
+            <div class="download_block">
+                <div class="download__inner">
+                    <a href="#" class="download">Download</a>
+                    <a href="#" class="excel">Excel </a>
+                    <a href="#" class="pdf">PDF</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- Send form -->
+    <div class="modal fade" id="sendform" tabindex="-1" role="dialog" aria-labelledby="sendform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendform">Send Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close_black.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="search_existing_container">
+                        <!-- search bar -->
+                        <div class="search__container">
+                            <input type="text" placeholder="Search existing clients..." id="modalfilter">
+                            <button type="button" class="search__btn"><img src="assets/images/search.svg" alt="search"></button>
+                        </div>
+                        <!-- search-table -->
+                        <div class="related__results">
+                            <table class="table" id="modaltable">
+                                <thead>
+                                <tr>
+                                    <th> name</th>
+                                    <th>email</th>
+                                    <th>phone number</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Marco Botton</td>
+                                    <td>botton@gmail.com</td>
+                                    <td>(704) 555-0127</td>
+                                </tr>
+                                <tr>
+                                    <td>Annette Mack</td>
+                                    <td>anblack@example.com</td>
+                                    <td>(239) 555-0108</td>
+                                </tr>
+                                <tr>
+                                    <td>Marvin McKinney</td>
+                                    <td>marvin@example.com</td>
+                                    <td class="contact_icon">(406) 555-0120 <img src="assets/images/contact_icon.svg" alt="contact"></td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Watson</td>
+                                    <td>longnameforemail@exam</td>
+                                    <td class="contact_icon">(480) 555-0103<img src="assets/images/contact_icon.svg" alt="contact"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mansi Simmons</td>
+                                    <td>simmons@example.com</td>
+                                    <td>(603) 555-0123</td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <!-- add new client -->
+                    <div class="add_new_client">
+                        <a href="javascript:void(0)" onclick="closeSendForm();" data-toggle="modal" data-target="#sendform-nonstaff"><img src="assets/images/plus_green.svg" alt="plus">Add New Client</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Send Form - Non Staff -->
+    <div class="modal fade" id="sendform-nonstaff" tabindex="-1" role="dialog" aria-labelledby="sendform-nonstaff" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendform-nonstaff">Send Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close_black.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="send_form_container">
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+
+                        <div class="message_by">
+                            <span>Message by</span>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Email
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Text
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">In Person
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="staff_nonstaff">
+                            <div class="staff_nonstaff_inner">
+                                <div class="select-item">
+                                    <label class="radio-container"> Staff
+                                        <input type="radio" name="radiobox1" value="Staff" onclick="openStaffForm()">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="select-item">
+                                    <label class="radio-container"> Non Staff
+                                        <input type="radio" name="radiobox1" value="Non Staff" checked="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="appt_footer">
+                            <div class="time_date_block">
+                                <div class="app_input_block">
+                                    <label for="">Appt Date</label>
+                                    <input type="text" class="datepicker date " id="reservationDate" placeholder="17/11/2020">
+                                    <img src="assets/images/calander2.svg" alt="calander">
+                                </div>
+                                <div class="app_time_block">
+                                    <label for=""> Appt Time</label>
+                                    <div class="custom-selectbox">
+                                        <select name="options">
+                                            <option value="option-1">7:30 PM</option>
+                                            <option value="option-2">8:30 PM</option>
+                                            <option value="option-3">10:00 PM</option>
+                                            <option value="option-4">12:30 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="send_asst">
+                                <label for=""> Send Assessment</label>
+                                <div class="custom-selectbox">
+                                    <select name="options">
+                                        <option value="option-1">Show Now</option>
+                                        <option value="option-2">Show Now</option>
+                                        <option value="option-3">Show Now</option>
+                                        <option value="option-4">1Show Now</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal_btn_block">
+                            <a href="#" class="cancel close" data-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a href="#" class="schedule">Schedule</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Send Form - Staff -->
+    <div class="modal fade" id="sendform-staff" tabindex="-1" role="dialog" aria-labelledby="sendform-staff" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendform-staff">Send Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close_black.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="send_form_container">
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+
+                        <div class="message_by">
+                            <span>Message by</span>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Email
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Text
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">In Person
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="staff_nonstaff">
+                            <div class="staff_nonstaff_inner">
+                                <div class="select-item">
+                                    <label class="radio-container"> Staff
+                                        <input type="radio" name="radiobox1" value="Staff" checked="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="select-item">
+                                    <label class="radio-container"> Non Staff
+                                        <input type="radio" name="radiobox1" value="Non Staff" onclick="openNonStaffForm()" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="schedule_switch">
+                            <div class="switch_container">
+                                <span>  Schedule</span>
+                                <label class="switchbtn"><input type="checkbox" id="schedule_checkbox" onchange="scheduleStateChanged();"></label>
+
+                            </div>
+                        </div>
+                        <div class="schedule_actionblock">
+                            <div class="repeat_on">
+                                <span>Repeats On</span>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">s
+                                        <input type="checkbox" >
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">m
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">t
+                                        <input type="checkbox" >
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">w
+                                        <input type="checkbox" >
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">t
+                                        <input type="checkbox" >
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">f
+                                        <input type="checkbox" >
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                                <div class="checkbox_holder">
+                                    <label class="customcheckbox">s
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark1"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="start_date_block">
+                                <div class="date_input_block">
+                                    <label for="">Start  Date</label>
+                                    <input type="text" class="datepicker date " id="reservationDate" placeholder="6/11/2020">
+                                    <img src="assets/images/calander2.svg" alt="calander">
+                                </div>
+                                <div class="start_time_block">
+                                    <label for=""> Start  Time</label>
+                                    <div class="custom-selectbox">
+                                        <select name="options">
+                                            <option value="option-1">7:30 PM</option>
+                                            <option value="option-2">8:30 PM</option>
+                                            <option value="option-3">10:00 PM</option>
+                                            <option value="option-4">12:30 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="send_asst">
+                                <label for=""> Send Assessment</label>
+                                <div class="custom-selectbox">
+                                    <select name="options">
+                                        <option value="option-1">60min before Start Time</option>
+                                        <option value="option-2">Show Now</option>
+                                        <option value="option-3">Show Now</option>
+                                        <option value="option-4">1Show Now</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal_btn_block">
+                            <a href="#" class="cancel close" data-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a href="#" class="schedule">send now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification-->
+    <div class="modal fade" id="notification" tabindex="-1" role="dialog" aria-labelledby="notification" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="disable_notificaiton">
+                        <h3>Are you sure you want to disable the schedule</h3>
+                        <a href="#" onclick="submitNotification(false)" class="select_disable">Yes, disable the schedule</a>
+                        <a href="#" onclick="submitNotification(true)" class="keep_it">No, keep it</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edit Send Form -->
+    <div class="modal fade" id="editsendform" tabindex="-1" role="dialog" aria-labelledby="editsendform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editsendform">Edit Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close_black.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="send_form_container editsend_form">
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+
+                        <div class="message_by">
+                            <span>Message by</span>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Email
+                                    <input type="checkbox">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Text
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">In Person
+                                    <input type="checkbox">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="staff_nonstaff">
+                            <div class="staff_nonstaff_inner">
+                                <div class="select-item">
+                                    <label class="radio-container"> Staff
+                                        <input type="radio" name="radiobox1" value="Staff" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="select-item">
+                                    <label class="radio-container"> Non Staff
+                                        <input type="radio" name="radiobox1" value="Non Staff" checked="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="appt_footer">
+                            <div class="time_date_block">
+                                <div class="app_input_block">
+                                    <label for="">Appt Date</label>
+                                    <input type="text" class="datepicker date " id="reservationDate" placeholder="Nov 6, 2020">
+                                    <img src="assets/images/calander2.svg" alt="calander">
+                                </div>
+                                <div class="app_time_block">
+                                    <label for=""> Appt Time</label>
+                                    <div class="custom-selectbox">
+                                        <select name="options">
+                                            <option value="option-1">7:30 PM</option>
+                                            <option value="option-2">8:30 PM</option>
+                                            <option value="option-3">10:00 PM</option>
+                                            <option value="option-4">12:30 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="send_asst">
+                                <label for=""> Send Assessment</label>
+                                <div class="custom-selectbox">
+                                    <select name="options">
+                                        <option value="option-1">60min before Start Time</option>
+                                        <option value="option-2">30min before Start Time</option>
+                                        <option value="option-3">20min before Start Time</option>
+                                        <option value="option-4">10min before Start Time</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal_btn_block">
+                            <a href="#" class="cancel close" data-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a href="#" class="schedule" data-toggle="modal" data-target="#editsendform_update" data-dismiss="modal">Change the appointment</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Edit Send Form Update-->
+    <div class="modal fade" id="editsendform_update" tabindex="-1" role="dialog" aria-labelledby="editsendform_update" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editsendform_update">Edit Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close_black.svg" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body editsendform_update">
+                    <div class="send_form_container editsend_form">
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="send_form_input_block">
+                            <input type="text" placeholder="">
+                        </div>
+
+                        <div class="message_by">
+                            <span>Message by</span>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Email
+                                    <input type="checkbox">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">Text
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                            <div class="checkbox_holder">
+                                <label class="customcheckbox">In Person
+                                    <input type="checkbox">
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="staff_nonstaff">
+                            <div class="staff_nonstaff_inner">
+                                <div class="select-item">
+                                    <label class="radio-container"> Staff
+                                        <input type="radio" name="radiobox1" value="Staff" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="select-item">
+                                    <label class="radio-container"> Non Staff
+                                        <input type="radio" name="radiobox1" value="Non Staff" checked="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="appt_footer">
+                            <div class="time_date_block">
+                                <div class="app_input_block">
+                                    <label for="">Appt Date</label>
+                                    <input type="text" class="datepicker date " id="reservationDate" placeholder="Nov 6, 2020">
+                                    <img src="assets/images/calander.svg" alt="calander">
+                                </div>
+                                <div class="app_time_block">
+                                    <label for=""> Appt Time</label>
+                                    <div class="custom-selectbox">
+                                        <select name="options">
+                                            <option value="option-1">7:30 PM</option>
+                                            <option value="option-2">8:30 PM</option>
+                                            <option value="option-3">10:00 PM</option>
+                                            <option value="option-4">12:30 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="send_asst">
+                                <label for=""> Send Assessment</label>
+                                <div class="custom-selectbox">
+                                    <select name="options">
+                                        <option value="option-1">60min before Start Time</option>
+                                        <option value="option-2">30min before Start Time</option>
+                                        <option value="option-3">20min before Start Time</option>
+                                        <option value="option-4">10min before Start Time</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal_btn_block">
+                            <a href="#" class="cancel" data-toggle="modal" data-target="#cancel_app" data-dismiss="modal">Cancel appointment</a>
+                            <a href="#" class="schedule" data-toggle="modal" data-target="#update_app" data-dismiss="modal">Update appointment</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update Appointment confirmation -->
+    <div class="modal fade" id="update_app" tabindex="-1" role="dialog" aria-labelledby="update_app" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="data_app_update_notifi">
+                        <h3>Are you sure you want to update the appoitnment</h3>
+                        <a href="#" class="action_btn close" data-dismiss="modal" aria-label="Close">Update Appointment</a>
+                        <a href="#" class="action_btn_secondry" data-toggle="modal" data-target="#editsendform_update" data-dismiss="modal">No, continue edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Appointment cancel confirmation -->
+    <div class="modal fade" id="cancel_app" tabindex="-1" role="dialog" aria-labelledby="cancel_app" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="data_app_update_notifi">
+                        <h3>Are you sure you want to cancel the appointment</h3>
+                        <a href="#" class="action_btn close" data-dismiss="modal" aria-label="Close">Cancel appointment</a>
+                        <a href="#" class="action_btn_secondry" data-toggle="modal" data-target="#editsendform_update" data-dismiss="modal">No, continue edit</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Covid Form -->
+    <div class="modal fade " id="covidform" tabindex="-1" role="dialog" aria-labelledby="covidform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sendform-nonstaff">View Form </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img th:src="@{assets/images/close_black.svg}" alt="close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="view_form">
+                                <div class="input_block">
+                                    <input type="text" name="" placeholder="">
+                                </div>
+                                <div class="input_block">
+                                    <input type="text" name="" placeholder="">
+                                </div>
+                                <div class="input_block">
+                                    <input type="text" name="" placeholder="">
+                                </div>
+                                <div class="input_block">
+                                    <input type="text" name="" placeholder="">
+                                </div>
+                                <div class="staff_nonstaff">
+                                    <div class="staff_nonstaff_inner">
+                                        <div class="select-item">
+                                            <label class="radio-container"> Staff
+                                                <input type="radio" name="radiobox1" value="Staff" checked="">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="select-item">
+                                            <label class="radio-container"> Non Staff
+                                                <input type="radio" name="radiobox1" value="Non Staff">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Health Screener_col">
+                                    <h3>Health Screener <span class="status pending">Pending</span></h3>
+                                    <p>Completed Date: </p>
+                                    <p> Completed Time:</p>
+                                    <p> Completed By:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <iframe th:src="@{/view-from-iframe.html}" height="950px" width="100%" title="Covid form" style="border: 0px;"></iframe>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script th:src="@{assets/js/jquery.min.js}"></script>
+<script th:src="@{assets/js/popper.min.js}"></script>
+<script th:src="@{assets/js/bootstrap.min.js}"></script>
+<script th:src="@{assets/js/datepicker.js}"></script>
+<script th:src="@{assets/js/main.js}"></script>
+<script>
+    function closeSendForm() {
+        $('#sendform').modal('toggle');
+    }
+
+    function openStaffForm() {
+        $('#sendform-nonstaff').modal('toggle');
+        $('#sendform-staff').modal('toggle');
+    }
+
+    function openNonStaffForm() {
+        $('#sendform-staff').modal('toggle');
+        $('#sendform-nonstaff').modal('toggle');
+    }
+
+    function submitNotification(schedule) {
+        $('#sendform-staff').modal('toggle');
+        $('#notification').modal('toggle');
+    }
+
+    function scheduleStateChanged() {
+        if ($('#schedule_checkbox').prop('checked') == false) {
+            $('#sendform-staff').modal('toggle');
+            $('#notification').modal('toggle');
+        }
+    }
+</script>
+</html>

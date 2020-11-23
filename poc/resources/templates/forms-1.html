@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosehill Dental</title>
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/boostrap.min.css" th:href="@{/assets/css/boostrap.min.css}">
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/main.css" th:href="@{/assets/css/main.css}">
+
+</head>
+
+<body>
+ 	<input type="hidden" id="uuid" name="uuid" value="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa" th:value="${uuid}">
+ 	
+    <!-- Get Started -->
+    <div class="getstarted">
+        <!-- header -->
+        <header class="header">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="#"><img th:src="@{/assets/images/logo.svg}" alt="Logo"></a>
+                </div>
+            </div>
+        </header>
+        <!-- ./END  -->
+        <div class="getstarted-col">
+            <img th:src="@{/assets/images/logo.svg}" alt="Logo">
+            <h3>Covid-19 Health Screen</h3>
+            <div class="user-data">
+                <div class="user-name">
+                    <p th:text="${respondent.firstName + ' ' + respondent.lastName}">Marco Botton</p>
+                </div>
+                <div class="date-timing">
+                    <span class="date" th:text="${appointmentDate}">Oct 9, 2020</span>
+                    <span class="time" th:text="${appointmentTime}">11:30 AM</span>
+                </div>
+            </div>
+            <div class="info">
+                <p>Recommendations provided do not constitude as medical advice and should not be used to diagnose or treat medical conditions</p>
+            </div>
+            <div class="btn-block">
+                <a href="javascript:void(0);" class="custom-btn getStart">Get Started</a>
+            </div>
+            <div class="footer">
+                <p>The protection of your personal data is a high priority. Your information will not be disclosed to third parties without your express consent</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form steps -->
+    <div class="form-container firstStep display-none">
+        <!-- header -->
+        <header class="header">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="#"><img th:src="@{/assets/images/logo.svg}" alt="Logo"></a>
+                </div>
+            </div>
+        </header>
+        <!-- ./END  -->
+        <div class="form-data-wrapper">
+            <!-- step one -->
+            <div class="form-data-inner stepOneInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 20%;"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <p>Question<span>1</span>/5</p>
+                    </div>
+                </div>
+                <div class="selection-col">
+                    <h3>Have you returned from travel outside of Canada in the past 14 days?</h3>
+
+                    
+                    <div class="action-block">
+                        <a href="javascript:void(0);" onclick="setAnswer(1, 'YES')" class="secondry-btn yesButton" step="one">Yes</a>
+                        <a href="javascript:void(0);" onclick="setAnswer(1, 'NO')" class="secondry-btn noButton" step="one">No</a>
+                    </div>
+                    <div class="next-btn-mobile stepOneNextBackSec display-none">
+                        <a href="javascript:void(0);" class="next-btn nextStepOne">Next</a>
+                    </div>
+                </div>
+
+                <div class="nex-back-actionblock stepOneNextBackSec display-none">
+                    <button class="next-btn nextStepOne">Next</button>
+                    <a href="javascript:void(0);" class="back-btn backGetstart">Back</a>
+                </div>
+            </div>
+            <!-- step two -->
+            <div class="form-data-inner stepTwoInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 30%;"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <p>Question <span>2</span>/5</p>
+                    </div>
+                </div>
+                <div class="selection-col">
+                    <h3>Have you tested positive for COVID-19? </h3>
+
+                    <div class="action-block">
+                        <a href="javascript:void(0);" onclick="setAnswer(2, 'YES')"  class="secondry-btn yesButton" step="two">Yes</a>
+                        <a href="javascript:void(0);" onclick="setAnswer(2, 'NO')"  class="secondry-btn noButton" step="two">No</a>
+                    </div>
+                    <div class="next-btn-mobile stepTwoNextBackSec display-none">
+                        <a href="javascript:void(0);" class="next-btn nextStepTwo">Next</a>
+                    </div>
+                </div>
+
+                <div class="nex-back-actionblock stepTwoNextBackSec display-none">
+                    <a href="javascript:void(0);" class="next-btn nextStepTwo">Next</a>
+                    <a href="javascript:void(0);" class="back-btn backStepTwoButton">Back</a>
+                </div>
+            </div>
+            <!-- step three -->
+            <div class="form-data-inner stepThreeInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 50%;"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <p>Question <span>3</span>/5</p>
+                    </div>
+                </div>
+                <div class="selection-col">
+                    <h3>Have you had close contact with a confirmed case of COVID-19 without wearingappropriate Personal Protective Equipment (PPE)? </h3>
+
+                    <div class="action-block">
+                        <a href="javascript:void(0);" onclick="setAnswer(3, 'YES')"  class="secondry-btn yesButton" step="three">Yes</a>
+                        <a href="javascript:void(0);" onclick="setAnswer(3, 'NO')"  class="secondry-btn noButton" step="three">No</a>
+                    </div>
+                    <div class="next-btn-mobile stepThreeNextBackSec  display-none">
+                        <a href="javascript:void(0);" class="next-btn nextStepThree">Next</a>
+                    </div>
+                </div>
+
+                <div class="nex-back-actionblock stepThreeNextBackSec  display-none">
+                    <a href="javascript:void(0);" class="next-btn nextStepThree">Next</a>
+                    <a href="javascript:void(0);" class="back-btn backStepThreeButton">Back</a>
+                </div>
+            </div>
+            <!-- step four -->
+            <div class="form-data-inner stepFourInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 70%;"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <p>Question <span>4</span>/5</p>
+                    </div>
+                </div>
+                <div class="selection-col symp-col">
+                    <h3>Do you have any of the following symptoms? </h3>
+                    <div class="symptoms-select-col">
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Fever</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Worsening chronic cough</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Pink eye (conjunctivitis)</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Chills</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Runny nose</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">New onset of cough</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Decrease or loss of sense of taste or smell</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Nausea/vomiting, diarrhea, abdominal pain</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Difficulty breathing</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Headaches</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Shortness of breath</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Difficulty swallowing</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Nasal congestion without other known cause</a>
+                        <a href="javascript:void(0)" class="selection-btn yesButton" step="four">Unexplained fatigue/malaise/muscle aches(myalgias)</a>
+                    </div>
+
+                    <div class="action-block">
+                        <a href="javascript:void(0);" onclick="setAnswer(4, 'NO')" class="secondry-btn noButton noButtonFour" step="four"> No</a>
+                    </div>
+                    <div class="next-btn-mobile stepFourNextBackSec display-none">
+                        <a href="javascript:void(0);" class="next-btn nextStepFour">Next</a>
+                    </div>
+                </div>
+
+
+                <div class="nex-back-actionblock stepFourNextBackSec display-none">
+                    <a href="javascript:void(0);" onclick="setAnswer(4, 'YES')" class="next-btn nextStepFour">Next</a>
+                    <a href="javascript:void(0);" class="back-btn backStepFourButton">Back</a>
+                </div>
+            </div>
+            <!-- step five -->
+            <div class="form-data-inner stepFiveInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 100%;"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <p>Question <span>5</span>/5</p>
+                    </div>
+                </div>
+                <div class="selection-col">
+                    <h3>If the person is 70 years of age or older, are they experiencing any of the following symptoms: delirium, unexplained or increased number of falls, acute functional decline, or worsening of chronicconditions? </h3>
+
+                    <div class="action-block">
+                        <a href="javascript:void(0);" onclick="setAnswer(5, 'YES')"  class="secondry-btn yesButton" step="five">Yes</a>
+                        <a href="javascript:void(0);" onclick="setAnswer(5, 'NO')" class="secondry-btn noButton" step="five">No</a>
+                    </div>
+                    <div class="next-btn-mobile  stepFiveNextBackSec display-none">
+                        <a href="javascript:void(0)" class="next-btn nextStepFive">Next</a>
+                    </div>
+                </div>
+
+                <div class="nex-back-actionblock  stepFiveNextBackSec display-none">
+                    <a href="javascript:void(0)" class="next-btn nextStepFive">Next</a>
+                    <a href="javascript:void(0)" class="back-btn backStepFiveButton">Back</a>
+                </div>
+            </div>
+            <!-- setp six -->
+            <div class="form-data-inner stepSixInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 100%;"></div>
+                    </div>
+                    <div class="progress-steps almost-done">
+                        <p>Almost done!</p>
+                    </div>
+                </div>
+                <div class="selection-col">
+                    <div class="verify-result-heading">
+                        <h3>Covid Screen <span class="negative">Negative</span> <span class="name" th:text="${respondent.firstName + ' ' + respondent.lastName}">Marco Botton</span> </h3>
+                        <p>I verify the information I have provided on this form is truthful and accurate</p>
+                        <div class="verify-btn">
+                            <a href="javascript:void(0);" class="custom-btn nextStepSix">Verify</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nex-back-actionblock verify-back">
+                    <a href="javascript:void(0);" class="back-btn backStepSixButton">Back</a>
+                </div>
+            </div>
+            <!-- step seven -->
+            <div class="form-data-inner stepSevenInner">
+                <div class="progress-bar-main">
+                    <div class="progress-bar-bg">
+                        <div class="progress-size" style="width: 100%;"></div>
+                    </div>
+                    <div class="progress-steps almost-done">
+                        <p>Almost done!</p>
+                    </div>
+                </div>
+                <div class="selection-col">
+                    <div class="verify-result-heading">
+                        <h3>Covid Screen <span class="negative">Negative</span> <span class="name" th:text="${respondent.firstName + ' ' + respondent.lastName}">Marco Botton</span> </h3>
+                        <p>I verify the information I have provided on this form is truthful and accurate</p>
+                        <div class="verify-form-col">
+                            <div class="input-block">
+                                <label for="">Name</label>
+                                <input type="text" name="" placeholder="" value="Marco Botton" th:value="${respondent.firstName + ' ' + respondent.lastName}">
+                            </div>
+                            <div class="input-block">
+                                <label for="">Date</label>
+                                <input type="text" name="" placeholder="" value="Nov 22, 2020" th:value="${dateNow}">
+                            </div>
+                            <div class="input-block">
+                                <label for="">Time</label>
+                                <input type="text" name="" placeholder="" value="11:30am" th:value="${timeNow}">
+                            </div>
+                        </div>
+
+                        <div class="verify-btn  mt-0">
+                            <a href="javascript:void(0);" class="custom-btn nextStepSeven" onclick="sendData()">Submit</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="nex-back-actionblock verify-back">
+                    <a href="javascript:void(0);" class="back-btn backStepSevenButton">Back</a>
+                </div>
+            </div>
+            <!-- step eight -->
+            <div class="form-data-inner stepEightInner">
+
+                <div class="selection-col">
+                    <div class="app-message-col">
+                        <img th:src="@{/assets/images/logo.svg}" alt="logo">
+                        <p class="app-text">Thank you <span th:text="${respondent.firstName + ' ' + respondent.lastName}">Marco Botton</span> for completing the health check prior to your appointment.</p>
+
+                        <div class="app-date_time">
+                            <p class="app-date">Appt Date <span th:text="${appointmentDate}">Nov 6</span></p>
+                            <p class="app-time"> Appt Time <span th:text="${appointmentTime}">10:30 AM</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nex-back-actionblock verify-back">
+                    <a href="javascript:void(0);" class="back-btn backStepEightButton">Back</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="../static/assets/js/jquery.min.js" th:src="@{/assets/js/jquery.min.js}"></script>
+<script src="../static//assets/js/popper.min.js" th:src="@{/assets/js/popper.min.js}"></script>
+<script src="../static//assets/js/bootstrap.min.js" th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script src="../static//assets/js/main.js" th:src="@{/assets/js/main.js}"></script>
+
+<script th:inline="javascript">
+
+ let formSubmissionAnswersDTO = {
+        data: {
+        "additionalProp1": "UNDEFINED",
+        "additionalProp2": "UNDEFINED",
+        "additionalProp3": "UNDEFINED",
+        "additionalProp4": "UNDEFINED",
+        "additionalProp5": "UNDEFINED",
+    },
+     "outcome": "UNDEFINED"
+};
+
+ let additionalProp4 = [];
+
+ function setAnswer(questionNum, val){
+  switch (questionNum) {
+  case 1: formSubmissionAnswersDTO.data.additionalProp1 = val;break;
+  case 2: formSubmissionAnswersDTO.data.additionalProp2 = val;break;
+  case 3: formSubmissionAnswersDTO.data.additionalProp3 = val;break;
+  case 4: if (val === "NO")  {formSubmissionAnswersDTO.data.additionalProp4 = "NO"}
+          else {
+            let elems = $(".symptoms-select-col").children();
+            let length = $(".symptoms-select-col").children().length;
+             
+            for (let i=0; i<length; i++)
+              {
+                  if (elems[i].className.includes('active')) {
+                    additionalProp4.push(elems[i].innerText);
+                    // console.log('active elem ', i, ' ', elems[i].innerText);
+                }
+              }
+
+              if (additionalProp4.length>1) {
+                formSubmissionAnswersDTO.data.additionalProp4 =  additionalProp4.join(' | ') ;
+                }
+              else if (additionalProp4.length ==1 ) {
+                  formSubmissionAnswersDTO.data.additionalProp4 = additionalProp4[0];
+                  //console.log(formSubmissionAnswersDTO.data.additionalProp4);
+                  };
+            }
+
+  break;
+  case 5: formSubmissionAnswersDTO.data.additionalProp5 = val;break;
+  default: break;
+}
+ }
+ 
+function sendData(){
+    formSubmissionAnswersDTO.outcome = "POSITIVE";
+       if (formSubmissionAnswersDTO.data.additionalProp1=="NO" &&
+       formSubmissionAnswersDTO.data.additionalProp2=="NO" &&
+       formSubmissionAnswersDTO.data.additionalProp3=="NO" &&
+       formSubmissionAnswersDTO.data.additionalProp4=="NO" &&
+       formSubmissionAnswersDTO.data.additionalProp5=="NO" )  
+       formSubmissionAnswersDTO.outcome = "NEGATIVE";
+       console.log(formSubmissionAnswersDTO);
+       const uuid = 'uuid';
+
+
+       $.ajax({
+             url: `/form-submission/${uuid}/answers`,  
+             method: "POST",             
+             data:  formSubmissionAnswersDTO,      
+             dataType: "json",          
+             success: function (data) {
+             alert('Data was sent', data);
+                 },
+  
+             error: function() { alert("Error!"); },
+             complete: function() { alert("Execution Completed!"); }
+             }); 
+
+    }
+
+</script>
+</html>
+
+ 
