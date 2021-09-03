@@ -238,6 +238,9 @@ section {
 			margin-left: 18px;
 		}
 	}
+	&__mob-img {
+		display: none;
+	}
 }
 .image-text {
 	align-items: center;
@@ -401,6 +404,7 @@ section {
 			fill: #000;
 		}
 		& + .answer {
+			visibility: visible;
 			opacity: 1;
 			transform: scaleY(1);
 			padding-top: 25px;
@@ -419,7 +423,8 @@ section {
 }
 .answer {
 	height: 0;
-	opacity: 0;;
+	opacity: 0;
+	visibility: hidden;
 	transform: scaleY(.6);
 	transform-origin: center top;
 	font-size: 17px;
@@ -440,6 +445,7 @@ section {
 		border: 1px solid rgba(0,0,0,.1);
 		border-top: 0;
 		font-weight: 700;
+		flex-wrap: nowrap;
 	}
 }
 .badges {
@@ -651,6 +657,8 @@ a.link-arr {
 	background: #F5F5F5;
 	&__logo {
 		max-width: 173px;
+		position: relative;
+		top: -3px;
 	}
 	h6 {
 		font-size: 22px;

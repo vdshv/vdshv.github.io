@@ -1,0 +1,417 @@
+@media (max-width: 1365px) {
+	.head {
+		&__img.half {
+		    display: flex;
+		    align-items: center;
+		}
+	}
+	.badges {
+		flex-flow: row wrap;
+		li {
+			width: 25%;
+			max-width: none;
+			margin-bottom: 30px;
+		}
+		span {
+			max-width: 130px;
+			margin: 14px auto 0;
+		}
+	}
+	.diff {
+		h5 {
+			font-size: 28px;
+			padding-right: 30px;
+		}
+		li {
+			padding: 60px 60px 60px 30px;
+		}
+	}
+}
+@media (max-width: 1023px) {
+	body {
+		font-size: 15px;
+	}
+	h1 {
+		font-size: 61px;
+	}
+	h2,h3 {
+		font-size: 30px;
+	}
+	.head {
+		span {
+			font-size: 16px;
+		}
+		p {
+			font-size: 17px;
+			&.line {
+				font-size: 11px;
+				padding: 0 5px 5px;
+			}
+		}
+		&__icons {
+			li {
+				display: block;
+				max-width: 75px;
+				text-align: center;
+			}
+			img {
+				max-width: 42px;
+				margin: 0 auto;
+				max-height: 31px;
+			}
+			span {
+				font-size: 11px;
+				display: block;
+				margin: 10px 0 0;
+			}
+		}
+	}
+	.reviews {
+		li {
+			width: calc(25% - 20px);
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	.diff {
+		padding: 45px 0 0;
+		h2 {
+			margin-bottom: 35px;
+		}
+		li {
+			padding: 35px 20px;
+			flex-direction: column;
+			&:last-child {
+				padding-bottom: 50px;
+			}
+			.half {
+				width: 100%;
+				&:last-child {
+					padding: 0;
+				}
+				&.flex {
+					align-items: center;
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.num {
+			margin-right: 15px;
+			font-size: 41px;
+			padding: 20px;
+		}
+		h5 {
+			font-size: 22px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	section {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.btn {
+		font-size: 16px;
+		background-position: right 70px center;
+		padding: 10px 80px;
+		display: block;
+		max-width: 280px;
+		margin: 0 auto;
+		text-align: center;
+		&:hover {
+			background-position: right 66px center;
+		}
+		&.btn-arr {
+			background-position: right 70px center;
+			&:hover {
+				background-position: right 66px center;
+			}
+		}
+	}
+	h4 {
+		font-size: 24px;
+		&.subh {
+			font-size: 18px;
+			text-align: center;
+			padding-bottom: 30px;
+		}
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h6 {
+		font-size: 16px;
+	}
+	.do-dont , .image-text, .head, .faq {
+		.half {
+			width: 100%;
+		}
+	}
+	.head {
+		&__img.half {
+			display: none;
+		}
+		h1,p.line {
+			text-align: left;
+			position: relative;
+			z-index: 2;
+		}
+		&__mob-img {
+			display: block;
+			margin-top: -45px;
+			width: calc(100% + 50px);
+			position: relative;
+			z-index: 1;
+			left: -20px;
+		}
+		&__text.half {
+			padding-top: 50px;
+		}
+		p {
+			text-align: center;
+			&.line {
+				margin-bottom: 0;
+				text-align: left;
+			}
+		}
+		&__icons {
+			margin-top: 45px;
+			
+			.flex {
+				width: calc(100% + 40px);
+				position: relative;
+				left: -20px;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			li {
+				display: flex;
+				flex-direction: column;
+			}
+			img {
+				margin-bottom: 10px;
+			}
+			span {
+				margin-top: auto;
+				font-size: 10px;
+			}
+		}
+	}
+	.image-text {
+		.h-text, &.alt .h-text {
+			padding: 0;
+			margin-bottom: 25px;
+		}
+		&.essential {
+			flex-direction: column-reverse;
+		}
+		&.goodness {
+			.h-text {
+				margin-bottom: 0;
+				margin-top: 20px;
+			}
+			.table {
+				margin-top: 30px;
+			}
+			.full {
+				min-width: calc(100% + 30px);
+				position: relative;
+				left: -15px;
+			}
+		}
+	}
+	.clinical {
+		padding-top: 55px;
+		.h-text.center {
+			margin-bottom: 50px;
+			font-size: 18px;
+			text-align: left;
+			h2 {
+				font-size: 32px;
+				text-align: center;
+			}
+		}
+	}
+	.proven {
+		margin: 50px 0 40px;
+		padding-bottom: 40px;
+		width: calc(100% + 20px);
+		position: relative;
+		left: -10px;
+		h4 {
+			font-size: 18px;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+		}
+		&__list {
+			max-width: calc(50% - 5px);
+			li {
+				margin-bottom: 30px;
+				>div {
+					width: 100%;
+					padding-left: 0;
+				}
+			}
+			img {
+				display: none;
+			}
+			span {
+				font-size: 15px;
+				display: block;
+			}
+			svg {
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				top: 5px;
+			}
+			h3 {
+				font-weight: 400;
+				font-size: 22px;
+				margin-right: 2px;
+				display: inline-block;
+			}
+			.question.active + .answer {
+				padding-top: 10px;
+			}
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+	.table {
+		li {
+			font-size: 15px;
+			&:first-child {
+				font-size: 15px;
+			}
+		}
+	}
+	.badges {
+		img {
+			width: 55px;
+		}
+		span {
+			font-size: 11px;
+			max-width: 85px;
+		}
+	}
+	.do-dont {
+		min-width: calc(100% + 40px);
+		position: relative;
+		left: -20px;
+		margin-top: 40px;
+		margin-bottom: 50px;	
+		.half {
+			padding: 30px 40px 40px 25px;
+		}
+		p {
+			font-size: 13px;
+			&.subh {
+				font-size: 15px;
+				margin-bottom: 8px;
+			}
+		}
+	}
+	.reviews {
+		margin-bottom: 40px;
+		h4 {
+			margin-bottom: 32px;
+		}
+		li {
+			width: 100%;
+			margin-bottom: 28px;
+		}
+		p {
+			max-width: 300px;
+			line-height: 1.6;
+		}
+		.name {
+			font-size: 14px;
+		}
+		.virified {
+			font-size: 13px;
+		}
+	}
+	.diff {
+		h2 {
+			font-size: 30px;
+			padding: 0 20px
+		}
+		h5 {
+			padding-right: 0;
+		}
+	}
+	.promo {
+		text-align: center;
+		padding-bottom: 60px;
+		.flex {
+			flex-direction: column-reverse;
+			img {
+				max-width: 290px;
+				margin: 0 auto 15px;
+			}
+		}
+		.btn {
+			margin-top: 15px;
+		}
+	}
+	.faq {
+		padding-top: 50px;
+		padding-bottom: 70px;
+		&__icon {
+			width: 62px;
+			margin-bottom: 14px;
+		}
+		h2 {
+			margin-bottom: 14px;
+		}
+		&__title.half {
+			padding-right: 0;
+			margin-bottom: 50px;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	.footer {
+		&__logo {
+			max-width: 140px;
+		}
+		h6, &__logo {
+			margin-bottom: 23px;
+		}
+		h6 {
+			font-size: 17px;
+		}
+		a {
+			font-size: 14px;
+		}
+		&__main {
+			padding: 55px 20px;
+			.flex {
+				flex-flow: row wrap;
+				justify-content: space-between;
+			}
+
+			li {
+				width: 40%;
+				margin-bottom: 45px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			li:first-child, li:last-child {
+				width: 100%;
+			}
+		}
+		&__disclaimer {
+			font-size: 12px;
+			padding: 25px 20px;
+		}
+	}
+}
