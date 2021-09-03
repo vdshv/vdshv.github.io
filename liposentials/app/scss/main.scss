@@ -4,11 +4,11 @@
    font-style: normal;
    unicode-range: U+000-5FF;
    src: 
-   // local('DMSans-Bold'),
-       // url('../fonts/DMSans-Bold.woff2') format('woff2'),
-       // url('../fonts/DMSans-Bold.woff') format('woff'),
-       url('../fonts/DMSans-Bold.ttf') format('ttf');
-       // url('../fonts/DMSans-Bold.eot') format('eot');
+   local('DMSans-Bold'),
+       url('../fonts/DMSans-Bold.woff2') format('woff2'),
+       url('../fonts/DMSans-Bold.woff') format('woff'),
+       url('../fonts/DMSans-Bold.ttf') format('ttf'),
+       url('../fonts/DMSans-Bold.eot') format('eot');
    font-display: swap;
 }
 @font-face { 
@@ -17,11 +17,11 @@
    font-style: normal;
    unicode-range: U+000-5FF;
    src: 
-   // local('DMSans-Medium'),
-       // url('../fonts/DMSans-Medium.woff2') format('woff2'),
-       // url('../fonts/DMSans-Medium.woff') format('woff'),
-       url('../fonts/DMSans-Medium.ttf') format('ttf');
-       // url('../fonts/DMSans-Medium.eot') format('eot');
+   local('DMSans-Medium'),
+       url('../fonts/DMSans-Medium.woff2') format('woff2'),
+       url('../fonts/DMSans-Medium.woff') format('woff'),
+       url('../fonts/DMSans-Medium.ttf') format('ttf'),
+       url('../fonts/DMSans-Medium.eot') format('eot');
    font-display: swap;
 }
 @font-face { 
@@ -30,11 +30,11 @@
    font-style: normal;
    unicode-range: U+000-5FF;
    src: 
-   // local('DMSans-Regular'),
-       // url('../fonts/DMSans-Regular.woff2') format('woff2'),
-       // url('../fonts/DMSans-Regular.woff') format('woff'),
-       url('../fonts/DMSans-Regular.ttf') format('ttf');
-       // url('../fonts/DMSans-Regular.eot') format('eot');
+   local('DMSans-Regular'),
+       url('../fonts/DMSans-Regular.woff2') format('woff2'),
+       url('../fonts/DMSans-Regular.woff') format('woff'),
+       url('../fonts/DMSans-Regular.ttf') format('ttf'),
+       url('../fonts/DMSans-Regular.eot') format('eot');
    font-display: swap;
 }
 @font-face { 
@@ -43,15 +43,14 @@
    font-style: italic;
    unicode-range: U+000-5FF;
    src: 
-   // local('DMSans-Italic'),
-       // url('../fonts/DMSans-Regular.woff2') format('woff2'),
-       // url('../fonts/DMSans-Regular.woff') format('woff'),
-       url('../fonts/DMSans-Italic.ttf') format('ttf');
-       // url('../fonts/DMSans-Regular.eot') format('eot');
+   local('DMSans-Italic'),
+       url('../fonts/DMSans-Regular.woff2') format('woff2'),
+       url('../fonts/DMSans-Regular.woff') format('woff'),
+       url('../fonts/DMSans-Italic.ttf') format('ttf'),
+       url('../fonts/DMSans-Regular.eot') format('eot');
    font-display: swap;
 }
 
-// $default-font: 'font';
 $acc: #E77E00;
 
 
