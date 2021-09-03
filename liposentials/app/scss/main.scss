@@ -3,7 +3,8 @@
    font-weight: 700;  
    font-style: normal;
    unicode-range: U+000-5FF;
-   src: local('DMSans-Bold'),
+   src: 
+   // local('DMSans-Bold'),
        // url('../fonts/DMSans-Bold.woff2') format('woff2'),
        // url('../fonts/DMSans-Bold.woff') format('woff'),
        url('../fonts/DMSans-Bold.ttf') format('ttf');
@@ -15,7 +16,8 @@
    font-weight: 500;  
    font-style: normal;
    unicode-range: U+000-5FF;
-   src: local('DMSans-Medium'),
+   src: 
+   // local('DMSans-Medium'),
        // url('../fonts/DMSans-Medium.woff2') format('woff2'),
        // url('../fonts/DMSans-Medium.woff') format('woff'),
        url('../fonts/DMSans-Medium.ttf') format('ttf');
@@ -27,7 +29,8 @@
    font-weight: 400;  
    font-style: normal;
    unicode-range: U+000-5FF;
-   src: local('DMSans-Regular'),
+   src: 
+   // local('DMSans-Regular'),
        // url('../fonts/DMSans-Regular.woff2') format('woff2'),
        // url('../fonts/DMSans-Regular.woff') format('woff'),
        url('../fonts/DMSans-Regular.ttf') format('ttf');
@@ -39,7 +42,8 @@
    font-weight: 400;  
    font-style: italic;
    unicode-range: U+000-5FF;
-   src: local('DMSans-Italic'),
+   src: 
+   // local('DMSans-Italic'),
        // url('../fonts/DMSans-Regular.woff2') format('woff2'),
        // url('../fonts/DMSans-Regular.woff') format('woff'),
        url('../fonts/DMSans-Italic.ttf') format('ttf');
@@ -172,6 +176,7 @@ section {
 	}
 	&:hover {
 		transition: .3s;
+		color: #fff;
 		background: #000 url('../img/btn-arr.svg') no-repeat right 76px center/ 17px 12px;
 	}
 }
@@ -390,8 +395,8 @@ section {
 		svg {
 			transform: rotate(45deg)
 		}
-		ellipse,circle {
-			fill: #EEEEEE;
+		ellipse, circle {
+			fill: #EEEEEE !important;
 		}
 		path {
 			fill: #000;
