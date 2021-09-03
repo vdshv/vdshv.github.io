@@ -24,19 +24,153 @@
 </head>
 <body>
 	<div class="overflow">
-		<header class="header">
-			<div class="lg-width">
+		<header class="header home">
+			<a class="header__logo" href="/">SendTo</a>
+			<div class="lg-width flex header__top">
+				<div class="header__links">
+					<a href="">Home</a>
+					<a href="">SendMoods</a>
+					<a href="">FAQs</a>
+				</div>
 				
-			</div>
-			<div class="banner">
-				<h1>SendTo</h1>
-				<p>
-					Whoever's on your mind.<br>
-					No address needed.
-				</p>
-				<input class="search" type="text" placeholder="Search A Gift">
+				<div class="header__acc">
+					<a href="" class="cart">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="28.75" viewBox="0 0 30 28.75">
+						  <g transform="translate(1.25 1.25)">
+						    <path d="M12.5,26.25A1.25,1.25,0,1,1,11.25,25,1.25,1.25,0,0,1,12.5,26.25Z" transform="translate(-1.25 -1.25)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+						    <path d="M26.25,26.25A1.25,1.25,0,1,1,25,25,1.25,1.25,0,0,1,26.25,26.25Z" transform="translate(-1.25 -1.25)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+						    <path d="M1.25,1.25h5L9.6,17.987A2.5,2.5,0,0,0,12.1,20H24.25a2.5,2.5,0,0,0,2.5-2.013l2-10.487H7.5" transform="translate(-1.25 -1.25)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+						  </g>
+						</svg>
+
+						<span>12</span>
+					</a>
+					<a href=""class="user">
+						<svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" viewBox="0 0 27 30">
+						  <g transform="translate(1.5 1.5)">
+						    <path d="M30,31.5v-3a6,6,0,0,0-6-6H12a6,6,0,0,0-6,6v3" transform="translate(-6 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+						    <path d="M24,10.5a6,6,0,1,1-6-6A6,6,0,0,1,24,10.5Z" transform="translate(-6 -4.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+						  </g>
+						</svg>
+
+					</a>
+				</div>
 			</div>
 		</header>
+
+		<section class="banner">
+			<h1>SendTo</h1>
+			<p>
+				Whoever's on your mind.<br>
+				No address needed.
+			</p>
+			<div class="header__search search-block">
+				<input class="search" type="text" placeholder="Search A Gift">
+				<div class="header__filters filters flex lg-width">
+					<div>
+						<h4>Categories</h4>
+						<div class="filters__grid">
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Flower
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Chocolate
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Non-Alcoholic
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Flower
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Flower
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Flower
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Flower
+							</label>
+						</div>
+					</div>
+					<div class="filters__price">
+						<h4>Categories</h4>
+						<div class="filters__block">
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								£21 - £39
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								£21 - £39
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								£21 - £39
+							</label>
+						</div>
+					</div>
+					<div>
+						<h4>Categories</h4>
+						<div class="filters__grid">
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Thinking Of You
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Engagement/Wedding
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Non-Alcoholic
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Thinking Of You
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Engagement/Wedding
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Flower
+							</label>
+							<label>
+								<input type="checkbox">
+								<span class="checkmark"></span>
+								Engagement/Wedding
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="how">
 			<div class="lg-width">
 				<h2>How it works</h2>
@@ -121,7 +255,7 @@
 		<footer class="footer">
 			<div class="lg-width flex">
 				<div>
-					<a class="footer__logo" href="/">SendTo</a>
+					<a class="header__logo footer__logo" href="/">SendTo</a>
 					<span>Follow Us On</span>
 					<div class="social flex">
 						<a href=""><img src="img/social1.svg" alt=""></a>

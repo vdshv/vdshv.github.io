@@ -11,21 +11,62 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
-	let questions = qsa('.question');
-	console.log(questions);
+	// let questions = qsa('.question');
 
-	questions.forEach(el => {
-		el.onclick = (e) => {
-			let answer = el.nextElementSibling;
-			if(el.classList.contains('active')) {
-				el.classList.remove('active');
-				answer.style.height = '0px';
-			} else {
-				el.classList.add('active');
-				answer.style.height = answer.scrollHeight + 'px';
+	// questions.forEach(el => {
+	// 	el.onclick = (e) => {
+	// 		let answer = el.nextElementSibling;
+	// 		if(el.classList.contains('active')) {
+	// 			el.classList.remove('active');
+	// 			answer.style.height = '0px';
+	// 		} else {
+	// 			el.classList.add('active');
+	// 			answer.style.height = answer.scrollHeight + 'px';
+	// 		}
+	// 	};
+	// })
+
+	let homeHeader = qs('.header.home'),
+		headerLogo = qs('.header.home .header__logo'),
+		bannerTitle = qs('.banner h1'),
+		bannerText = qs('.banner p'),
+		scrollEl = document.scrollingElement,
+		searchBtn = qs('input.search'),
+		searchFilters = qs('.filters'),
+		searchBlock = qs('.search-block');
+
+	if(homeHeader) {
+		document.onscroll = () => {
+		    if(bannerTitle.getBoundingClientRect().top < headerLogo.getBoundingClientRect().top) {
+		    	homeHeader.classList.add('active');
+		    	bannerTitle.classList.add('active');
+		    } else {
+		    	homeHeader.classList.remove('active');
+		    	bannerTitle.classList.remove('active');
+		    }
+		}
+
+		// bannerText.style.height = bannerText.scrollHeight + 80 + 'px';
+	}
+	if(searchBtn) {
+		searchBtn.onclick = () => {
+			if(!searchBlock.classList.contains('active')) {
+				searchBlock.classList.add('active');
+				bannerText.classList.add('search');
+				bannerText.style.height = '0px';
+				bannerText.style.marginBottom = '0px';
 			}
-		};
-	})
+		}
+		document.onclick = (e) => {
+			if(searchBlock.classList.contains('active') 
+				&& !e.target.closest('.search-block') 
+				&& e.target !== qs('.filters')) {
+			searchBlock.classList.remove('active');
+			bannerText.classList.remove('search');
+			bannerText.style.height = bannerText.scrollHeight + 40 + 'px';
+			}
+		}
+	}
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
