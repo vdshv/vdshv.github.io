@@ -31,9 +31,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		bannerTitle = qs('.banner h1'),
 		bannerText = qs('.banner p'),
 		scrollEl = document.scrollingElement,
+
 		searchBtn = qs('input.search'),
 		searchFilters = qs('.filters'),
-		searchBlock = qs('.search-block');
+		searchBlock = qs('.search-block'),
+
+		manualSeach = qs('.manual-search'),
+
+		viewProduct = qsa('.s-search__results .view'),
+		prodModal = qs('.product'),
+		prodClose = qs('.product .close');
+
 
 	if(homeHeader) {
 		document.onscroll = () => {
@@ -52,21 +60,55 @@ document.addEventListener("DOMContentLoaded", function() {
 		searchBtn.onclick = () => {
 			if(!searchBlock.classList.contains('active')) {
 				searchBlock.classList.add('active');
-				bannerText.classList.add('search');
-				bannerText.style.height = '0px';
-				bannerText.style.marginBottom = '0px';
+
+				if(homeHeader) {
+					bannerText.classList.add('search');
+					bannerText.style.height = '0px';
+					bannerText.style.marginBottom = '0px';
+				}
 			}
 		}
 		document.onclick = (e) => {
 			if(searchBlock.classList.contains('active') 
 				&& !e.target.closest('.search-block') 
-				&& e.target !== qs('.filters')) {
-			searchBlock.classList.remove('active');
-			bannerText.classList.remove('search');
-			bannerText.style.height = bannerText.scrollHeight + 40 + 'px';
+				&& e.target !== manualSeach
+				&& e.target !== searchFilters) {
+
+				searchBlock.classList.remove('active');
+
+				if(homeHeader) {
+					bannerText.classList.remove('search');
+					bannerText.style.height = bannerText.scrollHeight + 40 + 'px';
+				}
+			}
+			if(prodModal && prodModal.classList.contains('active')
+			   && !e.target.closest('.product .xlg-width')
+			   && !e.target.classList.contains('view')) {
+				prodModal.classList.remove('active');
 			}
 		}
 	}
+
+	if(manualSeach) {
+		manualSeach.onclick = () => {
+			searchBlock.classList.add('active');
+		}
+	}
+
+	if(prodModal) {
+		viewProduct.forEach((viewBtn) => {
+			viewBtn.onclick = () => {
+				prodModal.classList.add('active');
+			}
+		})
+		prodClose.onclick = () => {
+			prodModal.classList.remove('active');
+		}
+
+	}
+	
+
+
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)

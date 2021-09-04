@@ -22,9 +22,9 @@
 	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
 	<!-- SCRITICAL CSS  -->
 </head>
-<body class="homepage">
+<body>
 	<div class="overflow">
-		<header class="header home">
+		<header class="header page-header">
 			<a class="header__logo" href="/">SendTo</a>
 			<div class="lg-width flex header__top">
 				<div class="header__links">
@@ -58,182 +58,32 @@
 			</div>
 		</header>
 
-		<section class="banner">
-			<h1>SendTo</h1>
-			<p>
-				Whoever's on your mind.<br>
-				No address needed.
-			</p>
-			<div class="header__search search-block">
-				<input class="search" type="text" placeholder="Search A Gift">
-				<div class="header__filters filters flex lg-width">
-					<div>
-						<h4>Categories</h4>
-						<div class="filters__grid">
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Flower
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Chocolate
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Non-Alcoholic
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Flower
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Flower
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Flower
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Flower
-							</label>
-						</div>
-					</div>
-					<div class="filters__price">
-						<h4>Categories</h4>
-						<div class="filters__block">
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								£21 - £39
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								£21 - £39
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								£21 - £39
-							</label>
-						</div>
-					</div>
-					<div>
-						<h4>Categories</h4>
-						<div class="filters__grid">
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Thinking Of You
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Engagement/Wedding
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Non-Alcoholic
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Thinking Of You
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Engagement/Wedding
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Flower
-							</label>
-							<label>
-								<input type="checkbox">
-								<span class="checkmark"></span>
-								Engagement/Wedding
-							</label>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<section class="how">
-			<div class="lg-width">
-				<h2>How it works</h2>
-				<ul class=" how__list flex">
-					<li>
-						<div class="how__text">
-							<h3>Receiver Notified</h3>
-							<p>Once confirmed, your recipient is notified and asked to provide delivery address.</p>
-						</div>
-						
-						<img src="img/how1.svg" alt="">
-					</li>
-					<li>
-						<div class="how__text">
-							<h3>Receiver Notified</h3>
-							<p>Once confirmed, your recipient is notified</p>
-						</div>
-						
-						<img src="img/how2.svg" alt="">
-					</li>
-					<li>
-						<div class="how__text">
-							<h3>Receiver Notified</h3>
-							<p>Once confirmed, your recipient is notified and asked to provide delivery address.</p>
-						</div>
-						
-						<img src="img/how3.svg" alt="">
-					</li>
-					<li>
-						<div class="how__text">
-							<span>
-								Save Time<br>
-								Send Direct<br>
-								And be<br>
-								Secure with
-							</span>
-							<span class="logo">
-								SendTo
-							</span>
-						</div>
-						
-						<img src="img/how4.svg" alt="">
-					</li>
-				</ul>
-				<ul class="vendors flex">
-					<li><img src="img/vendor.png" alt=""></li>
-					<li><img src="img/vendor.png" alt=""></li>
-					<li><img src="img/vendor.png" alt=""></li>
-					<li><img src="img/vendor.png" alt=""></li>
-					<li><img src="img/vendor.png" alt=""></li>
-					<li><img src="img/vendor.png" alt=""></li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="home-moods">
+		<section class="home-moods page-moods">
 			<div class="s-width">
 				<h2>SendMoods</h2>
 				<p>pre-filtered results<br>
 				 for the 'reason' you want to send</p>
-				<a href="" class="btn btn-lg btn-arr">
-					Try Now
-				</a>
+				<ul class="page-moods__list">
+					<li>
+						<a href="sendmoods-search.html">SendThanks</a>
+					</li>
+					<li>
+						<a href="sendmoods-search.html">SendThanks</a>
+					</li>
+					<li>
+						<a href="sendmoods-search.html">SendThanks</a>
+					</li>
+					<li>
+						<a href="sendmoods-search.html">SendThanks</a>
+					</li>
+					<li>
+						<a href="sendmoods-search.html">SendThanks</a>
+					</li>
+					<li>
+						<a href="sendmoods-search.html">SendThanks</a>
+					</li>
+				</ul>
 			</div>
 		</section>
 
@@ -245,12 +95,6 @@
 			</div>
 		</section>
 
-		<section class="contact">
-			<div class="s-width">
-				<h2>SendTo Partnerships</h2>
-				<p>Feature your products in our store. Leave your details below for us to get in touch.</p>
-			</div>
-		</section>
 
 		<footer class="footer">
 			<div class="lg-width flex">
