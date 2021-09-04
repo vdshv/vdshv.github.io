@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		// bannerText.style.height = bannerText.scrollHeight + 80 + 'px';
 	}
-	if(searchBtn) {
-		searchBtn.onclick = () => {
+	if(searchBlock) {
+		if(searchBtn) searchBtn.onclick = () => {
 			if(!searchBlock.classList.contains('active')) {
 				searchBlock.classList.add('active');
 
