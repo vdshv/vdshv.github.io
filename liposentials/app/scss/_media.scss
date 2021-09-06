@@ -238,8 +238,14 @@
 			}
 		}
 		&-benefits {
+			background: url('../img/about/page-shape-mob.svg') no-repeat bottom center/ 100% auto;
+			padding-bottom: 40px;
 			h2 {
 				font-size: 34px;
+			}
+			&__img {
+				width: 150%;
+				margin-left: -20px;
 			}
 		}
 		&-about {
@@ -324,6 +330,14 @@
 			font-size: 18px;
 			h2 {
 				font-size: 32px;
+			}
+		}
+		&.benefits {
+			.proven {
+				margin-top: 35px;
+			}
+			h4 {
+				text-align: left;
 			}
 		}
 	}
