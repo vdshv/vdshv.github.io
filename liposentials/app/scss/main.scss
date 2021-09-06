@@ -61,7 +61,7 @@ $acc: #E77E00;
 }
 a {
 	text-decoration: none;
-	color: #000;
+	color: $acc;
 	transition: .3s;
 	&:hover {
 		transition: .3s;
@@ -716,6 +716,30 @@ a.link-arr {
 }
 .faq {
 	padding: 130px 25px 100px;
+	&.faq-page {
+		padding-top: 80px;
+		padding-bottom: 130px;
+		.btn {
+			margin-top: 110px;
+		}
+	}
+	&__info {
+		align-items: flex-start;
+		background: #F9F9F9;
+		border-radius: 3px;
+		padding: 55px 70px 40px 60px;
+		margin-bottom: 80px;
+		.faq__icon {
+			margin-bottom: 0;
+		}
+		h6 {
+			margin-bottom: 20px;
+		}
+		&-text {
+			width: calc(100% - 110px);
+			// width: auto;
+		}
+	}
 	&__icon {
 		width: 72px;
 		margin-bottom: 25px;
@@ -729,6 +753,51 @@ a.link-arr {
 	}
 	&__list.half {
 		width: 53%;
+	}
+	&__blocks {
+		.faq__list {
+			width: calc(50% - 15px);
+		}
+		h5 {
+			margin-bottom: 45px;
+		}
+	}
+	&__block {
+		margin-bottom: 100px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:nth-child(1) {
+			h5 {
+				color: $acc;
+			}
+		}
+		&:nth-child(2) {
+			h5 {
+				color: #576D78;
+			}
+			.question {
+				&.active {
+					color: #576D78;
+				}
+				circle {
+					fill: #576D78;
+				}
+			}
+		}
+		&:nth-child(3) {
+			h5 {
+				color: #E04646;
+			}
+			.question {
+				&.active {
+					color: #E04646;
+				}
+				circle {
+					fill: #E04646;
+				}
+			}
+		}
 	}
 	ul {
 		max-width: 570px;
@@ -794,6 +863,10 @@ a.link-arr {
 			display: block;
 			font-size: 15px;
 			margin-bottom: 15px;
+			color: #000;
+			&:hover {
+				color: rgba(0,0,0,.6);
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}

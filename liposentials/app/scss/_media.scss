@@ -229,6 +229,8 @@
 			}
 		}
 		&-page {
+			padding-top: 60px;
+			padding-bottom: 75px;
 			h2 {
 				font-size: 30px;
 			}
@@ -237,7 +239,11 @@
 				margin-top: 20px;
 			}
 		}
+		&-faq {
+			padding-bottom: 95px;
+		}
 		&-benefits {
+			padding-top: 0;
 			background: url('../img/about/page-shape-mob.svg') no-repeat bottom center/ 100% auto;
 			padding-bottom: 40px;
 			h2 {
@@ -485,6 +491,44 @@
 		}
 		p {
 			font-size: 14px;
+		}
+		&__info {
+			padding: 30px 25px;
+			margin-bottom: 35px;
+			.faq__icon {
+				width: 50px;
+			}
+			&-text {
+				width: 100%;
+				margin-top: 20px;
+			}
+			h6 {
+				font-size: 18px;
+			}
+			p {
+				font-size: 15px;
+			}
+		}
+		&__blocks {
+			h5 {
+				margin-bottom: 23px;
+			}
+			.faq__list:first-child {
+				margin-bottom: 25px;
+			}
+		}
+		&__block {
+			margin-bottom: 45px;
+		}
+		&.faq-page {
+			padding-bottom: 65px;
+			padding-top: 0;
+			margin-top: -40px;
+			position: relative;
+			z-index: 2;
+			.btn {
+				margin-top: 50px;
+			}
 		}
 	}
 	.footer {
