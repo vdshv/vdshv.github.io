@@ -4,6 +4,22 @@
 		    display: flex;
 		    align-items: center;
 		}
+		&-about {
+			.head-page__text {
+				padding-right: 40px;
+			}
+			.flex {
+				align-items: center;
+			}
+			&__desktop {
+				display: none;
+			}
+			&__mob {
+				display: block;
+				position: relative;
+				z-index: 2;
+			}
+		}
 	}
 	.badges {
 		flex-flow: row wrap;
@@ -37,6 +53,9 @@
 	h2,h3 {
 		font-size: 30px;
 	}
+	h4 {
+		font-size: 22px;
+	}
 	.head {
 		span {
 			font-size: 16px;
@@ -63,6 +82,15 @@
 				font-size: 11px;
 				display: block;
 				margin: 10px 0 0;
+			}
+		}
+		&-page {
+			position: relative;
+			background: url(../img/about/page-bg-mob.svg) no-repeat bottom center/100% auto;
+		}
+		&-about {
+			.flex {
+				align-items: center;
 			}
 		}
 	}
@@ -200,6 +228,47 @@
 				font-size: 10px;
 			}
 		}
+		&-page {
+			h2 {
+				font-size: 30px;
+			}
+			p {
+				font-size: 15px;
+				margin-top: 20px;
+			}
+		}
+		&-benefits {
+			h2 {
+				font-size: 34px;
+			}
+		}
+		&-about {
+			padding-top: 50px;
+			padding-bottom: 0;
+			.flex {
+				flex-direction: column;
+			}
+			.half {
+				width: 100%;
+				padding: 0;
+			}
+			&__mob {
+				position: relative;
+				top: 55px;
+			}
+		}
+	}
+	.text-block {
+		&.about {
+			margin-top: 120px;
+			h4 {
+				font-size: 22px;
+			}
+		}
+		.half {
+			width: 100%;
+			margin-bottom: 25px;
+		}
 	}
 	.image-text {
 		.h-text, &.alt .h-text {
@@ -207,8 +276,25 @@
 			margin-bottom: 25px;
 			text-align: center;
 		}
-		&.essential {
+		&.essential, &.about-upto {
 			flex-direction: column-reverse;
+		}
+		&.about-upto, &.about-lipo {
+			p, h4 {
+				text-align: left;
+			}
+			h4 {
+				font-size: 30px;
+			}
+			h3 {
+				font-size: 36px;
+			}
+			img {
+				margin-bottom: 30px;
+			}
+		}
+		&.about-lipo {
+			margin-top: 30px;
 		}
 		&.goodness {
 			.h-text {
@@ -218,11 +304,17 @@
 			.table {
 				margin-top: 30px;
 			}
-			.full {
-				min-width: calc(100% + 30px);
-				position: relative;
-				left: -15px;
+			&-about {
+				margin-top: 35px;
+				h4 {
+					margin-bottom: 15px;
+				}
 			}
+		}
+		.badges {
+			min-width: calc(100% + 30px);
+			position: relative;
+			left: -15px;
 		}
 	}
 	.clinical {
@@ -314,6 +406,10 @@
 				font-size: 15px;
 				margin-bottom: 8px;
 			}
+		}
+		&.about {
+			margin-top: 25px;
+			margin-bottom: 0;
 		}
 	}
 	.reviews {
