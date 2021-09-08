@@ -87,7 +87,7 @@ body {
 .text-outline, h2, .roadmap h3, .faq {
 	text-shadow: -4px -4px 0px #6357a5, 1px 1px 0px #6357a5, -1px 1px 0px #6357a5, 1px -1px 0px #6357a5;
 }
-.faq .answer, .footer, .roadmap, .about, .hero, .tracker, .pricing {
+.faq .answer, .footer, .roadmap, .about, .hero, .tracker, .pricing, .terms h3 {
 	text-shadow: -2px -2px 0px #6357a5, 1px 1px 0px #6357a5, -1px 1px 0px #6357a5, 1px -1px 0px #6357a5;
 }
 .pricing, .about, .roadmap {
@@ -100,7 +100,7 @@ body {
 	position: relative;
 	width: 100vw;
 	display: block;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 section {
 	padding-top: 140px;
@@ -160,18 +160,26 @@ h1 {
 	left: 0;
 	pointer-events: none;
 }
-h2 {
+h2, .terms h3 {
 	display: block;
 	text-align: center;
 	font-family: 'baby';
 	font-size: 2.06rem;
 	font-weight: 400;
 }
+
 .header {
 	background: #464087;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	box-shadow: 0px 7px 5px rgba(0,0,0, .45);
+	position: relative;
+	z-index: 4;
+	&.terms-header {
+		.flex {
+			justify-content: center;
+		}
+	}
 	.flex {
 		align-items: flex-end;
 	}
@@ -326,14 +334,13 @@ h2 {
 	position: relative;
 	z-index: 3;
 }
-.about {
-	padding-bottom: 110px;
+.terms, .about {
 	position: relative;
 	&::before, &::after {
 		content: '';
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 50%;
 		left: 0;
 		z-index: 1;
 	}
@@ -344,6 +351,22 @@ h2 {
 	&::after {
 		top: 50%;
 		background: linear-gradient(to bottom, #6357A5, transparent);
+	}
+}
+.terms {
+	&::before {
+		bottom: 50%;
+		background: linear-gradient(to top, #6357A5, rgba(120,100,171,.8) 80%, rgba(120,100,171,.5));
+	}
+	&::after {
+		top: 50%;
+		background: linear-gradient(to bottom, #6357A5, rgba(120,100,171,.8) 95%, rgba(120,100,171,0));
+	}
+}
+.about {
+	padding-bottom: 110px;
+	&::before, &::after {
+		height: 100%;
 	}
 	.flex {
 		align-items: center;
@@ -373,6 +396,22 @@ h2 {
 	p {
 		font-size: 1.4rem;
 		margin-bottom: 1.5rem;
+	}
+}
+.terms {
+	padding-bottom: 0px;
+	h2 {
+		margin-bottom: 50px;
+	}
+	h3 {
+		font-size: 1.7rem;
+		margin-bottom: 30px;
+	}
+	p {
+		font-size: 1rem;
+	}
+	p:last-child {
+		margin-bottom: 0;
 	}
 }
 .meet {
