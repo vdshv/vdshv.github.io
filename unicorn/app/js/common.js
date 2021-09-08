@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	      "display": "block",
 	      "width": "45px",
 	      "height": "45px",
-	      "background": "url('../img/stars.svg') no-repeat center center/contain",
+	      "background": "url('img/stars.svg') no-repeat center center/contain",
 	      // "text-shadow": "0 0 100px #fff",
 	      "pointerEvents": "none",
 	      "z-index": "10000000",
