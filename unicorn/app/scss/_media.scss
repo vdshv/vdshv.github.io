@@ -1,4 +1,4 @@
-@media(max-width: 1599px) {
+@media(max-width: 1699px) {
 	html {
 		font-size: 30px;
 	}
@@ -8,6 +8,12 @@
 		&-md {
 			max-width: 900px;
 		}
+	}
+	.text-outline, h2, .roadmap h3, .faq {
+		text-shadow: -3px -3px 0px #6357a5, 1px 1px 0px #6357a5, -1px 1px 0px #6357a5, 1px -1px 0px #6357a5;
+	}
+	.faq .answer, .footer, .roadmap, .about, .hero, .tracker, .pricing {
+		text-shadow: -1px -1px 0px #6357a5, 1px 1px 0px #6357a5, -1px 1px 0px #6357a5, 1px -1px 0px #6357a5;
 	}
 	.header {
 		padding-top: 10px;
@@ -23,6 +29,12 @@
 			a {
 				margin-left: 70px;
 			}
+			.btn {
+				margin-left: 40px;
+				font-size: 25px;
+				padding: 18px 60px 18px 20px;
+				background: url(../img/btn.svg) no-repeat right 18px center/30px auto,url(../img/btn-bg.svg) no-repeat center center/cover;
+			}
 		}
 	}
 	.white-box {
@@ -31,13 +43,13 @@
 	.hero {
 		padding-top: 60px;
 		&__title {
-			margin-top: 50px;
+			padding-top: 50px;
 			img {
 				max-width: 900px;
 				margin: 0 auto;
 			}
 			p {
-				margin-top: -40px;
+				margin-top: -20px;
 			}
 		}
 	}
@@ -46,7 +58,7 @@
 			padding: 10px 50px;
 			>div {
 				.timer-value::after {
-					right: -35px;
+					right: -15px;
 				}
 			}
 		}
@@ -106,14 +118,11 @@
 		}
 		&__nav {
 			a {
-				font-size: 0.7rem;
+				font-size: 0.8rem;
 				margin-left: 40px;
 			}
 			.btn {
-				margin-left: 40px;
-				font-size: 15px;
-				padding: 18px 60px 18px 20px;
-				background: url(../img/btn.svg) no-repeat right 18px center/30px auto,url(../img/btn-bg.svg) no-repeat center center/cover;
+				font-size: 20px;
 			}
 		}
 	}
@@ -127,12 +136,19 @@
 	html {
 		font-size: 24px;
 	}
+	.text-outline, h2, .roadmap h3, .faq {
+		text-shadow: -2px -2px 0px #6357a5, 1px 1px 0px #6357a5, -1px 1px 0px #6357a5;
+	}
+	// .faq .answer, .footer, .roadmap, .about, .hero, .tracker, .pricing {
+	// 	text-shadow: -1px -1px 0px #6357a5, 1px 1px 0px #6357a5, -1px 1px 0px #6357a5, 1px -1px 0px #6357a5;
+	// }
 	.header {
 		&__logo {
 			max-width: 100px;
 		}
 		&__nav {
 			a {
+				font-size: .95rem;
 				margin-left: 35px;
 			}
 		}
@@ -180,3 +196,217 @@
 		}
 	}
 }
+@media (max-width: 767px) {
+	html {
+		font-size: 20px;
+	}
+	.white-box {
+		border: 4px solid #fff;
+	}
+	section, header, footer {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	section {
+		padding-top: 60px;
+	}
+	.header {
+		position: relative;
+		z-index: 4;
+		padding-right: 8px;
+		&__logo {
+			width: 80px;
+		}
+		&__hamb, &__nav-close {
+			display: block;
+			width: 50px;
+			padding: 12px;
+		}
+		&__nav-close {
+			position: absolute;
+			top: 15px;
+			right: 10px;
+		}
+		&__nav {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			padding: 20px 30px;
+			top: 0;
+			left: 0;
+			text-align: center;
+			z-index: 6;
+			flex-direction: column;
+			justify-content: center;
+			background: #464087;
+			transform: translate3d(100%, 0, 0px);
+			transition: .25s;
+			&.active {
+				transform: translate3d(0%, 0, 0px);
+				transition: .25s;
+			}
+			a {
+				font-size: 40px;
+				display: block;
+				margin: 0 auto 20px;
+			}
+			.btn {
+				white-space: nowrap;
+				font-size: 25px;
+				margin: 20px auto 0;
+			}
+		}
+	}
+	.timer {
+		&__block {
+			padding: 10px 0px;
+			>div {
+				width: 25%;
+				.timer-value::after {
+					right: -6px;
+					font-size: 50px;
+					top: 10px;
+				}
+			}
+		}
+		&-value {
+			line-height: 1;
+			display: block;
+		}
+		&-label {
+			font-size: 24px;
+		}
+	}
+	.hero {
+		&__title {
+			p {
+				margin-top: -10px;
+			}
+		}
+	}
+	.tracker {
+		padding-bottom: 30px;
+		&::before {
+			height: 50px;
+			top: -25px;
+			background: linear-gradient(to bottom,rgba(176,210,225,0),#b0d2e1,rgba(176,210,225,0));
+			// background: linear-gradient(to bottom,transparent, transparent 30%,#b0d2e1 40%, #b0d2e1 60%, rgba 70%,transparent);
+		}
+		&__block {
+			margin-top: 20px;
+			padding: 10px 0;
+			p {
+				margin: 0 0 10px;
+			}
+		}
+		&__value {
+			span {
+				font-size: 1.6rem;
+				&:first-child {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.about, .roadmap {
+		.flex {
+			flex-direction: column;
+			>* {
+				width: 100%;
+			}
+		}
+	}
+	.about {
+		&__logo {
+			max-width: 220px;
+			margin-bottom: 20px;
+		}
+		&__text {
+			margin-bottom: 30px;
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.pricing, .roadmap {
+		p {
+			font-size: 1.4rem;
+			line-height: 1.4;
+		}
+	}
+	.collection {
+		&__list {
+			margin-top: 20px;
+			li {
+				width: calc((100% - 12px)/ 2);
+			    margin-bottom: 12px;
+			    margin-right: 12px;
+			    &:nth-child(3n) {
+			    	margin-right: 12px;
+			    }
+			    &:nth-child(2n) {
+			    	margin-right: 0px;
+			    }
+			}
+		}
+	}
+	.roadmap {
+		h3 {
+			display: block;
+			text-align: center;
+			font-size: 35px;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		&__phases {
+			margin-top: 30px;
+			&-list {
+				div {
+					margin-bottom: 10px;
+				}
+				li {
+					font-size: 1.35rem;
+					line-height: 1.2;
+					margin-bottom: 14px;
+				}
+			}
+		}
+	}
+	.faq {
+		padding-bottom: 20px;
+		h2 {
+			margin-bottom: 15px;
+		}
+		.question {
+			font-size: 1.6rem;
+			&:hover {
+				transform: scale(1);
+			}
+			&.active + .answer {
+				padding-top: 10px;
+			}
+		}
+		.answer {
+			font-size: 1.35rem;
+			padding-left: 15px;
+			padding-right: 0;
+		}
+	}
+	.footer {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		&__social {
+			a {
+				width: 80px;
+			}
+		}
+		&__terms {
+			font-size: 30px;
+		}
+	}
+}
+
+
+

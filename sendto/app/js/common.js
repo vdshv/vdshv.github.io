@@ -11,21 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
-	// let questions = qsa('.question');
-
-	// questions.forEach(el => {
-	// 	el.onclick = (e) => {
-	// 		let answer = el.nextElementSibling;
-	// 		if(el.classList.contains('active')) {
-	// 			el.classList.remove('active');
-	// 			answer.style.height = '0px';
-	// 		} else {
-	// 			el.classList.add('active');
-	// 			answer.style.height = answer.scrollHeight + 'px';
-	// 		}
-	// 	};
-	// })
-
 	let homeHeader = qs('.header.home'),
 		headerLogo = qs('.header.home .header__logo'),
 		bannerTitle = qs('.banner h1'),
@@ -53,38 +38,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		    	bannerTitle.classList.remove('active');
 		    }
 		}
-
-		// bannerText.style.height = bannerText.scrollHeight + 80 + 'px';
 	}
-	if(searchBlock) {
-		if(searchBtn) searchBtn.onclick = () => {
-			if(!searchBlock.classList.contains('active')) {
-				searchBlock.classList.add('active');
+	if(searchBtn) searchBtn.onclick = () => {
+		if(!searchBlock.classList.contains('active')) {
+			searchBlock.classList.add('active');
 
-				if(homeHeader) {
-					bannerText.classList.add('search');
-					bannerText.style.height = '0px';
-					bannerText.style.marginBottom = '0px';
-				}
-			}
-		}
-		document.onclick = (e) => {
-			if(searchBlock.classList.contains('active') 
-				&& !e.target.closest('.search-block') 
-				&& e.target !== manualSeach
-				&& e.target !== searchFilters) {
-
-				searchBlock.classList.remove('active');
-
-				if(homeHeader) {
-					bannerText.classList.remove('search');
-					bannerText.style.height = bannerText.scrollHeight + 40 + 'px';
-				}
-			}
-			if(prodModal && prodModal.classList.contains('active')
-			   && !e.target.closest('.product .xlg-width')
-			   && !e.target.classList.contains('view')) {
-				prodModal.classList.remove('active');
+			if(homeHeader) {
+				bannerText.classList.add('search');
+				bannerText.style.height = '0px';
+				bannerText.style.marginBottom = '0px';
 			}
 		}
 	}
@@ -132,23 +94,55 @@ document.addEventListener("DOMContentLoaded", function() {
 		qsa('.faq__width > div')[0].classList.add('active');
 		qsa('.faq__control h3')[0].classList.add('active');
 
+		questions.forEach(el => {
+			el.onclick = (e) => {
+				let answer = el.nextElementSibling;
+				if(el.classList.contains('active')) {
+					el.classList.remove('active');
+					answer.style.height = '0px';
+				} else {
+					el.classList.add('active');
+					answer.style.height = answer.scrollHeight + 15 + 'px';
+				}
+			};
+		})
 	}
 
-	questions.forEach(el => {
-		el.onclick = (e) => {
-			let answer = el.nextElementSibling;
-			if(el.classList.contains('active')) {
-				el.classList.remove('active');
-				answer.style.height = '0px';
-			} else {
-				el.classList.add('active');
-				answer.style.height = answer.scrollHeight + 15 + 'px';
-			}
-		};
-	})
 	
 
+	let cartBtn = qs('.header__acc .cart'),
+		cartBlock = qs('.s-cart');
+	cartBtn.onclick = (e) => {
+		e.preventDefault();
+		cartBlock.classList.add('active');
+	}
+	document.onclick = (e) => {
+		if(searchBlock && searchBlock.classList.contains('active') 
+			&& !e.target.closest('.search-block') 
+			&& e.target !== manualSeach
+			&& e.target !== searchFilters) {
 
+			searchBlock.classList.remove('active');
+
+			if(homeHeader) {
+				bannerText.classList.remove('search');
+				bannerText.style.height = bannerText.scrollHeight + 40 + 'px';
+			}
+		}
+		if(prodModal && prodModal.classList.contains('active')
+		   && !e.target.closest('.product .xlg-width')
+		   && !e.target.classList.contains('view')) {
+			prodModal.classList.remove('active');
+		}
+
+		if(cartBlock.classList.contains('active') 
+			&& !e.target.closest('.s-cart__wrap') 
+			&& !e.target.closest('.header__acc .cart')) {
+
+			cartBlock.classList.remove('active');
+		}
+	}
+	
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)

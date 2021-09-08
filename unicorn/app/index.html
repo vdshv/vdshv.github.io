@@ -11,7 +11,11 @@
 	<link rel="icon" href="" type="image/x-icon">
 
 	<!-- PRELOAD FONTS -->
-	<link rel="preload" as="font" href="fonts/font.woff2" type="font/woff2" crossorigin="anonymous">
+	<!-- <link rel="preload" as="font" href="fonts/font.woff2" type="font/woff2" crossorigin="anonymous"> -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/main.css">
 	
@@ -24,14 +28,20 @@
 				<div class="header__logo">
 					<img src="img/logo.svg" alt="">
 				</div>
+				<div class="header__hamb">
+					<img src="img/hamb.svg" alt="">
+				</div>
 				<nav class="header__nav">
-					<a href="">Buy</a>
-					<a href="">Collection</a>
-					<a href="">FAQ</a>
-					<a href="">Roadmap</a>
+					<a data-scroll="#buy">Buy</a>
+					<a data-scroll="#collection">Collection</a>
+					<a data-scroll="#faq">FAQ</a>
+					<a data-scroll="#roadmap">Roadmap</a>
 					<a href="" class="btn btn-md header__btn">
 						Connect Wallet
 					</a>
+					<span class="header__nav-close">
+						<img src="img/close.svg" alt="">
+					</span>
 				</nav>
 			</div>
 		</header>
@@ -43,24 +53,24 @@
 						<p class="text-outline">Time Until Mint</p>
 						<div class="flex timer__block white-box">
 							<div>
-								<span class="timer-value">04</span>
+								<span class="text-outline timer-value timer-days">04</span>
 								<span class="timer-label">Days</span>
 							</div>
 							<div>
-								<span class="timer-value">01</span>
+								<span class="text-outline timer-value timer-hours">01</span>
 								<span class="timer-label">Hours</span>
 							</div>
 							<div>
-								<span class="timer-value">02</span>
+								<span class="text-outline timer-value timer-minutes">02</span>
 								<span class="timer-label">Minutes</span>
 							</div>
 							<div>
-								<span class="timer-value">54</span>
+								<span class="text-outline timer-value timer-seconds">54</span>
 								<span class="timer-label">Seconds</span>
 							</div>
 						</div>
 					</div>
-					<div class="hero__title">
+					<div class="hero__title" id="buy">
 						<h1>Magical Unicorn Coalition</h1>
 						<img src="img/logo1.svg" alt="">
 						<p>#nounicornleftbehind</p>
@@ -70,7 +80,7 @@
 			<section class="tracker font-unicorn">
 				<div class="cont">
 					<a href="" class="btn btn-lg">Mint now</a>
-					<p>Max of 20 Unicorns per Wallet</p>
+					<p >Max of 20 Unicorns per Wallet</p>
 					<div class="tracker__block white-box">
 						<p class="text-outline">Mint Tracker</p>
 						<div class="tracker__value flex">
@@ -85,7 +95,7 @@
 				<div class="cont flex">
 					<div class="about__text">
 						<img class="about__logo" src="img/logo1.svg" alt="">
-						<p>Welcome Beautiful Creature! You have now entered into the mythical wonderland of the Magical Unicorn Coalition. You can leave your worries at the door, and join the subversive community of individuals that seek psychological harmony. The Coalition was formed to bring attention and awareness to these unseen problems across the kingdom.</p>
+						<p class="">Welcome Beautiful Creature! You have now entered into the mythical wonderland of the Magical Unicorn Coalition. You can leave your worries at the door, and join the subversive community of individuals that seek psychological harmony. The Coalition was formed to bring attention and awareness to these unseen problems across the kingdom.</p>
 					</div>
 					<div class="about__gif">
 						<img src="img/rare.gif" alt="">
@@ -96,29 +106,28 @@
 			<section class="pricing">
 				<div class="cont">
 					<h2>PRICING</h2>
-					<p class="text-outline">Each unique Magical Unicorn is available to mint for 0.555 ETH each. <br> We want everyone who is interested to be a part of this amazing Coalition and Communirty. Minting is capped at 20 NFTs per wallet.</p>
-					<p class="text-outline">Pre-Sale: 1,000 Magical Unicorns will be released prior to mint day.<br> Presale will only be available to Community members that have invited Five friends to join the Coalition.</p>
+					<p class="">Each unique Magical Unicorn is available to mint for 0.555 ETH each. <br> We want everyone who is interested to be a part of this amazing Coalition and Communirty. Minting is capped at 20 NFTs per wallet.</p>
+					<p>Pre-Sale: 1,000 Magical Unicorns will be released prior to mint day.<br> Presale will only be available to Community members that have invited Five friends to join the Coalition.</p>
 				</div>
 			</section>
 
-			<section class="collection meet">
+			<section class="collection meet" id="collection">
 				<div class="cont">
 					<h2>MEET THE MAGICAL UNICORNS</h2>
 					<ul class="collection__list flex">
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
-						<li><img src="img/item.jpg" alt=""></li>
+						<li><img src="img/collection/1.jpg" alt=""></li>
+						<li><img src="img/collection/2.jpg" alt=""></li>
+						<li><img src="img/collection/3.jpg" alt=""></li>
+						<li><img src="img/collection/4.jpg" alt=""></li>
+						<li><img src="img/collection/5.jpg" alt=""></li>
+						<li><img src="img/collection/6.jpg" alt=""></li>
+						<li><img src="img/collection/7.jpg" alt=""></li>
+						<li><img src="img/collection/8.jpg" alt=""></li>
 					</ul>
 				</div>
 			</section>
 
-			<section class="roadmap">
+			<section class="roadmap" id="roadmap">
 				<div class="cont">
 					<h2>ROADMAP</h2>
 					<p>The Magical unicorn Coalition and The Kingdom is a fulltime, project for us. The Coalition was formed to bring attention and awareness to these unseen problems across the kingdom. Below is the insight into the project and plans for the future.</p>
@@ -162,40 +171,40 @@
 				</div>
 			</section>
 
-			<section class="faq">
+			<section class="faq" id="faq">
 				<div class="cont cont-md faq__list">
 					<h2>FAQ</h2>
 					<div>
 						<div class="question">What is the Magical Unicorn Coalition?</div>
-						<div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus. Nemo nesciunt nam odit sint minima, sequi magni, deleniti cum esse labore, nulla ducimus. Cum dolore dolor, consequatur nisi commodi.</div>
+						<div class="answer">Magical Unicorn Coalition is a group of like minded individuals affected in some way by mental health; either personally or with someone we love. We’ve creating a community where we can all be ourselves, support each other through hard times and celebrate the good.</div>
 					</div>
 					<div>
 						<div class="question">What are Magical Unicorns?</div>
-						<div class="answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora praesentium voluptatum debitis ipsum reprehenderit consequatur minima. Quidem, dolores nemo, necessitatibus quo quam ducimus nulla minus odio dignissimos perspiciatis vitae nesciunt.</div>
+						<div class="answer">Magical Unicorns are a group of 7,777 unique NFT randomly generated and stored on the blockchain. This Digital Collection is securely stored in your ethereum wallet as an NFT asset that you can sell or trade.</div>
 					</div>
 					<div>
 						<div class="question">Where do I buy a Magical Unicorn?</div>
-						<div class="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum consequuntur quis reprehenderit magni molestiae, porro, quaerat! Deserunt, animi nisi, corrupti error soluta possimus quo sunt quasi eum nam ducimus fuga.</div>
+						<div class="answer">You can Mint Unicorns using our website, or head over to <a href="https://www.opens.io">opens.io</a> after the launch date.</div>
 					</div>
 					<div>
 						<div class="question">How much does a Magical Unicorn cost?</div>
-						<div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt odit nihil quibusdam labore, dolor dolorem officiis eos tempore. Voluptatum officiis debitis, saepe eum ad soluta fugiat ex quos, hic?</div>
+						<div class="answer">Magical Unicorn Mint fee is 0.0555 ETH each.</div>
 					</div>
-					<div>
+					<!-- <div>
 						<div class="question">How do I buy one?</div>
-						<div class="answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae expedita est iste modi dolore laborum exercitationem magni temporibus in ullam illum officiis animi sint dicta nobis molestias, eveniet ad error.</div>
-					</div>
+						<div class="answer"></div>
+					</div> -->
 					<div>
 						<div class="question">Can I buy more than one?</div>
-						<div class="answer">Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Rem recusandae possimus repellat mollitia excepturi alias optio enim illum quasi, ex, consequatur, obcaecati sunt nulla iste aperiam velit eligendi. Libero, assumenda.</div>
+						<div class="answer">You can buy up to 20 unicorns per wallet. We want to make sure everyone who is interested gets their chance to mint.</div>
 					</div>
 					<div>
 						<div class="question">Can I buy it on a Mobile device?</div>
-						<div class="answer">Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Ipsum corrupti quam, laborum provident! Exercitationem hic vero, maiores cumque consectetur blanditiis fugiat officiis similique laboriosam, minima et pariatur, qui tempora eaque?</div>
+						<div class="answer">You can mint on mobile! Connect your wallet using the button above and you can mint right from your phone.</div>
 					</div>
 					<div>
 						<div class="question">How do I get in touch with the Magical Unicorn Coalition Team?</div>
-						<div class="answer">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Rerum explicabo reprehenderit suscipit delectus. Eos libero optio dignissimos numquam officia esse, quia culpa, veritatis ad veniam laborum, quasi cum. Minima, molestiae.</div>
+						<div class="answer">The best way to get in touch with our team is through our discord channel!</div>
 					</div>
 				</div>
 			</section>
@@ -219,8 +228,8 @@
 
 			<footer class="footer font-unicorn">
 				<div class="footer__social flex">
-					<a href=""><img src="img/soc1.svg" alt=""></a>
-					<a href=""><img src="img/soc2.svg" alt=""></a>
+					<a href="https://twitter.com/MagicalUCnft"><img src="img/soc1.svg" alt=""></a>
+					<a href="https://discord.gg/42MUBcFx"><img src="img/soc2.svg" alt=""></a>
 					<a href=""><img src="img/soc3.svg" alt=""></a>
 				</div>
 				<a class="footer__terms" href=''>TERMS AND CONDITIONS</a>
@@ -237,7 +246,7 @@
 	<!-- VIDEO PLAYER -->
 	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.min.js"></script>
 
-	<script src="js/scripts.min.js"></script>
+	<script src="js/common.js"></script>
 
 </body>
 </html>
