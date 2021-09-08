@@ -106,6 +106,46 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 	}
+
+	let form = qs('.wpforms-field-container');
+	if(form) form.appendChild(qs('.wpforms-submit-container'));
+
+	let questions = qsa('.wpsm_panel-heading');
+	if(questions) {
+		qsa('.faq__width h3').forEach(el => el.removeAttribute('style'));
+		qs('.faq__control').append(...Array.from(document.querySelectorAll('.faq__width h3')));
+
+		qsa('.faq__control h3').forEach(el => {
+			el.onclick = (e) => {
+				let index = Array.from(qsa('.faq__control h3')).indexOf(el);
+				let = tabs = qsa('.faq__width > div');
+
+				if(el.previousElementSibling) el.previousElementSibling.classList.remove('active');
+				if(el.nextElementSibling) el.nextElementSibling.classList.remove('active');
+				el.classList.add('active');
+
+				if(tabs[index].previousElementSibling) tabs[index].previousElementSibling.classList.remove('active');
+				if(tabs[index].nextElementSibling) tabs[index].nextElementSibling.classList.remove('active');
+				tabs[index].classList.add('active');
+			};
+		})
+		qsa('.faq__width > div')[0].classList.add('active');
+		qsa('.faq__control h3')[0].classList.add('active');
+
+	}
+
+	questions.forEach(el => {
+		el.onclick = (e) => {
+			let answer = el.nextElementSibling;
+			if(el.classList.contains('active')) {
+				el.classList.remove('active');
+				answer.style.height = '0px';
+			} else {
+				el.classList.add('active');
+				answer.style.height = answer.scrollHeight + 15 + 'px';
+			}
+		};
+	})
 	
 
 
