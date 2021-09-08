@@ -313,6 +313,15 @@ h2 {
 		}
 	}
 }
+.animated {
+	opacity: 0;
+	transform: translate3d(0,80px,0);
+	&.in-view {
+		opacity: 1;
+		transform: translate3d(0,0px,0);
+		transition: 1.5s cubic-bezier(0.25, 1, 0.5, 1);;
+	}
+}
 .cont {
 	position: relative;
 	z-index: 3;
