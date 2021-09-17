@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		manualSeach = qs('.manual-search'),
 
 		viewProduct = qsa('.s-search__results .view'),
-		prodModal = qs('.product'),
-		prodClose = qs('.product .close');
+		prodModal = qs('.s-product'),
+		prodModals = qsa('.s-product'),
+		prodClose = qsa('.s-product .close');
 
 
 	if(homeHeader) {
@@ -59,14 +60,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if(prodModal) {
 		viewProduct.forEach((viewBtn) => {
-			viewBtn.onclick = () => {
-				prodModal.classList.add('active');
+			viewBtn.onclick = (e) => {
+				if(e.target.closest('.product').querySelector('.s-product .screen-reader-text')) {
+					e.target.closest('.product').querySelector('.s-product .screen-reader-text').classList.remove('screen-reader-text');
+				}
+				
+				e.target.closest('.product').querySelector('.s-product').classList.add('active');
+				qs('.s-search').classList.add('z-ind');
 			}
 		})
-		prodClose.onclick = () => {
-			prodModal.classList.remove('active');
-		}
-
+		prodClose.forEach((close) => {
+			close.onclick = (e) => {
+				e.target.closest('.s-product').classList.remove('active');
+				qs('.s-search').classList.remove('z-ind');
+			}
+		})
 	}
 
 	let form = qs('.wpforms-field-container');
@@ -80,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		qsa('.faq__control h3').forEach(el => {
 			el.onclick = (e) => {
 				let index = Array.from(qsa('.faq__control h3')).indexOf(el);
-				let = tabs = qsa('.faq__width > div');
+				let tabs = qsa('.faq__width > div');
 
 				if(el.previousElementSibling) el.previousElementSibling.classList.remove('active');
 				if(el.nextElementSibling) el.nextElementSibling.classList.remove('active');
@@ -110,12 +118,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	
 
-	let cartBtn = qs('.header__acc .cart'),
-		cartBlock = qs('.s-cart');
-	cartBtn.onclick = (e) => {
-		e.preventDefault();
-		cartBlock.classList.add('active');
-	}
 	document.onclick = (e) => {
 		if(searchBlock && searchBlock.classList.contains('active') 
 			&& !e.target.closest('.search-block') 
@@ -129,20 +131,56 @@ document.addEventListener("DOMContentLoaded", function() {
 				bannerText.style.height = bannerText.scrollHeight + 40 + 'px';
 			}
 		}
-		if(prodModal && prodModal.classList.contains('active')
-		   && !e.target.closest('.product .xlg-width')
-		   && !e.target.classList.contains('view')) {
-			prodModal.classList.remove('active');
-		}
+		if(prodModal && qs('.s-product.active')
+			   && !e.target.closest('.s-product .xlg-width')
+		   	   && !e.target.classList.contains('view')) {
+			qs('.s-product.active').classList.remove('active');
 
-		if(cartBlock.classList.contains('active') 
-			&& !e.target.closest('.s-cart__wrap') 
-			&& !e.target.closest('.header__acc .cart')) {
-
-			cartBlock.classList.remove('active');
+			qs('.s-search').classList.remove('z-ind');
 		}
 	}
-	
+
+	// ANCHORS HEADER
+	qsa('a[href="#faq"]').forEach(el => {
+		el.onclick = (e) => {
+			e.preventDefault();
+			// if(window.innerWidth < 768) {
+			// 	qs('.header__nav').classList.remove('active');
+			// }
+			let scrollToY = offsetTop(qs('.faq'));
+			scrollTo(scrollToY);
+		}
+	})
+	const requestAnimationFrame = window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame ||
+	    window.oRequestAnimationFrame ||
+	    window.msRequestAnimationFrame;
+
+	function scrollTo(to) {
+	    const start = window.scrollY || window.pageYOffset;
+	    const time = Date.now();
+	    const duration = Math.abs(start - to) / 2;
+
+	    (function step() {
+	        var dx = Math.min(1, (Date.now() - time) / duration)
+	        var pos = start + (to - start) * easeInOutCubic(dx)
+
+	        window.scrollTo(0, pos)
+
+	        if (dx < 1) {
+	            requestAnimationFrame(step)
+	        }
+	    })()
+	}
+	function easeInOutCubic(x) {
+		return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+	}
+	function offsetTop(el) {
+	    var rect = el.getBoundingClientRect(),
+	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	    return rect.top + scrollTop;
+	}
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
@@ -151,3 +189,45 @@ document.addEventListener("DOMContentLoaded", function() {
 		return searchIn ? searchIn.querySelectorAll(selector) : document.querySelectorAll(selector)
 	}
 });
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        smartSearch();
+    }
+});
+// SUPER CUSTOM SEARCH
+function smartSearch(){
+    //parsing search
+    let search = document.querySelector('input.search').value;
+    if (!search){
+        search = '?s=';
+    } else {
+        search = '?s='+search;
+    }
+    
+    //parsing filters
+    let filters = [];
+    let filters_string='&product_cat=';
+    
+        let boxes = document.querySelectorAll('input[type=checkbox]:checked');
+        
+        for (var i = 0; i < boxes.length; i++) {
+          filters.push(boxes[i].value);
+        }
+        
+        if (filters.length<1){
+            filters_string='';
+        } else {
+            filters_string = filters_string + filters[0];
+            if(filters.length>1){
+                for(var z = 1; z < filters.length; z++){
+                    filters_string = filters_string + "+" + filters[z];
+                }   
+            }
+        }
+        
+        
+    
+    window.location = "http://box2325.temp.domains/~sendtost/"+search+ "&post_type=product"+filters_string;
+}
+
+

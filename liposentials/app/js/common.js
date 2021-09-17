@@ -11,8 +11,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
+	let header = qs('.header'),
+		hamb = qs('.header-mob__hamb'),
+		menu = qs('.header__nav-nav'),
+		close = qs('.header-mob__close');
+
+	window.onscroll = () => {
+		if (document.scrollingElement.scrollTop > 47) {
+			header.classList.add('sticky');
+		} else {
+			header.classList.remove('sticky');
+		}
+	}
+	hamb.onclick = () => {
+		menu.classList.add('active');
+	}
+	close.onclick = () => {
+		menu.classList.remove('active');
+	}
+
 	let questions = qsa('.question');
-	console.log(questions);
 
 	questions.forEach(el => {
 		el.onclick = (e) => {
@@ -26,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		};
 	})
+
+
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)

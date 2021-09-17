@@ -10,6 +10,17 @@
    font-display: block;
 }
 @font-face { 
+   font-family: 'NanumPen';
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('NanumPen.eot'),
+       url('../fonts/NanumPen.woff2') format('woff2'),
+       url('../fonts/NanumPen.woff') format('woff'),
+       url('../fonts/NanumPen.ttf') format('ttf'),
+       url('../fonts/NanumPen.eot') format('eot');
+   font-display: block;
+}
+@font-face { 
    font-family: 'good';
    font-style: normal;
    unicode-range: U+000-5FF;
@@ -71,7 +82,7 @@ html {
 }
 body {
 	// font-family: 'purple';
-	font-family: 'Nanum Pen Script', cursive;
+	font-family: 'NanumPen';
 	position: relative;
 	line-height: 1.4;
 	overflow-x: hidden;

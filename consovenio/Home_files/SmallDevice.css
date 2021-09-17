@@ -1,0 +1,157 @@
+﻿@media (max-width: 575.98px) {
+  [data-forh-element="grid"] [class*="col-"] > div {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.5);
+    opacity: 0.5; }
+  a.logo img {
+    margin-top: 15px;
+    border: 1px solid yellow; }
+  html, body {
+    font-size: 12px !important; }
+  h1 {
+    font-size: 3rem; }
+  h2 {
+    font-size: 2.25rem !important;
+    margin-bottom: 4rem; }
+  h3 {
+    font-size: 2rem !important; }
+  .margin100 {
+    margin-top: 4rem; }
+  .margin200 {
+    margin-top: 150px; }
+  .introtext {
+    width: 100%;
+    margin-top: 150px; }
+    .introtext h1 {
+      font-size: 3.0rem !important; }
+  nav.navbar {
+    /* height: 188px;*/ }
+  nav div ul.navbar-nav {
+    border-bottom: 2px solid green;
+    width: 100%;
+    margin-top: 0.75rem;
+    background-color: #fff; }
+    nav div ul.navbar-nav li.nav-item {
+      padding-left: calc(var(--bs-gutter-x) / 2) !important;
+      padding-top: .5rem;
+      padding-bottom: .5rem; }
+      nav div ul.navbar-nav li.nav-item a.nav-link {
+        font-size: 1.5rem;
+        font-weight: 600; }
+  .offset-1,
+  .offset-2,
+  .offset-3,
+  .offset-4,
+  .offset-6 {
+    margin-left: 0; }
+  .col-4,
+  .col-5, .col-6, .col-7,
+  .col-8, .col-9, .col-10 {
+    width: 100%; }
+  .client-bar .col-2 {
+    width: 50%; }
+  .client-bar p.industry {
+    font-size: 1.25rem !important; }
+  .client-bar .d-lg-block {
+    margin-top: 6rem; }
+  .cont-m section.row div.offset-3, .cont-m section.row div.offset-2 {
+    width: 100%;
+    margin-left: 0;
+    display: block; }
+    .cont-m section.row div.offset-3:nth-of-type(2), .cont-m section.row div.offset-2:nth-of-type(2) {
+      margin-top: 1.5rem; }
+  #comp-2 .testimonials .mt-2 a div.envelope .col-8 {
+    width: 55%; }
+  #comp-2 .testimonials .mt-2 a div.envelope .col-4 {
+    width: 45%; }
+  #comp-2 .testimonials .mt-2 a div.envelope div[class^='col']:nth-child(1) {
+    font-size: 1.5rem; }
+  #comp-1 .t-header section div.col-2 {
+    display: block;
+    width: 100%; }
+    #comp-1 .t-header section div.col-2:nth-of-type(2), #comp-1 .t-header section div.col-2:nth-of-type(3) {
+      margin-top: 1.5rem; }
+  #comp-1 .t-section h2 {
+    font-size: 3rem; }
+  .col-5.stripe {
+    width: 41.666667%; }
+  .hp-help .blob2 {
+    margin-left: 100px; }
+  .hp-our-word .blob4 {
+    width: 160px;
+    height: 160px;
+    margin-left: 40px !important; }
+  .hp-offer section.services .col-4 {
+    display: block;
+    width: 100%; }
+  #comp-3 .col-2 {
+    display: none; }
+  #comp-2 .next-testimonial .chevron.bottom::before {
+    border-width: 2px 2px 0 0;
+    width: 40px;
+    height: 40px; }
+  #comp-2 .next-testimonial .chevron.top::before {
+    border-width: 2px 2px 0 0;
+    width: 40px;
+    height: 40px; }
+  #comp-2 .testimonials .mt-2 a div.envelope div[class^='col']:nth-child(1) {
+    width: 100%; }
+  #comp-2 .testimonials .mt-2 a div.envelope div[class^='col']:nth-child(2) {
+    display: none; }
+  #comp-2 .testimonials .mt-2 a div.envelope div[class^='col']:nth-child(1) p {
+    font-size: 2.00rem; }
+  #comp-2 .testimonials .mt-2 {
+    min-height: unset; }
+  #comp-2 .testimonials .mt-2 a.testimonial_link {
+    min-height: unset; }
+  #comp-4 .clock.sender {
+    position: relative;
+    float: right;
+    right: 0;
+    left: -120px;
+    bottom: 0;
+    top: -60px; }
+  #comp-4 .contact-box .send {
+    width: 112px !important;
+    height: 112px !important;
+    background-color: #adc137 !important;
+    border-radius: 23px;
+    transform: rotate(20deg);
+    position: absolute;
+    color: #adc137 !important; }
+  #comp-4 .contact-box .sendtext {
+    top: 43px;
+    left: 33px; }
+  #comp-5.col-2 {
+    display: none; }
+  #comp-5 i.chevron.top::before, #comp-5 i.chevron.right::before {
+    height: 40px;
+    width: 40px;
+    border-width: 2px 2px 0 0; }
+  #comp-5 .col-rr {
+    text-align: right; }
+  #comp-6 {
+    margin-left: -100px; }
+    #comp-6 .arrow-envelope .headline {
+      left: -60px; }
+    #comp-6 .arrow-envelope .line {
+      margin-left: 21px; }
+    #comp-6 .arrow-envelope .arrow::before {
+      width: 40px !important;
+      height: 40px !important; }
+  .b-button .b-button-env {
+    left: unset; }
+  .standard-list:nth-of-type(even) {
+    margin-left: unset;
+    margin-right: unset; }
+  .sc-detail-box .col-4 {
+    margin-bottom: 4rem; }
+    .sc-detail-box .col-4 .servicetitle {
+      font-size: 1.5rem; }
+  .tech:nth-of-type(1), .tech:nth-of-type(2), .tech:nth-of-type(3), .tech:nth-of-type(4), .tech:nth-of-type(5), .tech:nth-of-type(6) {
+    margin-left: unset;
+    margin-right: unset; }
+  footer {
+    margin-bottom: var(--bs-gutter-x, 0.75rem); } }

@@ -1,0 +1,28 @@
+﻿:root {
+  --bs-grid-opacity: 0.15; }
+
+[data-forh-element="grid"] {
+  position: fixed;
+  top: 0px;
+  left: 0%;
+  z-index: 1000000;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: "Open Sans", sans-serif; }
+
+[data-forh-element="grid"] > .container, [data-forh-element="grid"] > .container-fluid, [data-forh-element="grid"] > .container > .row, [data-forh-element="grid"] > .container-fluid > .row {
+  height: 100%; }
+
+[data-forh-element="grid"] [class*="col-"] {
+  /*    position: relative;
+    height: 100%;
+    background-color: rgba(255, 0, 0, var(--bs-grid-opacity));*/ }
+
+@media (min-width: 1200px) {
+  [data-forh-element="grid"] [class*="col-"] > div {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.2);
+    opacity: 0.5; } }

@@ -37,9 +37,58 @@
 		h5 {
 			font-size: 28px;
 			padding-right: 30px;
+			p {
+				font-size: 28px;
+			}
 		}
 		li {
 			padding: 60px 60px 60px 30px;
+		}
+	}
+	.product {
+		>.flex {
+			flex-direction: column;
+		}
+		&__card {
+			&.prod-best {
+				.product__ribbon {
+					padding: 5px 0;
+					line-height: 1;
+					font-size: 11px;
+					word-spacing: 100vw;
+					transform: translate3d(-50px, 8px, 0px) rotate(-45deg);
+				}
+			}
+		}
+		
+		&__badges {
+			margin-bottom: 26px;
+			margin-top: 22px;
+			width: calc(100% + 30px);
+			position: relative;
+			left: -15px;
+			img {
+				width: 75px;
+			}
+			span {
+				font-size: 12px;
+			}
+		}
+		.half {
+			width: 100%;
+			max-width: 600px;
+			margin: 0 auto;
+			&:nth-child(2n) {
+				margin-right: auto;
+			}
+		}
+		.btn {
+			font-size: 15px;
+			padding: 10px 0 13px;
+			&::after {
+				position: relative;
+				top: 2px;
+			}
 		}
 	}
 }
@@ -55,6 +104,107 @@
 	}
 	h4 {
 		font-size: 22px;
+	}
+	.announcement-bar {
+	    padding: 0 15px;
+	    height: 29px;
+	    .s-width {
+	    	justify-content: center;
+	    }
+	    p {
+	    	text-align: center;
+	    	font-size: 13px;
+	    	svg {
+	    		width: 18px;
+	    	}
+	    }
+	    a:not(.announcement-bar__message) {
+	    	display: none;
+	    }
+	}
+	div#shopify-section-header {
+		top: -29px;
+	}
+	.header {
+		padding: 0 15px;
+		height: auto;
+		&__logo {
+			width: 150px;
+		}
+		&-mob {
+			&__hamb {
+				display: block;
+				margin-right: 20px;
+				position: relative;
+				top: 1px;
+				padding: 25px 0;
+				svg {
+					display: block;
+				}
+			}
+			&__close {
+				display: block;
+				padding-left: 23px;
+				margin-bottom: 25px;
+
+			}
+			&__link {
+				display: block;
+			}
+		}
+		&__cta {
+			margin: 0;
+			padding: 5px 11px;
+		}
+		&__nav {
+			&-cart {
+				svg {
+					display: block;
+				}
+			}
+			&-nav.flex {
+				padding-top: 40px;
+			    position: fixed;
+			    width: 80%;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    z-index: 100;
+			    background: #fff;
+			    flex-direction: column;
+			    justify-content: flex-start;
+			    align-items: flex-start;
+			    box-shadow: none;
+			    transform: translate3d(-100%, 0, 0);
+			    transition: .3s;
+			    &.active {
+			    	// box-shadow: 0 0 100px rgba(0, 0, 0, 50%);
+			    	transform: translate3d(0%, 0, 0);
+			    	transition: .3s;
+			    }
+			    a {
+			    	font-size: 21px;
+			    }
+			    a.header-mob__cta {
+			    	display: block;
+			        padding: 6px 20px;
+			        width: calc(100% - 40px);
+			        position: relative;
+			        left: 20px;
+			        text-align: center;
+			        margin: 20px 0;
+			        font-size: 16px !important;
+			        text-transform: capitalize !important;
+			        border: 2px solid #000;
+			        &::after {
+			        	display: none;
+			        }
+			        &:hover {
+			        	color: #000;
+			        }
+			    }
+			}
+		}
 	}
 	.head {
 		span {
@@ -84,9 +234,9 @@
 				margin: 10px 0 0;
 			}
 		}
-		&-page {
+		&-page:not(.head-product) {
 			position: relative;
-			background: url(../img/about/page-bg-mob.svg) no-repeat bottom center/100% auto;
+			background: url(page-bg-mob.svg) no-repeat bottom center/100% auto;
 		}
 		&-about {
 			.flex {
@@ -131,16 +281,17 @@
 		}
 		h5 {
 			font-size: 22px;
+			p {
+				font-size: 22px;
+			}
 		}
 		p {
 			font-size: 15px;
 		}
 	}
-	.clinical {
-		&.tech {
-			h4,h3 {
-				font-size: 26px;
-			}
+	.tech {
+		h4,h3 {
+			font-size: 26px;
 		}
 	}
 	.image-text {
@@ -187,6 +338,61 @@
 			width: calc((100% - 225px) / 2 - 30px);
 		}
 	}
+
+	.s-contact {
+		padding-top: 30px;
+		padding-bottom: 35px;
+		p {
+			font-size: 15px;
+			&.lg {
+				font-size: 19px;
+				line-height: 1.3;
+				margin-bottom: 15px;
+			}
+			&.xlg {
+				font-size: 19px;
+			}
+		}
+		.half {
+			width: 100%;
+		}
+		ul {
+			margin-top: 60px;
+		}
+		li {
+			margin-bottom: 50px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.link-arr {
+			margin-top: 12px;
+		}
+		img {
+			width: 40px;
+			min-width: 40px;
+			margin-right: 20px;
+		}
+		&__form {
+			position: relative;
+			margin-top: 75px;
+			padding: 45px 0px;
+			&::after {
+				content: '';
+				position: absolute;
+				width: calc(100% + 40px);
+				left: -20px;
+				top: 0;
+				height: 100%;
+				background: #eee;
+				z-index: -1;
+			}
+			.btn {
+				width: 100%;
+				max-width: none;
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	section {
@@ -195,20 +401,13 @@
 	}
 	.btn {
 		font-size: 16px;
-		background-position: right 70px center;
-		padding: 10px 80px;
+		padding: 10px 0px;
 		display: block;
 		max-width: 280px;
 		margin: 0 auto;
-		text-align: center;
-		&:hover {
-			background-position: right 66px center;
-		}
-		&.btn-arr {
-			background-position: right 70px center;
-			&:hover {
-				background-position: right 66px center;
-			}
+		&::after {
+			position: relative;
+			top: 1px;
 		}
 	}
 	h4 {
@@ -280,8 +479,8 @@
 			}
 		}
 		&-page {
-			padding-top: 60px;
-			padding-bottom: 75px;
+			padding-top: 45px;
+			padding-bottom: 60px;
 			h2 {
 				font-size: 30px;
 			}
@@ -290,12 +489,24 @@
 				margin-top: 20px;
 			}
 		}
+		&-product {
+			padding-top: 28px;
+			padding-bottom: 35px;
+			background-position: right 25% center;
+			h2 {
+				font-size: 23px;
+			}
+			p {
+				margin-top: 10px;
+			}
+		}
 		&-faq {
 			padding-bottom: 95px;
+			padding-top: 60px;
 		}
 		&-benefits {
 			padding-top: 0;
-			background: url('../img/about/page-shape-mob.svg') no-repeat bottom center/ 100% auto;
+			background: url('page-shape-mob.svg') no-repeat bottom center/ 100% auto;
 			padding-bottom: 40px;
 			h2 {
 				font-size: 34px;
@@ -308,8 +519,14 @@
 		&-about {
 			padding-top: 50px;
 			padding-bottom: 0;
+			&__img {
+				margin-top: -55px;
+			}
 			.flex {
 				flex-direction: column;
+			}
+			p {
+				padding: 0;
 			}
 			.half {
 				width: 100%;
@@ -319,6 +536,17 @@
 				position: relative;
 				top: 55px;
 			}
+		}
+	}
+	#shopify-section-cart-template {
+		padding: 0 20px;
+	}
+	.header {
+		.mob-cart-hidden {
+			display: none;
+		}
+		.mob-cart-visible {
+			display: block;
 		}
 	}
 	.text-block {
@@ -429,11 +657,12 @@
 			padding-top: 40px;
 			padding-bottom: 55px;
 			img {
-				margin: 40px auto 0;
+				margin: 15px auto 0;
 			}
 		}
 		&__text {
 			width: 100%;
+			margin-bottom: 25px;
 		}
 	}
 	.clinical {
@@ -584,7 +813,7 @@
 	}
 	.faq {
 		padding-top: 50px;
-		padding-bottom: 70px;
+		padding-bottom: 75px;
 		&__icon {
 			width: 62px;
 			margin-bottom: 14px;
@@ -627,16 +856,31 @@
 		&__block {
 			margin-bottom: 45px;
 		}
-		&.faq-page {
-			padding-bottom: 65px;
-			padding-top: 0;
-			margin-top: -40px;
-			position: relative;
-			z-index: 2;
-			.btn {
-				margin-top: 50px;
-			}
+		
+	}
+	.faq-page {
+		padding-bottom: 0px;
+		padding-top: 0;
+		margin-top: -40px;
+		position: relative;
+		z-index: 2;
+	}
+	#shopify-section-faq-general .btn {
+		margin-top: 45px;
+		margin-bottom: 0;
+	}
+	.faq.faq-padding {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.faq.faq-page-block {
+		.btn {
+			margin-top: 0;
+			margin-bottom: 45px;
 		}
+	}
+	.faq.faq-general {
+		padding-bottom: 70px;
 	}
 	.footer {
 		&__logo {
@@ -673,5 +917,173 @@
 			font-size: 12px;
 			padding: 25px 20px;
 		}
+		.social {
+			justify-content: flex-start;
+		}
+	}
+	.product {
+		padding-top: 30px;
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-bottom: 45px;
+		&__card {
+			padding-left: 14px;
+			padding-right: 14px;
+			
+			&.shipping {
+				.product__img {
+					position: relative;
+					&::after {
+						width: 75px;
+						height: 75px;
+						bottom: 0px;
+					}
+				}
+			}
+			&.lg {
+				padding: 25px 15px;
+				h3 {
+ 					font-size: 30px;
+				} 
+				.flex {
+					justify-content: flex-end;
+					>div {
+						margin-right: 0;
+					}
+				}
+				.product__price {
+					margin-top: -10px;
+					margin-right: 0;
+					padding-right: 0;
+					
+				}
+			}
+			h3 {
+				font-size: 26px;
+			}
+			&-accent {
+				font-size: 22px;
+			}
+		}
+		.btn {
+			display: none;
+		}
+		&__mob-btn.btn {
+			margin-top: 16px;
+			display: block;
+			width: 100%;
+			max-width: none;
+		}
+		&__price {
+			span {
+				font-size: 15px;
+				&.val {
+					font-size: 36px;
+				}
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+		&__badges {
+			li {
+				width: 33.33%;
+				&:first-child {
+					padding-left: 8px;
+				}
+				&:last-child {
+					padding-right: 8px;
+				}
+			}
+		}
+	}
+
+
+	.cart-page {
+		padding-top: 36px;
+		padding-bottom: 90px;
+		h1 {
+			font-size: 30px;
+			margin-bottom: 25px;
+		}
+		thead {
+			display: none;
+		}
+		table, tbody {
+			display: block;
+			border: 0;
+		}
+		tr {
+			display: flex;
+			width: 100%;
+			flex-flow: row wrap;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding: 15px 0 30px;
+			border-bottom: 1px solid #F5F5F5;
+			&:first-child {
+				border-top: 1px solid #F5F5F5;
+			}
+		}
+		td {
+			padding: 0;
+			width: 100%;
+		}
+		.cart__product-information {
+			align-items: center;
+		}
+		.cart__image-wrapper {
+			padding: 0;
+		    margin-right: 20px;
+		    flex-basis: 130px;
+		}
+		.cart__image {
+			max-height: none;
+		}
+		.cart-subtotal {
+			text-align: right;
+		}
+		.btn {
+			width: 100%;
+			max-width: none;
+			margin-top: 20px;
+		}
+		.small--hide {
+			display: block !important;
+		}
+		.cart__qty {
+			margin-top: 0;
+			label {
+				display: block;
+				margin-bottom: 8px;
+			}
+		}
+		.cart__quantity-td {
+			flex-grow: 1;
+		    width: auto;
+		    text-align: left !important;
+		    padding-left: 150px !important;
+		    margin-top: 15px;
+		}
+		.cart__final-price {
+			margin-top: 15px;
+			display: flex !important;
+			width: auto;
+			align-items: center;
+		}
+		.cart__buttons-container {
+			max-width: 370px;
+		}
+		.cart__footer {
+			padding-top: 0;
+		}
+	}
+	.empty-page-content  {
+		h1 {
+			font-size: 30px;
+		}
 	}
 }
+
+
+
