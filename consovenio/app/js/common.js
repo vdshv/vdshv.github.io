@@ -11,4 +11,51 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
+
+	// SCROLLING ANIM
+	let options = {
+	    threshold: 0
+	}
+	let callback = function(entries, observer) {
+	    entries.forEach(entry => {
+	    	if (entry.isIntersecting){
+	    		entry.target.classList.add('in-view');
+	    	}  else {
+	    		entry.target.classList.remove('in-view');
+	    	}
+      	});
+	};
+	let observer = new IntersectionObserver(callback, options),
+		animated = qsa('.animated');
+
+	animated.forEach(el => {
+		if (observer) {
+			observer.observe(el)
+		} else {
+			el.classList.remove('animated');
+			el.classList.add('in-view');
+		}
+		
+	});
+	// END SCROLLING ANIM
+
+	// MOB MENU
+	// qs('.header__hamb').onclick = () => {
+	// 	qs('.header__nav').classList.add('active');
+	// }
+	// qs('.header__nav-close').onclick = () => {
+	// 	qs('.header__nav').classList.remove('active');
+	// }
+	// END MOB MENU
+
+
+
+	
+
+	function qs (selector, searchIn) {
+		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
+	}
+	function qsa (selector, searchIn) {
+		return searchIn ? searchIn.querySelectorAll(selector) : document.querySelectorAll(selector)
+	}
 });

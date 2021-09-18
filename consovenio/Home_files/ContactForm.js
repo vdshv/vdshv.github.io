@@ -2,16 +2,7 @@
 
     console.log('contact form - Init');
 
-    //$('.clock.sender').mouseout(function () {
-    //   // $(this).animate({ 'zoom': 1.2 }, 400);
-    //   $(this).animate({ 'zoom': 0.9 }, 350);
-    //   $(this).animate({ 'zoom': 1 }, 350);
-    //});
 
-    $('.cloock.sender').hover(function () {
-        $(this).animate({ 'zoom': 1.1 }, 350);
-        $(this).animate({ 'zoom': 1 }, 350);
-    });
 
     $('.cloock.sender').click(function () {
 
