@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		formCont = qs('.contact.form'),
 		error = qs('.contact__error');
 
-    form.onsubmit = (e) => {
+    if(form) form.onsubmit = (e) => {
     	e.preventDefault();
 
     	var canSend = false,
