@@ -838,7 +838,27 @@ p {
 			margin-bottom: 4vw;
 		}
 	}
+	.p-lg {
+		margin-bottom: 30px;
+	}
+	&__error {
+		display: inline-flex;
+		align-items: center;
+		color: #fff;
+		height: 50px;
+		background: $acc;
+		padding: 0 30px;
+		border-radius: 10px;
+		height: 0;
+		transform-origin: 0 50%;
+		transform: scaleY(0);
+		&.active {
+			transform: scaleY(1);
+			transition: .3s;
+		}
+	}
 	form {
+		margin-top: 20px;
 		max-width: 830px;
 		position: relative;
 	}
