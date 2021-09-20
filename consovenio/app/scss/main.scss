@@ -148,19 +148,29 @@ p {
 	&:focus {
 		outline: none;
 	}
-	&::after {
-	    content: '';
-	    position: absolute;
-	    height: 50px;
-	    width: 50px;
-	    border: 2px solid #000;
-	    top: 50%;
-	    right: 30px;
-	    transform: translate3d(0, -50%, 0) rotate(-45deg);
-	    border-top: 0;
-	    border-left: 0;
-	    transition: .2s;
+	&-arr {
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		top: 50%;
+		right: 30px;
+		transform: translate3d(0, -50%, 0);
+		transition: .25s;
+		&::after {
+		    content: '';
+		    position: absolute;
+		    height: 100%;
+		    width: 100%;
+		    left: 0;
+		    top: 0;
+		    border: 2px solid #000;
+		    transform: rotate(-45deg);
+		    border-top: 0;
+		    border-left: 0;
+		    transition: .25s;
+		}
 	}
+	
 	&-lg {
 		max-width: 790px;
 		width: 100%;
@@ -182,20 +192,32 @@ p {
 	&-rotate {
 		padding: 8px 25px;
 	    position: relative;
-	    transition: .25s;
 	}
-	&-rotate::after {
-	    content: '';
-	    position: absolute;
-	    width: 170px;
-	    height: 100%;
-	    top: 0;
-	    background: #aec037;
-	    left: 50%;
-	    z-index: -1;
-	    border-radius: 12px;
-	    transform: translate3d(-50%,0,0) rotate(-60deg);
-	    transition: .2s;
+	&-rotate {
+		&-blob {
+			z-index: -1;
+			position: absolute;
+			width: 170px;
+			height: 100%;
+			top: 0;
+			left: 50%;
+			transform: translate3d(-50%,0,0);
+			transition: width .3s;
+			&::after {
+			    content: '';
+			    position: absolute;
+			    width: 100%;
+			    height: 100%;
+			    top: 0;
+			    background: #aec037;
+			    left: 0;
+			    z-index: -1;
+			    border-radius: 12px;
+			    transform: rotate3d(0, 0, 1, -60deg);
+			    transform-origin: center center;
+			    transition: transform .3s;
+			}
+		}
 	}
 	&:hover {
 		text-decoration: none;
@@ -205,16 +227,24 @@ p {
 		transition: .2s ease-out;
 		transform: scale(1.02);
 	}
-	&:hover span::after {
+	&:hover .btn-rotate-blob {
 		width: 100%;
-		transform: translate3d(-50%,0,0) rotate(0deg);
-	    transition: .6s $cubic;
+	    transition: width .5s $cubic;
+		&::after {
+			transform: rotate3d(0, 0, 1, 0);
+		    transition: transform .5s $cubic;
+		}
 	}
-	&:hover::after {
-		transform: translate3d(10px, -50%, 0) rotate(-45deg);
-	    transition: .6s $cubic;
-	    width: 22px;
-	    height: 22px;
+	&:hover .btn-arr {
+		transition: .5s $cubic;
+		width: 22px;
+		height: 22px;
+		
+		&::after {
+		    transition: .5s $cubic;
+		    transform: translate3d(15px,0,0) rotate(-45deg);
+		    // transform-origin: 50% 50%;
+		}
 	}
 	&-lg:hover::after {
 		width: 50px;
