@@ -18,10 +18,13 @@ body {
 	font-family:"museo-sans";
 }
 a {
+	color: #000;
 	text-decoration: none;
+	transition: .2s;
 	&:hover {
 		text-decoration: none;
 		color: #000;
+		transition: .2s;
 	}
 }
 li {
@@ -133,13 +136,14 @@ p {
 
 .btn {
 	display: inline-block;
-		font-size: 21px;
-	    color: #000;
-	    text-transform: uppercase;
-	    font-weight: 700;
-	    position: relative;
-	    padding: 60px 60px 60px 0;
-	    text-decoration: none;
+	font-size: 21px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding: 60px 60px 60px 0;
+    text-decoration: none;
+
 	&:focus {
 		outline: none;
 	}
@@ -157,7 +161,8 @@ p {
 	    transition: .2s;
 	}
 	&-lg {
-		width: 80%;
+		max-width: 790px;
+		width: 100%;
 		text-align: center;
 		font-size: 21px;
 	    color: #000;
@@ -317,12 +322,31 @@ p {
 .acc {
 	color: $acc;
 }
-.head-text {
+.text-block {
 	.cont {
-		max-width: 67vw;
+		max-width: 65vw;
 	}
 	p {
 		font-weight: 500;
+		margin-bottom: 30px;
+	}
+	.p-lg {
+		margin-bottom: 50px;
+	}
+	&.center {
+		text-align: center;
+		p {
+			margin-bottom: 30px;
+		}
+	}
+	&.left {
+		text-align: left;
+		.cont {
+			max-width: 84vw;
+			p,h2 {
+				max-width: 65vw;
+			}
+		}
 	}
 }
 .line {
@@ -347,7 +371,7 @@ p {
 	}
 	&.acc {
 		&::before {
-			left: -30px;
+			left: 0;
 			height: 10px;
 			background: $acc;
 			border-radius: 3px;
@@ -366,6 +390,13 @@ p {
 		left: 0;
 		transform-origin: 0 50%;
 		transform: translate3d(0, -50%, 0) scale3d(0, 1.0, 1.0);
+	}
+	&.right {
+		&::before {
+			left: auto;
+			right: 0;
+			transform-origin: 100% 50%;
+		}
 	}
 	&.content-line {
 		&::before {
@@ -460,6 +491,11 @@ p {
 }
 .offer {
 	&__list {
+		.line.acc {
+			&::before {
+				left: -30px;
+			}
+		}
 		li {
 			&:nth-child(1) {
 				.line.in-view::before {
@@ -498,16 +534,22 @@ p {
 		align-items: flex-start;
 		justify-content: flex-start;
 		padding: 40px 0;
-		padding-left: 25px;
+		// padding-left: 25px;
 		position: relative;
-		&:nth-child(1) {
+		&:nth-child(5n - 4) {
 			padding-left: 0px;
 		}
-		&:nth-child(2) {
+		&:nth-child(5n - 3) {
 			padding-left: 50px;
 		}
-		&:nth-child(3) {
+		&:nth-child(5n - 2) {
 			padding-left: 100px;
+		}
+		&:nth-child(5n - 1) {
+			padding-left: 25px;
+		}
+		&:nth-child(5n) {
+			padding-left: 80px;
 		}
 		&.in-view {
 			.blob {
@@ -515,20 +557,20 @@ p {
 				transition: 2s $cubic;
 			}
 		}
+		h5 {
+			display: block;
+			font-size: 20px;
+			white-space: nowrap;
+			margin-right: 15px;
+			margin-bottom: 0;
+		}
+		p {
+			display:  block;
+			font-size: 20px;
+			margin-bottom: 0;
+		}
 	}
 	
-	h5 {
-		display: block;
-		font-size: 20px;
-		white-space: nowrap;
-		margin-right: 15px;
-		margin-bottom: 0;
-	}
-	p {
-		display:  block;
-		font-size: 20px;
-		margin-bottom: 0;
-	}
 	&__blob {
 		width: 120px;
 	    height: 45px;
@@ -680,6 +722,238 @@ p {
 	}
 	p {
 		font-size: 15px;
+	}
+}
+
+.work {
+	&__rect {
+		position: relative;
+		padding-bottom: 100%;
+	}
+	&__list {
+		align-items: stretch;
+		a {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: flex-end;
+			padding: 25px;
+			background: #EDEDED;
+			border-radius: 50px;
+			transition: .3s ease;
+			&:hover {
+				background: $acc;
+				transition: .3s ease;
+				transform: translate3d(0, -5px, 0);
+				.btn {
+					opacity: 1;
+					visibility: visible;
+					opacity: .25s;
+				}
+				.btn::after {
+					transform: translate3d(10px, -50%, 0) rotate(-45deg);
+				    transition: .3s;
+				    
+				}
+			}
+		}
+		.btn {
+			opacity: 0;
+			visibility: hidden;
+			transition: .25s;
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			font-size: 21px;
+			&::after {
+				right: 30px;
+				width: 22px;
+				height: 22px;
+			}
+		}
+		p {
+			// font-size: 30px;
+			font-size: 2vw;
+			text-transform: uppercase;
+			font-weight: 800;
+			text-align: left;
+			line-height: 1.2;
+		}
+		>div {
+			position: relative;
+			width: calc(100% / 3 - 7px);
+			margin-bottom: 10px;
+		}
+	}
+	&__info.flex {
+		margin-bottom: 100px;
+		align-items: flex-end;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		h5 {
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+		p {
+			font-size: 21px;
+			font-weight: 500;
+			color: $acc;
+			line-height: 1.5;
+		}
+	}
+}
+.contact {
+	&.form {
+		h2 {
+			margin-bottom: 4vw;
+		}
+	}
+	form {
+		max-width: 830px;
+		position: relative;
+	}
+	label {
+		display: block;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	input,textarea {
+		display: block;
+		font-size: 25px;
+		font-family:"museo-sans";
+		width: 100%;
+		border: 0;
+		border-bottom: 1px solid #000;
+		padding: 15px 30px;
+		color: #000;
+		&::placeholder {
+			opacity: .7;
+		}
+	}
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 2;
+		cursor: pointer;
+		border: 0;
+		background: none;
+		font-size: 20px;
+		font-weight: 500;
+		text-transform: uppercase;
+		width: 180px;
+		height: 180px;
+		transition: .3s;
+		transform: translate3d(50%, 50%, 0px);
+		&:hover {
+			transform: translate3d(50%, 50%, 0px) scale(1.05);
+			transition: .3s;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: $acc;
+			border-radius: 23px;
+			z-index: -1;
+			transform: rotate(20deg);
+		}
+	}
+	&__info {
+		padding-bottom: 15vw;
+		padding-top: 12vw;
+		h2 {
+			text-align: right;
+		}
+		.work__info {
+			max-width: 750px;
+			margin-left: auto;
+			margin-right: auto;
+			>div {
+				width: calc(50% - 75px);
+			}
+			a {
+				color: $acc;
+				&:hover {
+					color: #000;
+				}
+			}
+			h5 {
+				margin-top: 35px;
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+		p {
+			font-weight: 500;
+			max-width: 750px;
+			margin: 0 auto;
+		}
+	}
+	
+}
+.about {
+	h2 {
+		margin-bottom: 5vw;
+		text-align: right;
+	}
+	&__clients {
+		.work__info {
+			justify-content: flex-start;
+			li {
+				margin-right: 50px;
+			}
+			h5 {
+				margin-bottom: 30px;
+			}
+			.line {
+				padding: 0;
+			}
+		}
+		.dots {
+			width: 12px;
+			height: 12px;
+			background: $acc;
+			border-radius: 3px;
+			transform: translate3d(0, 50%, 0) scale3d(0, 1, 1);
+			display: flex;
+			&.in-view {
+				transition: transform 1.5s .2s $cubic;
+				transform:  translate3d(0, 50%, 0) scale3d(1, 1, 1);
+			}
+			&::before, &::after {
+				display: block;
+				content: '';
+				width: 12px;
+				min-width: 12px;
+				height: 12px;
+				background: $acc;
+				border-radius: 3px;
+			}
+			&::before {
+				margin-left: 20px;
+			}
+			&::after {
+				margin-left: 10px;
+			}
+		}
+
+	}
+	&__bottom {
+		padding-bottom: 14vw;
+		.btn {
+			margin-top: 6vw;
+		}
 	}
 }
 

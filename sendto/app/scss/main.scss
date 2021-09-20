@@ -783,7 +783,7 @@ section {
 			bottom: 12px;
 			left: 17px;
 			width: calc(100% - 34px);
-			padding: 8px 20px;
+			padding: 8px;
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-around;
@@ -798,7 +798,7 @@ section {
 				width: 100%;
 				text-align: center;
 				font-weight: 700;
-				font-size: 10px;
+				font-size: 13px;
 				margin-bottom: 6px;
 				color: #343434;
 			}
@@ -809,7 +809,7 @@ section {
 				text-align: center;
 				width: calc(50% - 3px);
 				color: #000 !important;
-				font-size: 10px;
+				font-size: 13px;
 				font-weight: 400;
 				text-transform: capitalize !important;
 				cursor: pointer;

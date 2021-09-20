@@ -26,7 +26,19 @@ document.addEventListener("DOMContentLoaded", function() {
 		viewProduct = qsa('.s-search__results .view'),
 		prodModal = qs('.s-product'),
 		prodModals = qsa('.s-product'),
-		prodClose = qsa('.s-product .close');
+		prodClose = qsa('.s-product .close'),
+		prodGalleryImg = qsa('.s-product__gallery ul img');
+
+
+	if(prodGalleryImg) {
+		prodGalleryImg.forEach(el => {
+			el.onclick = (e) => {
+				let newSrc = e.target.getAttribute('src');
+				el.closest('.s-product').querySelector('.s-product__gallery img').setAttribute('src', newSrc);
+				el.closest('.s-product').querySelector('.s-product__gallery img').setAttribute('srcset', newSrc);
+			}
+		})
+	}
 
 
 	if(homeHeader) {
@@ -140,6 +152,62 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
+	document.addEventListener("keyup", function(event) {
+	    if (event.keyCode === 13) {
+	        smartSearch();
+	    }
+	});
+	// SUPER CUSTOM SEARCH
+	function smartSearch(){
+	    //parsing search
+	    let search = document.querySelector('input.search').value;
+	    if (!search){
+	        search = '?s=';
+	    } else {
+	        search = '?s='+search;
+	    }
+	    
+	    //parsing filters
+	    let filters = [];
+	    let filters_string='&product_cat=';
+	    
+	        let boxes = document.querySelectorAll('input[type=checkbox]:checked');
+	        
+	        for (var i = 0; i < boxes.length; i++) {
+	          filters.push(boxes[i].value);
+	        }
+	        
+	        if (filters.length<1){
+	            filters_string='';
+	        } else {
+	            filters_string = filters_string + filters[0];
+	            if(filters.length>1){
+	                for(var z = 1; z < filters.length; z++){
+	                    filters_string = filters_string + "+" + filters[z];
+	                }   
+	            }
+	        }
+	    window.location = "http://box2325.temp.domains/~sendtost/"+search+ "&post_type=product"+filters_string;
+	}
+
+	let sendMeTooInputs = qsa('.s-product__checkbox input[type=checkbox]');
+
+	if(sendMeTooInputs) {
+		sendMeTooInputs.forEach(el => {
+			el.onchange = (e) => {
+
+				let currentQty = e.target.closest('.s-product').querySelector('input[type=number]');
+				let currentQtyVal = e.target.closest('.s-product').querySelector('input[type=number]').value;
+				
+				if (!e.target.checked) {
+		    	    currentQty.value = Number(currentQtyVal) - 1;
+			    } else {
+			        currentQty.value = Number(currentQtyVal) + 1;
+			    }
+			}
+		})
+	}
+
 	// ANCHORS HEADER
 	qsa('a[href="#faq"]').forEach(el => {
 		el.onclick = (e) => {
@@ -182,6 +250,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	    return rect.top + scrollTop;
 	}
 
+
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
 	}
@@ -189,45 +258,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		return searchIn ? searchIn.querySelectorAll(selector) : document.querySelectorAll(selector)
 	}
 });
-document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        smartSearch();
-    }
-});
-// SUPER CUSTOM SEARCH
-function smartSearch(){
-    //parsing search
-    let search = document.querySelector('input.search').value;
-    if (!search){
-        search = '?s=';
-    } else {
-        search = '?s='+search;
-    }
-    
-    //parsing filters
-    let filters = [];
-    let filters_string='&product_cat=';
-    
-        let boxes = document.querySelectorAll('input[type=checkbox]:checked');
-        
-        for (var i = 0; i < boxes.length; i++) {
-          filters.push(boxes[i].value);
-        }
-        
-        if (filters.length<1){
-            filters_string='';
-        } else {
-            filters_string = filters_string + filters[0];
-            if(filters.length>1){
-                for(var z = 1; z < filters.length; z++){
-                    filters_string = filters_string + "+" + filters[z];
-                }   
-            }
-        }
-        
-        
-    
-    window.location = "http://box2325.temp.domains/~sendtost/"+search+ "&post_type=product"+filters_string;
-}
+
 
 
