@@ -1029,6 +1029,13 @@ p {
 			display: flex;
 			justify-content: flex-end;
 		}
+		.techn__list {
+			margin-bottom: 7vw;
+			margin-top: 3vw;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 .btn-flex {
