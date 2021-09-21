@@ -1,0 +1,60 @@
+@font-face { 
+   font-family: 'recoleta';
+   font-style: normal;
+   font-weight: 700;
+   unicode-range: U+000-5FF;
+   src: local('Recoleta-Bold'),
+       url('../fonts/Recoleta-Bold.woff2') format('woff2'),
+       url('../fonts/Recoleta-Bold.woff') format('woff'),
+       url('../fonts/Recoleta-Bold.ttf') format('ttf'),
+       url('../fonts/Recoleta-Bold.eot') format('eot');
+   font-display: block;
+}
+@font-face { 
+   font-family: 'recoleta';
+   font-style: normal;
+   font-weight: 500;
+   unicode-range: U+000-5FF;
+   src: local('Recoleta-Medium'),
+       url('../fonts/Recoleta-Medium.woff2') format('woff2'),
+       url('../fonts/Recoleta-Medium.woff') format('woff'),
+       url('../fonts/Recoleta-Medium.ttf') format('ttf'),
+       url('../fonts/Recoleta-Medium.eot') format('eot');
+   font-display: block;
+}
+@font-face { 
+   font-family: 'recoleta';
+   font-style: normal;
+   font-weight: 400;
+   unicode-range: U+000-5FF;
+   src: local('Recoleta-Regular'),
+       url('../fonts/Recoleta-Regular.woff2') format('woff2'),
+       url('../fonts/Recoleta-Regular.woff') format('woff'),
+       url('../fonts/Recoleta-Regular.ttf') format('ttf'),
+       url('../fonts/Recoleta-Regular.eot') format('eot');
+   font-display: block;
+}
+@font-face { 
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   unicode-range: U+000-5FF;
+   src: local('Roboto-Bold'),
+       url('../fonts/Roboto-Bold.woff2') format('woff2'),
+       url('../fonts/Roboto-Bold.woff') format('woff'),
+       url('../fonts/Roboto-Bold.ttf') format('ttf'),
+       url('../fonts/Roboto-Bold.eot') format('eot');
+   font-display: block;
+}
+@font-face { 
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   unicode-range: U+000-5FF;
+   src: local('Roboto-Regular'),
+       url('../fonts/Roboto-Regular.woff2') format('woff2'),
+       url('../fonts/Roboto-Regular.woff') format('woff'),
+       url('../fonts/Roboto-Regular.ttf') format('ttf'),
+       url('../fonts/Roboto-Regular.eot') format('eot');
+   font-display: block;
+}

@@ -1,0 +1,260 @@
+@media(max-width: 1023px) {
+	.product, .revs {
+		&__list.flex {
+			justify-content: space-around;
+			>div {
+			 width: calc(50% - 23px);
+			 margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+@media(max-width: 767px) {
+	section, header, footer {
+		padding: 0 20px;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	h2 {
+		font-size: 16px;
+	}
+	h5 {
+		font-size: 12px;
+	}
+
+	p {
+		font-size: 12px;
+	}
+	.header {
+		padding-top: 45px;
+		padding-bottom: 45px;
+		&__logo {
+			margin: 0 auto;
+		}
+
+	}
+	.hero {
+		img {
+			max-width: 300px;
+		}
+	}
+	.product {
+		&__timer {
+			width: calc(100% + 40px);
+			position: relative;
+			left: -20px;
+			padding: 8px 20px;	
+			.percent {
+				display: none;
+			}
+			p {
+				font-size: 14px;
+			}
+			.timer {
+				span {
+					font-size: 14px;
+					&::after {
+						margin: 0 2px;
+					}
+				}
+			}
+		}
+	}
+	.product, .revs {
+		&__list.flex {
+			justify-content: space-around;
+			>div {
+			 width: 100%;
+			 margin-bottom: 25px;
+			 &.special {
+			 	margin-bottom: 0;
+			 }
+			}
+		}
+	}
+	.after {
+		&__cols.flex {
+			margin-top: 0;
+			width: calc(100% + 40px);
+			position: relative;
+			left: -20px;
+			>div {
+				width: 100%;
+			}
+			>img {
+				display: none;
+			}
+			ul {
+				width: 220px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.ingr {
+		margin-top: 30px;
+		h2 {
+			margin-bottom: 15px;
+		}
+		&__list.flex {
+			
+			>div {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 15px;
+				p {
+					text-align: center;
+				}
+			}
+			h5 {
+				margin-bottom: 10px;
+			}
+		}
+		a {
+			font-size: 12px;
+			padding: 10px;
+			margin-bottom:15px;
+		}
+		.full-list {
+			font-size: 12px;
+			&__wrap {
+				max-width: 300px;
+				padding: 30px 10px;
+			}
+		}
+	}
+	.how {
+		h2 {
+			margin-bottom: 15px;
+		}
+		&__list.flex {
+			>div {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			img {
+				margin: 0 auto;
+			}
+		}
+		h3 {
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+	.how-much {
+		margin-top: 20px;
+		h2 {
+			margin-bottom: 15px;
+		}
+		li {
+			margin-bottom: 8px;
+		}
+		span {
+			font-size: 12px;
+		}
+	}
+	.revs {
+		margin-top: 20px;
+		h2 {
+			margin-bottom: 8px;
+		}
+		&__list.flex {
+			.stars {
+				margin-top: 15px;
+			}
+			>div {
+				padding-bottom: 25px;
+			}
+		}
+		&__desktop {
+			display: none;
+		}
+		&__mob {
+			display: block;
+		}
+	}
+	.glide {
+	  position: relative;
+	  width: 100%;
+	  box-sizing: border-box; }
+	  .glide * {
+	    box-sizing: inherit; }
+	  .glide__slides {
+	    position: relative;
+	    width: 100%;
+	    list-style: none;
+	    backface-visibility: hidden;
+	    transform-style: preserve-3d;
+	    touch-action: pan-Y;
+	    overflow: hidden;
+	    padding: 0;
+	    white-space: nowrap;
+	    display: flex;
+	    flex-wrap: nowrap;
+	    align-items: stretch;
+	    will-change: transform; }
+	    .glide__slides--dragging {
+	      user-select: none; }
+	  .glide__slide {
+	    width: 100%;
+	    flex-shrink: 0;
+	    white-space: initial;
+	    user-select: none;
+	    -webkit-touch-callout: none;
+	    -webkit-tap-highlight-color: transparent; }
+	    .glide__slide a {
+	      user-select: none;
+	      -webkit-user-drag: none;
+	      -moz-user-select: none;
+	      -ms-user-select: none; }
+	  .glide__bullets {
+	  	margin-top: 8px;
+	    -webkit-touch-callout: none;
+	    user-select: none; 
+	    display: flex;
+	    justify-content: center;
+	    button {
+	    	width: 25px;
+	    	height: 25px;
+	    	background: $acc2;
+	    	border-radius: 5px;
+	    	color: #fff;
+	    	font-size: 14px;
+	    	margin: 0 4px;
+	    }
+		}
+
+	.too {
+		p {
+			max-width: 250px;
+		}
+		&__list.flex {
+			margin-top: 16px;
+			justify-content: space-between;
+			>div {
+				width: 100px;
+			}
+			h2 {
+				margin-bottom: 2px;
+			}
+		}
+	}
+	.faq {
+		&__list {
+			background: none;
+			padding: 0;
+		}
+		.question {
+			p {
+				font-size: 16px;
+			}
+			svg {
+				width: 16px;
+			}
+		}
+	}
+	.footer {
+		padding-bottom: 45px;
+	}
+}
