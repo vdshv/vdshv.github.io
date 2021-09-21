@@ -56,7 +56,18 @@
 		&__logo {
 			margin: 0 auto;
 		}
-
+		&.sticky {
+			padding-top: 8px;
+			padding-bottom: 8px;
+			.logo {
+				width: 105px;
+			}
+			.btn {
+				padding: 4px 20px;
+				font-size: 14px;
+				min-width: auto;
+			}
+		}
 	}
 	.hero {
 		&-home {

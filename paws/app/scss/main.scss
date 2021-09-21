@@ -149,6 +149,28 @@ p {
 	&__logo {
 		max-width: 170px;
 	}
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: 0 0 10px rgba(0,0,0,.1); 
+		padding-top: 14px;
+		padding-bottom: 14px;
+		background: #fff;
+		z-index: 3;
+		visibility: hidden;
+		opacity: 0;
+		transition: .2s;
+		&.active {
+			visibility: visible;
+			transition: .2s;
+			opacity: 1;
+		}
+		.logo {
+			width: 170px;
+		}
+	}
 
 }
 .hero {

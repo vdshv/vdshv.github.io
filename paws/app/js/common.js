@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	// }
 	// END MOB MENU
 
+	var sticky = qs('.header.sticky');
+	document.onscroll = () => {
+		if(window.scrollY >= 50) {
+			sticky.classList.add('active');
+		} else {
+			sticky.classList.remove('active');
+		}
+	}
 	
 	// FAQ
 	let questions = qsa('.question'),
