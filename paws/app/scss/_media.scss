@@ -121,6 +121,9 @@
 		img {
 			max-width: 300px;
 		}
+		&-email {
+			min-height: calc(100vh - 353px);
+		}
 	}
 	.as-seen {
 		margin-bottom: -30px;
@@ -347,4 +350,221 @@
 			}
 		}
 	}
+	.wpforms-page-indicator.progress {
+		margin-bottom: 25px !important;
+		&::before{
+			width: 130px;
+			height: 25px;			
+		}
+		.wpforms-page-indicator-page-progress-wrap {
+			margin-top: 11px !important;
+		}
+	}
+	div.wpforms-container-full .wpforms-form .wpforms-field-label {
+		font-size: 24px !important;
+		margin-bottom: 15px !important;
+		text-align: left;
+	}
+	div.wpforms-container-full .wpforms-field-html {
+		h1 {
+			font-size: 24px;
+			margin-bottom: 15px;
+			text-align: left;
+		}
+	}
+	div.wpforms-container-full .wpforms-form ul.wpforms-image-choices {
+		justify-content: flex-start;
+		li {
+			width: calc(50% - 12px);
+		}
+	}
+	div.wpforms-container-full .wpforms-form .wpforms-list-inline ul.wpforms-image-choices-modern li {
+		margin: 0 24px 10px 0 !important;
+		&:nth-child(5), &:last-child {
+			margin-right: 24px !important;
+		}
+		&:nth-child(2n - 1) {
+			margin: 0 24px 10px 0 !important;
+		}
+		&:nth-child(2n) {
+			margin: 0 24px 10px 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+	div.wpforms-field-container .wpforms-field-checkbox, div.wpforms-field-container .wpforms-field-radio {
+		ul:not(.wpforms-image-choices) {
+			max-width: none;
+			margin: 0 !important;
+			label {
+				text-align: left;
+				padding: 13px 15px;
+			}
+		}
+	}
+	div.wpforms-container-full .wpforms-field-html {
+		>div {
+			img {
+				width: 100%;
+				max-width: 300px;
+				margin: 0 auto 16px;
+			}
+			.text-content {
+				width: 100%;
+				padding-left: 0px;
+				p,ul {
+					margin-bottom: 16px;
+					font-size: 12px;
+				}
+				ul {
+					padding-left: 30px !important;
+				}
+				li {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.wpforms-page.wpforms-page-18.last input, .wpforms-page.wpforms-page-18.last select {
+	    margin: 0px auto 0px !important;
+	}
+
+	section.results  {
+		padding-top: 75px;
+		.header {
+			padding-top: 8px;
+			padding-left: 25px;
+			padding-right: 25px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			width: 100%;
+			box-shadow: 0 0 10px rgba(0,0,0,.1); 
+			background: #fff;
+			padding-bottom: 8px;
+			.header__logo {
+				width: 105px;
+				margin-left: 0;
+				margin-right: auto;
+			}
+			.btn {
+				padding: 4px 20px;
+				font-size: 14px;
+				min-width: auto;
+			}
+		}
+		.header__content {
+			flex-direction: column;
+			margin-bottom: 30px;
+			.mc__title {
+				width: 100%;
+				padding-right: 0;
+				margin-bottom: 10px;
+			}
+			.mc__img {
+				min-width: auto;
+				width: 100%;
+			}
+		}
+		.main__content {
+			>h2 {
+				font-size: 24px;
+				text-align: left;
+			}
+		}
+		.custom__content-2, .custom__content-1 {
+			margin-bottom: 23px;
+			flex-flow: row wrap;
+			width: calc(100% + 50px);
+			position: relative;
+			left: -25px;
+			>div {
+				padding: 15px 16px;
+				width: 100%;
+				max-width: none;
+				&:first-child{
+					margin-bottom: 25px;
+				}
+			}
+		}
+		.custom__content-1 {
+			h4 {
+				display: block;
+				text-align: center;
+			}
+		}
+		.custom__content-2 {
+			h4 {
+				font-size: 20px;
+				display: block;
+				text-align: center;
+			}
+		}
+		.custom__content-3 {
+			flex-flow: row wrap;
+			margin-bottom: 20px;
+			>div {
+				width: 47%;
+				&:nth-child(1) {
+					order: 1;
+					margin-bottom: 10px;
+				}
+				&:nth-child(2) {
+					order: 3;
+					min-height: 150px;
+					span {
+						font-size: 24px;
+					}
+				}
+				&:nth-child(3) {
+					order: 4;
+					min-height: 150px;
+					span {
+						font-size: 24px;
+					}
+				}
+				&:nth-child(4) {
+					order: 2;
+					margin-bottom: 10px;
+				}
+			}
+			h3 {
+				font-size: 12px;
+			}
+		}
+		.custom__content-3 + .custom__content-2 {
+			flex-flow: row wrap;
+			>div {
+				width: 100%;
+			}
+			h3 {
+				font-size: 12px;
+			}
+		}
+	}
+	.promise {
+		h2 {
+			font-size: 24px;
+		}
+		.flex {
+			>div, img {
+				width: 100%;
+			}
+			img {
+				margin-bottom: 16px;
+			}
+			p {
+				margin-bottom: 15px;
+			}
+			span {
+				font-size: 12px;
+				&.name {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+
 }

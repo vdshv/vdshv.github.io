@@ -80,9 +80,53 @@ document.addEventListener("DOMContentLoaded", function() {
 		    	tick();
 			}
 			countdown(15);
+
+
+			qsa('.header.sticky .btn').forEach(el => {
+				el.onclick = (e) => {
+					e.preventDefault();
+
+					let scrollToY = offsetTop(qs('.product'));
+					scrollTo(scrollToY);
+				}
+			})
 	}
  	
+
+	// ANCHORS HEADER
+
 	
+	const requestAnimationFrame = window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame ||
+	    window.oRequestAnimationFrame ||
+	    window.msRequestAnimationFrame;
+
+	function scrollTo(to) {
+	    const start = window.scrollY || window.pageYOffset;
+	    const time = Date.now();
+	    const duration = Math.abs(start - to) / 2;
+
+	    (function step() {
+	        var dx = Math.min(1, (Date.now() - time) / duration)
+	        var pos = start + (to - start) * easeInOutCubic(dx)
+
+	        window.scrollTo(0, pos)
+
+	        if (dx < 1) {
+	            requestAnimationFrame(step)
+	        }
+	    })()
+	}
+	function easeInOutCubic(x) {
+		return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+	}
+	function offsetTop(el) {
+	    var rect = el.getBoundingClientRect(),
+	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	    return rect.top + scrollTop;
+	}
+	// ANCHORS HEADER
 
 
 	function qs (selector, searchIn) {
