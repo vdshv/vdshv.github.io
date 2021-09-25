@@ -12,6 +12,33 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	
+	if(qs('.wpforms-field-number input[type=number]')) {
+		qs('.wpforms-field-number input[type=number]').setAttribute('min', '1');
+
+		qsa('.wpforms-field-container input').forEach(el => el.setAttribute('required', 'true'));
+
+		if(!qs('.wpforms-page.wpforms-page-2 .wpforms-page-button.wpforms-page-prev')) {
+			qsa('.wpforms-page:not(.wpforms-page-1):not(.last) .wpforms-page-next').forEach(el => {
+				let clone = el.cloneNode(true);
+				clone.setAttribute('data-action', 'prev');
+				clone.classList.remove('wpforms-page-next');
+				clone.classList.add('wpforms-page-prev');
+				clone.innerText = 'Previous';
+				el.parentElement.appendChild(clone);
+			})
+		}			
+	}
+
+	if(qs('.footer a')) {
+		if(!qs('.footer a').getAttribute('href').length) {
+			qs('.footer a:first-child').setAttribute('href', 'https://quiz.livelypaws.com/privacy-policy');
+			qs('.footer a:nth-child(2)').setAttribute('href', 'https://quiz.livelypaws.com/terms-and-conditions');
+			qs('.footer a:last-child').setAttribute('href', 'https://quiz.livelypaws.com/contact-us');
+			qsa('.footer a').forEach(el => {
+				el.setAttribute('target', '_blank');
+			})
+		}
+	}
 	
 	// FAQ
 	let questions = qsa('.question'),
@@ -62,13 +89,18 @@ document.addEventListener("DOMContentLoaded", function() {
 		    var seconds = 60;
 		    var mins = minutes
 			    function tick() {
-			        var minutes = qs(".timer .mins");
-			        var secs = qs(".timer .seconds");
+			        var minutes = qsa(".timer .mins");
+			        var secs = qsa(".timer .seconds");
 
 			        var current_minutes = mins-1
 			        seconds--;
-			        minutes.innerHTML = (current_minutes < 10 ? "0" : "") + current_minutes;
-			        secs.innerHTML = (seconds < 10 ? "0" : "") + String(seconds);
+			        minutes.forEach((el) => {
+			        	el.innerHTML = (current_minutes < 10 ? "0" : "") + current_minutes;
+			        })
+			        secs.forEach((el) => {
+			        	el.innerHTML = (seconds < 10 ? "0" : "") + String(seconds);
+			        })
+			        
 			        if( seconds > 0 ) {
 			            setTimeout(tick, 1000);
 			        } else {

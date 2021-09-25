@@ -38,6 +38,7 @@ select,
 textarea {
 	-webkit-appearance: none;
 	border: 0;
+	font-family:"Roboto";
 	background: none;
 	&:focus {
 		border: none;
@@ -121,7 +122,7 @@ p {
 	}
 }
 
-.btn, div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button, .wpforms-submit {
+.btn, div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button, .wpforms-submit, .newsletter-submit-btn {
 	display: inline-block;
 	font-size: 16px;
     color: #fff;
@@ -155,20 +156,52 @@ p {
 		left: 0;
 		width: 100%;
 		box-shadow: 0 0 10px rgba(0,0,0,.1); 
-		padding-top: 14px;
-		padding-bottom: 14px;
+		padding-top: 7px;
 		background: #fff;
 		z-index: 3;
 		visibility: hidden;
 		opacity: 0;
 		transition: .2s;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		.cont {
+			max-width: 1020px;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.product__timer {
+			margin-top: 7px;
+			padding-left: 0;
+			padding-right: 0;
+			p {
+				font-size: 16px;
+			}
+		}
+		.percent {
+			margin-right: 10px;
+			font-size: 16px;
+			height: 28px;
+			width: 28px;
+		}
+		.timer {
+			span {
+				font-size: 16px;
+			}
+		}
 		&.active {
 			visibility: visible;
 			transition: .2s;
 			opacity: 1;
 		}
 		.logo {
-			width: 170px;
+			width: 120px;
+		}
+		.btn {
+			font-size: 14px;
+			min-width: 120px;
+			padding-top: 6px;
+			padding-bottom: 6px;
 		}
 	}
 
@@ -254,6 +287,44 @@ p {
 			span {
 				font-weight: 700;
 				color: #26C092;
+				&:first-child {
+					margin-right: 5px;
+				}
+			}
+		}
+		form {
+			width: 100%;
+			max-width: 430px;
+			margin: 0 auto;
+			text-align: center;
+			input[type='email'] {
+				display: block;
+				width: 100%;
+				margin-top: 15px;
+				padding: 10px 15px;
+				border-bottom: 1px solid #000;
+				font-size: 16px;
+				text-align: center;
+				color: #000;
+			}
+			>div {
+				position: relative;
+				&::before {
+					content: 'We don’t send spam, share emails, and respect your privacy';
+					font-size: 12px;
+					font-style: italic;
+					font-weight: 400;
+					text-align: center;
+					display: block;
+					position: absolute;
+					width: 100%;
+					top: 55px;
+					left: 0;
+				}
+			}
+			button {
+				margin-top: 55px;
+				cursor: pointer;	
 			}
 		}
 	}
@@ -545,6 +616,40 @@ p {
 		}
 	}
 }
+.page-template-default.singular {
+	padding: 40px 25px;
+	text-align: left;
+	.page {
+		max-width: 970px;
+		margin: 0 auto; 
+	}
+	h1 {
+		margin-bottom: 30px;
+	}
+	h2 {
+		max-width: none;
+	}
+	h2,h3,h4,h5,h6 {
+		text-align: left;
+		display: block;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	ul {
+		margin-bottom: 15px;
+		padding-left: 30px;
+		li {
+			list-style: disc;
+			margin-bottom: 5px;
+		}
+	}
+}
 .revs {
 	margin-top: 44px;
 	h2 {
@@ -700,9 +805,9 @@ div.wpforms-container-full .wpforms-form .wpforms-page-indicator.progress .wpfor
 	background: #eee;
 }
 div.wpforms-container-full .wpforms-form .wpforms-field-label {
-	font-size: 44px !important;
+	font-size: 30px !important;
 	font-family: 'recoleta';
-	margin-bottom: 45px !important;
+	margin-bottom: 20px !important;
 	text-align: center;
 }
 form.wpforms-form {
@@ -738,9 +843,9 @@ div.wpforms-container-full .wpforms-form .wpforms-list-inline ul.wpforms-image-c
 }
 div.wpforms-container-full .wpforms-field-html {
 	h1 {
-		font-size: 44px;
+		font-size: 30px;
 		font-family: 'recoleta';
-		margin-bottom: 45px;
+		margin-bottom: 20px;
 		text-align: center;
 		display: block;
 		width: 100%;
@@ -769,7 +874,7 @@ div.wpforms-container-full .wpforms-field-html {
 }
 div.wpforms-field-container .wpforms-field-checkbox, div.wpforms-field-container .wpforms-field-radio {
 	ul:not(.wpforms-image-choices) {
-		max-width: 300px;
+		max-width: 500px;
 		margin: 0 auto !important;
 		li {
 			position: relative;
@@ -796,7 +901,7 @@ div.wpforms-field-container .wpforms-field-checkbox, div.wpforms-field-container
 			border: 2px solid transparent;
 			background: rgba(1,146,211,.07);
 			font-size: 16px !important;
-			padding: 18px 13px;
+			padding: 13px;
 			border-radius: 15px;
 		}
 	}
@@ -827,8 +932,8 @@ div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-b
 .wpforms-submit  {
 	width: 170px !important;
 	display: block !important;
-	padding: 12px 0 !important;
-	margin: 15px auto 0 !important;
+	padding: 9px 0 !important;
+	margin: 12px auto 0 !important;
 	border: 0 !important;
 	border: 2px solid $acc2 !important;
 	border-radius: 25px !important;
@@ -836,9 +941,17 @@ div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-b
 	text-transform: uppercase !important;
 	background: $acc2 !important;
 }
+.wpforms-field.wpforms-field-pagebreak > .wpforms-clear.wpforms-pagebreak-left {
+	display: flex;
+	flex-direction: column;
+}
+div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button.wpforms-page-next {
+	order: 1;
+}
 div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button.wpforms-page-prev {
 	background: transparent !important;
 	color: $acc2 !important;
+	order: 2;
 }
 div.wpforms-container-full .wpforms-form .wpforms-pagebreak-left .wpforms-page-button:hover {
 	background: $acc2 !important;
@@ -865,7 +978,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-indicator.progress .wpfor
     width: 100% !important;
     height: 44px !important;
     max-width: 500px !important;
-    margin: -30px auto 20px !important;
+    margin: -10px auto 10px !important;
 }
 .page-template-quizTemplate {
 	padding-left: 25px;
@@ -873,20 +986,18 @@ div.wpforms-container-full .wpforms-form .wpforms-page-indicator.progress .wpfor
 }
 .wpforms-page-indicator.progress {
 	display: flex !important;
-	flex-flow: row wrap;
+	flex-flow: row-reverse nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 25px !important;
-	margin-bottom: 40px !important;
-	&::before{
-		content: '';
-		width: 170px;
-		height: 32px;
-		display: block;
-		background: url('../images/logo.svg') no-repeat center center/contain;
-	}
+	padding-top: 20px !important;
+	margin-bottom: 25px !important;
 	.wpforms-page-indicator-page-progress-wrap {
-		margin-top: 15px !important;
+		flex-grow: 1;
+		margin-top: 0px !important;
+		margin-right: 15px !important;
+	}
+	.wpforms-page-indicator-steps {
+		white-space: nowrap;
 	}
 }
 section.results {

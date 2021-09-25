@@ -48,10 +48,19 @@ document.addEventListener("DOMContentLoaded", function() {
 	// }
 	// END MOB MENU
 
-
-
+	var arrow = qs('.hero__arrow');
+	if(arrow) {
+		arrow.classList.add('animate');
+		arrow.onclick = () => {
+			window.scrollTo({
+			    top: offsetTop(qs('.hero+.text-block')),
+			    behavior: "smooth"
+			});
+		}
+	}
 	
-	var form = qs('.contact form'),
+	
+	var form = qs('#form1'),
 		formCont = qs('.contact.form'),
 		error = qs('.contact__error');
 
@@ -86,6 +95,10 @@ document.addEventListener("DOMContentLoaded", function() {
             jsonItem["email"] = email;
             jsonItem["comment"] = comment;
 
+            var form = qs('.contact.form #comp-4');
+            var formHeight = qs('.contact.form #comp-4').clientHeight;
+            qs('.contact.form #comp-4').style.height = formHeight + 'px';
+
             fetch('https://pdconn.magnusco.net/api/IncomingMessages', {
 				method: 'POST',
 				headers: {
@@ -97,7 +110,14 @@ document.addEventListener("DOMContentLoaded", function() {
             	dialog = "Thank you for getting in touch! We appreciate you contacting Consovenio. One of our colleagues will get back in touch with you soon! Have a great day!";
             	error.classList.add('active');
             	error.innerHTML = dialog;
-            	error.style.height = '50px';
+            	let height = error.scrollHeight;
+            	error.style.height = height + 30 + 'px';
+
+            	form.style.height = '0px';
+            	form.style.transform = 'scaleY(0.2)';
+            	form.style.opacity = '0';
+            	form.style.visibility = 'hidden';
+
             	window.scrollTo({
             	    top: offsetTop(error) - 50,
             	    behavior: "smooth"
@@ -110,7 +130,9 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
         	error.classList.add('active');
         	error.innerHTML = dialog;
-        	error.style.height = '50px';
+        	let height = error.scrollHeight;
+        	error.style.height = height + 30 + 'px';
+
         	window.scrollTo({
         	    top: offsetTop(error) - 50,
         	    behavior: "smooth"

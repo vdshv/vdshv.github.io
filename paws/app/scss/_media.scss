@@ -56,9 +56,13 @@
 		&__logo {
 			margin: 0 auto;
 		}
+
 		&.sticky {
 			padding-top: 8px;
-			padding-bottom: 8px;
+			.cont {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 			.logo {
 				width: 105px;
 			}
@@ -66,6 +70,16 @@
 				padding: 4px 20px;
 				font-size: 14px;
 				min-width: auto;
+			}
+			.product__timer {
+				padding-right: 20px;
+				padding-left: 20px;
+				p {
+					font-size: 14px;
+				}
+				span {
+					font-size: 14px;
+				}
 			}
 		}
 	}
@@ -355,9 +369,6 @@
 		&::before{
 			width: 130px;
 			height: 25px;			
-		}
-		.wpforms-page-indicator-page-progress-wrap {
-			margin-top: 11px !important;
 		}
 	}
 	div.wpforms-container-full .wpforms-form .wpforms-field-label {
