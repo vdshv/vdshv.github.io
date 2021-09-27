@@ -87,9 +87,9 @@ img {
 	width: 100%;
 	height: auto;
 }
-form[action*="404"] {
+form[action*="404"], form[action*="503"] {
 	.header+p {
-		font-size: 3vw;
+		font-size: 6vw;
 		font-weight: 800;
 		display: block;
 		width: 100%;
@@ -101,7 +101,7 @@ form[action*="404"] {
 		align-items: center;
 		justify-content: center;
 		&::before {
-			content: '404 ';
+			// content: '404';
 			font-weight: inherit;
 			font-size: 6vw;
 			line-height: 1;
@@ -117,7 +117,10 @@ form[action*="404"] {
 form[action*="503"] {
 	.header+p {
 		&::before {
-			content: '503 ';
+			// content: '503'
+		}
+		&::after {
+			content: 'Please try to reload a page.';
 		}
 	}
 }
@@ -334,6 +337,9 @@ p {
 
 		}
 	}
+	&__hamb, &__nav-close {
+		display: none;
+	}
 
 }
 .hero {
@@ -403,7 +409,7 @@ p {
 		p {
 			text-transform: uppercase;
 			transform-origin: 100% 45%;
-			font-size: 20px;
+			// font-size: 20px;
 			font-weight: 700;
 			margin-right: 20px;
 
@@ -543,6 +549,9 @@ p {
 	flex-flow: row wrap;
 	position: relative;
 	z-index: 1;
+	&-mob {
+		display: none;
+	}
 }
 .blob {
 	border-radius: 10px;
@@ -600,7 +609,6 @@ p {
 	p {
 		position: relative;
 		z-index: 2;
-		font-size: 20px;
 		margin-bottom: 20px;
 		font-weight: 500;
 	}
@@ -647,6 +655,7 @@ p {
 			display: flex;
 			align-items: flex-end;
 			justify-content: center;
+			align-self: center;
 		}
 	}
 }
@@ -693,23 +702,8 @@ p {
 		}
 		p {
 			display:  block;
-			font-size: 20px;
 			margin-bottom: 0;
 		}
-	}
-	
-	&__blob {
-		width: 120px;
-	    height: 45px;
-	    display: block;
-	    top: 0;
-	    left: 0;
-	    position: absolute;
-	    z-index: -1;
-	    transform: rotate3d(0, 0, 1, 
-		-70deg
-		);
-		transition: 0s;
 	}
 	
 	&__blob {
@@ -746,11 +740,10 @@ p {
 	   		}
 			&-rect {
 		   	 border-radius: 0 0 0 0;
-   		}
-
+   			}
 			&-right {
 		   	 border-radius: 0px 10px 10px 0;
-   		}
+   			}
 		}
 			
 	}

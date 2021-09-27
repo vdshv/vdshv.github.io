@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END SCROLLING ANIM
 
 	// MOB MENU
-	// qs('.header__hamb').onclick = () => {
-	// 	qs('.header__nav').classList.add('active');
-	// }
-	// qs('.header__nav-close').onclick = () => {
-	// 	qs('.header__nav').classList.remove('active');
-	// }
+	qs('.header__hamb').onclick = () => {
+		qs('.header__nav').classList.add('active');
+	}
+	qs('.header__nav-close').onclick = () => {
+		qs('.header__nav').classList.remove('active');
+	}
 	// END MOB MENU
 
 	var arrow = qs('.hero__arrow');
@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
             	dialog = "Thank you for getting in touch! We appreciate you contacting Consovenio. One of our colleagues will get back in touch with you soon! Have a great day!";
             	error.classList.add('active');
             	error.innerHTML = dialog;
+            	error.style.height = '0px';
             	let height = error.scrollHeight;
             	error.style.height = height + 30 + 'px';
 
@@ -130,9 +131,9 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
         	error.classList.add('active');
         	error.innerHTML = dialog;
+        	error.style.height = '0px';
         	let height = error.scrollHeight;
         	error.style.height = height + 30 + 'px';
-
         	window.scrollTo({
         	    top: offsetTop(error) - 50,
         	    behavior: "smooth"
