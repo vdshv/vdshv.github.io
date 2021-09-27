@@ -46,6 +46,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	qs('.header__nav-close').onclick = () => {
 		qs('.header__nav').classList.remove('active');
 	}
+
+	var href = window.location.href,
+		links = links = Array(...qsa('.header__nav a')).map(el => el.getAttribute('href'));
+
+	links.forEach((link) => {
+		if(href.indexOf(link) !== -1) {
+			qs(`a[href*="${link}"]`).classList.add('active');
+		}
+	})
+	
+
 	// END MOB MENU
 
 	var arrow = qs('.hero__arrow');
@@ -62,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	var form = qs('#form1'),
 		formCont = qs('.contact.form'),
-		error = qs('.contact__error');
+		error = qs('.contact__error'),
+		errorText = qs('.contact__error p');
 
     if(form) form.onsubmit = (e) => {
     	e.preventDefault();
@@ -109,9 +121,8 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(response => {
             	dialog = "Thank you for getting in touch! We appreciate you contacting Consovenio. One of our colleagues will get back in touch with you soon! Have a great day!";
             	error.classList.add('active');
-            	error.innerHTML = dialog;
-            	error.style.height = '0px';
-            	let height = error.scrollHeight;
+            	errorText.innerHTML = dialog;
+            	let height = errorText.scrollHeight;
             	error.style.height = height + 30 + 'px';
 
             	form.style.height = '0px';
@@ -130,9 +141,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         } else {
         	error.classList.add('active');
-        	error.innerHTML = dialog;
-        	error.style.height = '0px';
-        	let height = error.scrollHeight;
+        	errorTexts.innerHTML = dialog;
+        	let height = errorText.scrollHeight;
         	error.style.height = height + 30 + 'px';
         	window.scrollTo({
         	    top: offsetTop(error) - 50,
