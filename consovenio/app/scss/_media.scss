@@ -387,11 +387,17 @@
 			a {
 				border-radius: 25px;
 				padding: 15px;
-				&:hover,&:focus {
-					transition: 0s;
-					.btn {
-						transition: 0s;
-					}
+			    background: #aec236;
+				.btn {
+				    opacity: 1;
+				    visibility: visible;
+				    .btn-arr {
+				        width: 12px;
+				        height: 12px;
+				        &::after {
+				        	transform: translate3d(10px,0,0) rotate(-45deg);
+				        }
+				    }
 				}
 			}
 			p {
