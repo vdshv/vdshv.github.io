@@ -529,6 +529,11 @@ p {
 			transform: scale3d(0, 1.0, 1.0);
 		}
 	}
+	&.line-hidden {
+		&::before {
+			display: none;
+		}
+	}
 }
 
 
