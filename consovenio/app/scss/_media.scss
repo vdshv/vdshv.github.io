@@ -500,6 +500,42 @@
 		}
 		
 	}
+
+	form[action*=cookies-policy], form[action*=terms-and-conditions], form[action*=privacy-policy], .text-content-page {
+		.text-block {
+			h1, h2 {
+				margin-bottom: 35px;
+			}
+			h3, h4, h5, h6 {
+				margin-top: 35px;
+				margin-bottom: 20px;
+			}
+			h2 {
+				font-size: 35px;
+			}
+			h3 {
+				font-size: 31px;
+			}
+			h4 {
+				font-size: 27px;
+			}
+			h5 {
+				font-size: 22px;
+			}
+			h6 {
+				font-size: 18px;
+			}
+			p,ul {
+				font-size: 15px;
+			}
+			ul {
+				padding-left: 30px;
+			}
+			li {
+				font-size: 15px;
+			}
+		}
+	}
 }
 
 
