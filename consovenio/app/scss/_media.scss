@@ -87,7 +87,7 @@
 		}
 	}
 }
-@media (orientation: landscape) {
+@media (max-width: 836px) and (orientation: landscape) and (max-height: 414px) {
   .header {
   	svg {
   		display: block;
