@@ -51,83 +51,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	
-	var form = qs('.contact form'),
-		formCont = qs('.contact.form'),
-		error = qs('.contact__error');
-
-    if(form) form.onsubmit = (e) => {
-    	e.preventDefault();
-
-    	var canSend = false,
-    		dialog = '',
-			email = qs('[type=email]').value,
-        	name = qs('[type=text]').value,
-        	comment = qs('textarea').value;
-
-        if (email.length == 0) {
-            dialog = "Please, fill in your email.";
-        } else {
-            var validation = isMailValid(email);
-
-            if (!validation) {
-                dialog = "You have entered an invalid e-mail address. Please try again.";
-            } else if (!name.length) {
-                dialog = "Please, fill in your name/company.";
-            } else if (!comment.length) {
-                dialog = "Please, fill in your message to us.";
-            } else {
-                canSend = true;
-            }
-        }
-
-        if (canSend) {
-            var jsonItem = {};
-            jsonItem["name"] = name;
-            jsonItem["email"] = email;
-            jsonItem["comment"] = comment;
-
-            fetch('https://pdconn.magnusco.net/api/IncomingMessages', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(jsonItem),
-            })
-            .then(response => {
-            	dialog = "Thank you for getting in touch! We appreciate you contacting Consovenio. One of our colleagues will get back in touch with you soon! Have a great day!";
-            	error.classList.add('active');
-            	error.innerHTML = dialog;
-            	error.style.height = '50px';
-            	window.scrollTo({
-            	    top: offsetTop(error) - 50,
-            	    behavior: "smooth"
-            	});
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
-
-        } else {
-        	error.classList.add('active');
-        	error.innerHTML = dialog;
-        	error.style.height = '50px';
-        	window.scrollTo({
-        	    top: offsetTop(error) - 50,
-        	    behavior: "smooth"
-        	});
-        }
-    }
-
-    function offsetTop(el) {
-        var rect = el.getBoundingClientRect(),
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return rect.top + scrollTop;
-    }
-	function isMailValid(email) {
-	    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-	    return emailReg.test(email);
+	var selects = qsa('.c-select li');
+	if(selects) {
+		selects.forEach(el => {
+			el.onclick = () => {
+				let btn = el.closest('.c-select').querySelector('button span');
+				console.log(btn);
+				btn.innerHTML = el.innerHTML;
+				btn.dataset.value = el.innerHTML;
+			}
+		})
 	}
-
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
