@@ -1,4 +1,4 @@
-history.scrollRestoration = "manual";
+// history.scrollRestoration = "manual";
 document.addEventListener("DOMContentLoaded", function() {
 	// DETECT TOUCH
 	var isTouchDevice = (('ontouchstart' in window)
@@ -40,15 +40,115 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END SCROLLING ANIM
 
 	// MOB MENU
-	// qs('.header__hamb').onclick = () => {
-	// 	qs('.header__nav').classList.add('active');
-	// }
-	// qs('.header__nav-close').onclick = () => {
-	// 	qs('.header__nav').classList.remove('active');
-	// }
+	qs('.header__menu').onclick = () => {
+		qs('.nav').classList.add('active');
+	}
+	qs('.nav-close').onclick = () => {
+		qs('.nav').classList.remove('active');
+	}
 	// END MOB MENU
 
 
+
+	// var slides = qsa('.glide__slide').length;
+	// <button class="glide__bullet" data-glide-dir="=0"></button>
+	let glides = qsa('.glide');
+	glides.forEach(glide => {
+		let qty = glide.querySelectorAll('.glide__slide').length,
+			bullets = glide.querySelector('.glide__bullets');
+		for(let i = 0; i < qty; i++) {
+			let bullet = document.createElement("button");
+			bullet.classList.add('glide__bullet');
+			bullet.dataset.glideDir = `=${i}`;
+			bullets.appendChild(bullet);
+			// <button class="glide__bullet" data-glide-dir="=0"></button>
+		}
+	})
+
+	let glidesCol1 = qsa('.glide.one-col');
+	glidesCol1.forEach(glide => {
+		new Glide(glide, {
+		  type: 'carousel',
+		  perView: 1,
+		  gap: 0
+		  // keyboard: true
+		}).mount();
+	});
+
+	let glidesCol3 = qsa('.glide.three-col');
+	glidesCol3.forEach(glide => {
+		new Glide(glide, {
+		  type: 'slider',
+		  rewind: false,
+		  bound: true,
+		  perView: 3,
+		  startAt: 0,
+		  gap: 32,
+		  keyboard: true
+		}).mount();
+	})
+
+	let pubs = qsa('.pubs__items'),
+		pubsSlides = qsa('.pubs__items .glide__slide'),
+		pubsQty = pubsSlides.length;
+
+	if(pubsSlides){
+		calcLayers(2);
+
+		let pubsGlide = new Glide('.glide.five-col', {
+			type: 'slider',
+			rewind: false,
+			bound: true,
+			focusAt: 'center',
+			perView: 5,
+			startAt: 2,
+			gap: 0,
+			keyboard: true
+		})
+
+		pubsGlide.on('run', function(e) {
+			var current = pubsGlide.index;
+		
+			calcLayers(current);
+		})
+		pubsGlide.mount();
+	} 
+
+	
+	
+
+	function calcLayers(current) {
+		for(let i = current - 1; i >= 0; i--) {
+			pubsSlides[i].style.zIndex = i + 1;
+			if(current - i > 2) {
+				pubsSlides[i].classList.add('hidden')
+			} else {
+				pubsSlides[i].classList.remove('hidden');
+			}
+		}
+		for(let i = pubsQty - 1; i > current; i--) {
+			pubsSlides[i].style.zIndex = pubsQty - i;
+
+			if(i - current > 2) {
+				pubsSlides[i].classList.add('hidden')
+			} else {
+				pubsSlides[i].classList.remove('hidden');
+			}
+		}
+		setTimeout(()=>{
+			pubsSlides[current].style.zIndex = 1000;
+		}, 400)
+	}
+
+	function renderBullets(glide) {
+
+	}
+
+	
+
+	
+
+	
 
 	
 	var selects = qsa('.c-select li');
