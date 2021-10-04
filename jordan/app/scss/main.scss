@@ -835,9 +835,19 @@ section {
 		}
 	}
 }
+.error-message {
+	background: rgba(229,72,66,.2);
+	border-radius: 8px;
+	padding: 20px;
+	color: #E54842;
+	font-size: 16px;
+	letter-spacing: .44px;
+	line-height: 1.2;
+}
 .appels {
 	padding-bottom: 55px;
 	padding-top: 30px;
+	min-height: 340px;
 	svg {
 		width: 20px;
 	}
