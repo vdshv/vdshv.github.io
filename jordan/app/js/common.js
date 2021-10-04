@@ -66,6 +66,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	})
 
+	// let galleryItems = qsa('.gallery-wrap div');
+	// if(galleryItems) galleryItems.forEach((el, ind) => {
+	// 	// el.style.gridArea = "a" + (ind + 1);
+	// })
+
+
 	let glidesCol1 = qsa('.glide.one-col');
 	glidesCol1.forEach(glide => {
 		new Glide(glide, {
@@ -120,21 +126,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	function calcLayers(current) {
 		for(let i = current - 1; i >= 0; i--) {
-			pubsSlides[i].style.zIndex = i + 1;
+			
 			if(current - i > 2) {
 				pubsSlides[i].classList.add('hidden')
 			} else {
 				pubsSlides[i].classList.remove('hidden');
 			}
+			pubsSlides[i].style.zIndex = i + 1;
 		}
 		for(let i = pubsQty - 1; i > current; i--) {
-			pubsSlides[i].style.zIndex = pubsQty - i;
+			
 
 			if(i - current > 2) {
 				pubsSlides[i].classList.add('hidden')
 			} else {
 				pubsSlides[i].classList.remove('hidden');
 			}
+			pubsSlides[i].style.zIndex = pubsQty - i;
 		}
 		setTimeout(()=>{
 			pubsSlides[current].style.zIndex = 1000;
