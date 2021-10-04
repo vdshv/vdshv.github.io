@@ -50,12 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-	// var slides = qsa('.glide__slide').length;
-	// <button class="glide__bullet" data-glide-dir="=0"></button>
 	let glides = qsa('.glide');
 	glides.forEach(glide => {
 		let qty = glide.querySelectorAll('.glide__slide').length,
 			bullets = glide.querySelector('.glide__bullets');
+		if(glide.classList.contains('three-col')) {
+			qty = qty - 2;
+		}
 		for(let i = 0; i < qty; i++) {
 			let bullet = document.createElement("button");
 			bullet.classList.add('glide__bullet');
@@ -139,11 +140,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			pubsSlides[current].style.zIndex = 1000;
 		}, 400)
 	}
-
-	function renderBullets(glide) {
-
-	}
-
 	
 
 	
