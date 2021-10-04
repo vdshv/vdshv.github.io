@@ -55,8 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	if(selects) {
 		selects.forEach(el => {
 			el.onclick = () => {
-				let btn = el.closest('.c-select').querySelector('button span');
-				console.log(btn);
+				let btn = el.closest('.c-select').querySelector('button span'),
+					siblings = el.closest('.c-select').querySelectorAll('li');
+				siblings.forEach(li => li.classList.remove('active'));
+
+				el.classList.add('active');
 				btn.innerHTML = el.innerHTML;
 				btn.dataset.value = el.innerHTML;
 			}
