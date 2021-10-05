@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END SCROLLING ANIM
 
 	// MOB MENU
-	if(qs('.header__menu')) {
+	if(qs('.nav-close')) {
 		qs('.header__menu').onclick = () => {
 			qs('.nav').classList.add('active');
 		}
