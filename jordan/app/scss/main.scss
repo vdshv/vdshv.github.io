@@ -369,12 +369,12 @@ img,svg {
 
 section {
 	padding-top: 80px;
-	// padding-bottom: 40px;
 }
 .header {
 	position: relative;
 	padding: 18px 25px;
 	background: #fff;
+	border-bottom: 1px solid #EEEEEE;
 	&__menu {
 		cursor: pointer;
 		padding: 5px 0;
@@ -409,13 +409,31 @@ section {
 	}
 	&__lang {
 		margin-left: 20px;
-		select {
-			color: #95A0AB;
-			font-size: 14px;
-			cursor: pointer;
-			padding: 5px 20px 5px 0;
-			background: url('../img/select.svg') no-repeat right center/ 10px auto;
+		.lang-select {
+			
+			button {
+				color: #95A0AB;
+				font-size: 14px;
+				cursor: pointer;
+				padding: 5px 20px 5px 0;
+				background: url('../img/select.svg') no-repeat right center/ 10px auto;
+			}
+			ul {
+				left: auto;
+				right: 0;
+				min-width: auto;
+				width: auto;
+			}
+			li {
+				font-size: 13px;
+				padding: 8px 20px;
+				&.active {
+					background: #f1f1f1;
+					color: #000;
+				}
+			}
 		}
+
 	}
 }
 .glide {
@@ -624,6 +642,10 @@ section {
 		left: 0;
 		background: rgba(183,191,201,.3);
 		backdrop-filter: blur(10px);
+		&.hidden {
+			opacity: 0;
+			transition: .2s;
+		}
 		&-close {
 			cursor: pointer;
 		}
@@ -655,6 +677,7 @@ section {
 		width: calc(100% / 3);
 		background: #fff;
 		padding-top: 40px;
+		transition: padding .3s;
 	}
 	&__glide {
 		padding-bottom: 14px;
@@ -1360,31 +1383,37 @@ section {
 .c-select {
 	position: relative;
 	z-index: 10;
+	&:not(.lang-select) {
+		button {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border: 1px solid #EEEEEB;
+			background: #F7F7F7;
+			font-size: 16px;
+			letter-spacing: 0.44px;
+			padding: 14px 22px;
+			border-radius: 24px;
+			min-width: 250px;
+			svg {
+				width: 10px;
+				margin-left: 15px;
+			}
+			&:focus {
+				border-color: #00B0AF;
+				background: #fff;
+			}
+		}
+	}
 	button {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		border: 1px solid #EEEEEB;
-		background: #F7F7F7;
-		font-size: 16px;
-		letter-spacing: 0.44px;
-		padding: 14px 22px;
 		cursor: pointer;
-		border-radius: 24px;
-		min-width: 250px;
 		transition: .3s;
 		&:focus {
-			border-color: #00B0AF;
-			background: #fff;
 			&+ul {
 				opacity: 1;
 				visibility: visible;
 				transition: opacity .3s;
 			}
-		}
-		svg {
-			width: 10px;
-			margin-left: 15px;
 		}
 	}
 	ul {

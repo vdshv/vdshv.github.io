@@ -201,18 +201,25 @@ document.addEventListener("DOMContentLoaded", function() {
 		}, 400)
 	}
 
+	let closeBannerMessage = qs('.hero__message-close'),
+		bannerMessage = qs('.hero__message');
+	if(closeBannerMessage) closeBannerMessage.onclick = () => {
+		bannerMessage.classList.add('hidden');
+		qs('.hero__right').style.paddingTop = "0";
+	}
 	
 	var selects = qsa('.c-select li');
-	if(selects) {
+	if(selects.length) {
 		selects.forEach(el => {
 			el.onclick = () => {
-				let btn = el.closest('.c-select').querySelector('button span'),
+				let btn = el.closest('.c-select').querySelector('.c-select__value'),
+					input = el.closest('.c-select').querySelector('input'),
 					siblings = el.closest('.c-select').querySelectorAll('li');
 				siblings.forEach(li => li.classList.remove('active'));
 
 				el.classList.add('active');
 				btn.innerHTML = el.innerHTML;
-				btn.dataset.value = el.innerHTML;
+				input.value = el.innerHTML;
 			}
 		})
 	}
