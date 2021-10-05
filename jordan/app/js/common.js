@@ -40,12 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END SCROLLING ANIM
 
 	// MOB MENU
-	// qs('.header__menu').onclick = () => {
-	// 	qs('.nav').classList.add('active');
-	// }
-	// qs('.nav-close').onclick = () => {
-	// 	qs('.nav').classList.remove('active');
-	// }
+	if(qs('.header__menu')) {
+		qs('.header__menu').onclick = () => {
+			qs('.nav').classList.add('active');
+		}
+		qs('.nav-close').onclick = () => {
+			qs('.nav').classList.remove('active');
+		}
+	}
+	
 	// END MOB MENU
 
 
