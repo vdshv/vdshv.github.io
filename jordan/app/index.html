@@ -11,12 +11,31 @@
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<link rel="icon" href="" type="image/x-icon"> -->
 
-	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<!-- <link rel="stylesheet" href="css/main.css" type="text/css"> -->
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Mulish:wght@300;400;700;800&display=block" rel="stylesheet">
 
+	<style>
+		
+	</style>
+	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
+	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
+	<!-- SCRITICAL CSS  -->
+
+	<style>
+		.lazyload,
+		.lazyloading {
+			opacity: 0;
+		}
+		.lazyloaded {
+			opacity: 1;
+			transition: opacity 300ms;
+		}
+
+	</style>
 </head>
 <body>
 	<div class="overflow">
@@ -95,7 +114,7 @@
 					</div>
 					<div class="nav__box">
 						<h3>La création d’une entreprise est devenue plus simple que jamais. </h3>
-						<img src="img/logo-lg.png" alt="">
+						<img class="lazyload" data-src="img/logo-lg.png" alt="">
 					</div>
 				</div>
 			</div>
@@ -111,6 +130,13 @@
 			</div>
 		</div>
 		<section class="hero flex">
+			<picture>
+			    <source class="lazyload" data-srcset="img/banner1.webp" type="image/webp">
+			    <source class="lazyload" data-srcset="img/banner1.jpg" type="image/jpeg">
+
+			    <img  class="lazyload hero__bg" data-src="img/banner1.jpg" alt="">
+			</picture>
+			
 			<div class="hero__left">
 				<div class="hero__title">
 					<h1>
@@ -136,7 +162,7 @@
 	      						<h4>Reneontres Qimam</h4>
 	      						<div class="hero__slide-flex">
 	      							<div class="img">
-	      								<img src="img/act1.jpg" alt="">
+	      								<img  class="lazyload" data-src="img/act1.jpg" alt="">
 	      								<div class="img-label">
 	      									<span class="day">23</span>
 	      									<span>Dec</span>
@@ -156,7 +182,7 @@
 	        						<h4>Reneontres Qimam</h4>
 	        						<div class="hero__slide-flex">
 	        							<div class="img">
-	        								<img src="img/act1.jpg" alt="">
+	        								<img  class="lazyload" data-src="img/act1.jpg" alt="">
 	        								<div class="img-label">
 	        									<span class="day">23</span>
 	        									<span>Dec</span>
@@ -176,7 +202,7 @@
             						<h4>Reneontres Qimam</h4>
             						<div class="hero__slide-flex">
             							<div class="img">
-            								<img src="img/act1.jpg" alt="">
+            								<img  class="lazyload" data-src="img/act1.jpg" alt="">
             								<div class="img-label">
             									<span class="day">23</span>
             									<span>Dec</span>
@@ -202,7 +228,7 @@
 					      		<h4>Qimam TV</h4>
 					      		<div class="hero__slide-flex">
 					      			<div class="img">
-					      				<img src="img/act2.jpg" alt="">
+					      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
 					      			</div>
 					      			<div class="content">
 					      				<span>Sujet de la semaine</span>
@@ -222,7 +248,7 @@
 					      		<h4>Termoignagés/Photothéquest</h4>
 					      		<div class="hero__slide-flex">
 					      			<div class="img">
-					      				<img src="img/act1.jpg" alt="">
+					      				<img  class="lazyload" data-src="img/act1.jpg" alt="">
 					      			</div>
 					      			<div class="content">
 					      				<span>Ahmed Mounir - CEO Consulting</span>
@@ -237,7 +263,7 @@
 						      		<h4>Termoignagés/Photothéquest</h4>
 						      		<div class="hero__slide-flex">
 						      			<div class="img">
-						      				<img src="img/act2.jpg" alt="">
+						      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
 						      			</div>
 						      			<div class="content">
 						      				<span>Ahmed Mounir - CEO Consulting</span>
@@ -252,7 +278,7 @@
 						      		<h4>Termoignagés/Photothéquest</h4>
 						      		<div class="hero__slide-flex">
 						      			<div class="img">
-						      				<img src="img/act2.jpg" alt="">
+						      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
 						      			</div>
 						      			<div class="content">
 						      				<span>Ahmed Mounir - CEO Consulting</span>
@@ -297,7 +323,7 @@
 					    <ul class="glide__slides">
 					      <li class="glide__slide slide flex boxes">
 					      	<div>
-					      		<img src="img/why-icon1.svg" alt="University Info test sur deux ligne">
+					      		<img  class="lazyload" data-src="img/why-icon1.svg" alt="University Info test sur deux ligne">
 					      		<h3>University Info test sur deux ligne</h3>
 					      		<p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
 					      		<span class="btn-arr">Learn more</span>
@@ -307,7 +333,7 @@
 					      </li>
 					      <li class="glide__slide slide flex boxes">
 					      	<div>
-					      		<img src="img/why-icon2.svg" alt="University Info test sur deux ligne">
+					      		<img  class="lazyload" data-src="img/why-icon2.svg" alt="University Info test sur deux ligne">
 					      		<h3>University Info test sur deux ligne</h3>
 					      		<p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
 					      		<span class="btn-arr">Learn more</span>
@@ -317,7 +343,7 @@
 					      </li>
 					      <li class="glide__slide slide flex boxes">
 					      	<div>
-					      		<img src="img/why-icon3.svg" alt="University Info test sur deux ligne">
+					      		<img  class="lazyload" data-src="img/why-icon3.svg" alt="University Info test sur deux ligne">
 					      		<h3>University Info test sur deux ligne</h3>
 					      		<p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
 					      		<span class="btn-arr">Learn more</span>
@@ -327,7 +353,7 @@
 					      </li>
 					      <li class="glide__slide slide flex boxes">
 					      	<div>
-					      		<img src="img/why-icon1.svg" alt="University Info test sur deux ligne">
+					      		<img  class="lazyload" data-src="img/why-icon1.svg" alt="University Info test sur deux ligne">
 					      		<h3>University Info test sur deux ligne</h3>
 					      		<p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
 					      		<span class="btn-arr">Learn more</span>
@@ -337,7 +363,7 @@
 					      </li>
 					      <li class="glide__slide slide flex boxes">
 					      	<div>
-					      		<img src="img/why-icon2.svg" alt="University Info test sur deux ligne">
+					      		<img  class="lazyload" data-src="img/why-icon2.svg" alt="University Info test sur deux ligne">
 					      		<h3>University Info test sur deux ligne</h3>
 					      		<p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
 					      		<span class="btn-arr">Learn more</span>
@@ -347,7 +373,7 @@
 					      </li>
 					      <li class="glide__slide slide flex boxes">
 					      	<div>
-					      		<img src="img/why-icon3.svg" alt="University Info test sur deux ligne">
+					      		<img  class="lazyload" data-src="img/why-icon3.svg" alt="University Info test sur deux ligne">
 					      		<h3>University Info test sur deux ligne</h3>
 					      		<p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
 					      		<span class="btn-arr">Learn more</span>
@@ -371,7 +397,7 @@
 					<a href="" class="btn">En savoir plus</a>
 				</div>
 				<div class="wizard__img">
-					<img src="img/wizard.png" alt="">
+					<img  class="lazyload" data-src="img/wizard.png" alt="">
 				</div>
 			</div>
 		</section>
@@ -450,17 +476,17 @@
 					    <ul class="glide__slides">
 					      	<li class="glide__slide">
 					      		<div class="slide">
-					      			<img src="img/eservice.jpg" alt="E-Services">
+					      			<img class="lazyload" data-src="img/eservice2.png" alt="E-Services">
 					      		</div>
 							</li>
 					      	<li class="glide__slide">
 					      		<div class="slide">
-					      			<img src="img/eservice.jpg" alt="E-Services">
+					      			<img class="lazyload" data-src="img/eservice2.png" alt="E-Services">
 					      		</div>
 							</li>
 					      	<li class="glide__slide">
 					      		<div class="slide">
-					      			<img src="img/eservice.jpg" alt="E-Services">
+					      			<img class="lazyload" data-src="img/eservice2.pnfg" alt="E-Services">
 					      		</div>
 							</li>
 				      	</ul>
@@ -485,35 +511,35 @@
 					    <ul class="glide__slides">
 					      <li class="glide__slide flex boxes">
 					      	<div>
-					      		<img src="img/act1.jpg" alt="">
+					      		<img  class="lazyload" data-src="img/act1.jpg" alt="">
 					      		<span>Publié il y a 31 minutes </span>
 					      		<p>Organisation d’un séminaire de sensibilisation et d’un cycle d’accompagnement sur la transformation digitale en faveur des administrations marocaines</p>
 					      	</div>
 					      </li>
 					      <li class="glide__slide flex boxes">
 					      	<div>
-  								<img src="img/act2.jpg" alt="">
+  								<img  class="lazyload" data-src="img/act2.jpg" alt="">
   								<span>Publié il y a 31 minutes </span>
   								<p>Relance de l’appel a partenariat pour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat … </p>
   							</div>
 					      </li>
 					      <li class="glide__slide flex boxes">
 					      	<div>
-  								<img src="img/act2.jpg" alt="">
+  								<img  class="lazyload" data-src="img/act2.jpg" alt="">
   								<span>Publié il y a 31 minutes </span>
   								<p>Relance de l’appel a partenariat pour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat … </p>
   							</div>
 					      </li>
 					      <li class="glide__slide flex boxes">
 					      	<div>
-  								<img src="img/act2.jpg" alt="">
+  								<img  class="lazyload" data-src="img/act2.jpg" alt="">
   								<span>Publié il y a 31 minutes </span>
   								<p>Relance de l’appel a partenariat pour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat … </p>
   							</div>
 					      </li>
 					      <li class="glide__slide flex boxes">
 					      	<div>
-  								<img src="img/act2.jpg" alt="">
+  								<img  class="lazyload" data-src="img/act2.jpg" alt="">
   								<span>Publié il y a 31 minutes </span>
   								<p>Relance de l’appel a partenariat pour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat … </p>
   							</div>
@@ -540,7 +566,7 @@
 			<div class="programs__wrap">
 				<div class="programs__flex flex cont">
 					<div class="programs__box">
-						<img src="img/program1.png" alt="Qimam">
+						<img  class="lazyload" data-src="img/program1.png" alt="Qimam">
 						<h3>Qimam</h3>
 					</div>
 					<div class="programs__text">
@@ -550,7 +576,7 @@
 
 				<div class="programs__flex flex cont">
 					<div class="programs__box">
-						<img src="img/program2.png" alt="Casa-Settat Analytics & Intelligence">
+						<img  class="lazyload" data-src="img/program2.png" alt="Casa-Settat Analytics & Intelligence">
 						<h3>Casa-Settat Analytics & Intelligence</h3>
 					</div>
 					<div class="programs__text">
@@ -802,7 +828,7 @@
 					<div class="pubs__item">
 						<div class="pubs__item-rect">
 							<div class="pubs__item-wrap">
-								<img src="img/pub3.svg" alt="PACKAGE INCITATIF 2020">
+								<img  class="lazyload" data-src="img/pub3.svg" alt="PACKAGE INCITATIF 2020">
 								<h6>PACKAGE INCITATIF 2020</h6>
 							</div>
 						</div>
@@ -810,7 +836,7 @@
 					<div class="pubs__item">
 						<div class="pubs__item-rect">
 							<div class="pubs__item-wrap">
-								<img src="img/pub3.svg" alt="CRI En chiffre 2020">
+								<img  class="lazyload" data-src="img/pub3.svg" alt="CRI En chiffre 2020">
 								<h6>CRI En chiffre 2020</h6>
 							</div>
 						</div>
@@ -826,12 +852,12 @@
 				</div>
 				<div class="links__flex flex col2 boxes">
 					<div>
-						<img src="img/link1.svg" alt="Guide de l'entrepreneur">
+						<img  class="lazyload" data-src="img/link1.svg" alt="Guide de l'entrepreneur">
 						<h3>Guide de l'entrepreneur</h3>
 						<a href="" class="btn-arr">Learn more</a>
 					</div>
 					<div>
-						<img src="img/link2.svg" alt="Guide de l'investisseur">
+						<img  class="lazyload" data-src="img/link2.svg" alt="Guide de l'investisseur">
 						<h3>Guide de l'investisseur</h3>
 						<a href="" class="btn-arr">Learn more</a>
 					</div>
@@ -854,24 +880,21 @@
 
 		<section class="gallery">
 			<div class="gallery-wrap">
-				<div><img class="lazyload"  src="img/gallery/1.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/2.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/3.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/4.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/6.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/7.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/8.jpg"></div>
-
-				<div><img class="lazyload"  src="img/gallery/9.jpg"></div>
-
-				
-				<div><img class="lazyload"  src="img/gallery/2.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/3.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/4.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/6.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/7.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/8.jpg"></div>
-				<div><img class="lazyload"  src="img/gallery/9.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/1.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/2.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/3.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/4.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/6.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/7.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/8.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/9.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/2.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/3.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/4.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/6.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/7.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/8.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/9.jpg"></div>
 			</div>
 			
 			
