@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END SCROLLING ANIM
 
 	// MOB MENU
-	qs('.header__menu').onclick = () => {
-		qs('.nav').classList.add('active');
-	}
-	qs('.nav-close').onclick = () => {
-		qs('.nav').classList.remove('active');
-	}
+	// qs('.header__menu').onclick = () => {
+	// 	qs('.nav').classList.add('active');
+	// }
+	// qs('.nav-close').onclick = () => {
+	// 	qs('.nav').classList.remove('active');
+	// }
 	// END MOB MENU
 
 
@@ -66,10 +66,61 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	})
 
-	// let galleryItems = qsa('.gallery-wrap div');
-	// if(galleryItems) galleryItems.forEach((el, ind) => {
-	// 	// el.style.gridArea = "a" + (ind + 1);
-	// })
+	let activities = qsa('.activities__item'),
+		activitiesGrid = qs('.activities__grid');
+	if(activitiesGrid) {
+		window.addEventListener('load', (event) => {
+		   activities.forEach(el=>{
+	   			// console.log(el.scrollHeight);
+	   		})
+		   let arr = Array(...activities),
+		   	   heights = arr.map(el=>el.scrollHeight),
+		   	   max = Math.max(...heights),
+		   	   min = Math.min(...heights),
+		   	   avg = (max + min) / 2;
+		   	arr.forEach(item => {
+		   		if(item.scrollHeight > avg) {
+		   			item.style.gridRowEnd = 'span 2';
+		   		}
+		   	})
+		   	activitiesGrid.style.alignItems = 'stretch';
+		});
+	}
+	let dropdowns = qsa('.dropdown-btn');
+
+	dropdowns.forEach(el => {
+		el.onclick = (e) => {
+			let answer = el.nextElementSibling;
+			if(el.classList.contains('active')) {
+				el.classList.remove('active');
+				answer.style.height = '0px';
+			} else {
+				el.classList.add('active');
+				answer.style.height = answer.scrollHeight + 10 + 'px';
+			}
+		};
+	})
+
+	let tabs = qsa('.tabs li'),
+		tabsContent = qsa('.tab');
+
+	if(tabs.length) tabs.forEach(tab => {
+		tab.onclick = () => {
+			if(!tab.classList.contains('active')) {
+				let curTabs = tab.closest('.tabs').querySelectorAll('li'),
+					curContent = tab.closest('.tabs-cont').querySelectorAll('.tab'),
+					curInd = Array(...curTabs).indexOf(tab);
+
+					
+
+				curTabs.forEach(el=>el.classList.remove('active'));
+				tab.classList.add('active');
+
+				curContent.forEach(el=>el.classList.remove('active'));
+				curContent[curInd].classList.add('active');
+			}
+		}
+	}) 
 
 
 	let glidesCol1 = qsa('.glide.one-col');
@@ -99,7 +150,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		pubsSlides = qsa('.pubs__items .glide__slide'),
 		pubsQty = pubsSlides.length;
 
-	if(pubsSlides){
+	if(pubsQty){
+
 		calcLayers(2);
 
 		let pubsGlide = new Glide('.glide.five-col', {
@@ -148,11 +200,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			pubsSlides[current].style.zIndex = 1000;
 		}, 400)
 	}
-	
-
-	
-
-	
 
 	
 	var selects = qsa('.c-select li');
