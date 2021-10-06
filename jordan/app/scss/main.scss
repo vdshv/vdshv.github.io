@@ -584,7 +584,6 @@ section {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		color: #fff;
 		padding-top: 40px;
 		padding-bottom: 40px;
 		&::before {
@@ -592,6 +591,7 @@ section {
 		}
 		&__title {
 			width: 100%;
+			color: #fff;
 			text-align: center;
 			h1 {
 				font-size: 40px;
