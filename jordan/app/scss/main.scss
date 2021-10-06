@@ -87,11 +87,6 @@ h2 {
 		background: #094599;
 	}
 }
-.box {
-	box-shadow: 0 0 20px 0 rgba(0,0,0,.02);
-	border-radius: 8px;
-	background: #fff;
-}
 h3 {
 	font-size: 24px;
 	line-height: 1.55;
@@ -436,8 +431,14 @@ section {
 
 	}
 }
+
+	
+	
+	
+
 .glide {
 	position: relative;
+
 	&__track {
 		width: 100%;
 		position: relative;
@@ -478,6 +479,7 @@ section {
 	&__bullet {
 		width: 15px;
 		height: 15px;
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -778,13 +780,39 @@ section {
 		}
 	}
 }
-.boxes.flex, .boxes.grid {
+.boxes {
 	align-items: stretch;
-	> div {
+	&-box {
 		background: #fff;
 		border-radius: 15px;
 		box-shadow: 0 0 77px 0 rgba(0,0,0,.06);
-		padding: 30px 17px 20px 30px;
+		padding: 30px 25px 20px;
+		// &--light {
+		// 	box-shadow: 0 0 20px 0 rgba(0,0,0,.02);
+		// 	border-radius: 8px;
+		// }
+	}
+
+	&-link {
+		position: relative;
+		transition: .3s;
+		&:hover {
+			transition: .3s;
+			transform: translate3d(0px, -10px, 0px);
+			.btn-arr {
+				&::after {
+					transform: translate3d(5px,0,0);
+				}
+			}
+		}
+		a {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 3;
+		}
 	}
 }
 
@@ -803,25 +831,6 @@ section {
 	}
 	.btn-arr {
 		margin-top: 4px;
-	}
-	.glide__slide {
-		position: relative;
-		&:hover {
-			transform: translate3d(0px, -10px, 0px);
-
-			.btn-arr {
-				&::after {
-					transform: translate3d(5px,0,0);
-				}
-			}
-		}
-		a {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-		}
 	}
 }
 
@@ -941,38 +950,7 @@ section {
 	}
 }
 
-.actualite {
-	background: url('../img/lines.svg') no-repeat bottom left / 105% auto;
-	// .col3 >div {
-	// 	padding: 0px 17px 20px 30px;
-	// 	width: calc((100% / 3) - 14px);
-	// 	border-radius: 8px;
-	// }
-	.flex > div {
-		padding: 0px 17px 20px 30px;
-		border-radius: 8px;
-	}
 
-	img {
-		width: calc(100% + 47px);
-		position: relative;
-		left: -30px;
-		border-radius: 8px 8px 0 0;
-		margin-bottom: 13px;
-	}
-	span {
-		color: #95A0AB;
-		font-size: 15px;
-		margin-bottom: 8px;
-	}
-	p {
-		opacity: 1;
-		letter-spacing: 0;
-	}
-	.btn-arr {
-		margin-top: 30px;
-	}
-}
 
 .programs {
 	&__wrap {
@@ -1043,7 +1021,7 @@ section {
 		&.hidden {
 			opacity: 0;
 			visibility: hidden;
-			transition:  opacity .3s, visibility .3s;
+			transition:  opacity .5s, visibility .5s;
 		}
 	}
 	.glide__slide--active {
@@ -1053,10 +1031,21 @@ section {
 			visibility: visible;
 			transition: .3s;
 		}
-		
 		.pubs__item {
 			transform: scale(2);
 			transition: 1s cubic-bezier(.56,-0.05,0,1.07);
+			&:hover {
+				transform: scale(2.1);
+				transition: .3s;
+			}
+			a {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 3;
+			}
 			&::after {
 				opacity: 1;
 				// transition: prop time;
@@ -1070,7 +1059,7 @@ section {
 			&-regular {
 				opacity: 0;
 				visibility: hidden;
-				transition: 0s 0s;
+				transition: .15s 0s;
 			}
 		}
 		
@@ -1200,11 +1189,17 @@ section {
 		}
 	}
 }
-.news {
+.newsletter {
 	text-align: center;
-	// padding-top: px;
 	padding-bottom: 90px;
-
+	&--news {
+		padding-top: 180px;
+		background: url('../img/lines.svg') no-repeat bottom 20px left / 105% auto;
+		.boxes-box {
+			padding-top: 35px;
+			padding-bottom: 60px;
+		}
+	}
 	h3 {
 		font-weight: 700;
 	}
@@ -1419,6 +1414,7 @@ section {
 	button {
 		cursor: pointer;
 		transition: .3s;
+		color: #3D4854;
 		&:focus {
 			&+ul {
 				opacity: 1;
@@ -1474,6 +1470,7 @@ section {
 	svg {
 		width: 20px;
 	}
+
 	&__top {
 		margin-bottom: 32px;
 		a {
@@ -1494,6 +1491,7 @@ section {
 			margin-bottom: 20px;
 		}
 		span.flex {
+			display: flex;
 			justify-content: flex-start;
 			font-size: 16px;
 			color: #B7BFC9;
@@ -1502,7 +1500,7 @@ section {
 				margin-right: 8px;
 			}
 			&:last-of-type {
-				margin-bottom: 24px;
+				margin-bottom: 30px;
 			}
 		}
 		.btn {
@@ -1510,35 +1508,20 @@ section {
 		}
 	}
 }
-.grid.boxes {
+.grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 32px;
-	>div {
-		padding: 20px;
-		border-radius: 8px;
-	}
 	&.col2 {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 .rapports {
-	&__grid.boxes {
-		img {
-			width: calc(100% + 40px);
-			position: relative;
-			left: -20px;
-			border-radius: 8px 8px 0 0;
-			margin-bottom: 24px;
-		}
-		>div {
-			padding-top: 0;
-			padding-bottom: 24px;
-		}
+	
 		h4 {
 			margin-bottom: 16px;
 		}
-	}
+
 }
 .partners {
 	text-align: center;
@@ -1617,27 +1600,15 @@ section {
 .activities {
 	padding-bottom: 60px;
 	&__grid {
-		// display: block;
 		display: grid;
-		// grid-template-columns: repeat(1, .315fr);
 		grid-template-columns: repeat(3, 1fr);
-
 		grid-template-rows: repeat(1, minmax(auto, 1fr));		
 		grid-gap: 30px;
-
-
 		align-items: flex-start;
 	}
 	&__item {
-		// display: block;
 		grid-column-end: span 1;
 		grid-row-end: span 1;
-		&:nth-child(1) {
-			// grid-row-end: span 2;
-
-		}
-		background: #fff;
-		padding: 32px;
 		h3 {
 			font-weight: 700;
 			line-height: 1.3;
@@ -1815,6 +1786,98 @@ section {
 			line-height: 1.5;
 		}
 	}
+}
+
+.banner {
+	background: #EDF6F5;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	.flex {
+		align-items: flex-start;
+	}
+	&--news {
+
+		img {
+			width: 47%;
+		}
+		&__content {
+			width: 53%;
+			padding-left: 35px;
+			span {
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+			h3 {
+				font-size: 40px;
+				margin-bottom: 15px;
+				margin-top: 10px;
+				line-height: 1.2;
+				font-weight: 700;
+			}
+			p {
+				color: #B7BFC9;
+				line-height: 1.5;
+				margin-bottom: 16px;
+			}
+			.btn {
+				margin-top: 10px
+			}
+		}
+	}
+}
+
+.news {
+	padding-top: 30px;
+	&__top {
+		border-radius: 44px;
+		border: 1px solid #EEEEEE;
+		background: #fff;
+		margin-bottom: 35px;
+		padding: 20px;
+		grid-gap: 20px;
+		button {
+			max-width: none;
+			width: 100%;
+		}
+		.c-select {
+			flex-grow: 1;
+		}
+	}
+	h2 {
+		font-size: 40px;
+		margin-bottom: 25px;
+	}
+	&__list {
+		.boxes-box {
+			padding-top: 0;
+		}
+		img {
+			width: calc(100% + 50px);
+			position: relative;
+			left: -25px;
+			border-radius: 8px 8px 0 0;
+			margin-bottom: 18px;
+		}
+		span {
+			color: #95A0AB;
+			font-size: 15px;
+			display: block;
+			margin-bottom: 6px;
+		}
+		p {
+			opacity: 1;
+			letter-spacing: 0;
+		}
+		.btn-arr {
+			margin-top: 30px;
+		}
+	}
+}
+.actualite {
+	background: url('../img/lines.svg') no-repeat bottom left / 105% auto;
 }
 
 @import "media";
