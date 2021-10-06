@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		   	activitiesGrid.style.alignItems = 'stretch';
 		});
 	}
-	let dropdowns = qsa('.dropdown-btn');
+	let dropdowns = qsa('.dropdown-trigger');
 
 	dropdowns.forEach(el => {
 		el.onclick = (e) => {
@@ -99,7 +99,12 @@ document.addEventListener("DOMContentLoaded", function() {
 				answer.style.height = '0px';
 			} else {
 				el.classList.add('active');
-				answer.style.height = answer.scrollHeight + 10 + 'px';
+				if(answer.closest('.faq__item')){
+					answer.style.height = answer.scrollHeight + 35 + 'px';
+				} else {
+					answer.style.height = answer.scrollHeight + 10 + 'px';
+				}
+				
 			}
 		};
 	})
@@ -132,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		  type: 'carousel',
 		  perView: 1,
 		  gap: 0
-		  // keyboard: true
 		}).mount();
 	});
 
