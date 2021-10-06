@@ -1858,6 +1858,49 @@ section {
 	h2 {
 		margin-bottom: 25px;
 	}
+	&-head {
+		h2 {
+			font-size: 40px;
+		}
+		.social-cont {
+			width: 100%;
+			&__wrap {
+				position: relative;
+				top: 0px;
+				left: 0;
+				width: 100%;
+			}
+			.cont {
+				position: relative;
+			}
+		}
+		&__social {
+			text-align: center;
+			width: 66px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			&-wrap {
+				border-radius:4px;
+				background: #F4F4F4;
+				padding: 10px 18px;
+			}
+			a {
+				display: block;
+				margin-bottom: 12px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			span {
+				font-size: 12px;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+				display: block;
+				font-weight: 700;
+			}
+		}
+	}
 	&__top {
 		border-radius: 44px;
 		border: 1px solid #EEEEEE;
@@ -1872,9 +1915,6 @@ section {
 		.c-select {
 			flex-grow: 1;
 		}
-	}
-	h2 {
-		font-size: 40px;
 	}
 	&__list {
 		.boxes-box {
