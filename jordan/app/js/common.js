@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		qs('.hero__right').style.paddingTop = "0";
 	}
 	
-	var selects = qsa('.c-select li');
+	let selects = qsa('.c-select li');
 	if(selects.length) {
 		selects.forEach(el => {
 			el.onclick = () => {
@@ -227,6 +227,17 @@ document.addEventListener("DOMContentLoaded", function() {
 				el.classList.add('active');
 				btn.innerHTML = el.innerHTML;
 				input.value = el.innerHTML;
+			}
+		})
+	}
+
+	let contactSelects = qsa('.contact select');
+	if(contactSelects.length) {
+		contactSelects.forEach(select => select.onchange = () => {
+			if(!select.value) {
+				select.classList.add('placeholder');
+			} else {
+				select.classList.remove('placeholder');
 			}
 		})
 	}

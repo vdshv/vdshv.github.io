@@ -90,7 +90,7 @@ h2 {
 h3 {
 	font-size: 24px;
 	line-height: 1.55;
-	font-weight: 400;
+	font-weight: 700;
 }
 h4 {
 	font-size: 20px;
@@ -237,7 +237,6 @@ img,svg {
 		h3 {
 			font-size: 32px;
 			line-height: 1.22;
-			font-weight: 700;
 			margin-bottom: 75px;
 		}
 		img {
@@ -304,7 +303,10 @@ img,svg {
     background: #094599;
     font-weight: 700;
     position: relative;
-    padding: 11px 50px;
+    padding: 11px 25px;
+    min-width: 210px;
+    cursor: pointer;
+    text-align: center;
     border-radius: 25px;
     text-decoration: none;
     transition: .2s;
@@ -348,6 +350,7 @@ img,svg {
 		background: #F4F7FB;
 		color: $a;
 		display: flex;
+		justify-content: center;
 		svg {
 			width: 20px;
 			margin-right: 8px;
@@ -359,6 +362,12 @@ img,svg {
 	&-sm {
 		font-size: 12px;
 		padding: 5px 16px;
+		min-width: auto;
+	}
+	&-alt {
+		font-size: 14px;
+		background: #B7BFC9;
+		padding: 8px 35px;
 	}
 }
 
@@ -599,9 +608,17 @@ section {
 			}
 		}
 	}
+
 	&-faq {
 		padding-bottom: 200px;
-		position: relative;
+		z-index: 1;
+	}
+	&-search {
+		padding-bottom: 40px;	
+	}
+	&-contact {
+		padding-top: 55px;
+		padding-bottom: 270px;
 		z-index: 1;
 	}
 	&::before {
@@ -799,10 +816,6 @@ section {
 		box-shadow: 0 0 77px 0 rgba(0,0,0,.06);
 		padding: 30px 25px 20px;
 		overflow: hidden;
-		// &--light {
-		// 	box-shadow: 0 0 20px 0 rgba(0,0,0,.02);
-		// 	border-radius: 8px;
-		// }
 	}
 
 	&-link {
@@ -836,13 +849,14 @@ section {
 		}
 		h3 {
 			margin-bottom: 8px;
+			font-weight: 400;
 		}
 	}
 	.sect__head {
 		margin-bottom: 0;
 	}
 	.btn-arr {
-		margin-top: 4px;
+		margin-top: 8px;
 	}
 	.glide__slide {
 		max-width: 360px;
@@ -913,10 +927,11 @@ section {
 			opacity: 0;
 		}
 		p {
+			font-family: 'Merriweather', serif;
 			font-size: 24px;
 			opacity: 1;
 			line-height: 1.55;
-			max-width: 250px;
+			max-width: 275px;
 			letter-spacing: 0;
 			margin: 0 auto;
 		}
@@ -1013,7 +1028,7 @@ section {
 		&:last-child {
 			align-items: flex-start;
 			.programs__text {
-				padding-top: 40px;
+				padding-top: 30px;
 			}
 		}
 		>div {
@@ -1026,7 +1041,7 @@ section {
 		border-radius: 15px;
 		box-shadow: 0 0 77px 0 rgba(0,0,0,.06);
 		text-align: center;
-		padding: 38px 20px 52px;
+		padding: 40px 20px 45px;
 		img {
 			max-width: 250px;
 			max-height: 80px;
@@ -1038,6 +1053,12 @@ section {
 			font-size: 34px;
 			font-weight: 400;
 			margin-top: 10px;
+			line-height: 1.3;
+
+			min-height: 88px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 	&__text {
@@ -1223,10 +1244,9 @@ section {
 .links {
 	background: url('../img/lines.svg') no-repeat bottom left / 105% auto;
 	padding-bottom: 80px;
-	&__flex {
-		h3 {
-			margin-bottom: 35px;
-		}
+	h3 {
+		margin-bottom: 35px;
+		font-weight: 400;
 	}
 }
 .newsletter {
@@ -1239,9 +1259,6 @@ section {
 			padding-top: 35px;
 			padding-bottom: 60px;
 		}
-	}
-	h3 {
-		font-weight: 700;
 	}
 	p {
 		color: #95A0AB;
@@ -1273,7 +1290,8 @@ section {
 			text-transform: uppercase;
 			font-weight: 400;
 			font-size: 14px;
-			padding: 11px 0;
+			padding-left: 11px;
+			padding-right: 11px;
 			min-width: 145px;
 			cursor: pointer;
 		}
@@ -1525,6 +1543,7 @@ section {
 
 	&__top {
 		margin-bottom: 32px;
+		align-items: center;
 		a {
 			font-size: 18px;
 			font-weight: 600;
@@ -1667,7 +1686,6 @@ section {
 		grid-column-end: span 1;
 		grid-row-end: span 1;
 		h3 {
-			font-weight: 700;
 			line-height: 1.3;
 			margin-bottom: 15px;
 			display: block;
@@ -1723,7 +1741,6 @@ section {
 		min-width: 250px;
 		padding-right: 25px;
 		h3 {
-			font-weight: 700;
 			margin-bottom: 15px;
 		}
 		li {
@@ -1879,7 +1896,6 @@ section {
 				margin-bottom: 15px;
 				margin-top: 10px;
 				line-height: 1.2;
-				font-weight: 700;
 			}
 			p {
 				color: #B7BFC9;
@@ -1929,6 +1945,7 @@ section {
 				top: 0px;
 				left: 0;
 				width: 100%;
+				z-index: 10;
 			}
 			.cont {
 				position: relative;
@@ -1987,8 +2004,10 @@ section {
 			top: -2px;
 			border-radius: 12px 12px 0 0;
 			margin-bottom: 18px;
+			height: 210px;
+			object-fit: cover;
 		}
-		span {
+		span:not(.btn-arr) {
 			color: #95A0AB;
 			font-size: 15px;
 			display: block;
@@ -2040,6 +2059,41 @@ section {
 		}
 	}
 }
+.boxes-event {
+	.img {
+		position: relative;
+		&-label {
+			position: absolute;
+			background: #fff;
+			box-shadow: 0 4px 21px 0 rgba(60, 60, 60, .08);
+			// bottom: 0;
+			bottom: -35px;
+			left: 0;
+			// padding: 8px 12px;
+			padding: 10px 22px;
+
+			text-align: center;
+			// border-radius: 0 4px 0 0;
+			border-radius: 11px;
+			span {
+				color: #00AFA3;
+				display: block;
+				// font-size: 12px;
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 1;
+			}
+			.day {
+				// font-size: 16px;
+				font-size: 27px;
+			}
+		}
+	}
+	img {
+		height: 140px;
+		margin-bottom: 50px;
+	}
+}
 .quote {
 	text-align: center;
 	padding-top: 50px;
@@ -2082,7 +2136,6 @@ section {
 		margin-right: auto;
 	}
 	h3 {
-		font-weight: 700;
 		line-height: 1.3;
 		font-size: 35px;
 		margin-bottom: 30px;
@@ -2156,6 +2209,71 @@ section {
 }
 .actualite {
 	background: url('../img/lines.svg') no-repeat bottom left / 105% auto;
+}
+.contact {
+	position: relative;
+	z-index: 2;
+	margin-top: -244px;
+	padding-top: 0;
+	&__form {
+		padding: 40px;
+		flex-flow: row wrap;
+		border-radius: 16px;
+		label {
+			display: block;
+			width: 100%;
+			margin-bottom: 40px;
+			&.half {
+				width: calc(50% - 18px);
+			}
+			p {
+				font-size: 14px;
+				padding-left: 22px;
+				margin-bottom: 8px;
+			}
+			.required {
+				color: #E54842;
+			}
+		}
+		input,select,textarea {
+			display: block;
+			width: 100%;
+			border-radius: 25px;
+			background: #f7f7f7;
+			height: 50px;
+			padding-left: 22px;
+			padding-right: 30px;
+			font-size: 14px;
+			&::placeholder, &.placeholder {
+				color: #95A0AB;
+			}
+		}
+		select[value=""] {
+			// color: #95A0AB;
+			// display: none;
+		}
+		textarea {
+			padding-top: 16px;
+			height: 155px;
+		}
+	}
+	&__btn {
+		width: 100%;
+		text-align: center;
+	}
+}
+.search {
+	&-block {
+		padding-top: 30px;
+		margin-bottom: 30px;
+		&__title {
+			margin-bottom: 20px;
+		}
+		&__btn {
+			margin-top: 24px;
+			text-align: center;
+		}
+	}
 }
 
 @import "media";
