@@ -2352,6 +2352,10 @@ section {
 		margin-bottom: 30px;
 		&--basic {
 			margin-bottom: 60px;
+			.newsletter__form {
+				max-width: none;
+				margin: 0 0 30px;
+			}
 		}
 		&__title {
 			margin-bottom: 20px;
@@ -2363,13 +2367,8 @@ section {
 
 		&__box {
 			padding: 35px;
-			.newsletter__form {
-				max-width: none;
-				margin: 0;
-			}
 		}
 		&__list {
-			margin-top: 30px;
 			li {
 				padding-top: 20px;
 				padding-bottom: 20px;
