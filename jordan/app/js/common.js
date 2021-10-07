@@ -231,6 +231,22 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	}
 
+	let headerSearch = qs('.header__search'),
+		headerForm = qs('.header__search input');
+	if(headerSearch) {
+		headerSearch.onclick = (e) => {
+			headerSearch.classList.add('active');
+			headerForm.focus();
+		}
+		document.onclick = (e) => {
+			if(headerSearch.classList.contains('active')
+			&& !e.target.closest('.header__search')) {
+				headerSearch.classList.remove('active');
+			}
+		}
+	} 
+
+
 	let contactSelects = qsa('.contact select');
 	if(contactSelects.length) {
 		contactSelects.forEach(select => select.onchange = () => {

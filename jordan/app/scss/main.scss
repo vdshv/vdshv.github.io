@@ -43,6 +43,9 @@ textarea {
 		border: none;
 		outline: none;
 	}
+	&::placeholder, &.placeholder {
+		color: #95A0AB;
+	}
 }
 
 
@@ -376,9 +379,12 @@ section {
 }
 .header {
 	position: relative;
-	padding: 18px 25px;
+	padding: 9px 25px;
 	background: #fff;
 	border-bottom: 1px solid #EEEEEE;
+	.cont {
+		min-height: 52px;
+	}
 	.flex {
 		align-items: center;
 	}
@@ -387,31 +393,96 @@ section {
 		padding: 5px 0;
 		font-size: 14px;
 		text-transform: uppercase;
+		margin-right: 35px;
 		svg {
 			width: 18px;
 			margin-right: 15px;
 		}
 	}
 	&__logo {
-		max-width: 89px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		z-index: 1;
 		transform: translate3d(-50%, -50%, 0px);
+		img {
+			width: 90px;
+			height: 50px;
+			object-fit: contain;
+		}
 	}
 	&__right {
-
+		flex-grow: 1;
+		justify-content: flex-end;
+		position: relative;
+		z-index: 2;
 	}
 	&__search {
-		padding: 5px 0;
+		transition: .3s;
 		cursor: pointer;
+		&.active {
+			flex-grow: 1;
+			transition: .6s;
+			cursor: initial;
+			* {
+				pointer-events: initial;
+			}
+			form {
+				border-color: #eeeeeb;
+			    background: #f7f7f7;
+			}
+			input {
+				cursor: initial;
+				opacity: 1;
+				visibility: visible;
+			}
+			button {
+				padding-right: 22px;
+				padding-left: 18px;
+			}
+			span {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		form {
+			cursor: pointer;
+			width: 100%;
+			border: 1px solid transparent;
+		    padding-left: 22px;
+		    border-radius: 24px;
+		    transition: .3s;
+		    position: relative;
+
+		}
+		input {
+			width: 95px;
+			flex-grow: 1;
+			font-size: 14px;
+		    height: 50px;
+		    opacity: 0;
+		    transition: .3s;
+		}
+		button {
+			cursor: pointer;
+			height: 50px;
+			transition: .3s;
+		}
+		* {
+			pointer-events: none;
+		}
+
 		span {
+			position: absolute;
+			left: 22px;
+			top: 0;
+			line-height: 50px;
 			white-space: nowrap;
 			font-size: 14px;
 			color: #95A0AB;
-		}
-		svg {
-			margin-left: 13px;
+			cursor: pointer;
+			margin-right: 13px;
+			transition: .3s;
 		}
 	}
 	&__lang {
@@ -2244,13 +2315,6 @@ section {
 			padding-left: 22px;
 			padding-right: 30px;
 			font-size: 14px;
-			&::placeholder, &.placeholder {
-				color: #95A0AB;
-			}
-		}
-		select[value=""] {
-			// color: #95A0AB;
-			// display: none;
 		}
 		textarea {
 			padding-top: 16px;
