@@ -158,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		pubsQty = pubsSlides.length;
 
 	if(pubsQty){
-
 		calcLayers(2);
 
 		let pubsGlide = new Glide('.glide.five-col', {
@@ -172,41 +171,56 @@ document.addEventListener("DOMContentLoaded", function() {
 			keyboard: true
 		})
 
+		pubsSlides.forEach((slide,index) => slide.onclick = (e) => {
+			if(!slide.classList.contains('glide__slide--active')) {
+				pubsGlide.go(`=${index}`);
+			}
+		})
+
 		pubsGlide.on('run', function(e) {
 			var current = pubsGlide.index;
 		
 			calcLayers(current);
 		})
 		pubsGlide.mount();
-	} 
-
-	
-	
+	}
 
 	function calcLayers(current) {
 		for(let i = current - 1; i >= 0; i--) {
-			
 			if(current - i > 2) {
 				pubsSlides[i].classList.add('hidden')
 			} else {
 				pubsSlides[i].classList.remove('hidden');
 			}
 			pubsSlides[i].style.zIndex = i + 1;
+			 pubsSlides[i].style.transform = 'translate3d(0, 0, 0)';
 		}
 		for(let i = pubsQty - 1; i > current; i--) {
-			
-
 			if(i - current > 2) {
 				pubsSlides[i].classList.add('hidden')
 			} else {
 				pubsSlides[i].classList.remove('hidden');
 			}
 			pubsSlides[i].style.zIndex = pubsQty - i;
+			pubsSlides[i].style.transform = 'translate3d(0, 0, 0)';
 		}
+		let currentSlide = pubsSlides[current],
+			prevSlide = currentSlide.previousElementSibling,
+			nextSlide = currentSlide.nextElementSibling;
+
+		currentSlide.style.transform = 'translate3d(0, 0, 0)';
+		
 		setTimeout(()=>{
 			pubsSlides[current].style.zIndex = 1000;
-		}, 400)
+			if(prevSlide) {
+				prevSlide.style.transform = 'translate3d(-20%, 0, 0)';
+			}
+			if(nextSlide) {
+				nextSlide.style.transform = 'translate3d(20%, 0, 0)';
+			}
+		}, 600)
 	}
+
 
 	let closeBannerMessage = qs('.hero__message-close'),
 		bannerMessage = qs('.hero__message');
@@ -232,16 +246,19 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	let headerSearch = qs('.header__search'),
-		headerForm = qs('.header__search input');
+		headerForm = qs('.header__search input'),
+		headerLogo = qs('.header__logo');
 	if(headerSearch) {
 		headerSearch.onclick = (e) => {
 			headerSearch.classList.add('active');
 			headerForm.focus();
+			headerLogo.classList.add('hidden');
 		}
 		document.onclick = (e) => {
 			if(headerSearch.classList.contains('active')
 			&& !e.target.closest('.header__search')) {
 				headerSearch.classList.remove('active');
+				headerLogo.classList.remove('hidden');
 			}
 		}
 	} 
