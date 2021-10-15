@@ -1,4 +1,4 @@
-// history.scrollRestoration = "manual";
+history.scrollRestoration = "manual";
 document.addEventListener("DOMContentLoaded", function() {
 	// DETECT TOUCH
 	var isTouchDevice = (('ontouchstart' in window)
@@ -366,9 +366,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	let selectOptions = qsa('.c-select li'),
 		selectButtons = qsa('.c-select button');
 	if(selectOptions.length) {
-		selectButtons.forEach(el => {
-			el.onclick = e => e.target.focus(); 
-		});
 		selectOptions.forEach(el => {
 			el.onclick = () => {
 				let btn = el.closest('.c-select').querySelector('.c-select__value'),
@@ -392,14 +389,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			headerForm.focus();
 			headerLogo.classList.add('hidden');
 		}
-		document.onclick = (e) => {
-			if(headerSearch.classList.contains('active')
-			&& !e.target.closest('.header__search')) {
-				headerSearch.classList.remove('active');
-				headerLogo.classList.remove('hidden');
-			}
-		}
 	} 
+	document.onclick = (e) => {
+		if(headerSearch && headerSearch.classList.contains('active')
+		   && !e.target.closest('.header__search')) {
+			  headerSearch.classList.remove('active');
+			  headerLogo.classList.remove('hidden');
+		}
+
+		if(selectButtons.length && e.target.closest('.c-select')) {
+			e.target.closest('.c-select').querySelector('button').focus();
+		}
+	}
 
 
 	let contactSelects = qsa('.contact select');

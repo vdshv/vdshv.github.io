@@ -25,6 +25,11 @@
 			}
 		}
 	}
+	.news-content {
+		.cont-md {
+			max-width: 850px;
+		}
+	}
 }
 @media (max-width: 1023px) {
 	h2 {
@@ -42,6 +47,9 @@
 			min-height: 600px;
 			max-height: 700px;
 			height: 100vh;
+		}
+		&-news {
+			display: none;
 		}
 		&__right {
 			display: none;
@@ -106,6 +114,30 @@
 			}
 		}
 	}
+	.news-content {
+		&__wrap {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.cont-md {
+			max-width: 600px;
+		}
+		&__title {
+			padding: 0 20px;
+			font-size: 30px;
+		}
+	}
+	.newsletter {
+		&--news {
+			padding-top: 80px;
+		}
+	}
+	.wizard {
+		&--faq {
+			padding-top: 80px;
+		}
+	}
+
 }
 @media (max-width: 900px) {
 	.pubs {
@@ -254,6 +286,8 @@
 		}
 		&-page {
 			min-height: 200px;
+			padding-left: 20px;
+			padding-right: 20px;
 			&__title {
 				h1 {
 					font-size: 30px;
@@ -462,7 +496,6 @@
 			padding: 30px 20px;
 		}
 		&--news {
-			padding-top: 80px;
 			background: none;
 			
 		}
@@ -551,6 +584,8 @@
 	}
 	.appels {
 		&__top {
+			flex-direction: column;
+			align-items: flex-start;
 			a.flex {
 				margin-top: 30px;
 			}
@@ -644,6 +679,99 @@
 		}
 		&__content {
 			padding: 20px;
+		}
+	}
+	.news {
+		h2 {
+			font-size: 20px;
+		}
+		&__top.grid {
+			grid-gap: 14px;
+			grid-template-columns: repeat(2,1fr);
+			padding: 0;
+			background: none;
+			box-shadow: none;
+			border: none;
+			button {
+				min-width: auto;
+			}
+			.c-select:last-child {
+				ul {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+		&-head {
+			.social-cont {
+				display: none;
+			}
+		}
+		&-content {
+			&__title {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+			&__wrap {
+				padding-top: 20px;
+				padding-bottom: 20px;
+				.link {
+					width: calc(100% + 40px);
+					position: relative;
+					left: -20px;
+					padding: 20px 20px 25px;
+					a {
+						word-break: break-all;
+					}
+				}
+			}
+		}
+
+	}
+	.banner {
+		&--news {
+			padding-top: 30px;
+			.cont.flex {
+				display: none;
+			}
+			&-mob {
+				display: block;
+				padding-top: 0;
+			}
+		}
+		&--boxes {
+			padding-top: 30px;
+			padding-bottom: 20px;
+			h2 {
+				font-size: 20px;
+			}
+			.boxes-box {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.quote {
+		padding-top: 80px;
+		padding-bottom: 10px;
+		.cont {
+			padding: 120px 15px 55px;
+
+			&::before {
+				width: 76%;
+				left: 12%;
+				top: -40px;
+			}
+			&::after {
+				display: none;
+			}
+		}
+		svg {
+			display: none;
+		}
+		h3 {
+			margin-bottom: 10px;
 		}
 	}
 }	
