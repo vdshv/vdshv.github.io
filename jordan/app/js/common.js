@@ -58,7 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		let qty = glide.querySelectorAll('.glide__slide').length,
 			bullets = glide.querySelector('.glide__bullets');
 		if(glide.classList.contains('three-col')) {
-			qty = qty - 2;
+			if(window.innerWidth > 1023) {
+				qty = qty - 2;
+			} else if (window.innerWidth > 600) {
+				qty = qty - 1;
+			}
 		}
 		for(let i = 0; i < qty; i++) {
 			let bullet = document.createElement("button");
@@ -322,11 +326,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		});
 		player.on('ready', event => {
-
-			// var heroHome = qs('.hero-home');
-
-			// heroHome.style.height = window.innerHeight - 71 + 'px';
-
 			var heroHeight = qs('.hero-home').clientHeight,
 				vpwidth = window.innerWidth,
 				iframe = qs('.hero iframe');
@@ -334,14 +333,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
 
 			window.addEventListener('resize', () => {
-			  // heroHome.style.height = window.innerHeight - 71 + 'px';
 
 			  heroHeight = qs('.hero-home').clientHeight;
 			  vpwidth = window.innerWidth;
 
 			  iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
 			});
-			
+
 
 			const instance = event.detail.plyr;
 
