@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			bullet.classList.add('glide__bullet');
 			bullet.dataset.glideDir = `=${i}`;
 			bullets.appendChild(bullet);
-			// <button class="glide__bullet" data-glide-dir="=0"></button>
 		}
 	})
 
@@ -73,9 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		activitiesGrid = qs('.activities__grid');
 	if(activitiesGrid) {
 		window.addEventListener('load', (event) => {
-		   activities.forEach(el=>{
-	   			// console.log(el.scrollHeight);
-	   		})
 		   let arr = Array(...activities),
 		   	   heights = arr.map(el=>el.scrollHeight),
 		   	   max = Math.max(...heights),
@@ -149,7 +145,18 @@ document.addEventListener("DOMContentLoaded", function() {
 		  perView: 3,
 		  startAt: 0,
 		  gap: 32,
-		  keyboard: true
+		  breakpoints: {
+		    1023: {
+		      perView: 2,
+		      gap: 20
+		    },
+		    600: {
+		      perView: 1.05,
+		      gap: 20,
+		      focusAt: 'center'
+		    }
+		  }
+
 		}).mount();
 	})
 
@@ -168,7 +175,17 @@ document.addEventListener("DOMContentLoaded", function() {
 			perView: 5,
 			startAt: 2,
 			gap: 0,
-			keyboard: true
+			breakpoints: {
+				1023: {
+				  perView: 4
+				},
+				767: {
+				  perView: 3
+				},
+				550: {
+					perView: 2
+				}
+			}
 		})
 
 		pubsSlides.forEach((slide,index) => slide.onclick = (e) => {
@@ -206,16 +223,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		let currentSlide = pubsSlides[current],
 			prevSlide = currentSlide.previousElementSibling,
-			nextSlide = currentSlide.nextElementSibling;
+			nextSlide = currentSlide.nextElementSibling,
+			mobScreen = window.innerWidth < 550;
 
 		currentSlide.style.transform = 'translate3d(0, 0, 0)';
 		
 		setTimeout(()=>{
 			pubsSlides[current].style.zIndex = 1000;
-			if(prevSlide) {
+			if(prevSlide && !mobScreen) {
 				prevSlide.style.transform = 'translate3d(-20%, 0, 0)';
 			}
-			if(nextSlide) {
+			if(nextSlide && !mobScreen) {
 				nextSlide.style.transform = 'translate3d(20%, 0, 0)';
 			}
 		}, 600)
@@ -223,10 +241,123 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	let closeBannerMessage = qs('.hero__message-close'),
-		bannerMessage = qs('.hero__message');
+		bannerMessage = qs('.hero__message'),
+		heroRightExpand = qs('.hero__right-expand'),
+		heroRight = qs('.hero__right'),
+		heroLeft = qs('.hero__left'),
+		player = qs('#player');
+
+
 	if(closeBannerMessage) closeBannerMessage.onclick = () => {
 		bannerMessage.classList.add('hidden');
-		qs('.hero__right').style.paddingTop = "0";
+		qs('.hero__right-scroll').style.paddingTop = "0";
+	}
+	if (heroRightExpand) heroRightExpand.onclick = (e) => {
+		if(heroRightExpand.classList.contains('active')) {
+			heroRight.classList.remove('hidden');
+			heroRightExpand.classList.remove('active');
+			heroLeft.style.transform = 'translate3d(0,0,0)';
+		} else {
+			heroRight.classList.add('hidden');
+			heroRightExpand.classList.add('active');
+
+			var shift = qs('.hero__right').clientWidth / 2;
+			heroLeft.style.transform = `translate3d(${shift}px,0,0)`;
+		}
+	}
+	if(player) {
+		const player = new Plyr('#player', {
+		  controls: false,
+		  autoplay: true,
+		  muted: true,
+		  clickToPlay: false,
+		  quality: { default: 1080 }
+		});
+
+		let controls = qs('.hero__title-btn'),
+			play = qs('.hero__title-btn .play'),
+			pause = qs('.hero__title-btn .pause'),
+			replay = qs('.hero__title-btn .replay'),
+			mute = qs('.hero__title-btn .mute-video');
+
+		pause.onclick = (e) => {
+			if(!e.target.closest('.mute-video')) {
+				player.pause();
+				pause.classList.remove('active');
+				play.classList.add('active');
+			} else {
+				if(player.muted) {
+					mute.classList.remove('active');
+					player.muted = false;
+				} else {
+					mute.classList.add('active');
+					player.muted = true;
+				}
+				
+			}
+			
+		}
+		play.onclick = () => {
+			player.play();
+			pause.classList.add('active');
+			play.classList.remove('active');
+		}
+		replay.onclick = () => {
+			player.play();
+			pause.classList.add('active');
+			replay.classList.remove('active');
+		}
+		
+		player.on('timeupdate', event => {
+			const instance = event.detail.plyr;
+			if(instance.playing && instance.currentTime >= instance.duration - 1) {
+				player.pause();
+				player.currentTime = 0;
+				pause.classList.remove('active');
+				replay.classList.add('active');
+			}
+			if(instance.playing) {
+				pause.classList.add('active');
+				play.classList.remove('active');
+			}
+		});
+		player.on('ready', event => {
+
+			// var heroHome = qs('.hero-home');
+
+			// heroHome.style.height = window.innerHeight - 71 + 'px';
+
+			var heroHeight = qs('.hero-home').clientHeight,
+				vpwidth = window.innerWidth,
+				iframe = qs('.hero iframe');
+
+			iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
+
+			window.addEventListener('resize', () => {
+			  // heroHome.style.height = window.innerHeight - 71 + 'px';
+
+			  heroHeight = qs('.hero-home').clientHeight;
+			  vpwidth = window.innerWidth;
+
+			  iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
+			});
+			
+
+			const instance = event.detail.plyr;
+
+			if(!instance.playing) {
+				pause.classList.remove('active');
+				play.classList.add('active');
+			}
+
+			if(instance.muted) {
+				mute.classList.add('active');
+			}
+
+			controls.style.opacity = 1;
+		});
+
+		
 	}
 	
 	let selects = qsa('.c-select li');
@@ -288,7 +419,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		(function init() {
 
 		    (function step() {
-		    	// console.log();
 		    	if(offsetTop(social) <= 20) {
 		    		socailBlock.style.position = "fixed";
 		    		socailBlock.style.top = "20px";

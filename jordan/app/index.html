@@ -17,6 +17,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Mulish:wght@300;400;700;800&display=block" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.css" integrity="sha512-kuSeWNZsBfW/esn9MiIQ3hkFqNdHKljzVQYBOe7gPXGUNCE8KqrbZLHDSH005HrUwCI8erQ5iDrBHlSzTfSbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 	<style>
 		
 	</style>
@@ -42,12 +44,12 @@
 
 		<header class="header">
 			<div class="cont cont-xlg flex">
-				<span class="header__menu flex">
+				<div class="header__menu flex">
 					<svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H18V2.5H0V0.5ZM0 6.5H12.6V8.5H0V6.5ZM9 12.5H0V14.5H9V12.5Z" fill="#3D4854"/>
 					</svg>
-					Menu
-				</span>
+					<span>Menu</span>
+				</div>
 				<a href="/" class="header__logo">
 					<img class="lazyload" data-src="img/logo.png">
 				</a>
@@ -137,13 +139,15 @@
 				</div>
 			</div>
 		</div>
-		<section class="hero flex">
+		<section class="hero hero-home flex">
 			<picture>
 			    <source class="lazyload" data-srcset="img/banner1.webp" type="image/webp">
 			    <source class="lazyload" data-srcset="img/banner1.jpg" type="image/jpeg">
 
 			    <img  class="lazyload hero__bg" data-src="img/banner1.jpg" alt="">
 			</picture>
+
+			<div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="619427082"></div>
 			
 			<div class="hero__left">
 				<div class="hero__title">
@@ -151,127 +155,143 @@
 						<strong>Casablanca-Settat</strong>
 						catalysateur économique du Maroc
 					</h1>
-					<span class="hero__title-btn flex">
-						<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M7.5 3.8V0L2.8125 4.75L7.5 9.5V5.7C10.5938 5.7 13.125 8.265 13.125 11.4C13.125 14.535 10.5938 17.1 7.5 17.1C4.40625 17.1 1.875 14.535 1.875 11.4H0C0 15.58 3.375 19 7.5 19C11.625 19 15 15.58 15 11.4C15 7.22 11.625 3.8 7.5 3.8Z" fill="white"/>
-						</svg>
-						Replay video
+					<div class="hero__title-btn flex">
+						<div class="play">
+							<svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12.9354 8.95807C12.9658 8.97778 12.9658 9.02222 12.9354 9.04193L1.07723 16.7441C1.04397 16.7657 0.999999 16.7418 0.999999 16.7021L1 1.29787C1 1.2582 1.04397 1.23433 1.07724 1.25594L12.9354 8.95807Z" stroke="white" stroke-width="2"/>
+							</svg>
+
+							<span>Play video</span>
+						</div>
+						<div class="pause active">
+							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="10" y="5.5" width="2" height="7" rx="1" fill="white"/>
+							<rect x="6" y="5.5" width="2" height="7" rx="1" fill="white"/>
+							<circle cx="9" cy="9" r="8" stroke="white" stroke-width="2"/>
+							</svg>
+							<span>Pause video</span>
+
+							<div class="mute-video">
+								<svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.68782 5.11765H2.1C1.49248 5.11765 1 5.61014 1 6.21765V11.7824C1 12.3899 1.49249 12.8824 2.1 12.8824H6.68782L11.7391 16.679C12.4641 17.224 13.5 16.7067 13.5 15.7997V8.17647V2.20026C13.5 1.29328 12.4641 0.776009 11.7391 1.32095L6.68782 5.11765Z" stroke="white" stroke-width="2" stroke-linejoin="bevel"/>
+								<path d="M20 5C23.6222 8.38824 21.5092 11.7451 20 13" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+								<path d="M17 7C18.8111 8.69412 17.7546 10.3725 17 11" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							
+
+						</div>
+						<div class="replay">
+							<svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.5 3.8V0L2.8125 4.75L7.5 9.5V5.7C10.5938 5.7 13.125 8.265 13.125 11.4C13.125 14.535 10.5938 17.1 7.5 17.1C4.40625 17.1 1.875 14.535 1.875 11.4H0C0 15.58 3.375 19 7.5 19C11.625 19 15 15.58 15 11.4C15 7.22 11.625 3.8 7.5 3.8Z" fill="white"/>
+							</svg>
+
+							<span>Replay video</span>
+						</div>
 						
-					</span>
+						
+						
+					</div>
 				</div>
 			</div>
 			
 			<div class="hero__right">
-				<div class="glide hero__glide one-col">
-				  <div class="glide__track" data-glide-el="track">
-					    <ul class="glide__slides">
-					      <li class="glide__slide">
-					      	<div class="hero__slide">
-	      						<h4>Reneontres Qimam</h4>
-	      						<div class="hero__slide-flex">
-	      							<div class="img">
-	      								<img  class="lazyload" data-src="img/act1.jpg" alt="">
-	      								<div class="img-label">
-	      									<span class="day">23</span>
-	      									<span>Dec</span>
-	      								</div>
-	      							</div>
-	      							<div class="content">
-	      								<span>10:00 AM - 2:00 PM</span>
-	      								<h6>Interview avec le dg du cri de casablanca-settat</h6>
-	      								<a href="" class="btn-arr">Learn More</a>
-	      							</div>
-	      							
-	      						</div>
-	      					</div>
-					      </li>
-	  				      <li class="glide__slide">
-	  				      	<div class="hero__slide">
-	        						<h4>Reneontres Qimam</h4>
-	        						<div class="hero__slide-flex">
-	        							<div class="img">
-	        								<img  class="lazyload" data-src="img/act1.jpg" alt="">
-	        								<div class="img-label">
-	        									<span class="day">23</span>
-	        									<span>Dec</span>
-	        								</div>
-	        							</div>
-	        							<div class="content">
-	        								<span>10:00 AM - 2:00 PM</span>
-	        								<h6>Interview avec le dg du cri de casablanca-settat</h6>
-	        								<a href="" class="btn-arr">Learn More</a>
-	        							</div>
-	        							
-	        						</div>
-	        					</div>
-	  				      </li>
-      				      <li class="glide__slide">
-      				      	<div class="hero__slide">
-            						<h4>Reneontres Qimam</h4>
-            						<div class="hero__slide-flex">
-            							<div class="img">
-            								<img  class="lazyload" data-src="img/act1.jpg" alt="">
-            								<div class="img-label">
-            									<span class="day">23</span>
-            									<span>Dec</span>
-            								</div>
-            							</div>
-            							<div class="content">
-            								<span>10:00 AM - 2:00 PM</span>
-            								<h6>Interview avec le dg du cri de casablanca-settat</h6>
-            								<a href="" class="btn-arr">Learn More</a>
-            							</div>
-            							
-            						</div>
-            					</div>
-      				      </li>
-					    </ul>
-				  </div>
-				  <div class="glide__bullets flex" data-glide-el="controls[nav]">
-				   </div>
-				</div>
+				<div class="hero__right-scroll">
+					<div class="glide hero__glide one-col">
+					  <div class="glide__track" data-glide-el="track">
+						    <ul class="glide__slides">
+						      <li class="glide__slide">
+						      	<div class="hero__slide">
+		      						<h4>Reneontres Qimam</h4>
+		      						<div class="hero__slide-flex">
+		      							<div class="img">
+		      								<img  class="lazyload" data-src="img/act1.jpg" alt="">
+		      								<div class="img-label">
+		      									<span class="day">23</span>
+		      									<span>Dec</span>
+		      								</div>
+		      							</div>
+		      							<div class="content">
+		      								<span>10:00 AM - 2:00 PM</span>
+		      								<h6>Interview avec le dg du cri de casablanca-settat</h6>
+		      								<a href="" class="btn-arr">Learn More</a>
+		      							</div>
+		      							
+		      						</div>
+		      					</div>
+						      </li>
+		  				      <li class="glide__slide">
+		  				      	<div class="hero__slide">
+		        						<h4>Reneontres Qimam</h4>
+		        						<div class="hero__slide-flex">
+		        							<div class="img">
+		        								<img  class="lazyload" data-src="img/act1.jpg" alt="">
+		        								<div class="img-label">
+		        									<span class="day">23</span>
+		        									<span>Dec</span>
+		        								</div>
+		        							</div>
+		        							<div class="content">
+		        								<span>10:00 AM - 2:00 PM</span>
+		        								<h6>Interview avec le dg du cri de casablanca-settat</h6>
+		        								<a href="" class="btn-arr">Learn More</a>
+		        							</div>
+		        							
+		        						</div>
+		        					</div>
+		  				      </li>
+	      				      <li class="glide__slide">
+	      				      	<div class="hero__slide">
+	            						<h4>Reneontres Qimam</h4>
+	            						<div class="hero__slide-flex">
+	            							<div class="img">
+	            								<img  class="lazyload" data-src="img/act1.jpg" alt="">
+	            								<div class="img-label">
+	            									<span class="day">23</span>
+	            									<span>Dec</span>
+	            								</div>
+	            							</div>
+	            							<div class="content">
+	            								<span>10:00 AM - 2:00 PM</span>
+	            								<h6>Interview avec le dg du cri de casablanca-settat</h6>
+	            								<a href="" class="btn-arr">Learn More</a>
+	            							</div>
+	            							
+	            						</div>
+	            					</div>
+	      				      </li>
+						    </ul>
+					  </div>
+					  <div class="glide__bullets flex" data-glide-el="controls[nav]">
+					   </div>
+					</div>
 
-				<div class="accent">
-					      	<div class="hero__slide">
-					      		<h4>Qimam TV</h4>
-					      		<div class="hero__slide-flex">
-					      			<div class="img">
-					      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
-					      			</div>
-					      			<div class="content">
-					      				<span>Sujet de la semaine</span>
-					      				<h6>Ceci est un titre qui pourra s’étaler sur deux lignes</h6>
-					      				<a href="" class="btn btn-sm">Call to action</a>
-					      			</div>
-					      		</div>
-					      	</div>
-				  
-				</div>
+					<div class="accent">
+						      	<div class="hero__slide">
+						      		<h4>Qimam TV</h4>
+						      		<div class="hero__slide-flex">
+						      			<div class="img">
+						      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
+						      			</div>
+						      			<div class="content">
+						      				<span>Sujet de la semaine</span>
+						      				<h6>Ceci est un titre qui pourra s’étaler sur deux lignes</h6>
+						      				<a href="" class="btn btn-sm">Call to action</a>
+						      			</div>
+						      		</div>
+						      	</div>
+					  
+					</div>
 
-				<div class="glide hero__glide one-col">
-				  <div class="glide__track" data-glide-el="track">
-					    <ul class="glide__slides">
-					      <li class="glide__slide">
-					      	<div class="hero__slide">
-					      		<h4>Termoignagés/Photothéquest</h4>
-					      		<div class="hero__slide-flex">
-					      			<div class="img">
-					      				<img  class="lazyload" data-src="img/act1.jpg" alt="">
-					      			</div>
-					      			<div class="content">
-					      				<span>Ahmed Mounir - CEO Consulting</span>
-					      				<h6>“Qimam m’a aidé a trouver des nouveaus fournisseurs…”</h6>
-					      				<a href="" class="btn-arr">Learn More</a>
-					      			</div>
-					      		</div>
-					      	</div>
-					      </li>
-						    <li class="glide__slide">
+					<div class="glide hero__glide one-col">
+					  <div class="glide__track" data-glide-el="track">
+						    <ul class="glide__slides">
+						      <li class="glide__slide">
 						      	<div class="hero__slide">
 						      		<h4>Termoignagés/Photothéquest</h4>
 						      		<div class="hero__slide-flex">
 						      			<div class="img">
-						      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
+						      				<img  class="lazyload" data-src="img/act1.jpg" alt="">
 						      			</div>
 						      			<div class="content">
 						      				<span>Ahmed Mounir - CEO Consulting</span>
@@ -281,27 +301,51 @@
 						      		</div>
 						      	</div>
 						      </li>
-						    <li class="glide__slide">
-						      	<div class="hero__slide">
-						      		<h4>Termoignagés/Photothéquest</h4>
-						      		<div class="hero__slide-flex">
-						      			<div class="img">
-						      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
-						      			</div>
-						      			<div class="content">
-						      				<span>Ahmed Mounir - CEO Consulting</span>
-						      				<h6>“Qimam m’a aidé a trouver des nouveaus fournisseurs…”</h6>
-						      				<a href="" class="btn-arr">Learn More</a>
-						      			</div>
-						      		</div>
-						      	</div>
-						      </li>
-					    </ul>
-				  </div>
-				  <div class="glide__bullets flex" data-glide-el="controls[nav]">
-				   </div>
+							    <li class="glide__slide">
+							      	<div class="hero__slide">
+							      		<h4>Termoignagés/Photothéquest</h4>
+							      		<div class="hero__slide-flex">
+							      			<div class="img">
+							      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
+							      			</div>
+							      			<div class="content">
+							      				<span>Ahmed Mounir - CEO Consulting</span>
+							      				<h6>“Qimam m’a aidé a trouver des nouveaus fournisseurs…”</h6>
+							      				<a href="" class="btn-arr">Learn More</a>
+							      			</div>
+							      		</div>
+							      	</div>
+							      </li>
+							    <li class="glide__slide">
+							      	<div class="hero__slide">
+							      		<h4>Termoignagés/Photothéquest</h4>
+							      		<div class="hero__slide-flex">
+							      			<div class="img">
+							      				<img  class="lazyload" data-src="img/act2.jpg" alt="">
+							      			</div>
+							      			<div class="content">
+							      				<span>Ahmed Mounir - CEO Consulting</span>
+							      				<h6>“Qimam m’a aidé a trouver des nouveaus fournisseurs…”</h6>
+							      				<a href="" class="btn-arr">Learn More</a>
+							      			</div>
+							      		</div>
+							      	</div>
+							      </li>
+						    </ul>
+					  </div>
+					  <div class="glide__bullets flex" data-glide-el="controls[nav]">
+					   </div>
+					</div>
 				</div>
 
+
+				
+
+				<div class="hero__right-expand">
+					<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M7.34575 7.09089L12.4648 12.7048C12.7943 13.0695 13.3623 13.1006 13.7317 12.774C13.8967 12.5997 13.9973 12.3572 13.9973 12.1137C13.9973 11.9024 13.9213 11.6913 13.7682 11.5227L9.21973 6.49998L13.7708 1.44397C14.1014 1.11528 14.0711 0.551323 13.7008 0.225951C13.3313 -0.100528 12.7631 -0.0695056 12.4335 0.295014L7.34575 5.90907C7.03952 6.24589 7.03952 6.75389 7.34575 7.09089ZM0.229675 7.09108L5.28306 12.7048C5.6126 13.0695 6.18063 13.1006 6.54996 12.774C6.71503 12.5997 6.81554 12.3572 6.81554 12.1137C6.81554 11.9024 6.73957 11.6913 6.58643 11.5227L2.03801 6.49998L6.59017 1.44397C6.91933 1.11528 6.88941 0.551323 6.54996 0.226321C6.14711 -0.100344 5.61267 -0.0691359 5.28306 0.295569L0.229675 5.90925C-0.0765581 6.24607 -0.0765581 6.75407 0.229675 7.09108Z" fill="#B7BFC9"/>
+					</svg>
+				</div>
 				
 			</div>
 			<div class="hero__message">
@@ -397,37 +441,37 @@
 					<div class="glide three-col numbers__slider">
 					  	<div class="glide__track" data-glide-el="track">
 						    <ul class="glide__slides">
-						      	<li class="glide__slide">
+						      	<li class="glide__slide boxes-box">
 						      		<div>
 						      			<span class="number">48<span>%</span></span>
 						      			<p>Du PIB national produit dans la région Casablanca-Settat</p>
 						      		</div>
 						      	</li>
-						      	<li class="glide__slide">
+						      	<li class="glide__slide boxes-box">
 						      		<div>
 	  									<span class="number">33<span>%</span></span>
-	  									<p>Du PIB national produit dans la région Casablanca-Settat</p>
+	  									<p>Du PIB national produit</p>
 	  								</div>
 						      	</li>
-						      	<li class="glide__slide">
+						      	<li class="glide__slide boxes-box">
 						      		<div>
 						      			<span class="number">94<span>%</span></span>
 						      			<p>Du PIB national produit dans la région Casablanca-Settat</p>
 						      		</div>
 						      	</li>
-						      	<li class="glide__slide">
+						      	<li class="glide__slide boxes-box">
 						      		<div>
 						      			<span class="number">48<span>%</span></span>
 						      			<p>Du PIB national produit dans la région Casablanca-Settat</p>
 						      		</div>
 						      	</li>
-						      	<li class="glide__slide">
+						      	<li class="glide__slide boxes-box">
 						      		<div>
 	  									<span class="number">33<span>%</span></span>
 	  									<p>Du PIB national produit dans la région Casablanca-Settat</p>
 	  								</div>
 						      	</li>
-						      	<li class="glide__slide">
+						      	<li class="glide__slide boxes-box">
 						      		<div>
 						      			<span class="number">94<span>%</span></span>
 						      			<p>Du PIB national produit dans la région Casablanca-Settat</p>
@@ -479,6 +523,8 @@
 					<div class="glide__bullets flex" data-glide-el="controls[nav]">
 				   	</div>
 				</div>
+
+				<a href="" class="btn eservice__mob-btn">En savoir plus</a>
 
 			</div>
 		</section>
@@ -887,7 +933,7 @@
 		
 
 		<section class="newsletter">
-			<div class="cont">
+			<div class="cont boxes-box">
 				<h3>Inscrivez vous à notre newsletter</h3>
 				<p>Recevez toutes l’actualité de CRI en vous inscrivant à la newsletter</p>
 				<form class="newsletter__form flex">
@@ -990,7 +1036,7 @@
 	<!-- SLIDER -->
 	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
 	<!-- VIDEO PLAYER -->
-	<!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.min.js"></script> -->
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.8/plyr.min.js" integrity="sha512-8Tq/SKkeNKeVYZCkk0esWn+r00nNMcfZhsdszg9GN7BZSGgV1v9AJ8qHDI/PqFqRYZVOe8Afbph7OFb7SWwaPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script defer src="js/common.js"></script>
 
