@@ -39,6 +39,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END MOB MENU
 
 
+	if(qs('.xoo-wsc-cart-trigger')) {
+		qs('.xoo-wsc-cart-trigger').onclick = () => {
+			let href = qs('.xoo-wsc-ft-buttons-cont a').getAttribute('href').replace('?page_id=33', 'checkout');
+			qs('.xoo-wsc-ft-buttons-cont a').setAttribute('href', href);
+		}
+	}
+
 	let checkout = qs('form.woocommerce-checkout');
 	if(checkout) {
 		let fields = qsa('#billing_first_name_field, #billing_flast_name_field, #billing_email_field, #billing_last_name_field'),

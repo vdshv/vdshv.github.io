@@ -114,6 +114,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	if(tabs.length) tabs.forEach(tab => {
 		tab.onclick = () => {
+			if(tab.closest('.faq__tabs')) {
+				let scrollToY = offsetScrollTop(qs('.faq__content'));
+				scrollTo(scrollToY);
+			}
+
 			if(!tab.classList.contains('active')) {
 				let curTabs = tab.closest('.tabs').querySelectorAll('li'),
 					curContent = tab.closest('.tabs-cont').querySelectorAll('.tab'),
@@ -358,9 +363,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 	}
 	
-	let selects = qsa('.c-select li');
-	if(selects.length) {
-		selects.forEach(el => {
+	let selectOptions = qsa('.c-select li'),
+		selectButtons = qsa('.c-select button');
+	if(selectOptions.length) {
+		selectButtons.forEach(el => {
+			el.onclick = e => e.target.focus(); 
+		});
+		selectOptions.forEach(el => {
 			el.onclick = () => {
 				let btn = el.closest('.c-select').querySelector('.c-select__value'),
 					input = el.closest('.c-select').querySelector('input'),
@@ -371,7 +380,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				btn.innerHTML = el.innerHTML;
 				input.value = el.innerHTML;
 			}
-		})
+		});
 	}
 
 	let headerSearch = qs('.header__search'),
@@ -404,6 +413,40 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	}
 
+
+	const requestAnimationFrame = window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame ||
+	    window.oRequestAnimationFrame ||
+	    window.msRequestAnimationFrame;
+
+	function scrollTo(to) {
+	    const start = window.scrollY || window.pageYOffset;
+	    const time = Date.now();
+	    const duration = Math.abs(start - to) / 2;
+
+	    (function step() {
+	        var dx = Math.min(1, (Date.now() - time) / duration)
+	        var pos = start + (to - start) * easeInOutCubic(dx)
+
+	        window.scrollTo(0, pos)
+
+	        if (dx < 1) {
+	            requestAnimationFrame(step)
+	        }
+	    })()
+	}
+	function easeInOutCubic(x) {
+		return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+	}
+	function offsetScrollTop(el) {
+	    var rect = el.getBoundingClientRect(),
+	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	    return rect.top + scrollTop;
+	}
+
+
+
 	let social = qs('.social-cont'),
 		socailBlock = qs('.social-cont__wrap');
 
@@ -433,7 +476,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	function offsetTop(el) {
 	    var rect = el.getBoundingClientRect(),
 	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	    // return rect.top + scrollTop;
 	    return rect.top;
 	}
 
