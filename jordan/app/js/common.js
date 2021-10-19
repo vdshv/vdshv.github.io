@@ -1,4 +1,4 @@
-history.scrollRestoration = "manual";
+// history.scrollRestoration = "manual";
 document.addEventListener("DOMContentLoaded", function() {
 	// DETECT TOUCH
 	var isTouchDevice = (('ontouchstart' in window)
@@ -40,13 +40,55 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END SCROLLING ANIM
 
 	// MOB MENU
-	if(qs('.nav-close')) {
-		qs('.header__menu').onclick = () => {
+	var navClose = qs('.nav-close'),
+		headerHamb = qs('.header__menu');
+	if(navClose) {
+		headerHamb.onclick = () => {
 			qs('.nav').classList.add('active');
+			document.scrollingElement.style.overflow = "hidden";
+			document.scrollingElement.style.height = "100vh";
 		}
-		qs('.nav-close').onclick = () => {
+		navClose.onclick = () => {
 			qs('.nav').classList.remove('active');
+			document.scrollingElement.style.overflow = "initial";
+			document.scrollingElement.style.height = "auto";
 		}
+
+		let navLinks = qsa('.nav-main a'),
+			navCol = qs('.nav-main-col'),
+			subs = qsa('.nav-sub > nav'),
+			subsCol = qs('.nav-sub-col'),
+			subBack = qs('.nav-sub-back');
+
+		navLinks.forEach(link => {
+			link.onclick = (e) => {
+				e.preventDefault();
+
+				
+				navLinks.forEach(el => el.classList.remove('active'));
+				link.classList.add('active');
+				
+				subs.forEach(sub => sub.classList.remove('active'));
+				subs[[...navLinks].indexOf(link)].classList.add('active');
+
+				if(window.innerWidth < 1024) {
+					subsCol.classList.add('active');
+					navCol.classList.remove('active');
+				}
+			}
+		})
+
+		subBack.onclick = () => {
+			subsCol.classList.remove('active');
+			navCol.classList.add('active');
+			setTimeout(()=>{
+				subs.forEach(sub => sub.classList.remove('active'));
+			}, 300)
+		}
+
+		var navBottomHeight = qs('.nav__bottom').clientHeight;
+		qs('.nav .cont-xlg').style.minHeight = `calc(100% - ${navBottomHeight}px)`;
+
 	}
 	
 	// END MOB MENU
@@ -138,16 +180,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	let glidesCol1 = qsa('.glide.one-col');
 	glidesCol1.forEach(glide => {
-		new Glide(glide, {
+		let glidecol = new Glide(glide, {
 		  type: 'carousel',
 		  perView: 1,
 		  gap: 0
-		}).mount();
+		})
+		glidecol.mount();
+
+		setTimeout(()=>{
+			glidecol.update();
+		}, 300)
 	});
 
 	let glidesCol3 = qsa('.glide.three-col');
 	glidesCol3.forEach(glide => {
-		new Glide(glide, {
+		let glide3col = new Glide(glide, {
 		  type: 'slider',
 		  rewind: false,
 		  bound: true,
@@ -166,7 +213,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		    }
 		  }
 
-		}).mount();
+		})
+		glide3col.mount();
+
+		setTimeout(()=>{
+			glide3col.update();
+		}, 300)
+		
 	})
 
 	let pubs = qsa('.pubs__items'),
@@ -208,6 +261,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		
 			calcLayers(current);
 		})
+
+		setTimeout(()=>{
+			pubsGlide.update();
+		}, 300)
+
 		pubsGlide.mount();
 	}
 
@@ -337,13 +395,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
 
-			window.addEventListener('resize', () => {
-
-			  heroHeight = qs('.hero-home').clientHeight;
-			  vpwidth = window.innerWidth;
-
-			  iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
-			});
 
 
 			const instance = event.detail.plyr;
@@ -362,6 +413,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		
 	}
+
+	window.addEventListener('resize', () => {
+		if(player) {
+			var iframe = qs('.hero iframe'),
+				heroHeight = qs('.hero-home').clientHeight,
+				vpwidth = window.innerWidth;
+
+			iframe.style.width = (heroHeight * 16 / 9) > vpwidth ? (heroHeight * 16 / 9) + 'px' : vpwidth + 'px';
+		}
+
+		// if(headerHamb) {
+		// 	let subs = qsa('.nav-sub > nav'),
+		// 		navCol = qs('.nav-main-col'),
+		// 		subsCol = qs('.nav-sub-col');
+			
+		// 	// subs.forEach(sub => sub.classList.remove('active'));
+
+		// 	// subsCol.classList.remove('active');
+		// 	// navCol.classList.add('active');
+		// }
+	 
+	});
 	
 	let selectOptions = qsa('.c-select li'),
 		selectButtons = qsa('.c-select button');
