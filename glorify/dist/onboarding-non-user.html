@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>FrontMan.com</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#808DF4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page">
+    <header class="w-full h-[3.25rem] p-4 flex justify-center items-center bg-ui-01 border-b border-ui-04">
+        <img src="images/logo-glorify-g.svg" alt="" class="w-5 h-5">
+    </header>
+
+    <main class="main py-10">
+        <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center mb-8">
+                <h2 class="text-heading-01 font-bold text-text-01 dark:text-text-01-dark">Welcome to Glorify</h2>
+                <p class="text-body-01 text-text-02 mt-1 dark:text-text-01-dark">Complete your profile to get a personalized experience</p>
+            </div>
+
+            <div class="bg-ui-01 rounded shadow-small divide-y divide-ui-04 w-90">
+                <div class="p-6">
+                    <div class="flex items-center ">
+                        
+                        <span class="inline-flex justify-center items-center mr-3 rounded-full bg-ui-02 border border-ui-04  w-9 h-9 text-icon-primary-01">
+                            <svg role="img" class="icon icon-duo icon-team  w-6 h-6"><use xlink:href="icons/duo/icons-duo.svg#icon-team"></use></svg>
+                        </span>
+                        
+    
+                        
+
+                        
+
+                        
+
+                        
+
+                        
+                        <div class="flex-grow mr-2">
+                            <h3 class="text-body-01 text-text-01 font-semibold   mb-1">Join Metacarbon</h3>
+
+                            <p class="text-body-small-01 text-text-02">
+                                Max Moskalenko invited you to the team
+                            </p>
+                        </div>
+                        
+
+                        
+                    </div>
+                </div>
+                <div class="p-6 space-y-6">
+                    <h5 class="text-sub-heading-01 text-text-03 font-semibold">SETUP YOUR PROFILE</h5>
+                    <div class="flex items-start">
+                        <img class='inline-block w-13 h-13 rounded-full mr-4 border border-ui-04 flex-shrink-0' src='images/avatars/avatar-male-01.png' alt=''>
+                        
+                        <div>
+                            <div class="flex space-x-2 mb-2">
+                                <input type="text" class="h-8 px-4" placeholder="Placeholder"  value="Brooklyn">
+                                <input type="text" class="h-8 px-4" placeholder="Placeholder"  value="Richards">
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button type="button" class="
+                                    px-xsmall h-7 text-button-lower rounded-sm inline-flex justify-center items-center border bg-ui-01 text-text-primary-01 border-ui-04
+                                    hover:border-hover-primary
+                                    active:bg-active-primary active:text-text-04
+                                    disabled:bg-ui-01 disabled:text-disabled-03 disabled:border-disabled-02
+                                    
+                                    " >
+
+                                    
+
+                                    <span>Upload</span>
+
+                                    
+                                </button>
+
+                                <button type="button" class="
+                                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                                    hover:text-hover-primary
+                                    active:text-active-primary
+                                    disabled:text-disabled-03
+                                    text-button-upper uppercase font-semibold
+                                    " >
+
+                                    
+
+                                    
+                                    <span>DELETE</span>
+                                    
+
+                                    
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="
+                        px-large py-xsmall text-button-upper font-semibold w-full rounded-sm inline-flex justify-center items-center border bg-interactive-01 text-text-04 border-interactive-01
+                        hover:bg-hover-primary hover:border-hover-primary
+                        active:bg-active-primary active:border-active-primary
+                        disabled:bg-ui-01 disabled:text-disabled-03 disabled:border-disabled-02
+                        
+                        " >
+
+                        
+
+                        <span>CONTINUE</span>
+
+                        
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Onboard Logo -->
+    <div class="modal" id="modal-onboard-logo">
+    	<div class="modal__wrap">
+    		<div class="modal__content w-[678px]">
+    			<div class="flex justify-between items-center">
+                    <div class="flex">
+                        <svg role="img" class="icon icon-mono icon-upload text-icon-primary-01 w-6 h-6 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-upload"></use></svg>
+
+                        <h2 class="text-heading-01 text-text-01 font-bold ">Upload your image</h2>
+                    </div>
+
+                    <button type="button" class="modal__close text-icon-02 hover:text-icon-primary-01 leading-none">
+                        <svg role="img" class="icon icon-mono icon-x"><use xlink:href="icons/mono/icons-mono.svg#icon-x"></use></svg>
+                    </button>
+                </div>
+                <div class="flex space-x-3">
+                    <div class="border border-dashed border-ui-04 rounded flex flex-col justify-center items-center w-full h-80 text-center">
+                        <svg role="img" class="icon icon-mono icon-upload-cloud w-13 h-13 text-icon-primary-01 mb-4"><use xlink:href="icons/mono/icons-mono.svg#icon-upload-cloud"></use></svg>
+                        <h5 class="text-body-01 font-semibold text-text-03">Drag and Drop File</h5>
+                        <span class="text-caption-01 text-text-03 my-1">or</span>
+                        <button type="button" class="
+                            px-small py-xxsmall text-button-upper font-semibold w-40 rounded-sm inline-flex justify-center items-center border bg-interactive-01 text-text-04 border-interactive-01
+                            hover:bg-hover-primary hover:border-hover-primary
+                            active:bg-active-primary active:border-active-primary
+                            disabled:bg-ui-01 disabled:text-disabled-03 disabled:border-disabled-02
+                            
+                            " >
+
+                            
+
+                            <span>UPLOAD</span>
+
+                            
+                        </button>
+                        <span class="text-caption-01 text-text-03 mt-4">Max upload size 20MB</span>
+                    </div>
+                </div>
+    		</div>
+    	</div>
+    </div>
+    <!-- / Modal Onboard Logo -->
+	<div class="sm:flex fixed top-0 left-0 w-screen h-screen hidden flex-col justify-center items-center bg-ui-02-dark z-50 text-text-01-dark p-20 text-center">
+	    <h3 class="text-2xl mb-8">Screen not wide enough!</h3>
+	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! A ea, libero ut architecto nobis quidem ad, unde maiores rerum eius facere quibusdam.</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="../../../node_modules/svg4everybody/dist/svg4everybody.min.js"></script> -->
+
+	<!-- Custom scrollbar -->
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="js/jquery.overlayScrollbars.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>FrontMan.com</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#808DF4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--components p-8 bg-ui-background">
+	
+
+
+    <nav class="sticky top-0 flex items-center bg-ui-01-dark mb-4 rounded text-body-small-01 divide-x divide-ui-04-dark max-w-full shadow-small z-50">
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>NAV</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-navigation.header.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-navigation.sidebars.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">sidebars</a>
+                <a href="__components-navigation.controls.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">controls</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-buttons.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">BUTTONS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>FORMS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-forms.fields.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Fields</a>
+                <a href="__components-forms.dropdowns.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Dropdowns</a>
+                <a href="__components-forms.selectors.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selectors</a>
+                <a href="__components-forms.badges.tags.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Badges & Tags</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-indicators.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">INDICATORS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>LISTS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-lists.items.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Items</a>
+                <a href="__components-lists.selections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selections</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-tables.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TABLES</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>CARDS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-cards.carousel.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Carousel</a>
+                <a href="__components-cards.interface.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Interface</a>
+                <a href="__components-cards.marketing.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Marketing</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-text.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TEXT</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-snackbars.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">SNACKBARS</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-menus.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">MENUS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>MODALS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-modals.small.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Small</a>
+                <a href="__components-modals.all.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">ALL</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>EDITOR</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-editor.header.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-editor.images.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Images</a>
+                <a href="__components-editor.assets.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Navigation</a>
+                <a href="__components-editor.assets.collections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Collections</a>
+                <a href="__components-editor.assets.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets List Items</a>
+                <a href="__components-editor.assets.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Cards</a>
+                <hr>
+                <a href="__components-editor.inspector.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Navigation</a>
+                <a href="__components-editor.inspector.sections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector sections</a>
+                <a href="__components-editor.inspector.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector List Items</a>
+                <a href="__components-editor.inspector.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Cards</a>
+                <a href="__components-editor.inspector.controls.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector controls</a>
+                <a href="__components-editor.canvas.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Canvas</a>
+                <hr>
+                <a href="__components-editor.publish.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Publish</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-interactive-01 text-text-04 px-12 py-8 rounded-lg mb-8">
+        <h1 class="text-4xl font-semibold mb-2">Selection controls</h1>
+
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li>
+                    <div class="flex items-center">
+                        <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Components</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                        </svg>
+                        <span class="ml-2 text-sm font-medium text-text-primary-02" aria-current="page">Selection controls</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+	
+
+    <hr>
+    <h2 class="font-semibold text-3xl text-text-02 my-3">Selection Controls</h2>
+    <hr class="mb-8">
+
+    <!-- Checkbox -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Checkbox</h3>
+        
+        <div class="flex gap-8 mb-4">
+            <label class="select-control pl-6 ">
+                <input type="checkbox" class="hidden"  >
+                
+                <svg role="img" class="icon icon-mono icon-checkbox left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox"></use></svg>
+                <svg role="img" class="icon icon-mono icon-checkbox-checked left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox-checked"></use></svg>
+                
+                
+                <span class="text-body-small-01 text-text-01 ">Checkbox label</span>
+            </label>
+            <label class="select-control pl-6 ">
+                <input type="checkbox" class="hidden" disabled checked >
+                
+                <svg role="img" class="icon icon-mono icon-checkbox left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox"></use></svg>
+                <svg role="img" class="icon icon-mono icon-checkbox-checked left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox-checked"></use></svg>
+                
+                
+                <span class="text-body-small-01 text-text-01 ">Checkbox label</span>
+            </label>
+        </div>
+        <div class="flex gap-8 mb-4">
+            <label class="select-control  pr-6">
+                <input type="checkbox" class="hidden"  >
+                
+                <svg role="img" class="icon icon-mono icon-checkbox  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox"></use></svg>
+                <svg role="img" class="icon icon-mono icon-checkbox-checked  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox-checked"></use></svg>
+                
+                
+                <span class="text-body-small-01 text-text-01 ">Checkbox label</span>
+            </label>
+            <label class="select-control  pr-6">
+                <input type="checkbox" class="hidden" disabled checked >
+                
+                <svg role="img" class="icon icon-mono icon-checkbox  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox"></use></svg>
+                <svg role="img" class="icon icon-mono icon-checkbox-checked  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-checkbox-checked"></use></svg>
+                
+                
+                <span class="text-body-small-01 text-text-01 ">Checkbox label</span>
+            </label>
+        </div>
+    </section>
+
+    <!-- Radio -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Radio</h3>
+        
+        <div class="flex gap-8 mb-4">
+            <label class="select-control pl-6 ">
+                <input type="radio" class="hidden"  name="">
+                
+                
+                <svg role="img" class="icon icon-mono icon-radio left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-radio"></use></svg>
+                <svg role="img" class="icon icon-mono icon-radio-checked left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-radio-checked"></use></svg>
+                
+                <span class="text-body-small-01 text-text-01 ">Radio button label</span>
+            </label>
+            <label class="select-control pl-6 ">
+                <input type="radio" class="hidden" disabled checked name="">
+                
+                
+                <svg role="img" class="icon icon-mono icon-radio left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-radio"></use></svg>
+                <svg role="img" class="icon icon-mono icon-radio-checked left-0 "><use xlink:href="icons/mono/icons-mono.svg#icon-radio-checked"></use></svg>
+                
+                <span class="text-body-small-01 text-text-01 ">Radio button label</span>
+            </label>
+        </div>
+        <div class="flex gap-8 mb-4">
+            <label class="select-control  pr-6">
+                <input type="radio" class="hidden"  name="">
+                
+                
+                <svg role="img" class="icon icon-mono icon-radio  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-radio"></use></svg>
+                <svg role="img" class="icon icon-mono icon-radio-checked  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-radio-checked"></use></svg>
+                
+                <span class="text-body-small-01 text-text-01 ">Radio button label</span>
+            </label>
+            <label class="select-control  pr-6">
+                <input type="radio" class="hidden" disabled checked name="">
+                
+                
+                <svg role="img" class="icon icon-mono icon-radio  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-radio"></use></svg>
+                <svg role="img" class="icon icon-mono icon-radio-checked  right-0"><use xlink:href="icons/mono/icons-mono.svg#icon-radio-checked"></use></svg>
+                
+                <span class="text-body-small-01 text-text-01 ">Radio button label</span>
+            </label>
+        </div>
+    </section>
+
+    <!-- Toggle @Light -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Toggle @Light</h3>
+        
+        <div class="flex gap-8 mb-4">
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+        </div>
+        <div class="flex gap-8 mb-4">
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Label Off</label>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Label On</label>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Disabled Off</label>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Disabled On</label>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Toggle @Dark -->
+    <section class="mb-10 dark bg-ui-01-dark rounded-lg p-4 dark">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Toggle @Dark</h3>
+        
+        <div class="flex gap-8 mb-4">
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+            </div>
+
+        </div>
+        <div class="flex gap-8 mb-4">
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Label Off</label>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" >
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Label On</label>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle " role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Disabled Off</label>
+                
+            </div>
+
+            <div class="inline-flex items-center @@extend">
+                <button type="button" class="toggle on" role="switch" aria-checked="false" disabled>
+                  <span class="sr-only">Use setting</span>
+                  <span aria-hidden="true"></span>
+                </button>
+                
+                <label for="">Disabled On</label>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stepper -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Stepper</h3>
+        
+        <div class="flex gap-8 mb-4">
+            <div class="stepper">
+                <button type="button" >
+                    <svg role="img" class="icon icon-mono icon-minus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-minus-circle"></use></svg>
+                </button>
+                <span >1</span>
+                <button type="button" >
+                    <svg role="img" class="icon icon-mono icon-plus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-plus-circle"></use></svg>
+                </button>
+            </div>  
+            <div class="stepper">
+                <button type="button" >
+                    <svg role="img" class="icon icon-mono icon-minus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-minus-circle"></use></svg>
+                </button>
+                <span >2</span>
+                <button type="button" >
+                    <svg role="img" class="icon icon-mono icon-plus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-plus-circle"></use></svg>
+                </button>
+            </div>  
+            <div class="stepper">
+                <button type="button" >
+                    <svg role="img" class="icon icon-mono icon-minus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-minus-circle"></use></svg>
+                </button>
+                <span >99</span>
+                <button type="button" >
+                    <svg role="img" class="icon icon-mono icon-plus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-plus-circle"></use></svg>
+                </button>
+            </div>  
+            <div class="stepper">
+                <button type="button" disabled>
+                    <svg role="img" class="icon icon-mono icon-minus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-minus-circle"></use></svg>
+                </button>
+                <span class="disabled">1</span>
+                <button type="button" disabled>
+                    <svg role="img" class="icon icon-mono icon-plus-circle"><use xlink:href="icons/mono/icons-mono.svg#icon-plus-circle"></use></svg>
+                </button>
+            </div>  
+        </div>
+    </section>
+
+
+	<div class="sm:flex fixed top-0 left-0 w-screen h-screen hidden flex-col justify-center items-center bg-ui-02-dark z-50 text-text-01-dark p-20 text-center">
+	    <h3 class="text-2xl mb-8">Screen not wide enough!</h3>
+	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! A ea, libero ut architecto nobis quidem ad, unde maiores rerum eius facere quibusdam.</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="../../../node_modules/svg4everybody/dist/svg4everybody.min.js"></script> -->
+
+	<!-- Custom scrollbar -->
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="js/jquery.overlayScrollbars.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>

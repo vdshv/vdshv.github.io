@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>FrontMan.com</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#808DF4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--components p-8 bg-ui-03">
+	
+
+
+    <nav class="sticky top-0 flex items-center bg-ui-01-dark mb-4 rounded text-body-small-01 divide-x divide-ui-04-dark max-w-full shadow-small z-50">
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>NAV</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-navigation.header.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-navigation.sidebars.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">sidebars</a>
+                <a href="__components-navigation.controls.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">controls</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-buttons.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">BUTTONS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>FORMS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-forms.fields.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Fields</a>
+                <a href="__components-forms.dropdowns.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Dropdowns</a>
+                <a href="__components-forms.selectors.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selectors</a>
+                <a href="__components-forms.badges.tags.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Badges & Tags</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-indicators.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">INDICATORS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>LISTS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-lists.items.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Items</a>
+                <a href="__components-lists.selections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selections</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-tables.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TABLES</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>CARDS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-cards.carousel.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Carousel</a>
+                <a href="__components-cards.interface.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Interface</a>
+                <a href="__components-cards.marketing.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Marketing</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-text.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TEXT</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-snackbars.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">SNACKBARS</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-menus.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">MENUS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>MODALS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-modals.small.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Small</a>
+                <a href="__components-modals.all.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">ALL</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>EDITOR</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-editor.header.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-editor.images.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Images</a>
+                <a href="__components-editor.assets.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Navigation</a>
+                <a href="__components-editor.assets.collections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Collections</a>
+                <a href="__components-editor.assets.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets List Items</a>
+                <a href="__components-editor.assets.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Cards</a>
+                <hr>
+                <a href="__components-editor.inspector.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Navigation</a>
+                <a href="__components-editor.inspector.sections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector sections</a>
+                <a href="__components-editor.inspector.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector List Items</a>
+                <a href="__components-editor.inspector.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Cards</a>
+                <a href="__components-editor.inspector.controls.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector controls</a>
+                <a href="__components-editor.canvas.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Canvas</a>
+                <hr>
+                <a href="__components-editor.publish.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Publish</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-interactive-01 text-text-04 px-12 py-8 rounded-lg mb-8">
+        <h1 class="text-4xl font-semibold mb-2">Editor</h1>
+
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li>
+                    <div class="flex items-center">
+                        <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Components</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                        </svg>
+                        <span class="ml-2 text-sm font-medium text-text-primary-02" aria-current="page">Editor</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+	
+
+    <hr>
+    <h2 class="font-semibold text-3xl text-text-02 my-3">Canvas</h2>
+    <hr class="mb-8">
+    
+    <section class="mb-4">
+        <h3 class="font-semibold text-lg text-ui-05 my-3">Artboard</h3>
+        
+        <div class="flex gap-8 mb-12">
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+
+                
+
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+                <img src="https://source.unsplash.com/2cFZ_FB08UM/800x800/" alt="" class="absolute w-full h-full top-0 left-0">
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+
+                
+
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+        </div>
+
+        <div class="flex gap-8 mb-12">
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+                <div class="absolute top-6 right-6 bottom-6 left-6 border border-ui-04"></div>
+            
+
+                
+
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+                <img src="https://source.unsplash.com/2cFZ_FB08UM/800x800/" alt="" class="absolute w-full h-full top-0 left-0">
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+                <div class="absolute top-6 right-6 bottom-6 left-6 border border-ui-04"></div>
+            
+
+                
+
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+        </div>
+
+        <div class="flex gap-8 mb-12">
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+
+                
+                <div class="absolute top-0 left-0 w-full h-full border border-ui-04 flex justify-between">
+                    <span class="w-16 bg-[#FF75AF] bg-opacity-30"></span>
+                    <span class="w-16 bg-[#FF75AF] bg-opacity-30"></span>
+                </div>
+                
+
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+                <img src="https://source.unsplash.com/2cFZ_FB08UM/800x800/" alt="" class="absolute w-full h-full top-0 left-0">
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+
+                
+                <div class="absolute top-0 left-0 w-full h-full border border-ui-04 flex justify-between">
+                    <span class="w-16 bg-[#FF75AF] bg-opacity-30"></span>
+                    <span class="w-16 bg-[#FF75AF] bg-opacity-30"></span>
+                </div>
+                
+
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+        </div>
+
+        <div class="flex gap-8 mb-12">
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+
+                
+
+                
+                <div class="absolute top-0 left-0 w-full h-full" style="background-size: 0.716rem 0.716rem; background-image: linear-gradient(to right, var(--ui-04) 1px, transparent 1px), linear-gradient(to bottom, var(--ui-04) 1px, transparent 1px);"></div>
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+            <div class="relative">
+                <div class="bg-ui-01 w-[528px] h-[528px]"></div>
+                
+                <img src="https://source.unsplash.com/2cFZ_FB08UM/800x800/" alt="" class="absolute w-full h-full top-0 left-0">
+                
+
+                <button type="button" class="
+                    @@size rounded-sm inline-flex justify-center items-center text-text-03
+                    hover:text-hover-primary
+                    active:text-active-primary
+                    disabled:text-disabled-03
+                    text-button-upper uppercase font-semibold absolute top-0 right-0 py-1 px-1 bg-ui-01 rounded-bl z-30
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-edit transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    
+
+                    
+                    <span>Edit BG</span>
+                    
+
+                    
+                </button>
+
+                
+
+                
+
+                
+                <div class="absolute top-0 left-0 w-full h-full" style="background-size: 0.716rem 0.716rem; background-image: linear-gradient(to right, var(--ui-04) 1px, transparent 1px), linear-gradient(to bottom, var(--ui-04) 1px, transparent 1px);"></div>
+                
+
+                <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 flex">
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-left @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-plus @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-1">
+                        <svg role="img" class="icon icon-mono icon-copy @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-copy"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01 mx-3">
+                        <svg role="img" class="icon icon-mono icon-angle-right @@size transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="mb-4">
+        <h3 class="font-semibold text-lg text-ui-05 my-3">Selection tool</h3>
+        
+        <div class="flex gap-8 mb-12">
+            <div class="relative w-100 h-100 flex justify-center items-center border-2 border-interactive-01 ">
+                
+
+                
+
+                <span class="absolute -top-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -top-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+            </div>
+            <div class="relative w-100 h-100 flex justify-center items-center border-2 border-interactive-01 ">
+                
+                <button class="h-5 inline-flex items-center py-0.5 px-2 rounded-sm text-caption-01 font-semibold
+                bg-interactive-01 text-text-04
+                hover:bg-hover-primary hover:text-text-04
+                active:bg-active-primary active:text-text-04
+                disabled:bg-disabled-02 disabled:text-disabled-03
+                focus:outline-none
+                absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2" >
+                    
+
+                    Add image to shape
+
+                    
+                </button>
+                
+
+                
+
+                <span class="absolute -top-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -top-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+            </div>
+        </div>
+        <div class="flex gap-8 mb-12">
+            <div class="relative w-100 h-100 flex justify-center items-center border-2 border-interactive-01 bg-ui-01">
+                
+
+                
+                <img src="images/loader-gradient.svg" alt="">
+                
+
+                <span class="absolute -top-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -top-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+            </div>
+            <div class="relative w-100 h-100 flex justify-center items-center border-dashed border-2 border-interactive-01 ">
+                
+
+                
+
+                <span class="absolute -top-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -top-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -right-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+                <span class="absolute -bottom-1 -left-1 w-2 h-2 border-2 border-interactive-01 bg-ui-03"></span>
+            </div>
+        </div>
+    </section>
+
+	<div class="sm:flex fixed top-0 left-0 w-screen h-screen hidden flex-col justify-center items-center bg-ui-02-dark z-50 text-text-01-dark p-20 text-center">
+	    <h3 class="text-2xl mb-8">Screen not wide enough!</h3>
+	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! A ea, libero ut architecto nobis quidem ad, unde maiores rerum eius facere quibusdam.</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="../../../node_modules/svg4everybody/dist/svg4everybody.min.js"></script> -->
+
+	<!-- Custom scrollbar -->
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="js/jquery.overlayScrollbars.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>

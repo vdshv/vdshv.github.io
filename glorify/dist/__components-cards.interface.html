@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>FrontMan.com</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#808DF4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--components p-8 bg-ui-03">
+	
+
+
+    <nav class="sticky top-0 flex items-center bg-ui-01-dark mb-4 rounded text-body-small-01 divide-x divide-ui-04-dark max-w-full shadow-small z-50">
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>NAV</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-navigation.header.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-navigation.sidebars.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">sidebars</a>
+                <a href="__components-navigation.controls.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">controls</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-buttons.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">BUTTONS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>FORMS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-forms.fields.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Fields</a>
+                <a href="__components-forms.dropdowns.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Dropdowns</a>
+                <a href="__components-forms.selectors.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selectors</a>
+                <a href="__components-forms.badges.tags.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Badges & Tags</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-indicators.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">INDICATORS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>LISTS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-lists.items.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Items</a>
+                <a href="__components-lists.selections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selections</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-tables.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TABLES</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>CARDS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-cards.carousel.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Carousel</a>
+                <a href="__components-cards.interface.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Interface</a>
+                <a href="__components-cards.marketing.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Marketing</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-text.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TEXT</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-snackbars.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">SNACKBARS</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-menus.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">MENUS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>MODALS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-modals.small.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Small</a>
+                <a href="__components-modals.all.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">ALL</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>EDITOR</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-editor.header.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-editor.images.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Images</a>
+                <a href="__components-editor.assets.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Navigation</a>
+                <a href="__components-editor.assets.collections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Collections</a>
+                <a href="__components-editor.assets.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets List Items</a>
+                <a href="__components-editor.assets.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Cards</a>
+                <hr>
+                <a href="__components-editor.inspector.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Navigation</a>
+                <a href="__components-editor.inspector.sections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector sections</a>
+                <a href="__components-editor.inspector.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector List Items</a>
+                <a href="__components-editor.inspector.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Cards</a>
+                <a href="__components-editor.inspector.controls.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector controls</a>
+                <a href="__components-editor.canvas.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Canvas</a>
+                <hr>
+                <a href="__components-editor.publish.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Publish</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-interactive-01 text-text-04 px-12 py-8 rounded-lg mb-8">
+        <h1 class="text-4xl font-semibold mb-2">Cards</h1>
+
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li>
+                    <div class="flex items-center">
+                        <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Components</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                        </svg>
+                        <span class="ml-2 text-sm font-medium text-text-primary-02" aria-current="page">Cards</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+	
+
+    <hr>
+    <h2 class="font-semibold text-3xl text-text-02 my-3">Interface</h2>
+    <hr class="mb-8">
+
+    <!-- Platform cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Platform cards</h3>
+
+        <div class="flex gap-8">
+            <label class="checkable relative flex justify-center items-center w-10 h-10 rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all ">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-5 h-5 text-icon-02 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <img src="images/brands/brand-amazon.svg" alt="" class="w-6 h-6">
+            </label>
+        </div>
+    </section>
+
+    <!-- BG remove cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">BG remove cards</h3>
+
+        <div class="flex gap-8">
+            <label class="checkable relative flex justify-center items-center rounded border border-transparent hover:border-hover-primary group transition-all">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <img src="https://source.unsplash.com/2cFZ_FB08UM/68x68/" alt="" class="w-17 h-17 rounded">
+            </label>
+        </div>
+    </section>
+
+    <!-- Category cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Category cards</h3>
+
+        <div class="flex gap-8">
+            <label class="checkable relative flex justify-center items-center rounded border border-transparent group transition-all overflow-hidden @@extend">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <img src="images/card-category-01.jpg" alt="" class="w-[98px] h-16">
+
+                <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-[#717171] bg-opacity-50 transition-all group-hover:bg-[rgba(148,158,255,0.67)]">
+                    <h4 class="text-text-04 text-center text-caption-01 font-semibold">Category Name</h4>
+                </div>
+            </label>
+        </div>
+    </section>
+
+    <!-- Brand cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Brand cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-64 h-[172px] flex flex-col justify-center items-center rounded bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-plus w-6 h-6 text-icon-02 mb-1 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                <p class="text-body-01 font-semibold group-hover:text-text-primary-01">Add a new brand</p>
+            </button>
+
+            <label class="checkable relative w-64 h-[172px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-6 h-6 text-icon-02 absolute top-2 right-2 opacity-0 group-hover:opacity-100"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-6 h-6 text-icon-primary-01 absolute top-2 right-2 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <img src="images/brands/brand-puppr-full.svg" alt="">
+
+                <div class="absolute bottom-0 right-0 flex items-center px-3 py-2.5 opacity-0 invisible transition-all group-hover:visible group-hover:opacity-100">
+                    <button type="button" class="
+                        px-xsmall h-7 text-button-lower mr-3 rounded-sm inline-flex justify-center items-center border bg-ui-01 text-text-primary-01 border-ui-04
+                        hover:border-hover-primary
+                        active:bg-active-primary active:text-text-04
+                        disabled:bg-ui-01 disabled:text-disabled-03 disabled:border-disabled-02
+                        
+                        " >
+
+                        
+                        <svg role="img" class="icon icon-mono icon-switch transition-none mr-1"><use xlink:href="icons/mono/icons-mono.svg#icon-switch"></use></svg>
+                        
+
+                        <span>Switch</span>
+
+                        
+                    </button>
+
+                    <button type="button" class="inline-flex items-center text-text-03 mr-1 hover:text-hover-primary active:text-active-primary disabled:text-disabled-03">
+
+                        <svg role="img" class="icon icon-mono icon-edit transition-none w-6 h-6"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                    </button>
+
+                    <button type="button" class="inline-flex items-center text-text-03 hover:text-hover-primary active:text-active-primary disabled:text-disabled-03">
+
+                        <svg role="img" class="icon icon-mono icon-trash transition-none w-6 h-6"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                    </button>
+                </div>
+            </label>
+        </div>
+    </section>
+
+    <!-- Common sizes card - small -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Common sizes cards - small</h3>
+
+        <div class="flex gap-8">
+            <label class="checkable relative">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <div class="relative w-[94px] h-[72px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                    <div class="absolute top-1 left-1 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                        <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                    </div>
+        
+                    <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                </div>
+
+                <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                <p class="text-text-03 text-caption-01">2000x2000</p>
+            </label>
+        </div>
+    </section>
+    
+    <!-- Common sizes card - medium -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Common sizes cards - medium</h3>
+        
+        <div class="flex gap-8">
+            <label class="checkable relative">
+                
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                
+
+                <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                    
+                    <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                        <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                    </div>            
+                    
+
+                    
+        
+                    <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                </div>
+
+                <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                <p class="text-text-03 text-caption-01">2000x2000</p>
+            </label>
+            <label class="checkable relative">
+                
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                
+
+                <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                    
+
+                    
+                    <div class="absolute top-2 left-2 flex items-center mr-2 -space-x-1">
+                        <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-icon-primary-01 text-caption-01 font-semibold">
+                            <svg role="img" class="icon icon-duo icon-duo-team w-4 h-4"><use xlink:href="icons/duo/icons-duo.svg#icon-team"></use></svg>
+                        </span>
+                        <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-text-03 text-caption-01 font-semibold">12</span>
+                    </div>           
+                    
+        
+                    <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                </div>
+
+                <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                <p class="text-text-03 text-caption-01">2000x2000</p>
+            </label>
+        </div>
+    </section>
+
+    <!-- Favourite colors cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Favourite colors cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-48 h-20 flex justify-center items-center rounded bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-plus w-4 h-4 text-icon-02 mr-1 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                <p class="text-body-small-01 font-semibold group-hover:text-text-primary-01">Create New</p>
+            </button>
+
+            <label class="checkable checkable--favourite relative h-20 flex justify-center pt-5 rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all w-48">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-5 h-5 text-icon-02 absolute top-1 right-1 opacity-0 group-hover:opacity-100"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-5 h-5 text-icon-primary-01 absolute top-1 right-1 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <div class="flex flex-col items-center">
+                    <div class="palette flex">
+                        <span class="w-7 h-7 first:rounded-l last:rounded-r" style="background-color: #79DFFF;"></span>
+                        <span class="w-7 h-7 first:rounded-l last:rounded-r" style="background-color: #72BBFF;"></span>
+                        <span class="w-7 h-7 first:rounded-l last:rounded-r" style="background-color: #4897E1;"></span>
+                        <span class="w-7 h-7 first:rounded-l last:rounded-r" style="background-color: #8995FF;"></span>
+                    </div>
+                    <p class="text-text-03 text-caption-01 text-center mt-1">Organic</p>
+                </div>
+
+                <div class="dropdown absolute bottom-1 right-1 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                    <button type="button" class="dropdown__trigger group" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-dots w-5 h-5 text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                    </button>
+                    <div class="dropdown__menu dropdown__menu--right mb-2 w-[152px] divide-y divide-ui-04 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-edit w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                                <span class="mb-0">Edit</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-tag w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-tag"></use></svg>
+                                <span class="mb-0">Add tags</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-duo icon-brand w-4 h-4 mr-2"><use xlink:href="icons/duo/icons-duo.svg#icon-brand"></use></svg>
+                                <span class="mb-0">Save to brand kit</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-folder-arrow w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-folder-arrow"></use></svg>
+                                <span class="mb-0">Move</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-share w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-share"></use></svg>
+                                <span class="mb-0">Share</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-trash w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                                <span class="mb-0">Delete</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </section>
+
+    <!-- Brand logo cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Brand logo cards</h3>
+
+        <div class="flex gap-6">
+            <div class="checkable relative w-100 h-[172px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 group transition-all">
+                <img src="images/brands/brand-puppr-full.svg" alt="" class="h-12">
+
+                <div class="absolute top-2 right-2 flex items-center opacity-0 invisible transition-all group-hover:visible group-hover:opacity-100">
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-download"><use xlink:href="icons/mono/icons-mono.svg#icon-download"></use></svg>
+                        </span>
+                    </button>
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-trash"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand extra logo cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Brand extra logo cards</h3>
+
+        <div class="flex gap-6">
+            <div class="flex flex-col items-start">
+                <button type="button" class="relative w-28 h-28 flex justify-center items-center rounded bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                    <svg role="img" class="icon icon-mono icon-plus w-6 h-6 text-icon-02 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                </button>
+                <p class="mt-2 text-text-03 text-sub-heading-01 font-semibold uppercase">Add version</p>
+            </div>
+
+            <div class="relative bg-ui-03 rounded border border-ui-04 text-text-03 group-hover:bg-hover-ui group-hover:border-ui-07 transition-all @@extend">
+                <img src="images/brands/brand-puppr-circle.png" alt="">
+
+                <div class="absolute top-2 right-2 flex items-center opacity-0 invisible transition-all group-hover:visible group-hover:opacity-100">
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-star"><use xlink:href="icons/mono/icons-mono.svg#icon-star"></use></svg>
+                        </span>
+                    </button>
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-switch"><use xlink:href="icons/mono/icons-mono.svg#icon-switch"></use></svg>
+                        </span>
+                    </button>
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-trash"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                        </span>
+                    </button>
+                </div>
+                <p class="absolute top-full left-0 w-full mt-2 text-text-03 text-sub-heading-01 font-semibold uppercase group-hover:text-text-primary-01 truncate">Circle.svg</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favourite icon cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Favourite icon cards</h3>
+
+        <div class="flex gap-6">
+            <label class="checkable checkable--favourite relative w-25 h-25 flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-5 h-5 text-icon-02 absolute top-1 right-1 opacity-0 group-hover:opacity-100"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-5 h-5 text-icon-primary-01 absolute top-1 right-1 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <img src="images/icon-fork-knife.svg" alt="" class="w-10 h-10">
+
+                <div class="dropdown absolute bottom-1 right-1 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                    <button type="button" class="dropdown__trigger group" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-dots w-5 h-5 text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                    </button>
+                    <div class="dropdown__menu dropdown__menu--right mb-2 w-[152px] divide-y divide-ui-04 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-tag w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-tag"></use></svg>
+                                <span class="mb-0">Add tags</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-duo icon-brand w-4 h-4 mr-2"><use xlink:href="icons/duo/icons-duo.svg#icon-brand"></use></svg>
+                                <span class="mb-0">Save to brand kit</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-folder-arrow w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-folder-arrow"></use></svg>
+                                <span class="mb-0">Move</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-trash w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                                <span class="mb-0">Delete</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </section>
+
+    <!-- Favourite font cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Favourite font cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-48 h-[72px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-upload w-4 h-4 text-icon-02 mr-1 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-upload"></use></svg>
+                <p class="text-body-small-01 font-semibold group-hover:text-text-primary-01">Upload custom</p>
+            </button>
+
+            <label class="checkable checkable--favourite relative h-[72px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all w-48">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-5 h-5 text-icon-02 absolute top-1 right-1 opacity-0 group-hover:opacity-100"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-5 h-5 text-icon-primary-01 absolute top-1 right-1 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <img src="images/font-ptserif.svg" alt="">
+
+                <div class="dropdown absolute bottom-1 right-1 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible">
+                    <button type="button" class="dropdown__trigger group" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-dots w-5 h-5 text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                    </button>
+                    <div class="dropdown__menu dropdown__menu--right mb-2 w-[152px] divide-y divide-ui-04 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-edit w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                                <span class="mb-0">Edit</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-tag w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-tag"></use></svg>
+                                <span class="mb-0">Add tags</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-duo icon-brand w-4 h-4 mr-2"><use xlink:href="icons/duo/icons-duo.svg#icon-brand"></use></svg>
+                                <span class="mb-0">Save to brand kit</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-folder-arrow w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-folder-arrow"></use></svg>
+                                <span class="mb-0">Move</span>
+                            </a>
+                            <a href="#!" class="listitem w-full border-0 px-3 h-8 text-body-small-01 hover:bg-active-ui hover:text-text-primary-01">
+                                <svg role="img" class="icon icon-mono icon-trash w-4 h-4 mr-2"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                                <span class="mb-0">Delete</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </section>
+
+    <!-- Saved design cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Saved design cards</h3>
+
+        <div class="flex gap-8">
+            <label class="checkable relative w-64 rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                <input type="checkbox" class="absolute invisible">
+
+                <svg role="img" class="icon icon-mono icon-circle w-6 h-6 text-icon-02 absolute top-2 right-2 opacity-0 group-hover:opacity-100"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                <svg role="img" class="icon icon-mono icon-check-circle-solid w-6 h-6 text-icon-primary-01 absolute top-2 right-2 opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+
+                <div class="p-4 flex justify-center items-center">
+                    <img src="https://source.unsplash.com/APNnyM36puU/172x104/" alt="">
+                </div>
+
+                <div class="p-4 border-t border-ui-04 relative pr-9">
+                    <div class="flex mb-1">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown__trigger group mr-2 -space-x-1 " data-toggle="dropdown" >
+                                <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-icon-primary-01 text-caption-01 font-semibold">
+                                    <svg role="img" class="icon icon-duo icon-duo-team w-4 h-4"><use xlink:href="icons/duo/icons-duo.svg#icon-team"></use></svg>
+                                </span>
+                                <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-text-03 text-caption-01 font-semibold">12</span>
+
+                                
+                            </button>
+                        </div>
+
+
+                        <h4 class="font-semibold ml-2 text-body-01">Retargetting Ads</h4>
+                    </div>
+                    <p class="text-body-small-01 text-text-02">800x960 | Edited 5 mins ago</p>
+
+                    <div class="dropdown absolute top-1/2 transform -translate-y-1/2 right-4">
+                        <button type="button" class="dropdown__trigger group" data-toggle="dropdown">
+                            <svg role="img" class="icon icon-mono icon-dots w-6 h-6 text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </section>
+
+    <!-- Plan card -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Plan card</h3>
+
+        <div class="flex gap-8">
+            <div class="relative w-[412px] h-[264px] rounded-lg bg-cover text-text-04" style="background-image: url('images/card-plan-bg.png');">
+                <div class="p-5">
+                    <div class="flex justify-between items-start w-full">
+                        <svg role="img" class="icon icon-mono icon-glorify-g w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-glorify-g"></use></svg>
+                        <img src="images/card-plan-pattern.svg" alt="" class="absolute top-0 left-1/2 transform -translate-x-1/2">
+                        <div class="dropdown">
+                            <button type="button" class="dropdown__trigger group" data-toggle="dropdown">
+                                <svg role="img" class="icon icon-mono icon-dots w-6 h-6 text-icon-04"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h4 class="text-heading-01 font-bold mt-16">PRO Plan</h4>
+                </div>
+                <hr class="opacity-25">
+                <div class="p-5 flex justify-between items-start">
+                    <p class="flex items-center text-heading-01 font-bold">
+                        <span>$19.99</span>
+                        <small class="opacity-50 font-normal text-sub-heading-01 ml-1">/ MONTH</small>
+                    </p>
+
+                    <p class="text-body-small-01">
+                        1 User <br>
+                        100 BG Remover Credits <br>
+                        1 Brand account
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial card -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Tutorial card</h3>
+
+        <div class="flex gap-8">
+            <div class="flex flex-col text-body-01">
+                <div class="w-[246px] h-[184px] bg-ui-01 border border-ui-04 overflow-hidden group"></div>
+                <div class="flex justify-between items-start mt-2">
+                    <p class="text-text-01">Picking a template</p>
+                    <span class="text-text-03">1:02</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero image cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Hero image cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-[172px] h-[172px] flex flex-col justify-center items-center rounded bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-plus w-4 h-4 text-icon-02 mb-1 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                <p class="text-body-small-01 font-semibold group-hover:text-text-primary-01">New from Scratch</p>
+            </button>
+
+            <div class="checkable relative w-[172px] h-[172px] rounded border border-ui-overlay-04 bg-ui-01 group transition-all overflow-hidden flex-shrink-0">
+                <img src="https://source.unsplash.com/fadifl83vhA/172x172/" alt="" class="">
+                <div class="absolute top-2 right-2 flex items-center opacity-0 invisible transition-all group-hover:visible group-hover:opacity-100">
+                    <button type="button" class="
+                        w-5 h-5 rounded-sm inline-flex justify-center items-center border bg-ui-01 text-icon-02 border-ui-04
+                        hover:bg-hover-ui hover:border-hover-primary hover:text-icon-primary-01
+                        active:bg-active-ui hover:border-active-primary active:text-icon-primary-01
+                        disabled:bg-disabled-02 disabled:text-disabled-03 disabled:border-disabled-02
+                        
+                        " >
+
+                        
+                        <svg role="img" class="icon icon-mono icon-layers transition-none "><use xlink:href="icons/mono/icons-mono.svg#icon-layers"></use></svg>
+                        
+
+                        
+
+                        
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand fonts -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Brand fonts</h3>
+
+        <div class="flex gap-6">
+            <div class="relative group w-full text-text-03 hover:text-text-primary-01 w-[556px]">
+                <div class="pb-5 border-b border-ui-04 group-hover:border-active-primary transition-all">
+                    <span class="text-sub-heading-01 font-semibold">HEADING</span>
+                    <h2 class="font-poppins font-bold text-[36px] text-text-01 mb-3  leading-normal group-hover:text-hover-primary transition-all">Poppins 36pt</h2>
+                    <div class="flex items-center text-caption-01">
+                        <span class="w-3 h-3 mr-1.5 rounded-sm" style="background-color: #000000;"></span>
+                        <span>000000</span>
+                        <span class="text-ui-04 mx-2">|</span>
+                        <span>Bold</span>
+                    </div>
+                </div>
+
+                <div class="absolute top-1/2 transform -translate-y-1/2 right-6 flex items-center opacity-0 invisible transition-all group-hover:visible group-hover:opacity-100">
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-edit"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                        </span>
+                    </button>
+                    <button type="button" class="relative inline-flex items-center border-none transition-none text-icon-02 hover:text-icon-primary-01 mr-1 last:mr-0 disabled:pointer-events-none">
+                        <span class="w-6 h-6 rounded-full inline-flex justify-center items-center transition-all border border-ui-04 bg-ui-01">
+                            <svg role="img" class="icon icon-mono icon-trash"><use xlink:href="icons/mono/icons-mono.svg#icon-trash"></use></svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative group w-[556px] px-6 py-5 text-text-03 hover:text-text-primary-01">
+                <div class="py-5 border-b border-ui-04 group-hover:border-active-primary transition-all">
+                    <span class="text-sub-heading-01 font-semibold">HEADING</span>
+                    <h2 class="text-2xl text-text-03 group-hover:text-hover-primary transition-all">Heading text</h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Brand colour cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Brand colour cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-[4.5rem] h-[4.5rem] flex flex-col justify-center items-center rounded-full bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-plus w-6 h-6 text-icon-02 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+            </button>
+
+            <div class="relative w-[4.5rem] h-[4.5rem] rounded-full border border-ui-04 group transition-all" style="background-color: #79DFFF;">
+                <button type="button" class="absolute top-0 right-0 flex flex-col justify-center items-center w-6 h-6 rounded-full bg-ui-01 border border-ui-04 text-icon-02 invisible opacity-0 group-hover:visible group-hover:opacity-100 hover:text-icon-primary-01 focus:text-icon-primary-01">
+                    <svg role="img" class="icon icon-mono icon-x w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-x"></use></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color palette cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Color palette cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-10 h-10 flex flex-col justify-center items-center rounded-full bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-plus w-6 h-6 text-icon-02 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+            </button>
+
+            <div class="relative w-10 h-10 rounded-full border border-ui-04 group transition-all" style="background-color: #C190FF;"></div>
+        </div>
+    </section>
+
+    <!-- Selected plugin card -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Selected plugin card</h3>
+
+        <div class="flex gap-6">
+            <a href="#modal-plugin" class="modal-trigger flex items-start relative flex-col w-[10.75rem]">
+                
+
+                <img src="https://source.unsplash.com/LeG68PrXA6Y/172x172/" alt="" class="rounded 
+                mb-4 w-full
+                
+                ">
+
+                <div class="flex flex-col ">
+                    <h3 class="text-body-01 font-semibold text-text-01 mb-1">GloriStocks</h3>
+                    <p class="text-body-small-01 text-text-03">
+                        Use tons of images, graphics & illustrations from top ...
+                    </p>
+                    <div class="flex items-center space-x-2 mt-3">
+                        <span class="inline-flex justify-center items-center min-w-4 rounded-full py-0.25 px-1 border bg-ui-01 border-ui-04 text-text-03 text-caption-01 font-semibold">$5.50</span>
+                        <span class="text-helper-text text-text-02">•</span>
+                        <span class="text-caption-01 text-text-02">Stocks</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#modal-plugin" class="modal-trigger flex items-start relative flex-col w-[10.75rem]">
+                
+                <span class="absolute top-3 left-3 inline-flex justify-center items-center min-w-4 rounded-full py-0.25 px-1 bg-interactive-02 text-caption-01 text-text-secondary-01 font-semibold">Promoted</span>
+                
+
+                <img src="https://source.unsplash.com/LeG68PrXA6Y/172x172/" alt="" class="rounded 
+                mb-4 w-full
+                
+                ">
+
+                <div class="flex flex-col ">
+                    <h3 class="text-body-01 font-semibold text-text-01 mb-1">GloriStocks</h3>
+                    <p class="text-body-small-01 text-text-03">
+                        Use tons of images, graphics & illustrations from top ...
+                    </p>
+                    <div class="flex items-center space-x-2 mt-3">
+                        <span class="inline-flex justify-center items-center min-w-4 rounded-full py-0.25 px-1 border bg-ui-01 border-ui-04 text-text-03 text-caption-01 font-semibold">$5.50</span>
+                        <span class="text-helper-text text-text-02">•</span>
+                        <span class="text-caption-01 text-text-02">Stocks</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Picture upload cards -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Picture upload cards</h3>
+
+        <div class="flex gap-6">
+            <button type="button" class="relative w-24 h-24 flex flex-col justify-center items-center rounded-full bg-ui-01 border border-ui-04 text-text-03 hover:bg-hover-ui group transition-all">
+                <svg role="img" class="icon icon-mono icon-upload w-6 h-6 text-icon-02 transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-upload"></use></svg>
+                <span class="text-caption-01 group-hover:text-hover-primary">Upload</span>
+            </button>
+
+            <div class="relative w-24 h-24 inline-flex justify-center items-center rounded-full border border-ui-04 group transition-all" style="background-color: #79DFFF;">
+                <img src="images/brands/brand-puppr-logo.svg" alt="">
+
+                <button type="button" class="absolute top-0 right-0 flex flex-col justify-center items-center w-6 h-6 rounded-full bg-ui-01 border border-ui-04 text-icon-02 hover:text-icon-primary-01 focus:text-icon-primary-01 z-10">
+                    <svg role="img" class="icon icon-mono icon-x w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-x"></use></svg>
+                </button>
+
+                <button type="button" class="absolute w-full h-full top-0 left-0 flex flex-col justify-center items-center rounded-full text-text-04 bg-ui-overlay-01 invisible opacity-0 group-hover:visible group-hover:opacity-100">
+                    <svg role="img" class="icon icon-mono icon-upload w-6 h-6 transition-all"><use xlink:href="icons/mono/icons-mono.svg#icon-upload"></use></svg>
+                    <span class="text-caption-01">Upload</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty canvas size card -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Empty canvas size card</h3>
+
+        <div class="flex gap-6">
+            <a href="#!" class="group">
+                <span class="relative w-[6.75rem] h-[6.75rem] flex justify-center items-center rounded bg-ui-03 border border-ui-04 group-hover:border-hover-primary group-hover:bg-hover-ui transition-all">
+                    <span class="flex justify-center items-center w-12 h-[5.25rem] bg-ui-01 border border-ui-04 rounded transition-all group-hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-plus w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </span>
+                </span>
+
+                <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1 group-hover:text-text-primary-01">Story</h4>
+                <p class="text-text-03 text-caption-01 group-hover:text-text-primary-01">1080 x 1920px</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Card Count -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Card Count</h3>
+
+        <div class="flex gap-6">
+            <div class="flex items-center -space-x-1 mr-2" data-toggle="dropdown">
+                <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-icon-primary-01 text-caption-01 font-semibold">
+                    <svg role="img" class="icon icon-duo icon-duo-team w-4 h-4"><use xlink:href="icons/duo/icons-duo.svg#icon-team"></use></svg>
+                </span>
+                <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-text-03 text-caption-01 font-semibold">12</span>
+            </div>
+        </div>
+    </section>
+
+	<div class="sm:flex fixed top-0 left-0 w-screen h-screen hidden flex-col justify-center items-center bg-ui-02-dark z-50 text-text-01-dark p-20 text-center">
+	    <h3 class="text-2xl mb-8">Screen not wide enough!</h3>
+	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! A ea, libero ut architecto nobis quidem ad, unde maiores rerum eius facere quibusdam.</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="../../../node_modules/svg4everybody/dist/svg4everybody.min.js"></script> -->
+
+	<!-- Custom scrollbar -->
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="js/jquery.overlayScrollbars.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>

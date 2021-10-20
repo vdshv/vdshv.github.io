@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>FrontMan.com</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#808DF4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--components p-8 bg-ui-03">
+	
+
+
+    <nav class="sticky top-0 flex items-center bg-ui-01-dark mb-4 rounded text-body-small-01 divide-x divide-ui-04-dark max-w-full shadow-small z-50">
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>NAV</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-navigation.header.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-navigation.sidebars.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">sidebars</a>
+                <a href="__components-navigation.controls.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">controls</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-buttons.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">BUTTONS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>FORMS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-forms.fields.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Fields</a>
+                <a href="__components-forms.dropdowns.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Dropdowns</a>
+                <a href="__components-forms.selectors.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selectors</a>
+                <a href="__components-forms.badges.tags.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Badges & Tags</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-indicators.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">INDICATORS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>LISTS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-lists.items.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Items</a>
+                <a href="__components-lists.selections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selections</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-tables.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TABLES</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>CARDS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-cards.carousel.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Carousel</a>
+                <a href="__components-cards.interface.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Interface</a>
+                <a href="__components-cards.marketing.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Marketing</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-text.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TEXT</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-snackbars.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">SNACKBARS</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-menus.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">MENUS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>MODALS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-modals.small.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Small</a>
+                <a href="__components-modals.all.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">ALL</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>EDITOR</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-editor.header.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-editor.images.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Images</a>
+                <a href="__components-editor.assets.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Navigation</a>
+                <a href="__components-editor.assets.collections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Collections</a>
+                <a href="__components-editor.assets.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets List Items</a>
+                <a href="__components-editor.assets.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Cards</a>
+                <hr>
+                <a href="__components-editor.inspector.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Navigation</a>
+                <a href="__components-editor.inspector.sections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector sections</a>
+                <a href="__components-editor.inspector.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector List Items</a>
+                <a href="__components-editor.inspector.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Cards</a>
+                <a href="__components-editor.inspector.controls.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector controls</a>
+                <a href="__components-editor.canvas.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Canvas</a>
+                <hr>
+                <a href="__components-editor.publish.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Publish</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-interactive-01 text-text-04 px-12 py-8 rounded-lg mb-8">
+        <h1 class="text-4xl font-semibold mb-2">Editor</h1>
+
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li>
+                    <div class="flex items-center">
+                        <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Components</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                        </svg>
+                        <span class="ml-2 text-sm font-medium text-text-primary-02" aria-current="page">Editor</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+	
+
+    <hr>
+    <h2 class="font-semibold text-3xl text-text-02 my-3">Assets Collections</h2>
+    <hr class="mb-8">
+    
+    <!-- Templates -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Templates</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                <div class="relative w-full transition-all">
+                    <div class="assets-header p-4 border-t bg-ui-01-dark border-ui-04 relative hover:bg-hover-ui-dark dark:border-transparent" onclick="document.location.href = '#!'; return false">
+                        <div class="flex items-center mb-1">
+                            <div class="dropdown">
+                                <button type="button" class="dropdown__trigger group mr-2 -space-x-1 mr-3" data-toggle="dropdown" >
+                                    <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-icon-primary-01 text-caption-01 font-semibold">
+                                        <svg role="img" class="icon icon-duo icon-duo-team w-4 h-4"><use xlink:href="icons/duo/icons-duo.svg#icon-team"></use></svg>
+                                    </span>
+                                    <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-text-03 text-caption-01 font-semibold">12</span>
+
+                                    
+                                </button>
+                            </div>
+
+
+                            <h4 class="font-semibold text-text-01-dark text-sub-heading-01">SQUARE PHOTO</h4>
+                            <svg role="img" class="icon icon-mono icon-angle-right text-icon-04 ml-auto w-4 h-4 group-hover:text-icon-01-primary"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                        </div>
+                        <p class="text-caption-01 text-text-02-dark">1080 x 1080 • 1020 templates available</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                <div class="relative w-full transition-all">
+                    <div class="assets-header p-4 border-t bg-ui-01-dark border-ui-04 relative hover:bg-hover-ui-dark dark:border-transparent" onclick="document.location.href = '#!'; return false">
+                        <div class="flex items-center mb-1">
+                            <div class="dropdown">
+                                <button type="button" class="dropdown__trigger group mr-2 -space-x-1 mr-3" data-toggle="dropdown" >
+                                    <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-icon-primary-01 text-caption-01 font-semibold">
+                                        <svg role="img" class="icon icon-duo icon-duo-team w-4 h-4"><use xlink:href="icons/duo/icons-duo.svg#icon-team"></use></svg>
+                                    </span>
+                                    <span class="w-6 h-6 flex justify-center items-center border border-ui-04 bg-ui-01 rounded-full text-text-03 text-caption-01 font-semibold">12</span>
+
+                                    
+                                </button>
+                            </div>
+
+
+                            <h4 class="font-semibold text-text-01-dark text-sub-heading-01">SQUARE PHOTO</h4>
+                            <svg role="img" class="icon icon-mono icon-angle-right text-icon-04 ml-auto w-4 h-4 group-hover:text-icon-01-primary"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                        </div>
+                        <p class="text-caption-01 text-text-02-dark">1080 x 1080 • 1020 templates available</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devices -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Devices</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">SQUARE PHOTO</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                    <div class="grid grid-cols-3 gap-2 p-4 pt-2">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">SQUARE PHOTO</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                    <div class="grid grid-cols-3 gap-2 p-4 pt-2">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                        <img src="https://source.unsplash.com/GCQaYDCQwgc/84x84/" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Palettes -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Palletes</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">ORGANIC</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        
+                        <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                            <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                            <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                        </button>
+                        
+                        <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                            <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                            <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                        </button>
+                        
+                        <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                            <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                            <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                        </button>
+                        
+                        <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                            <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                            <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                            <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                <div class="relative w-full transition-all">
+                    <div class="p-4 pb-2">
+                        <h4 class="text-text-04 caption-01 font-semibold">Other</h4>
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-2">
+                        <p class="text-body-small-01 text-text-02-dark">Palette name</p>
+                        <div class="flex items-center space-x-2">
+                            <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                                <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                                <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                                </span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-heart"><use xlink:href="icons/mono/icons-mono.svg#icon-heart"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-2">
+                        <p class="text-body-small-01 text-text-02-dark">Palette name</p>
+                        <div class="flex items-center space-x-2">
+                            <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                                <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                                <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                                </span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-heart"><use xlink:href="icons/mono/icons-mono.svg#icon-heart"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-2">
+                        <p class="text-body-small-01 text-text-02-dark">Palette name</p>
+                        <div class="flex items-center space-x-2">
+                            <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                                <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                                <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                                </span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-heart"><use xlink:href="icons/mono/icons-mono.svg#icon-heart"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-2">
+                        <h4 class="text-text-04 caption-01 font-semibold">Favourites</h4>
+                        <div class="flex items-center space-x-2">
+                            <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                                <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                                <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                                </span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-heart"><use xlink:href="icons/mono/icons-mono.svg#icon-heart"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                                <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                                <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                                </span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-heart"><use xlink:href="icons/mono/icons-mono.svg#icon-heart"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group">
+                                <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                                <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                                <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                                </span>
+                            </button>
+    
+                            <button type="button" class="
+                                inline-flex items-center flex-shrink-0 border-none transition-none
+                                group relative
+                                disabled:pointer-events-none">
+    
+                                <span class="
+                                    w-6 h-6
+                                    rounded-full inline-flex justify-center items-center transition-all border bg-ui-01-dark text-icon-03-dark border-ui-04-dark
+                                    group-hover:text-icon-primary-01
+                                    group-focus:text-icon-primary-01
+                                ">
+                                    <svg role="img" class="icon icon-mono icon-heart"><use xlink:href="icons/mono/icons-mono.svg#icon-heart"></use></svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Tools</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                    <div class="flex flex-col flex-grow text-left">
+                        <h5 class="text-sub-heading-01 font-semibold">BASIC</h5>
+                        
+                    </div>
+
+                    <svg role="img" class="icon icon-mono icon-angle-down transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                </button>
+    
+                <div class="collapse hidden">
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        
+                        <button type="button" data-panel="@@target" class="w-full h-16 p-2 flex flex-col items-center text-center rounded bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive  ">
+                            <svg role="img" class="icon icon-duo icon-duo-text w-7 h-7  textExtend"><use xlink:href="icons/duo/icons-duo.svg#icon-text"></use></svg>
+                            <span class="text-caption-01 ">Text</span>
+                        </button>
+                        <button type="button" data-panel="@@target" class="w-full h-16 p-2 flex flex-col items-center text-center rounded bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive  ">
+                            <svg role="img" class="icon icon-duo icon-duo-camera w-7 h-7  cameraExtend"><use xlink:href="icons/duo/icons-duo.svg#icon-camera"></use></svg>
+                            <span class="text-caption-01 ">Free photos</span>
+                        </button>
+                        <button type="button" data-panel="@@target" class="w-full h-16 p-2 flex flex-col items-center text-center rounded bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive  ">
+                            <svg role="img" class="icon icon-duo icon-duo-image w-7 h-7  imageExtend"><use xlink:href="icons/duo/icons-duo.svg#icon-image"></use></svg>
+                            <span class="text-caption-01 ">Shapes</span>
+                        </button>
+                        <button type="button" data-panel="@@target" class="w-full h-16 p-2 flex flex-col items-center text-center rounded bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive  ">
+                            <svg role="img" class="icon icon-duo icon-duo-star w-7 h-7  starExtend"><use xlink:href="icons/duo/icons-duo.svg#icon-star"></use></svg>
+                            <span class="text-caption-01 ">Icons</span>
+                        </button>
+                        <button type="button" data-panel="@@target" class="w-full h-16 p-2 flex flex-col items-center text-center rounded bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive  ">
+                            <svg role="img" class="icon icon-duo icon-duo-bgr w-7 h-7  bgrExtend"><use xlink:href="icons/duo/icons-duo.svg#icon-bgr"></use></svg>
+                            <span class="text-caption-01 ">Backgrounds</span>
+                        </button>
+                        <button type="button" data-panel="@@target" class="w-full h-16 p-2 flex flex-col items-center text-center rounded bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive bg-ui-02-dark text-text-01-dark transition-all hover:bg-active-primary active:bg-active-interactive  ">
+                            <svg role="img" class="icon icon-duo icon-duo-badge w-7 h-7  badgeExtend"><use xlink:href="icons/duo/icons-duo.svg#icon-badge"></use></svg>
+                            <span class="text-caption-01 ">My brand</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Effects -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Effects</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">WATER</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        <img src="images/assets-effect-01.png" alt="" class="w-full">
+                        <img src="images/assets-effect-01.png" alt="" class="w-full">
+                        <img src="images/assets-effect-01.png" alt="" class="w-full">
+                        <img src="images/assets-effect-01.png" alt="" class="w-full">
+                        <img src="images/assets-effect-01.png" alt="" class="w-full">
+                        <img src="images/assets-effect-01.png" alt="" class="w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shapes -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Shapes</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">BASIC SHAPES</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+
+                    <div class="grid grid-cols-4 gap-2 p-4 pt-2">
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-square w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icons -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Icons</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+                        <svg role="img" class="icon icon-duo icon-duo-provider-nounproject w-4 h-4 mr-1"><use xlink:href="icons/duo/icons-duo.svg#icon-provider-nounproject"></use></svg>
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">THE NOUN PROJECT</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+
+                    <div class="grid grid-cols-4 gap-2 p-4 pt-2">
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                        <div class="w-full inline-flex justify-center items-center h-13 bg-ui-02-dark text-icon-03-dark">
+                            <svg role="img" class="icon icon-mono icon-crown w-7 h-7"><use xlink:href="icons/mono/icons-mono.svg#icon-crown"></use></svg>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free photos -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Free photos</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+                        <svg role="img" class="icon icon-duo icon-duo-provider-pixabay w-4 h-4 mr-1"><use xlink:href="icons/duo/icons-duo.svg#icon-provider-pixabay"></use></svg>
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">PIXABAY</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Backgrounds -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Backgrounds</h3>
+        
+        <div class="flex items-start gap-8 mb-8">
+            <div class="dark flex flex-col bg-ui-01-dark w-[18.75rem]">
+                
+                <div class="relative w-full transition-all">
+                    <button type="button" class="collapse-trigger w-full flex items-center px-4 py-3 bg-ui-01-dark text-text-01-dark hover:bg-hover-ui-dark transition-all group">
+                        
+
+                        <h5 class="text-sub-heading-01 font-semibold">BACKGROUNDS</h5>
+
+                        <svg role="img" class="icon icon-mono icon-angle-right ml-auto transition-all group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-right"></use></svg>
+                    </button>
+
+                    <div class="grid grid-cols-2 gap-2 p-4 pt-2">
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="inline-block relative group">
+                            <img src="https://source.unsplash.com/fadifl83vhA/130x72/" alt="">
+                            <div class="dropdown js-dropdown-out absolute top-1 right-1 opacity-0 transition-all group-hover:opacity-100">
+                                <button type="button" class="dropdown__trigger rounded-full text-icon-04 w-6 h-6 flex justify-center items-center bg-ui-overlay-01 hover:text-icon-primary-01 active:text-icon-primary-01" data-toggle="dropdown" data-menu=".dropdown__menu--photo">
+                                    <svg role="img" class="icon icon-mono icon-dots"><use xlink:href="icons/mono/icons-mono.svg#icon-dots"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<div class="sm:flex fixed top-0 left-0 w-screen h-screen hidden flex-col justify-center items-center bg-ui-02-dark z-50 text-text-01-dark p-20 text-center">
+	    <h3 class="text-2xl mb-8">Screen not wide enough!</h3>
+	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! A ea, libero ut architecto nobis quidem ad, unde maiores rerum eius facere quibusdam.</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="../../../node_modules/svg4everybody/dist/svg4everybody.min.js"></script> -->
+
+	<!-- Custom scrollbar -->
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="js/jquery.overlayScrollbars.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>

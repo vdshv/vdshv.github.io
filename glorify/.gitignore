@@ -1,0 +1,12 @@
+/node_modules/
+/production/
+/.git/
+/app/Web Design
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
+/package.json
+/gulpfile.js
+/tailwind-full.config.js
+/tailwind.config.js

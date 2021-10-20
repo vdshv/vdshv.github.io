@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>FrontMan.com</title>
+    <meta name="description" content="">
+    <meta name="author" content="front-man.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#808DF4">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page page--components p-8 bg-ui-01">
+	
+
+
+    <nav class="sticky top-0 flex items-center bg-ui-01-dark mb-4 rounded text-body-small-01 divide-x divide-ui-04-dark max-w-full shadow-small z-50">
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>NAV</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-navigation.header.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-navigation.sidebars.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">sidebars</a>
+                <a href="__components-navigation.controls.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">controls</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-buttons.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">BUTTONS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>FORMS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-forms.fields.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Fields</a>
+                <a href="__components-forms.dropdowns.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Dropdowns</a>
+                <a href="__components-forms.selectors.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selectors</a>
+                <a href="__components-forms.badges.tags.html" class="inline-flex items-center w-full p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Badges & Tags</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-indicators.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">INDICATORS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>LISTS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-lists.items.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Items</a>
+                <a href="__components-lists.selections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Selections</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-tables.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TABLES</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>CARDS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-cards.carousel.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Carousel</a>
+                <a href="__components-cards.interface.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Interface</a>
+                <a href="__components-cards.marketing.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Marketing</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <a href="__components-text.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">TEXT</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-snackbars.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">SNACKBARS</a>
+        </div>
+        <div class="flex flex-col">
+            <a href="__components-menus.html" class="inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">MENUS</a>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>MODALS</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-modals.small.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Small</a>
+                <a href="__components-modals.all.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">ALL</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="dropdown__trigger inline-flex items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark" data-toggle="dropdown">
+                <span>EDITOR</span>
+                <svg role="img" class="icon icon-mono icon-angle-down ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+            </button>
+            <div class="dropdown__menu items-stretch w-40 bg-ui-02-dark overflow-hidden">
+                <a href="__components-editor.header.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Header</a>
+                <a href="__components-editor.images.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Images</a>
+                <a href="__components-editor.assets.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Navigation</a>
+                <a href="__components-editor.assets.collections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Collections</a>
+                <a href="__components-editor.assets.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets List Items</a>
+                <a href="__components-editor.assets.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Assets Cards</a>
+                <hr>
+                <a href="__components-editor.inspector.navigation.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Navigation</a>
+                <a href="__components-editor.inspector.sections.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector sections</a>
+                <a href="__components-editor.inspector.listitems.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector List Items</a>
+                <a href="__components-editor.inspector.cards.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Cards</a>
+                <a href="__components-editor.inspector.controls.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector controls</a>
+                <a href="__components-editor.canvas.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Inspector Canvas</a>
+                <hr>
+                <a href="__components-editor.publish.html" class="inline-flex w-100 items-center p-4 text-text-04 font-semibold whitespace-nowrap hover:bg-ui-04-dark">Publish</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-interactive-01 text-text-04 px-12 py-8 rounded-lg mb-8">
+        <h1 class="text-4xl font-semibold mb-2">Selection controls</h1>
+
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li>
+                    <div class="flex items-center">
+                        <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">Components</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                        </svg>
+                        <span class="ml-2 text-sm font-medium text-text-primary-02" aria-current="page">Selection controls</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+    </div>
+	
+
+    <hr>
+    <h2 class="font-semibold text-3xl text-text-02 my-3">Selection controls</h2>
+    <hr class="mb-8">
+    
+    <!-- Slider selector @Light -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Slider selector @Light</h3>
+        
+        <div class="w-inspector">
+            <div class="flex flex-col gap-8">
+                <input type="range" min="1" max="100" step="1" value="20">
+
+                <div class="flex flex-col ">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold mr-auto dark:text-text-02-dark">Size</span>
+
+                        
+                        
+                        
+                    </div>
+                    <input type="range" min="1" max="100" step="1" value="20">
+                </div>
+
+                <div class="flex flex-col ">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold mr-auto dark:text-text-02-dark">Size</span>
+
+                        
+                        <input type="text" class="h-7 px-2 w-24" placeholder="Placeholder"  value="10px">
+                        
+                        
+                        
+                    </div>
+                    <input type="range" min="1" max="100" step="1" value="20">
+                </div>
+
+                <div class="flex flex-col ">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold mr-auto dark:text-text-02-dark">Size</span>
+
+                        
+                        
+                        
+                        <div class="dropdown h-7 w-24">
+                            <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-7 w-24 group" data-toggle="dropdown" >
+                                <div class="flex items-center mr-auto">
+                                    
+                                    
+                                    
+                                    <span>10px</span>
+                                    
+                                </div>
+
+                                <div class="flex items-center ml-auto">
+                                    
+                                    
+                                    <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                                </div>
+                            </button>
+                        </div>
+
+                        
+                    </div>
+                    <input type="range" min="1" max="100" step="1" value="20">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider selector @Dark -->
+    <section class="mb-10 dark bg-ui-01-dark rounded-lg p-4">
+        <h3 class="font-semibold text-2xl text-ui-05-dark mb-3">Slider selector @Dark</h3>
+        
+        <div class="w-inspector">
+            <div class="flex flex-col gap-8">
+                <input type="range" min="1" max="100" step="1" value="20">
+
+                <div class="flex flex-col ">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold mr-auto dark:text-text-02-dark">Size</span>
+
+                        
+                        
+                        
+                    </div>
+                    <input type="range" min="1" max="100" step="1" value="20">
+                </div>
+
+                <div class="flex flex-col ">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold mr-auto dark:text-text-02-dark">Size</span>
+
+                        
+                        <input type="text" class="h-7 px-2 w-24" placeholder="Placeholder"  value="10px">
+                        
+                        
+                        
+                    </div>
+                    <input type="range" min="1" max="100" step="1" value="20">
+                </div>
+
+                <div class="flex flex-col ">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold mr-auto dark:text-text-02-dark">Size</span>
+
+                        
+                        
+                        
+                        <div class="dropdown h-7 w-24">
+                            <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-7 w-24 group" data-toggle="dropdown" >
+                                <div class="flex items-center mr-auto">
+                                    
+                                    
+                                    
+                                    <span>10px</span>
+                                    
+                                </div>
+
+                                <div class="flex items-center ml-auto">
+                                    
+                                    
+                                    <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                                </div>
+                            </button>
+                        </div>
+
+                        
+                    </div>
+                    <input type="range" min="1" max="100" step="1" value="20">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Annotation selector -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Annotation selector</h3>
+        
+        <div class="flex items-center gap-8">
+            <div class="flex flex-col">
+                <span class="inline-block text-caption-01 text-text-03 whitespace-nowrap mr-auto">Pointer A Head Style</span>
+
+                <div class="dropdown">
+                    <button type="button" class="dropdown__trigger group" data-toggle="dropdown">
+                        <img src="images/annotations/annotations-02.svg" alt="">
+                        <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2 group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div class="flex flex-col">
+                    <span class="inline-block text-caption-01 text-text-03 whitespace-nowrap text-center mb-2">Start pointer</span>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-10 w-20 group rounded-r-none" data-toggle="dropdown">
+                            <img src="images/annotations/start-pointer.svg" alt="">
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2 group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col mx-[-1px]">
+                    <span class="inline-block text-caption-01 text-text-03 whitespace-nowrap text-center mb-2">Line</span>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-10 w-20 group rounded-none" data-toggle="dropdown">
+                            <img src="images/annotations/line.svg" alt="">
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2 group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="inline-block text-caption-01 text-text-03 whitespace-nowrap text-center mb-2">End pointer</span>
+                    <div class="dropdown">
+                        <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-10 w-20 group rounded-l-none" data-toggle="dropdown">
+                            <img src="images/annotations/end-pointer.svg" alt="">
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2 group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- List selection controls @Light -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">List selection controls @Light</h3>
+        
+        <div class="flex flex-col gap-8 w-inspector">
+            <div class="flex items-center space-x-1 flex-shrink-0 ">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Color</span>
+
+                 <div class="relative w-[86px]">
+                    <input type="text" class="px-2 w-full h-7 pl-7" placeholder="Placeholder" value="FFED8C">
+                    <div class="absolute top-1/2 transform -translate-y-1/2 left-2.5 w-3 h-3 pointer-events-none" style="background-color: #FFED8C;"></div>
+                </div>
+                <input type="text" class="h-7 px-2 w-12" placeholder="Placeholder"  value="100%">
+            </div>
+
+            <div class="flex items-center space-x-1 ">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Blend mode</span>
+
+                <div class="dropdown h-7 w-24">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-7 w-24 group" data-toggle="dropdown" >
+                        <div class="flex items-center mr-auto">
+                            
+                            
+                            
+                            <span>Multiply</span>
+                            
+                        </div>
+
+                        <div class="flex items-center ml-auto">
+                            
+                            
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col ">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold mb-3">Blend mode</span>
+
+                <div class="dropdown h-7 w-24">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-7 w-24 group" data-toggle="dropdown" >
+                        <div class="flex items-center mr-auto">
+                            
+                            
+                            
+                            <span>Multiply</span>
+                            
+                        </div>
+
+                        <div class="flex items-center ml-auto">
+                            
+                            
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </div>
+                    </button>
+                </div>
+
+
+                <div class="flex space-x-1 mt-1">
+                    <input type="text" class="h-7 px-2 w-12" placeholder="Placeholder"  value="100%">
+                     <div class="relative w-[86px]">
+                        <input type="text" class="px-2 w-full h-7 pl-7" placeholder="Placeholder" value="FFED8C">
+                        <div class="absolute top-1/2 transform -translate-y-1/2 left-2.5 w-3 h-3 pointer-events-none" style="background-color: #FFED8C;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex ">
+                 <div class="relative w-[110px]">
+                    <input type="text" class="px-2 w-full h-7 pl-7 border-r-none" placeholder="Placeholder" value="FFED8C">
+                    <div class="absolute top-1/2 transform -translate-y-1/2 left-2.5 w-3 h-3 pointer-events-none" style="background-color: #FFED8C;"></div>
+                </div>
+
+                <div class="dropdown ml-[-1px] mr-1">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--outlined w-7 h-7 border-l-none group" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-blend text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-blend"></use></svg>
+                    </button>
+                    <div class="dropdown__menu dropdown__menu--right w-[148px] mt-1 py-1">
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Normal</span>
+                        </button>
+                        <hr class="border-ui-04 dark:border-ui-04-dark">
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Darken</span>
+                        </button>
+                        <button type="button" class="listitem active w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Multiply</span>
+                        </button>
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Color burn</span>
+                        </button>
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Lighten</span>
+                        </button>
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Overlay</span>
+                        </button>
+                    </div>
+                </div>
+
+                <input type="text" class="h-7 px-2 w-12" placeholder="Placeholder"  value="100%">
+
+                <button type="button" class="
+                    w-5 h-5 rounded-sm inline-flex justify-center items-center border bg-ui-01 text-icon-02 border-ui-04
+                    hover:bg-hover-ui hover:border-hover-primary hover:text-icon-primary-01
+                    active:bg-active-ui hover:border-active-primary active:text-icon-primary-01
+                    disabled:bg-disabled-02 disabled:text-disabled-03 disabled:border-disabled-02
+                    ml-3 self-center
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-minus transition-none "><use xlink:href="icons/mono/icons-mono.svg#icon-minus"></use></svg>
+                    
+
+                    
+
+                    
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- List selection controls @Dark -->
+    <section class="mb-10 dark bg-ui-01-dark rounded-lg p-4">
+        <h3 class="font-semibold text-2xl text-ui-05-dark mb-3">List selection controls @Dark</h3>
+        
+        <div class="flex flex-col gap-8 w-inspector">
+            <div class="flex items-center space-x-1 flex-shrink-0 ">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Color</span>
+
+                 <div class="relative w-[86px]">
+                    <input type="text" class="px-2 w-full h-7 pl-7" placeholder="Placeholder" value="FFED8C">
+                    <div class="absolute top-1/2 transform -translate-y-1/2 left-2.5 w-3 h-3 pointer-events-none" style="background-color: #FFED8C;"></div>
+                </div>
+                <input type="text" class="h-7 px-2 w-12" placeholder="Placeholder"  value="100%">
+            </div>
+
+            <div class="flex items-center space-x-1 ">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Blend mode</span>
+
+                <div class="dropdown h-7 w-24">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-7 w-24 group" data-toggle="dropdown" >
+                        <div class="flex items-center mr-auto">
+                            
+                            
+                            
+                            <span>Multiply</span>
+                            
+                        </div>
+
+                        <div class="flex items-center ml-auto">
+                            
+                            
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col ">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold mb-3">Blend mode</span>
+
+                <div class="dropdown h-7 w-24">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--outlined h-7 w-24 group" data-toggle="dropdown" >
+                        <div class="flex items-center mr-auto">
+                            
+                            
+                            
+                            <span>Multiply</span>
+                            
+                        </div>
+
+                        <div class="flex items-center ml-auto">
+                            
+                            
+                            <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 ml-2"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                        </div>
+                    </button>
+                </div>
+
+
+                <div class="flex space-x-1 mt-1">
+                    <input type="text" class="h-7 px-2 w-12" placeholder="Placeholder"  value="100%">
+                     <div class="relative w-[86px]">
+                        <input type="text" class="px-2 w-full h-7 pl-7" placeholder="Placeholder" value="FFED8C">
+                        <div class="absolute top-1/2 transform -translate-y-1/2 left-2.5 w-3 h-3 pointer-events-none" style="background-color: #FFED8C;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex ">
+                 <div class="relative w-[110px]">
+                    <input type="text" class="px-2 w-full h-7 pl-7 border-r-none" placeholder="Placeholder" value="FFED8C">
+                    <div class="absolute top-1/2 transform -translate-y-1/2 left-2.5 w-3 h-3 pointer-events-none" style="background-color: #FFED8C;"></div>
+                </div>
+
+                <div class="dropdown ml-[-1px] mr-1">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--outlined w-7 h-7 border-l-none group" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-blend text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-blend"></use></svg>
+                    </button>
+                    <div class="dropdown__menu dropdown__menu--right w-[148px] mt-1 py-1">
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Normal</span>
+                        </button>
+                        <hr class="border-ui-04 dark:border-ui-04-dark">
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Darken</span>
+                        </button>
+                        <button type="button" class="listitem active w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Multiply</span>
+                        </button>
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Color burn</span>
+                        </button>
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Lighten</span>
+                        </button>
+                        <button type="button" class="listitem w-full border-0 px-3 h-8 text-body-small-01">
+                            <span>Overlay</span>
+                        </button>
+                    </div>
+                </div>
+
+                <input type="text" class="h-7 px-2 w-12" placeholder="Placeholder"  value="100%">
+
+                <button type="button" class="
+                    w-5 h-5 rounded-sm inline-flex justify-center items-center border bg-ui-01 text-icon-02 border-ui-04
+                    hover:bg-hover-ui hover:border-hover-primary hover:text-icon-primary-01
+                    active:bg-active-ui hover:border-active-primary active:text-icon-primary-01
+                    disabled:bg-disabled-02 disabled:text-disabled-03 disabled:border-disabled-02
+                    ml-3 self-center
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-minus transition-none "><use xlink:href="icons/mono/icons-mono.svg#icon-minus"></use></svg>
+                    
+
+                    
+
+                    
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text alignment selector -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Text alignment selector</h3>
+        
+        <div class="flex flex-col gap-8 w-inspector">
+            <div class="flex justify-between items-center w-full">
+                <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap font-semibold dark:text-text-02-dark">Paragraph</span>
+                <div class="flex space-x-1">
+                    <button type="button" class="text-icon-primary-01 leading-none">
+                        <svg role="img" class="icon icon-mono icon-justify-left w-5 h-5 transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-justify-left"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-justify-center w-5 h-5 transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-justify-center"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-justify-right w-5 h-5 transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-justify-right"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Position and size selector -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Position and size selector</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-inspector">
+                <div class="flex items-center w-full">
+                    <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Position</span>
+    
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-hash w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-hash"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+
+                    <span class="w-5 flex justify-center items-center">
+                        
+                            <button type="button" class="self-center hover:text-icon-primary-01 text-icon-02 ">
+                                <svg role="img" class="icon icon-mono icon-link w-4 h-4 transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-link"></use></svg>
+                            </button>
+                        
+                    </span>
+
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-hash w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-hash"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-inspector">
+                <div class="flex items-center w-full">
+                    <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Position</span>
+    
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-hash w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-hash"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+
+                    <span class="w-5 flex justify-center items-center">
+                        
+                            <button type="button" class="self-center hover:text-icon-primary-01  text-icon-primary-01">
+                                <svg role="img" class="icon icon-mono icon-link w-4 h-4 transition-none"><use xlink:href="icons/mono/icons-mono.svg#icon-link"></use></svg>
+                            </button>
+                        
+                    </span>
+
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-hash w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-hash"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-8">
+            <div class="w-inspector">
+                <div class="flex items-center w-full">
+                    <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Position</span>
+    
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-@@iconFirst w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-@@iconFirst"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+
+                    <span class="w-5 flex justify-center items-center">
+                        
+                    </span>
+
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-@@iconSecond w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-@@iconSecond"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-inspector">
+                <div class="flex items-center w-full">
+                    <span class="inline-block text-caption-01 text-text-02 whitespace-nowrap mr-auto font-semibold">Position</span>
+    
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-@@iconFirst w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-@@iconFirst"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+
+                    <span class="w-5 flex justify-center items-center">
+                        
+                    </span>
+
+                    <div class="relative w-[72px]">
+                        <input type="text" class="h-7 pl-7 pr-2 w-[72px] pl-10   " placeholder="Placeholder"  value="123">
+
+                        
+    
+                        
+
+                        
+                        <span class="absolute w-8 h-full top-0 left-0 inline-flex items-center justify-center border-r border-ui-04 bg-transparent text-icon-02 dark:border-ui-04-dark">
+                            <svg role="img" class="icon icon-mono icon-@@iconSecond w-4 h-4"><use xlink:href="icons/mono/icons-mono.svg#icon-@@iconSecond"></use></svg>
+                        </span>
+                        
+
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Palette selection -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Palette selection</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-28">
+                <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group ">
+                    <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                    <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                    <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                    <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+
+                    <span class="absolute w-full h-full top-0 left-0 flex justify-center items-center text-icon-04 border-2 border-ui-03 rounded transition-all group-hover:opacity-100  bg-ui-overlay-02 opacity-0">
+                        
+                        <svg role="img" class="icon icon-mono icon-brandit"><use xlink:href="icons/mono/icons-mono.svg#icon-brandit"></use></svg>
+                        
+                    </span>
+                </button>
+            </div>
+            <div class="w-28">
+                <button type="button" class="w-full flex flex-grow border-2 border-transparent rounded relative hover:border-ui-03 transition-all group pointer-events-none">
+                    <span class="flex-grow h-7 rounded-l" style="background-color: #79DFFF;"></span>
+                    <span class="flex-grow h-7" style="background-color: #72BBFF;"></span>
+                    <span class="flex-grow h-7" style="background-color: #4897E1;"></span>
+                    <span class="flex-grow h-7 rounded-r" style="background-color: #8995FF;"></span>
+
+                    <span class="absolute w-full h-full top-0 left-0 flex justify-center items-center text-icon-04 border-2 border-ui-03 rounded transition-all group-hover:opacity-100 opacity-100 ">
+                        
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Effect selection -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Effect selection</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-15">
+                <div class="flex flex-col items-center group">
+                    <span class="relative border rounded transition-all border-transparent  group-hover:border-interactive-01">
+                        <img src="https://source.unsplash.com/2cFZ_FB08UM/60x40/" alt="" class="rounded w-full">
+                        <span class="absolute w-full h-full top-0 left-0 border-4 border-ui-01 transition-all rounded opacity-0 "></span>
+                    </span>
+                    <span class="text-helper-text text-text-01 mt-1">Normal</span>
+                </div>
+            </div>
+            <div class="w-15">
+                <div class="flex flex-col items-center group">
+                    <span class="relative border rounded transition-all  border-interactive-01 group-hover:border-interactive-01">
+                        <img src="https://source.unsplash.com/2cFZ_FB08UM/60x40/" alt="" class="rounded w-full">
+                        <span class="absolute w-full h-full top-0 left-0 border-4 border-ui-01 transition-all rounded  opacity-100"></span>
+                    </span>
+                    <span class="text-helper-text text-text-01 mt-1">Normal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Picker / Color Slider -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Color Picker / Color Slider</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-inspector">
+                <input type="range" min="1" max="100" step="1" value="20" class="range-color">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Color Picker / Opacity Slider -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Color Picker / Opacity Slider</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-inspector">
+                <input type="range" min="1" max="100" step="1" value="20" class="range-opacity">
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Picker / Gradient Slider -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Color Picker / Gradient Slider</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-inspector">
+                <input type="range" min="1" max="100" step="1" value="20" class="range-gradient">
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Picker / Color -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Color Picker / Color</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="flex space-x-2">
+                <button type="button" class="
+                    w-5 h-5 rounded-sm inline-flex justify-center items-center border bg-ui-01 text-icon-02 border-ui-04
+                    hover:bg-hover-ui hover:border-hover-primary hover:text-icon-primary-01
+                    active:bg-active-ui hover:border-active-primary active:text-icon-primary-01
+                    disabled:bg-disabled-02 disabled:text-disabled-03 disabled:border-disabled-02
+                    
+                    " >
+
+                    
+                    <svg role="img" class="icon icon-mono icon-plus transition-none "><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    
+
+                    
+
+                    
+                </button>
+
+                <button type="button" class="
+                    w-5 h-5 rounded-sm inline-flex justify-center items-center border bg-checkers text-icon-02 border-ui-04 bg-cover
+                    hover:bg-hover-ui hover:border-hover-primary hover:text-icon-primary-01
+                    active:bg-active-ui hover:border-active-primary active:text-icon-primary-01
+                    disabled:bg-disabled-02 disabled:text-disabled-03 disabled:border-disabled-02
+                    ">
+                </button>
+
+                <button type="button" class="
+                    w-5 h-5 rounded-sm inline-flex justify-center items-center border text-icon-02 border-ui-04 bg-[#000000]
+                    hover:bg-hover-ui hover:border-hover-primary hover:text-icon-primary-01
+                    active:bg-active-ui hover:border-active-primary active:text-icon-primary-01
+                    disabled:bg-disabled-02 disabled:text-disabled-03 disabled:border-disabled-02
+                    ">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Picker / Angle -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Color Picker / Angle</h3>
+        
+        <div class="flex gap-8 mb-8">
+            <div class="w-[38px] h-[38px] relative border border-ui-05">
+                <span class="w-[7px] h-[7px] rounded-full border border-interactive-01 bg-ui-01 absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2"></span>
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-0 left-full transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-1/2 left-full transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-full left-0 transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+                <span class="w-[7px] h-[7px] rounded-full border border-ui-05 bg-ui-01 absolute top-full left-full transform -translate-x-1/2 -translate-y-1/2 hover:border-interactive-01"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zoom selection -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Zoom selection</h3>
+        
+        <div class="flex justify-between items-start mb-4 w-100">
+            <div class="flex space-x-1">
+                <div class="flex border border-ui-04 p-2 bg-ui-01 space-x-2 h-8 rounded">
+                    <button type="button" class="text-icon-02 leading-none p-0 w-4 h-4 hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono w-4 h-4 block icon-minus"><use xlink:href="icons/mono/icons-mono.svg#icon-minus"></use></svg>
+                    </button>
+                    <button type="button" class="text-icon-02 leading-none p-0 w-4 h-4 hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono w-4 h-4 block icon-plus"><use xlink:href="icons/mono/icons-mono.svg#icon-plus"></use></svg>
+                    </button>
+                </div>
+
+                <div class="dropdown">
+                    <button type="button" class="dropdown__trigger dropdown__trigger--light group px-2 h-8 bg-ui-01 border border-ui-04 rounded" data-toggle="dropdown">
+                        <span>100%</span>
+                        <svg role="img" class="icon icon-mono icon-angle-down text-icon-03 group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                    </button>
+                    <div class="dropdown__menu dropdown__menu--right divide-y divide-ui-04 mt-2">
+                        <div class="p-3">
+                             <div class="relative w-full">
+                                <input type="search" class="px-7 w-full h-7 pr-2 pl-7" placeholder="Placeholder" >
+
+                                
+                                <div class="absolute inset-y-0 left-2 flex items-center pointer-events-none text-icon-02 dark:text-icon-03-dark">
+                                    <svg role="img" class="icon icon-mono icon-search text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-search"></use></svg>
+                                </div>
+                                
+    
+                                
+
+                                
+                            </div>
+                        </div>
+                        <div class="pt-2 pb-1">
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">Fit to screen</span>
+
+                                
+
+                                
+
+
+                                
+                                <svg role="img" class="icon icon-mono icon-fullscreen ml-auto text-icon-02"><use xlink:href="icons/mono/icons-mono.svg#icon-fullscreen"></use></svg>
+                                
+                            </button>
+                            <hr class="border-ui-04 mx-3 mb-1">
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">200%</span>
+
+                                
+
+                                
+
+
+                                
+                            </button>
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">150%</span>
+
+                                
+
+                                
+
+
+                                
+                            </button>
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            active
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">100%</span>
+
+                                
+
+                                
+
+
+                                
+                            </button>
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">50%</span>
+
+                                
+
+                                
+
+
+                                
+                            </button>
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">25%</span>
+
+                                
+
+                                
+
+
+                                
+                            </button>
+                            <button type="button" class="listitem h-8 text-body-small-01
+                            
+                            w-full border-0 px-3" >
+                                
+
+                                <span class="mb-0">10%</span>
+
+                                
+
+                                
+
+
+                                
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Toolset -->
+    <section class="mb-10">
+        <h3 class="font-semibold text-2xl text-ui-05 my-3">Zoom selection</h3>
+        
+        <div class="flex justify-between items-start mb-4 w-100">
+            <div class="flex">
+                <div class="dropdown dropdown--toolset group px-1.5 h-8 border border-r-0 border-ui-04 bg-ui-01 rounded-l">
+                    <button type="button" class="tool-select text-icon-02 group-hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-text w-5 h-5 text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-text"></use></svg>
+                    </button>
+                    <button type="button" class="dropdown__trigger text-icon-03 hover:text-icon-primary-01" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-angle-down text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                    </button>
+                    <div class="dropdown__menu py-1 mt-2">
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        active
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-text w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-text"></use></svg>
+                            
+
+                            <span class="mb-0">Text box</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-paragraph w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-paragraph"></use></svg>
+                            
+
+                            <span class="mb-0">Body text</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-list-bullet w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-list-bullet"></use></svg>
+                            
+
+                            <span class="mb-0">Bullet list</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown dropdown--toolset group px-1.5 h-8 border-t border-b border-ui-04 bg-ui-01">
+                    <button type="button" class="tool-select text-icon-02 group-hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-square w-5 h-5 text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                    </button>
+                    <button type="button" class="dropdown__trigger text-icon-03 hover:text-icon-primary-01" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-angle-down text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                    </button>
+                    <div class="dropdown__menu py-1 mt-2">
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-square w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-square"></use></svg>
+                            
+
+                            <span class="mb-0">Square</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-circle w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                            
+
+                            <span class="mb-0">Circle</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        active
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-triangle w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-triangle"></use></svg>
+                            
+
+                            <span class="mb-0">Triangle</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown dropdown--toolset group px-1.5 h-8 border-t border-b border-ui-04 bg-ui-01">
+                    <button type="button" class="tool-select text-icon-02 group-hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-arrow-line w-5 h-5 text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-arrow-line"></use></svg>
+                    </button>
+                    <button type="button" class="dropdown__trigger text-icon-03 hover:text-icon-primary-01" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-angle-down text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                    </button>
+                    <div class="dropdown__menu py-1 mt-2">
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-arrow-line w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-arrow-line"></use></svg>
+                            
+
+                            <span class="mb-0">Line arrow</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-arrow-triangle w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-arrow-triangle"></use></svg>
+                            
+
+                            <span class="mb-0">Triangle arrow</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        active
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-arrow-circle w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-arrow-circle"></use></svg>
+                            
+
+                            <span class="mb-0">Circle arrow</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-arrow-ring w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-arrow-ring"></use></svg>
+                            
+
+                            <span class="mb-0">Ring arrow</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-arrow-flatend w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-arrow-flatend"></use></svg>
+                            
+
+                            <span class="mb-0">Flat-end arrow</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown dropdown--toolset group px-1.5 h-8 border border-l-0 border-ui-04 bg-ui-01 rounded-r">
+                    <button type="button" class="tool-select text-icon-02 group-hover:text-icon-primary-01">
+                        <svg role="img" class="icon icon-mono icon-pencil w-5 h-5 text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-pencil"></use></svg>
+                    </button>
+                    <button type="button" class="dropdown__trigger text-icon-03 hover:text-icon-primary-01" data-toggle="dropdown">
+                        <svg role="img" class="icon icon-mono icon-angle-down text-current"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
+                    </button>
+                    <div class="dropdown__menu py-1 mt-2">
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        active
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-edit w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-edit"></use></svg>
+                            
+
+                            <span class="mb-0">Pencil</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                        <button type="button" class="listitem h-8 text-body-small-01
+                        
+                        w-full border-0 px-3" >
+                            
+                            <svg role="img" class="icon icon-mono icon-pen w-4 h-4 mr-2 text-icon-02 dark:text-icon-03-dark"><use xlink:href="icons/mono/icons-mono.svg#icon-pen"></use></svg>
+                            
+
+                            <span class="mb-0">Pentool</span>
+
+                            
+
+                            
+
+
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<div class="sm:flex fixed top-0 left-0 w-screen h-screen hidden flex-col justify-center items-center bg-ui-02-dark z-50 text-text-01-dark p-20 text-center">
+	    <h3 class="text-2xl mb-8">Screen not wide enough!</h3>
+	    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit! A ea, libero ut architecto nobis quidem ad, unde maiores rerum eius facere quibusdam.</p>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="../../../node_modules/svg4everybody/dist/svg4everybody.min.js"></script> -->
+
+	<!-- Custom scrollbar -->
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+	<!-- Slick Carousel -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
+	<script src="js/jquery.overlayScrollbars.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>
