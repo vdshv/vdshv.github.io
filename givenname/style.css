@@ -1,0 +1,152 @@
+ * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@import url(https://fonts.adobe.com/fonts/ocr-b?red=a);
+
+body {
+	font-family: 'ocr-b', sans-serif;
+	color: #333;
+	font-size: 15px;
+	line-height: 1.5;
+	padding: 0 40px;
+	min-height: 100vh;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+.full-height {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.full-height img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 10px;
+    height: calc(100vh - 174px);
+    max-height: 500px;
+    width: auto;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.site-content{
+	padding: 50px 25px;
+	margin-left: 200px;
+}
+.header, .footer {
+	padding: 30px 0;
+}
+
+.header__logo {
+	font-family: ocr-b-std, monospace;
+	letter-spacing: 5px;
+	font-style: normal;
+	font-weight: 400;  ;
+	min-width: 120px;
+	font-size: 30px;
+}
+.header__nav a {
+  	margin-left: 40px;
+}
+
+.links {
+	align-items: flex-start;
+	max-width: 600px;
+}
+.links ul {
+	list-style: none;
+}
+.links li {
+	margin-bottom: 30px;
+}
+.links h2 {
+	font-size: 15px;
+	font-weight: 700;
+	margin-bottom: 3px;
+}
+.links a {
+	line-height: 1;
+	display: block;
+	font-size: 15px;
+	margin-bottom: 7px;
+}
+.column a{
+
+  
+}
+
+.gallery{
+	max-width: 500px;
+
+}
+footer a{
+	padding: 5px;
+	text-align: left;
+}
+.language {
+	text-align: right;
+}
+.gallery img{
+	padding-top: 10px;
+	
+} 
+.container article{
+	max-width: 700px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+@media (max-width:1023px) {
+	
+	
+	
+}
+
+
+@media all and  (max-width:767px) {
+	body {
+		padding: 0 25px;
+	}
+	.flex {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.header__logo {
+		margin-bottom: 20px;
+	}
+	.header__nav a {
+		margin-left: 0;
+		margin-bottom: 12px;
+	}
+	.full-height img {
+		width: 100%;
+		height: auto;
+	}
+	.footer {
+		flex-direction: row;
+	}
+	.footer a {
+		display: block;
+	}	
+	.site-content{
+		margin: auto;
+	}
+}
+@media all and (max-width:319px) {
+  .body {
+      
+      max-width: 200px
+  }
+  .container h2 {
+  	margin-top: 20px;
+  }
+}
