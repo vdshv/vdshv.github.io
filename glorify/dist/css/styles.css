@@ -2203,7 +2203,7 @@ div.listitem .icon {
 .checkable:hover {
 	cursor: pointer;
 }
-.checkable:hover .icon-circle {
+.checkable:hover .icon-circle, .checkable:hover .icon-trash {
 	opacity: 1;
 }
 .checkable--favourite.checked {
