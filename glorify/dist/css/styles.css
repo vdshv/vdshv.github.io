@@ -3855,6 +3855,9 @@ div.listitem .icon {
 .z-30 {
 	z-index: 30;
 }
+.z-20 {
+	z-index: 20;
+}
 .order-first {
 	-webkit-box-ordinal-group: -9998;
 	    -ms-flex-order: -9999;
@@ -4324,6 +4327,9 @@ div.listitem .icon {
 }
 .min-h-0 {
 	min-height: 0px;
+}
+.min-h-auto {
+	min-height: auto;
 }
 .min-h-\[370px\] {
 	min-height: 370px;
@@ -4805,6 +4811,9 @@ div.listitem .icon {
 }
 .gap-y-8 {
 	row-gap: 2rem;
+}
+.gap-y-4 {
+	row-gap: 1rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-x-reverse: 0;

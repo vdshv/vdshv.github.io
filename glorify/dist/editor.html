@@ -8285,12 +8285,12 @@
                         </div>
                     </div>
                 </div>
-                Modal Browse Sizes -->
+                <!-- Modal Browse Sizes -->
                 <div class="modal" id="modal-browse-sizes">
                 	<div class="modal__wrap">
                 		<div class="modal__content w-[678px] h-[600px] flex flex-col">
 
-                            <div class="flex divide-x divide-ui-04 flex-grow p-0">
+                            <div class="flex divide-x divide-ui-04 flex-grow p-0 w-full">
                                 <div class="w-[227px] min-w-[227px] divide-y divide-ui-04">
 
                                     <div class="p-4">
@@ -8305,7 +8305,7 @@
                                         </div>
 
                                          <div class="relative @@width">
-                                            <input type="text" class="px-7 w-full px-7" placeholder="Placeholder" >
+                                            <input type="text" class="px-7 w-full pr-4 h-7" placeholder="Placeholder" >
 
                                             
                                             <div class="absolute inset-y-0 left-2 flex items-center pointer-events-none text-icon-02 dark:text-icon-03-dark">
@@ -8499,8 +8499,8 @@
                                     </div>
                                 </div>
 
-                                <div class="flex-grow bg-ui-02 overflow-y-auto">
-                                    <div class="sticky top-0 z-10 bg-ui-background p-4 border-b border-ui-04 ">
+                                <div class="flex-grow bg-ui-02 flex flex-col">
+                                    <div class="relative z-20 bg-ui-background p-4 border-b border-ui-04 min-h-auto">
                                         <div class="flex items-center browse-sizes__header">
                                             
     
@@ -8527,7 +8527,7 @@
                                     </div>
                    
                     
-                                    <ul class="divide-y divide-ui-04 px-11">
+                                    <ul class="relative z-10 divide-y divide-ui-04 px-11 flex-grow overflow-y-auto tab-panel show" id="browse-sizes-suggested" data-simplebar>
                                         <li class="py-6">
                                             <div class="flex justify-between mb-4">
                                                 <div class="flex items-center">
@@ -8553,7 +8553,7 @@
                                                 </button>
                                             </div>
                             
-                                            <div class="flex justify-between flex-wrap gap-4">
+                                            <div class="flex justify-between flex-wrap gap-y-4">
                                                 
                                                     <label class="checkable relative">
                                                         
@@ -8604,8 +8604,9 @@
                                                     </label>
                                                 
                                             </div>
-
                                         </li>
+
+
                                         <li class="py-6">
                                             <div class="flex justify-between mb-4">
                                                 <div class="flex items-center">
@@ -8631,7 +8632,185 @@
                                                 </button>
                                             </div>
 
-                                            <div class="flex justify-between flex-wrap gap-4">
+                                            <div class="flex justify-between flex-wrap gap-y-4">
+                             
+                                                
+                                                    <label class="checkable relative">
+                                                        
+                                                        <input type="checkbox" class="absolute invisible">
+
+                                                        <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                                                        <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                                                        
+
+                                                        <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                                                            
+                                                            <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                                                                <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                                                            </div>            
+                                                            
+
+                                                            
+        
+                                                            <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                                                        </div>
+
+                                                        <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                                                        <p class="text-text-03 text-caption-01">2000x2000</p>
+                                                    </label>
+                                                
+                                                    <label class="checkable relative">
+                                                        
+                                                        <input type="checkbox" class="absolute invisible">
+
+                                                        <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                                                        <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                                                        
+
+                                                        <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                                                            
+                                                            <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                                                                <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                                                            </div>            
+                                                            
+
+                                                            
+        
+                                                            <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                                                        </div>
+
+                                                        <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                                                        <p class="text-text-03 text-caption-01">2000x2000</p>
+                                                    </label>
+                                                
+                                                    <label class="checkable relative">
+                                                        
+                                                        <input type="checkbox" class="absolute invisible">
+
+                                                        <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                                                        <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                                                        
+
+                                                        <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                                                            
+                                                            <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                                                                <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                                                            </div>            
+                                                            
+
+                                                            
+        
+                                                            <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                                                        </div>
+
+                                                        <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                                                        <p class="text-text-03 text-caption-01">2000x2000</p>
+                                                    </label>
+                                                
+                                                    <label class="checkable relative">
+                                                        
+                                                        <input type="checkbox" class="absolute invisible">
+
+                                                        <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                                                        <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                                                        
+
+                                                        <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                                                            
+                                                            <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                                                                <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                                                            </div>            
+                                                            
+
+                                                            
+        
+                                                            <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                                                        </div>
+
+                                                        <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                                                        <p class="text-text-03 text-caption-01">2000x2000</p>
+                                                    </label>
+                                                
+                                                    <label class="checkable relative">
+                                                        
+                                                        <input type="checkbox" class="absolute invisible">
+
+                                                        <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                                                        <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                                                        
+
+                                                        <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                                                            
+                                                            <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                                                                <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                                                            </div>            
+                                                            
+
+                                                            
+        
+                                                            <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                                                        </div>
+
+                                                        <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                                                        <p class="text-text-03 text-caption-01">2000x2000</p>
+                                                    </label>
+                                                
+                                                    <label class="checkable relative">
+                                                        
+                                                        <input type="checkbox" class="absolute invisible">
+
+                                                        <svg role="img" class="icon icon-mono icon-circle z-10 w-5 h-5 text-icon-02 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-circle"></use></svg>
+                                                        <svg role="img" class="icon icon-mono icon-check-circle-solid z-10 w-5 h-5 text-icon-primary-01 absolute top-0 right-0 transform opacity-0"><use xlink:href="icons/mono/icons-mono.svg#icon-check-circle-solid"></use></svg>
+                                                        
+
+                                                        <div class="relative w-[170px] h-[92px] flex justify-center items-center rounded bg-ui-01 border border-ui-04 hover:border-hover-primary group transition-all">
+                                                            
+                                                            <div class="absolute top-2 left-2 flex justify-center items-center w-6 h-6 bg-ui-01 border border-ui-04 rounded-full">
+                                                                <img src="images/brands/brand-amazon.svg" alt="" class="w-4 h-4">
+                                                            </div>            
+                                                            
+
+                                                            
+        
+                                                            <img src="images/card-size-01.svg" alt="" class="w-15 h-15">
+                                                        </div>
+
+                                                        <h4 class="text-text-01 text-body-small-01 font-semibold mt-2 mb-1">Hero Image</h4>
+                                                        <p class="text-text-03 text-caption-01">2000x2000</p>
+                                                    </label>
+                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="relative z-10 divide-y divide-ui-04 px-11 flex-grow overflow-y-auto tab-panel" id="browse-sizes-custom" data-simplebar>
+                        
+                                        <li class="py-6">
+                                            <div class="flex justify-between mb-4">
+                                                <div class="flex items-center">
+                                                	<img src="images/brands/brand-amazon.svg" alt="" class="w-5 h-5 mr-2">
+                                                	<h3 class="text-body-01 text-text-01 font-semibold @@extend">Amazon</h3>
+                                                </div>
+
+                                                <button type="button" class="
+                                                    text-xs rounded-sm inline-flex justify-center items-center text-text-03
+                                                    hover:text-hover-primary
+                                                    active:text-active-primary
+                                                    disabled:text-disabled-03
+                                                    
+                                                    " >
+
+                                                    
+
+                                                    
+                                                    <span>Select all</span>
+                                                    
+
+                                                    
+                                                </button>
+                                            </div>
+
+                                            <div class="flex justify-between flex-wrap gap-y-4">
                              
                                                 
                                                     <label class="checkable relative">
@@ -8797,7 +8976,7 @@
                                             <svg role="img" class="icon icon-mono icon-angle-down text-icon-02 group-hover:text-icon-primary-01"><use xlink:href="icons/mono/icons-mono.svg#icon-angle-down"></use></svg>
                                         </button>
 
-                                        <div class="dropdown__menu w-[300px] h-[168px] overflow-y-auto top-auto bottom-full mb-2 mt-0 py-1" role="none">
+                                        <div class="dropdown__menu w-[300px] h-[168px] overflow-y-auto top-auto bottom-full mb-2 mt-0 py-1" role="none" data-simplebar>
                                             
                                                 <button type="button" class="listitem h-8 text-body-small-01
                                                 
@@ -8967,7 +9146,7 @@
                 		</div>
                     </div>
                 </div>
-                <!-- / Modal Browse Sizes
+                <!-- Modal Browse Sizes -->
                 <div class="inspector flex-grow overflow-y-auto" id="inspector-panel-text-inner" data-simplebar>
                     <!-- Font -->
                     <div class="relative border-b border-ui-04">
