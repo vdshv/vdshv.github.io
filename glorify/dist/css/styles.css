@@ -1491,6 +1491,12 @@ button:not(.dropdown__trigger)[disabled] .icon-duo {
 .dropdown__trigger[disabled] .palette, .dropdown__trigger[disabled] span.rounded-full:not(.bg-interactive-01), .dropdown__trigger[disabled] img.rounded-full, .dropdown__trigger[disabled] > img {
 	opacity: 0.3;
 }
+.dropdown__trigger[disabled] .rounded-full {
+	background-color: var(--disabled-01);
+}
+.dropdown__trigger[disabled] .rounded-full {
+	color: var(--disabled-03);
+}
 .dropdown__trigger--outlined {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2700,10 +2706,6 @@ div.listitem .icon {
 }
 .modal__content > * {
 	padding: 1.5rem;
-}
-.browse-sizes__header .self-start {
-    -ms-flex-item-align: center;
-        align-self: center;
 }
 /*------------------------------------*
     @COMPONENTS #ASSETS
@@ -4331,6 +4333,9 @@ div.listitem .icon {
 .min-h-auto {
 	min-height: auto;
 }
+.min-h-\[474px\] {
+	min-height: 474px;
+}
 .min-h-\[370px\] {
 	min-height: 370px;
 }
@@ -4624,6 +4629,9 @@ div.listitem .icon {
 }
 .min-w-\[176px\] {
 	min-width: 176px;
+}
+.min-w-\[2\.25rem\] {
+	min-width: 2.25rem;
 }
 .min-w-\[227px\] {
 	min-width: 227px;
