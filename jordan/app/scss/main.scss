@@ -325,9 +325,24 @@ img,svg {
 				transition: .25s;
 			}
 		}
-
+		&.nav-main a {
+			padding-right: 40px;
+		}
 	}
 	&-main {
+		a {
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 12px;
+				height: 12px;
+				top: 50%;
+				transform: translate3d(0, -50%, 0px);
+				right: 12px;
+				background: url(../img/link-arr.svg) no-repeat center center / contain;
+			}
+		}
 		a:last-child {
 			margin-bottom: 40px;
 		}
