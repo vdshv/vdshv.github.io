@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+	<title></title>
+	<meta name="description" content="">
+<!-- 	
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="icon" href="" type="image/x-icon"> -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+	    rel="preload"
+	    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Mulish:wght@300;400;700;800&display=block"
+	    as="style"
+	    onload="this.onload=null;this.rel='stylesheet'"
+	/>
+	<noscript>
+	    <link
+	        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Mulish:wght@300;400;700;800&display=block"
+	        rel="stylesheet"
+	        type="text/css"
+	    />
+	</noscript>
+
+	<!-- CRITICAL CSS  -->
+	<style>
+		.title {
+			width: 100%;
+			text-align: center;
+			position: relative;
+			padding: 0;
+			margin-top: 80px;
+		}
+		.title h3 {
+			background: #fff;
+			display: inline;
+			position: relative;
+			z-index: 2;
+			padding: 0 20px;
+		}
+		.title::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			top: 50%;
+			background: #D8D8D8;
+			z-index: 1;
+		}
+	</style>
+	<style>
+		*{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0}body{font-size:16px;min-width:320px;position:relative;line-height:1.75;overflow-x:hidden;color:#3d4854;background:#fcfcfc;font-family:Mulish,sans-serif}a{color:#3d4854;text-decoration:none;-webkit-transition:color .2s;-o-transition:color .2s;transition:color .2s}a:hover{text-decoration:none;-webkit-transition:color .2s;-o-transition:color .2s;transition:color .2s}p{letter-spacing:.44px}li{list-style:none}button,input,select,textarea{-webkit-appearance:none;border:none;background:0 0;font-family:Mulish,sans-serif}button:focus,input:focus,select:focus,textarea:focus{border:none;outline:0}button::-webkit-input-placeholder,input::-webkit-input-placeholder,select::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#95a0ab}button::-moz-placeholder,input::-moz-placeholder,select::-moz-placeholder,textarea::-moz-placeholder{color:#95a0ab}button:-ms-input-placeholder,input:-ms-input-placeholder,select:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#95a0ab}button::-ms-input-placeholder,input::-ms-input-placeholder,select::-ms-input-placeholder,textarea::-ms-input-placeholder{color:#95a0ab}button.placeholder,button::placeholder,input.placeholder,input::placeholder,select.placeholder,select::placeholder,textarea.placeholder,textarea::placeholder{color:#95a0ab}footer,header,section{padding-left:25px;padding-right:25px}h1,h2,h3,h4,h5,h6{font-family:Merriweather,serif;font-weight:700;line-height:1.2}h2{font-size:50px}h3{font-size:24px;line-height:1.55;font-weight:700}h4{font-size:20px;line-height:1.5}.overflow{position:relative;width:100%;display:block;overflow-x:hidden}.cont{max-width:1140px;margin:0 auto}.cont-lg{max-width:1275px}.cont-xlg{max-width:1390px}.cont-md{max-width:890px}.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row nowrap;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.flex.col3{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.flex.col3>*{width:calc(33% - 21px)}.flex.col2{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}.flex.col2>*{width:calc(50% - 12px)}.flex.flex-fs{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.flex.flex-sb{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.nav{position:fixed;z-index:20;top:0;left:0;width:100%;height:100%;background:#f4f7fb;opacity:0;visibility:hidden;-webkit-transition:opacity .2s,visibility .2s;-o-transition:opacity .2s,visibility .2s;transition:opacity .2s,visibility .2s}section{padding-top:80px}.header{position:relative;padding:9px 25px;background:#fff;border-bottom:1px solid #eee;z-index:3}.header .cont{min-height:52px}.header .flex{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.header__menu{cursor:pointer;padding:5px 0;font-size:14px;text-transform:uppercase;margin-right:30px}.header__menu svg{width:18px;margin-right:15px}.header__logo{position:absolute;top:50%;left:50%;z-index:2;-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0);-webkit-transition:opacity .25s,visibility .25s;-o-transition:opacity .25s,visibility .25s;transition:opacity .25s,visibility .25s}.header__logo img{width:90px;height:50px;-o-object-fit:contain;object-fit:contain}.header__right{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;position:relative;z-index:1}.header__search{-webkit-transition:flex-grow .3s,-webkit-box-flex .3s,-webkit-flex-grow .3s;transition:flex-grow .3s,-webkit-box-flex .3s,-webkit-flex-grow .3s;-o-transition:flex-grow .3s;transition:flex-grow .3s;transition:flex-grow .3s,-webkit-box-flex .3s,-webkit-flex-grow .3s,-ms-flex-positive .3s;cursor:pointer}.header__search form{cursor:pointer;width:100%;border:1px solid transparent;padding-left:22px;border-radius:24px;-webkit-transition:border-color .3s,background .3s;-o-transition:border-color .3s,background .3s;transition:border-color .3s,background .3s;position:relative}.header__search input{width:95px;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-size:14px;height:50px;opacity:0;-webkit-transition:opacity .3s,visibility .3s;-o-transition:opacity .3s,visibility .3s;transition:opacity .3s,visibility .3s}.header__search button{cursor:pointer;height:50px;-webkit-transition:padding .3s;-o-transition:padding .3s;transition:padding .3s}.header__search button svg{width:17px}.header__search *{pointer-events:none}.header__search span{position:absolute;left:22px;top:0;line-height:50px;white-space:nowrap;font-size:14px;color:#95a0ab;cursor:pointer;margin-right:13px;-webkit-transition:opacity .3s,visibility .3s;-o-transition:opacity .3s,visibility .3s;transition:opacity .3s,visibility .3s}.header__lang{margin-left:20px}.header__lang .lang-select button{color:#95a0ab;font-size:14px;cursor:pointer;padding:5px 20px 5px 0;background:url(../img/select.svg) no-repeat right center/10px auto}.header__lang .lang-select ul{left:auto;right:0;min-width:auto;width:auto}.header__lang .lang-select li{font-size:13px;padding:8px 20px}.header__lang .lang-select li.active{background:#f1f1f1;color:#000}.hero-page{background:url(../img/page-bg.svg) no-repeat center center/cover;min-height:220px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding-top:40px;padding-bottom:40px}.hero-page__title{width:100%;color:#fff;text-align:center}.hero-page__title h1{font-size:40px;color:#fff}.hero-faq{padding-bottom:200px;z-index:1}.hero-search{padding-bottom:40px}.hero-contact{padding-top:55px;padding-bottom:270px;z-index:1}.hero>div{z-index:3}.hero__label{color:#fff;font-size:16px;font-weight:700;padding:5px 20px;border:2px solid #fff;text-transform:uppercase;line-height:1.4;margin:0 auto 13px;display:inline-block}.page-nav{padding-top:9px;padding-bottom:9px;border-bottom:1px solid #eee}.page-nav .flex{-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}.page-nav a,.page-nav span{font-size:14px;color:#b7bfc9;font-weight:700}.page-nav a::after,.page-nav span::after{content:'/';margin:0 10px}.page-nav a:first-child::after,.page-nav span:first-child::after{content:':';margin-left:3px}.page-nav a:last-child,.page-nav span:last-child{font-weight:400}.page-nav a:last-child::after,.page-nav span:last-child::after{display:none}.c-select{position:relative;z-index:10}.c-select:not(.lang-select) button{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:1px solid #eeeeeb;background:#f7f7f7;font-size:16px;letter-spacing:.44px;padding:14px 22px;border-radius:24px;min-width:250px}.c-select:not(.lang-select) button svg{width:10px;margin-left:15px}.c-select:not(.lang-select) button:focus{border-color:#00b0af;background:#fff}.c-select button{cursor:pointer;-webkit-transition:.3s;-o-transition:.3s;transition:.3s;color:#3d4854}.c-select button:focus+ul{opacity:1;visibility:visible;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.c-select ul{opacity:0;visibility:hidden;position:absolute}.c-select li{font-size:16px;line-height:24px;padding:11px 12px 13px;color:#000;cursor:pointer;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.grid{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:32px}.grid.col2{grid-template-columns:repeat(2,1fr)}.tab{opacity:0;visibility:hidden}.dropdown-trigger{cursor:pointer}.dropdown-trigger svg{cursor:pointer;-webkit-transition:.4s;-o-transition:.4s;transition:.4s;width:36px}.dropdown-trigger svg rect{-webkit-transition:.4s;-o-transition:.4s;transition:.4s}.dropdown-content{height:0;opacity:0;visibility:hidden;-webkit-transform:scaleY(0);-ms-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:center top;-ms-transform-origin:center top;transform-origin:center top;font-size:17px;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.boxes{-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}.boxes-box{background:#fff;border-radius:12px;-webkit-box-shadow:0 0 77px 0 rgba(0,0,0,.06);box-shadow:0 0 77px 0 rgba(0,0,0,.06);padding:30px 25px 20px;overflow:hidden}.boxes-link{position:relative;-webkit-transition:.3s;-o-transition:.3s;transition:.3s}.boxes-link:hover{-webkit-transition:.3s;-o-transition:.3s;transition:.3s;-webkit-transform:translate3d(0,-10px,0)!important;transform:translate3d(0,-10px,0)!important}.boxes-link:hover .btn-arr::after{-webkit-transform:translate3d(5px,0,0);transform:translate3d(5px,0,0)}.boxes-link a{position:absolute;width:100%;height:100%;top:0;left:0;z-index:3}.lazyload,.lazyloading{opacity:0}.lazyloaded{opacity:1;transition:opacity .3s}
+	</style>
+	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
+	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
+	<!-- CRITICAL CSS  -->
+
+</head>
+<body>
+	<div class="overflow">
+
+		<header class="header animated animated--static">
+			<div class="cont cont-xlg flex">
+				<div class="header__menu flex">
+					<svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H18V2.5H0V0.5ZM0 6.5H12.6V8.5H0V6.5ZM9 12.5H0V14.5H9V12.5Z" fill="#3D4854"/>
+					</svg>
+					<span>Menu</span>
+				</div>
+				<a href="/" class="header__logo">
+					<img class="lazyload" data-src="img/logo.png">
+				</a>
+				<div class="header__right flex">
+					<div class="header__search flex">
+						<form class="flex" action="">
+							<input type="search" placeholder="Recherche …">
+							<span>Recherche …</span>
+							<button>
+								<svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M16.7409 16.8941L12.551 12.4401C13.6287 11.13 14.219 9.48223 14.219 7.76691C14.219 3.76002 11.0299 0.5 7.10855 0.5C3.18915 0.5 0 3.76002 0 7.76691C0 11.775 3.18915 15.035 7.10855 15.035C8.58026 15.035 9.98396 14.5816 11.1821 13.719L15.4052 18.2085C15.5818 18.3969 15.8186 18.5 16.074 18.5C16.314 18.5 16.5415 18.406 16.7154 18.235C17.0852 17.8724 17.0956 17.2721 16.7409 16.8941ZM7.10855 2.39621C10.0064 2.39621 12.364 4.80627 12.364 7.76691C12.364 10.7291 10.0064 13.1388 7.10855 13.1388C4.21227 13.1388 1.85499 10.7291 1.85499 7.76691C1.85499 4.80627 4.21227 2.39621 7.10855 2.39621Z" fill="#95A0AB"/>
+								</svg>
+							</button>
+						</form>
+						
+					</div>
+					<div class="header__lang">
+						<div class="c-select lang-select">
+							<input id="lang-select" type="text" hidden="" value="FR">
+							<button>
+								<span class="c-select__value">FR</span>
+							</button>
+							<ul>
+								<li class="active">FR</li>
+								<li>EN</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="hero hero-page">
+			<div class="hero-page__title">
+				<span class="hero__label">
+					TITLE
+				</span>
+				<h1>
+					Second title
+				</h1>
+			</div>
+		</section>
+
+		<section class="title">
+			<h3>Cards exemples</h3>
+		</section>
+		
+
+		<section>
+			<ul class="cont grid boxes faq__tabs">
+				<li class="boxes-box">
+					<img data-src="img/faq/1.svg" class="icon-xlg lazyload" alt="">
+					<h4>Aide aux investisseurs</h4>
+					<span>42 Questions</span>
+				</li>
+				<li class="boxes-box">
+					<img data-src="img/faq/2.svg" class="icon-xlg lazyload" alt="">
+					<h4>Formalités de l'entreprise</h4>
+					<span>12 Questions</span>
+				</li>
+				<li class="boxes-box">
+					<img data-src="img/faq/3.svg" class="icon-xlg lazyload" alt="">
+					<h4>L'entreprise au quotidien</h4>
+					<span>42 Questions</span>
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<div class="cont">
+				<ul class="news__list boxes grid">
+					<li class="boxes-link boxes-box">
+						<a href=""></a>
+						<img  class="lazyload" data-src="img/act1.jpg" alt="">
+						<span>Publié il y a 31 minutes </span>
+						<p>Organisation d’un séminaire de sensibilisation et d’un cycle d’accompagnement sur la transformation digitale en faveur des administrations marocaines</p>
+					</li>
+					<li class="boxes-link boxes-box">
+						<a href=""></a>
+						<img  class="lazyload" data-src="img/act2.jpg" alt="">
+						<span>Publié il y a 31 minutes </span>
+						<p>Organisation d’un séminaire de sensibilisation et d’un cycle d’accompagnement sur la transformation digitale en faveur des  </p>
+					</li>
+					<li class="boxes-link boxes-box">
+						<a href=""></a>
+						<img  class="lazyload" data-src="img/act1.jpg" alt="">
+						<span>Publié il y a 31 minutes </span>
+						<p>Organisation d’un séminaire de sensibilisation et d’un cycle d’accompagnement sur la transformation digitale en faveur des administrations marocaines</p>
+					</li>
+					<li class="boxes-link boxes-box boxes-event">
+						<a href=""></a>
+						<div class="img">
+							<img  class="lazyload" data-src="img/act1.jpg" alt="">
+							<div class="img-label">
+								<span class="day">23</span>
+								<span>Dec</span>
+							</div>
+						</div>
+						
+						<span>10:00 AM - 2:00 PM</span>
+						<p>Relance de l’appel a partenariatpour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat…</p>
+						<span class="btn-arr">Learn more</span>
+					</li>
+					<li class="boxes-link boxes-box boxes-event">
+						<a href=""></a>
+						<div class="img">
+							<img  class="lazyload" data-src="img/act1.jpg" alt="">
+							<div class="img-label">
+								<span class="day">23</span>
+								<span>Dec</span>
+							</div>
+						</div>
+						
+						<span>10:00 AM - 2:00 PM</span>
+						<p>Relance de l’appel a partenariatpour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat…</p>
+						<span class="btn-arr">Learn more</span>
+					</li>
+					<li class="boxes-link boxes-box boxes-event">
+						<a href=""></a>
+						<div class="img">
+							<img  class="lazyload" data-src="img/act1.jpg" alt="">
+							<div class="img-label">
+								<span class="day">23</span>
+								<span>Dec</span>
+							</div>
+						</div>
+						
+						<span>10:00 AM - 2:00 PM</span>
+						<p>Relance de l’appel a partenariatpour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat…</p>
+						<span class="btn-arr">Learn more</span>
+					</li>
+			    </ul>
+			</div>
+		</section>
+
+
+		<section class="title">
+			<h3>Typography</h3>
+		</section>
+
+		<section>
+			<div class="cont cont-md">
+				<h2 class="h1">Big section divider.</h2>
+				<h2 class="h2">Title of section.</h2>
+				<h3 class="h3">Medium title</h3>
+				<h3>Small title</h3>
+			</div>
+		</section>
+
+		<section class="title">
+			<h3>Content bloc</h3>
+		</section>
+		
+
+		<section class="news-content">
+			<div class="cont cont-md">
+				<div class="news-content__wrap">
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, temporibus, recusandae. Reiciendis, architecto quo doloremque quisquam cupiditate harum porro atque aut quaerat natus dolor a unde debitis repellat nobis nostrum!
+					<br>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tenetur, molestias ea sunt totam provident cupiditate sapiente consequatur mollitia, asperiores corporis unde consequuntur possimus nemo facilis quod, hic ipsum? Ut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium libero quis magni, fuga praesentium voluptatum ut quam animi, totam officia, quas omnis ex sequi esse inventore saepe non ipsam. Nostrum?
+					</p>
+
+					<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Perspiciatis aliquam possimus error nihil quia iusto, facere et libero debitis, deserunt assumenda, temporibus vero, placeat dolore perferendis suscipit voluptatum labore vel.</p>
+
+					<ul class="bullet-list">
+						<li>Stumptown shabby chic pour-over roof party.</li>
+						<li>DIY normcore. Actually artisan organic occupy.</li>
+						<li>Wes Anderson ugh whatever pour-over.</li>
+						<li>Gastropub selvage. </li>
+						<li>Chillwave craft beer tote bag stumptown quinoa hashtag. </li>
+					</ul>
+					<ol class="ordered-list">
+						<li>Stumptown shabby chic pour-over roof party.</li>
+						<li>DIY normcore. Actually artisan organic occupy.</li>
+						<li>Wes Anderson ugh whatever pour-over.</li>
+						<li>Gastropub selvage. </li>
+						<li>Chillwave craft beer tote bag stumptown quinoa hashtag. </li>
+					</ol>
+
+					<div class="link flex">
+						<span>Dropbox</span>
+						<a href="https://www.dropbox.com/request/X0S1FLM8Y5F1c5tgXSUG">https://www.dropbox.com/request/X0S1FLM8Y5F1c5tgXSUG</a>
+					</div>
+
+					
+				</div>
+				
+				<img class="lazyload" data-src="img/news-img.jpg" alt="">
+
+				<div class="news-content__wrap">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero. Integer dapibus lectus eu mi placerat rutrum. Donec at lectus mauris. Quisque dictum, odio nec bibendum suscipit, tellus augue scelerisque sapien, quis bibendum erat sapien vel mi. Vivamus massa felis, facilisis ut justo in, condimentum accumsan lacus. Phasellus volutpat turpis nisi.</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit iusto exercitationem rerum hic, nemo sunt voluptatum placeat expedita officia alias autem porro, earum aspernatur illum facilis voluptatem laudantium sint non!</p>
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="banner banner--news">
+			<div class="cont flex">
+				<img data-src="img/news-banner.jpg" class="lazyload" alt="">
+				<div class="banner--news__content">
+					<span>Sujet de la semaine</span>
+					<h3>Ceci est un titre qui pourra s’étaler sur deux lignes</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<a class="btn" href="">Call to action</a>
+				</div>
+			</div>
+
+			<div class="news banner--news-mob">
+				<h2>Article lié</h2>
+				<ul class="news__list boxes grid">
+					<li class="boxes-box">
+						<a href=""></a>
+						<img data-src="img/news-banner.jpg" class="lazyload" alt="">
+						<span>Publié il y a 31 minutes </span>
+						<p>Relance de l’appel a partenariatpour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat … </p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="banner banner--news banner--no-bg">
+			<div class="cont flex">
+				<img data-src="img/news-banner.jpg" class="lazyload" alt="">
+				<div class="banner--news__content">
+					<h3>Ceci est un titre qui pourra s’étaler sur deux lignes</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<a class="btn" href="">Call to action</a>
+				</div>
+			</div>
+
+			<div class="news banner--news-mob">
+				<h2>Article lié</h2>
+				<ul class="news__list boxes grid">
+					<li class="boxes-box">
+						<a href=""></a>
+						<img data-src="img/news-banner.jpg" class="lazyload" alt="">
+						<span>Publié il y a 31 minutes </span>
+						<p>Relance de l’appel a partenariatpour l’amenagement, le developpement et la gestionde deux parcs Industriels dans la region casablanca-settat … </p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="banner--col2 banner--no-bg">
+			<div class="cont flex col2">
+				<div class="banner--news__content">
+					<img data-src="img/news-banner.jpg" class="lazyload" alt="">
+					<h3>Ceci est un titre qui pourra s’étaler sur deux lignes</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<a class="btn" href="">Call to action</a>
+				</div>
+				<div class="banner--news__content">
+					<img data-src="img/news-banner.jpg" class="lazyload" alt="">
+					<h3>Ceci est un titre qui pourra s’étaler sur deux lignes</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in metus vel elit commodo iaculis id sit amet nulla. Nam quis molestie eros. Integer sed quam lorem. Etiam sit amet diam arcu. In diam lacus, commodo in nisl ac, imperdiet dictum libero.</p>
+					<a class="btn" href="">Call to action</a>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="title">
+			<h3>Quote</h3>
+		</section>
+		
+
+		<section class="quote--alt">
+			<div class="cont">
+				<svg width="79" height="60" viewBox="0 0 79 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M20.3975 60C32.1464 60 39 51.8203 39 41.6774C39 32.5161 33.6151 25.3179 24.477 25.3179C20.7238 25.3179 17.2971 26.6266 15.0126 28.917C14.0335 30.2257 13.0544 29.5713 13.3808 28.099C14.6862 18.1197 20.887 12.8847 30.1883 10.1035C32.636 9.28557 33.4519 7.64962 32.636 5.35929L31.6569 2.74177C30.841 0.61504 29.3724 -0.36653 27.0879 0.124255C12.0753 3.72334 0 16.4837 0 35.4608C0 50.3479 7.50628 60 20.3975 60Z" fill="#00B0AF"/>
+				<path d="M63.2594 51C73.2008 51 79 44.0472 79 35.4258C79 27.6386 74.4435 21.5202 66.7113 21.5202C63.5356 21.5202 60.636 22.6326 58.7029 24.5794C57.8745 25.6919 57.046 25.1356 57.3222 23.8841C58.4268 15.4017 63.6736 10.952 71.5439 8.58801C73.6151 7.89274 74.3054 6.50218 73.6151 4.5554L72.7866 2.33051C72.0962 0.522784 70.8536 -0.311551 68.9205 0.105616C56.2176 3.16484 46 14.0112 46 30.1416C46 42.7957 52.3515 51 63.2594 51Z" fill="#00B0AF"/>
+				</svg>
+				<h3>Tousled food truck polaroid, salvia bespoke small batch Pinterest Marfa.</h3>
+				<span>auteur : Said mertah</span>
+			</div>
+		</section>
+
+		<section class="quote">
+			<div class="cont">
+				<svg width="67" height="48" viewBox="0 0 67 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M16.2134 48C25.5523 48 31 41.4562 31 33.3419C31 26.0128 26.7197 20.2543 19.4561 20.2543C16.4728 20.2543 13.749 21.3013 11.9331 23.1336C11.1548 24.1806 10.3766 23.6571 10.636 22.4792C11.6736 14.4958 16.6025 10.3077 23.9958 8.08284C25.9414 7.42846 26.59 6.1197 25.9414 4.28743L25.1632 2.19342C24.5146 0.492032 23.3473 -0.293224 21.5314 0.0994037C9.59833 2.97867 0 13.187 0 28.3686C0 40.2783 5.96653 48 16.2134 48Z" fill="white"/>
+				<path d="M52.2134 48C61.5523 48 67 41.4562 67 33.3419C67 26.0128 62.7197 20.2543 55.4561 20.2543C52.4728 20.2543 49.749 21.3013 47.9331 23.1336C47.1548 24.1806 46.3766 23.6571 46.636 22.4792C47.6736 14.4958 52.6025 10.3077 59.9958 8.08284C61.9414 7.42846 62.59 6.1197 61.9414 4.28743L61.1632 2.19342C60.5146 0.492032 59.3473 -0.293224 57.5314 0.0994037C45.5983 2.97867 36 13.187 36 28.3686C36 40.2783 41.9665 48 52.2134 48Z" fill="white"/>
+				</svg>
+				<h3>The greatest glory in living lies not in never falling, but in rising every time we fall.</h3>
+				<span>@John doe</span>
+			</div>
+		</section>
+
+
+		<section class="title">
+			<h3>Table</h3>
+		</section>
+
+		<section class="table-section">
+			<div class="cont cont-md">
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>LABEL 2</th>
+							<th>LABEL 3</th>
+							<th>LABEL 4</th>
+							<th>LABEL 5</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2134</td>
+							<td>Vivamus suscipit et purus.</td>
+							<td>OUI</td>
+							<td>Vivamus suscipit.</td>
+							<td>Vivamus suscipit et purus.</td>
+						</tr>
+						<tr>
+							<td>2134</td>
+							<td>Vivamus suscipit et purus.</td>
+							<td>OUI</td>
+							<td>Vivamus suscipit.</td>
+							<td>Vivamus suscipit et purus.</td>
+						</tr>
+						<tr>
+							<td>2134</td>
+							<td>Vivamus suscipit et purus.</td>
+							<td>OUI</td>
+							<td>Vivamus suscipit.</td>
+							<td>Vivamus suscipit et purus.</td>
+						</tr>
+						<tr>
+							<td>2134</td>
+							<td>Vivamus suscipit et purus.</td>
+							<td>OUI</td>
+							<td>Vivamus suscipit.</td>
+							<td>Vivamus suscipit et purus.</td>
+						</tr>
+						<tr>
+							<td>2134</td>
+							<td>Vivamus suscipit et purus.</td>
+							<td>OUI</td>
+							<td>Vivamus suscipit.</td>
+							<td>Vivamus suscipit et purus.</td>
+						</tr>
+						<tr>
+							<td>2134</td>
+							<td>Vivamus suscipit et purus.</td>
+							<td>OUI</td>
+							<td>Vivamus suscipit.</td>
+							<td>Vivamus suscipit et purus.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+
+		<section class="title">
+			<h3>Pagination</h3>
+		</section>
+		
+		<section>
+			<div class="cont">
+				<div class="search-block__pagination flex">
+					<a href="" class="active">1</a>
+					<a href="">2</a>
+					<a href="">3</a>
+					<a href="">4</a>
+					<a href="">5</a>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="title">
+			<h3>Bloc auto promo</h3>
+		</section>
+
+
+		<section class="wizard wizard--faq">
+			<div class="cont flex">
+				<div class="wizard__text">
+					<h2>Vous n'avez pas trouver votre réponse? posez nous votre question !</h2>
+					<a href="" class="btn">Envoyer une question</a>
+				</div>
+				<div class="wizard__img">
+					<img  class="lazyload" data-src="img/faq/illustr.svg" alt="">
+				</div>
+			</div>
+		</section>
+		
+
+		<section class="title">
+			<h3>Accordéan</h3>
+		</section>
+
+		<section>
+			<div class="cont cont-md">
+				<div class="faq__item boxes-box">
+					<h4 class="dropdown-trigger flex">Quels sont les documents tirés de la comptabilité ?
+						<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="6.5" width="15" height="3" fill="#3D4854"/>
+						<rect x="9" y="0.5" width="15" height="3" transform="rotate(90 9 0.5)" fill="#3D4854"/>
+						</svg>
+
+					</h4>
+					<div class="dropdown-content">
+						<p>La Balance : Etat récapitulatif faisant apparaître , pour chaque compte, le solde débiteur ou le solde créditeur au début de l’exercice, le cumul des mouvements débiteurs et le cumul des mouvements créditeurs depuis le début de l’exercice, le solde débiteur et le solde créditeur constitués en fin de période. La balance constitue un instrument indispensable du contrôle comptable.</p>
+					</div>
+				</div>
+				<div class="faq__item boxes-box">
+					<h4 class="dropdown-trigger flex">Quels sont les documents tirés de la comptabilité ?
+						<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="6.5" width="15" height="3" fill="#3D4854"/>
+						<rect x="9" y="0.5" width="15" height="3" transform="rotate(90 9 0.5)" fill="#3D4854"/>
+						</svg>
+
+					</h4>
+					<div class="dropdown-content">
+						<p>La Balance : Etat récapitulatif faisant apparaître , pour chaque compte, le solde débiteur ou le solde créditeur au début de l’exercice, le cumul des mouvements débiteurs et le cumul des mouvements créditeurs depuis le début de l’exercice, le solde débiteur et le solde créditeur constitués en fin de période. La balance constitue un instrument indispensable du contrôle comptable.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="title" style="margin-bottom: 50px;">
+			<h3>Carrousel image</h3>
+		</section>
+		
+		<section class="gallery">
+			<div class="gallery-wrap  animated animated--bottom">
+				<div><img class="lazyload"  data-src="img/gallery/1.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/2.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/3.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/4.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/6.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/7.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/8.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/9.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/2.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/3.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/4.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/6.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/7.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/8.jpg"></div>
+				<div><img class="lazyload"  data-src="img/gallery/9.jpg"></div>
+			</div>
+		</section>
+		
+
+		<footer class="footer">
+			<div class="cont">
+				<div class="footer__flex flex">
+					<div>
+						<p>CRI<br> Casablanca<br> Settat</p>
+						<p>COPYRIGHT 2021</p>
+						<div class="footer__social flex">
+							<a href="">
+								<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g opacity="0.9">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.000976562 14.742C0.000976562 7.05943 6.24364 0.809082 13.9168 0.809082C21.5905 0.809082 27.8326 7.05943 27.8326 14.742C27.8326 22.424 21.5894 28.6749 13.9168 28.6749C6.24364 28.6749 0.000976562 22.424 0.000976562 14.742ZM15.1135 15.2325H17.3775L17.6707 12.3776H15.1147V10.6995C15.1147 10.0687 15.5322 9.92167 15.826 9.92167H17.6303V7.14979L15.1444 7.14024C12.3865 7.14024 11.7587 9.20723 11.7587 10.53V12.377H10.164V15.2325H11.7587V23.3119H15.1135V15.2325Z" fill="#00AFA3"/>
+								</g>
+								</svg>
+
+							</a>
+							<a href="">
+								<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.954 28.6706C21.6382 28.6706 27.8676 22.4336 27.8676 14.7398C27.8676 7.04609 21.6382 0.809082 13.954 0.809082C6.26966 0.809082 0.0403137 7.04609 0.0403137 14.7398C0.0403137 22.4336 6.26966 28.6706 13.954 28.6706ZM20.5663 11.3444C21.2389 11.2645 21.8803 11.0854 22.4765 10.8207C22.0308 11.4885 21.4671 12.0748 20.8168 12.5441C20.8232 12.6867 20.8264 12.8304 20.8264 12.9747C20.8264 17.3754 17.4811 22.4492 11.3638 22.4492C9.48581 22.4492 7.73724 21.8982 6.26621 20.953C6.52589 20.9841 6.79127 20.9997 7.05914 20.9997C8.61772 20.9997 10.0515 20.4675 11.19 19.5743C9.73432 19.5472 8.50636 18.5845 8.08323 17.2619C8.28611 17.3006 8.49421 17.3212 8.70899 17.3212C9.01183 17.3212 9.30624 17.2807 9.58501 17.2043C8.06388 16.8986 6.91702 15.5529 6.91702 13.9395C6.91702 13.9256 6.91702 13.9114 6.91727 13.8973C7.36545 14.1473 7.87861 14.2971 8.42352 14.3142C7.53163 13.7172 6.94406 12.6976 6.94406 11.5426C6.94406 10.9325 7.10825 10.3601 7.39447 9.86837C9.0349 11.8836 11.4856 13.2091 14.2496 13.348C14.1926 13.1041 14.163 12.8501 14.163 12.5891C14.163 10.7504 15.6524 9.25922 17.4888 9.25922C18.4459 9.25922 19.3103 9.6635 19.9169 10.3104C20.6742 10.1612 21.3862 9.88426 22.0289 9.50258C21.7801 10.2806 21.253 10.9325 20.5663 11.3444Z" fill="#00AFA3"/>
+								</svg>
+
+							</a>
+							<a href="">
+								<svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M28.1018 14.2981C28.1018 21.7479 21.8287 27.7871 14.0905 27.7871C6.35225 27.7871 0.0791626 21.7479 0.0791626 14.2981C0.0791626 6.84832 6.35225 0.809082 14.0905 0.809082C21.8287 0.809082 28.1018 6.84832 28.1018 14.2981ZM21.4227 11.6951C21.4227 10.5643 20.4711 9.64776 19.2972 9.64776H9.32513C8.15144 9.64776 7.20007 10.5645 7.20007 11.6951V17.185C7.20007 18.3158 8.15162 19.2324 9.32513 19.2324H19.297C20.4712 19.2324 21.4225 18.3156 21.4225 17.185V11.6951H21.4227ZM12.8887 11.5997V16.7561L16.9505 14.178L12.8887 11.5997Z" fill="#00AFA3"/>
+								</svg>
+
+							</a>
+							<a href="">
+								<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.118225 14.752C0.118225 7.02115 6.3934 0.751953 14.1316 0.751953C21.8697 0.751953 28.1449 7.02115 28.1449 14.752C28.1449 22.4828 21.8697 28.752 14.1316 28.752C6.3934 28.752 0.118225 22.4828 0.118225 14.752ZM6.64657 21.916H10.0595V11.6581H6.64657V21.916ZM8.35312 10.2573H8.33088C7.18562 10.2573 6.44493 9.4697 6.44493 8.48532C6.44493 7.47873 7.20829 6.71289 8.37578 6.71289C9.54328 6.71289 10.2617 7.47873 10.284 8.48532C10.284 9.4697 9.54328 10.2573 8.35312 10.2573ZM18.9531 21.916H22.3656V16.0341C22.3656 12.8834 20.6819 11.4173 18.4365 11.4173C16.6259 11.4173 15.8144 12.4115 15.3609 13.1105V11.6581H11.9482C11.9929 12.6204 11.9482 21.916 11.9482 21.916H15.3609V16.1875C15.3609 15.881 15.3829 15.5746 15.4731 15.3554C15.7199 14.743 16.2814 14.1085 17.2241 14.1085C18.459 14.1085 18.9531 15.0491 18.9531 16.4283V21.916Z" fill="#00AFA3"/>
+								</svg>
+
+							</a>
+						</div>
+					</div>
+					<div>
+						<a href="">PROJETS </a>
+						<a href="">ACTUALITÉS</a>
+						<a href="">DOMAINES D’ACTIVITÉS</a>
+						<a href="">PUBLICATIONS</a>
+						<a href="">COOPÉRATION & PARTENARIATS</a>
+						<a href="">ESPACE PRESSE</a>
+					</div>
+					<div>
+						<a href="">NOUS REJOINDRE</a>
+						<a href="">APPELS D’OFFRES</a>
+						<a href="">NOUS CONTACTER</a>
+						<a href="">AGENDA</a>
+					</div>
+					<div>
+						<a href="">MENTIONS LÉGALES</a>
+						<a href="">GLOSSAIRE</a>
+						<a href="">FAQ</a>
+						<a href="">PLAN DU SITE</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p>Conformément à la loi 09-08, vous disposez d’un droit d’accés, de rectification et d’opposition au traitement de vos données personnelles, ce traitement a éré déclaré auprès de la CNDP sous le N°</p>
+				</div>
+			</div>
+		</footer>
+		          
+	</div>
+
+	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+
+
+	<script defer src="js/common.js"></script>
+
+</body>
+</html>
