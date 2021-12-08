@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title></title>
+	<meta name="description" content="">
+	
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="icon" href="" type="image/x-icon">
+
+	<!-- PRELOAD FONTS -->
+	<link rel="preload" as="font" href="fonts/DMSans-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+
+	<!-- CRITICAL CSS -->
+	<style>
+		
+	</style>
+	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
+	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
+	<!-- SCRITICAL CSS  -->
+</head>
+<body>
+	<div class="overflow">
+		<div class="header">
+			<div class="announcement"></div>
+			<div class="header__main"></div>
+		</div>
+
+        <section class="head-page head-product head-nft">
+			<div class="s-width flex">
+				<div class="half head__text">
+					<span>EFFECTIVE, CONVENIENT, AND DELICIOUS</span>
+					<h2>Liposomal<br> <strong>Vitamin C</strong></h2>
+					<a class="btn btn-arr">Shop now</a>
+				</div>
+
+				<div class="half head__img">
+					<img src="img/nft/hero.jpg" alt="">
+				</div>
+			</div>
+		</section>
+
+        <section class="nft-team">
+            <div class="s-width flex">
+                <div>
+                    <span>{{ section.settings.pre_title }}</span>
+                    <h2>
+                        {{ section.settings.title }}
+                        <span>{{ section.settings.title_acc }}</span>
+                    </h2>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h5>{{ block.settings.title }}</h5>
+                    <p>{{ block.settings.text }}</p>
+                    <a class="flex" target="_blank" href="{{ block.settings.twitter_link }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19"><path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"></path></svg>
+                        {{ block.settings.twitter_link }}
+                    </a>
+                    <a class="flex" target="_blank" href="{{ block.settings.in_link }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19"><path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"></path></svg>
+                        {{ block.settings.in_link }}
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="nft-goals">
+            <div class="s-width flex">
+                <div>
+                    <span>{{ section.settings.pre_title }}</span>
+                    <h2>
+                        {{ section.settings.title }}
+                        <span>{{ section.settings.title_acc }}</span>
+                    </h2>
+                </div>
+                <div class="nft-goals__chart">
+                  
+                        <div class="launch flex">
+                            <span>Launch</span>
+                            <span class="check">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13.414" height="10.122" viewBox="0 0 13.414 10.122">
+                                    <path id="Shape_14_copy_2" data-name="Shape 14 copy 2" d="M806,8712l4,4,8-8" transform="translate(-805.293 -8707.291)" fill="none" stroke="#fff" stroke-width="2"/>
+                                  </svg>
+                                  
+                            </span>
+                        </div>
+                        <div class="launch funded flex">
+                            <span>Funded</span>
+                            <span class="check">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13.414" height="10.122" viewBox="0 0 13.414 10.122">
+                                    <path id="Shape_14_copy_2" data-name="Shape 14 copy 2" d="M806,8712l4,4,8-8" transform="translate(-805.293 -8707.291)" fill="none" stroke="#fff" stroke-width="2"/>
+                                  </svg>
+                                  
+                            </span>
+                        </div>
+                        <div>
+                            <div class="flex chart-cont">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="10, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                    </svg>
+                                    <div class="chart-text">
+                                        <span>10<p>%</p></span>
+                                        <p>sold</p>
+                                    </div>
+                                  </div>
+                                  <p>Each NFT holder will receive a physical product from our trial production batch. The owners will hold AMA session and meet all the participants for supporting us.</p>
+                            </div>
+        
+                            <div class="flex chart-cont">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="50, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                    </svg>
+                                    <div class="chart-text">
+                                        <span>50<p>%</p></span>
+                                        <p>sold</p>
+                                    </div>
+                                  </div>
+                                  <p>Each NFT holder will receive a physical product from our trial production batch. The owners will hold AMA session and meet all the participants for supporting us.</p>
+                            </div>
+        
+                            <div class="flex chart-cont">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="100, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                    </svg>
+                                    <div class="chart-text">
+                                        <span>100<p>%</p></span>
+                                        <p>sold</p>
+                                    </div>
+                                  </div>
+                                  <p>Each NFT holder will receive a physical product from our trial production batch. The owners will hold AMA session and meet all the participants for supporting us.</p>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+        </section>
+
+
+        <section class="nft-roadmap">
+            <div class="s-width">
+                <div class="nft-roadmap__phase">
+                    <h4>PHASE I</h4>
+                    <div class="nft-roadmap__flex">
+                        <div>
+                            <h5>2021 Q1-Q3</h5>
+                            <div>
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                            <div>
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>2021 Q1-Q3</h5>
+                            <div>
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                            <div>
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nft-roadmap__phase">
+                    <h4>PHASE I</h4>
+                    <div class="nft-roadmap__flex">
+                        <div>
+                            <h5>2021 Q1-Q3</h5>
+                            <div class="nft-roadmap__block">
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                            <div class="nft-roadmap__block">
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>2021 Q1-Q3</h5>
+                            <div class="nft-roadmap__block">
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                            <div class="nft-roadmap__block">
+                                <h6>IDEATION PHASE</h6>
+                                <p>Defined concept</p>
+                                <p>Defined specs of for the consumer product</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+		<section class="product">
+			<div class="s-width flex">
+				<div class="half">
+					<div class="product__card prod-best lg shipping">
+						<h3>FAMILY PACK</h3>
+						<span class="product__card-accent">BUY 5, GET 1 FREE</span>
+						<div class="product__img">
+							<img src="img/family-pack.jpg" alt="">
+						</div>
+						<div class="flex">
+							<div class="product__price">
+								<span>only</span>
+								<span class="val">$29.83</span>
+								<span>each</span>
+								<p>Total:  <b>$178.95</b>  <i>$233.70</i></p>
+							</div>
+							<button class="btn btn-arr">Select package</button>
+						</div>
+						<button class="btn product__mob-btn  btn-arr">Select package</button>
+					</div>
+
+
+					<ul class="product__badges flex">
+						<li><img src="img/free-shipping.svg" alt=""><span>The Only Clinically Proven Liposomal Vitamin C</span></li>
+						<li><img src="img/free-shipping.svg" alt=""><span>The Only Clinically Proven Liposomal Vitamin C</span></li>
+						<li><img src="img/free-shipping.svg" alt=""><span>The Only Clinically Proven Liposomal Vitamin C</span></li>
+					</ul>
+
+				</div>
+				<div class="half">
+					<div class="product__card prod-best prod-popular shipping">
+						<h3>4 MONTHS SUPPLY</h3>
+						<div class="flex">
+							<div class="product__img">
+								<img src="img/family-pack.jpg" alt="">
+							</div>
+							<div class="product__price">
+								<span>only</span>
+								<span class="val">$29.29</span>
+								<span>each</span>
+								<p>Total:  <b>$178.95</b>  <i>$233.70</i></p>
+
+								<button class="btn btn-arr">Select package</button>
+							</div>
+							
+						</div>
+						<button class="btn product__mob-btn btn-arr">Select package</button>
+					</div>
+					<div class="product__card prod-best shipping">
+						<h3>4 MONTHS SUPPLY</h3>
+						<div class="flex">
+							<div class="product__img">
+								<img src="img/family-pack.jpg" alt="">
+							</div>
+							<div class="product__price">
+								<span>only</span>
+								<span class="val">$29.29</span>
+								<span>each</span>
+								<p>Total:  <b>$178.95</b>  <i>$233.70</i></p>
+
+								<button class="btn btn-arr">Select package</button>
+							</div>
+							<button class="btn product__mob-btn btn-arr">Select package</button>
+						</div>
+					</div>
+					<div class="product__card prod-best">
+						<h3>4 MONTHS SUPPLY</h3>
+						<div class="flex">
+							<div class="product__img">
+								<img src="img/family-pack.jpg" alt="">
+							</div>
+							<div class="product__price">
+								<span>only</span>
+								<span class="val">$99.29</span>
+								<span>each</span>
+								<p>Total:  <b>$178.95</b>  <i>$233.70</i></p>
+
+								<button class="btn btn-arr">Select package</button>
+							</div>
+							<button class="btn product__mob-btn btn-arr">Select package</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<footer class="footer">
+			<div class="s-width footer__main">
+				<ul class="flex">
+					<li>
+						<img class="footer__logo" src="img/f-logo@2x.png" alt="">
+						<a href="mailto:info@liposentials.com">info@liposentials.com</a>
+					</li>
+					<li>
+						<h6>Product</h6>
+						<a href="">Technology Behind</a>
+						<a href="">FAQ</a>
+						<a href="">Liposomal Vitamin C</a>
+					</li>
+					<li>
+						<h6>Company</h6>
+						<a href="">About Us</a>
+						<a href="">Contact Us</a>
+						<a href="">Privacy Policy</a>
+						<a href="">Terms of Service</a>
+					</li>
+					<li>
+						<h6>Social</h6>
+						<div class="social flex">
+							<!-- <a href=""><img src="" alt=""></a>
+							<a href=""><img src="" alt=""></a>
+							<a href=""><img src="" alt=""></a> -->
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__disclaimer">
+				<div class="s-width">
+					<p>DISCLAIMER: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. The views and nutritional advice expressed by Liposentials  are not intended for the purpose of providing medical advice. Please always consult your health care provider if you are taking any medications or have any medical condition. Individual results may vary.</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- LAZYLOAD -->
+	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+	<!-- SLIDER -->
+	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+	<!-- VIDEO PLAYER -->
+	<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.min.js"></script>
+
+	<script src="js/common.js"></script>
+
+</body>
+</html>
