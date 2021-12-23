@@ -154,6 +154,27 @@ section, header {
 	.full {
 		width: 100%;
 	}
+	&.nowrap {
+		flex-wrap: nowrap;
+	}
+
+}
+.center {
+	text-align: center;
+}
+.covered {
+	.flex {
+		justify-content: space-evenly;
+	}
+	h5 {
+		margin-bottom: 10px;
+		display: block;
+	}
+	img {
+		width: auto;
+		height: auto;
+		margin: 15px;
+	}
 }
 // .btn {
 // 	color: #fff;

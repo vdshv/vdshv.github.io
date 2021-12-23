@@ -1,0 +1,83 @@
+@font-face { 
+   font-family: 'font';  
+   font-weight: 500;  
+   font-style: normal;
+   unicode-range: U+000-5FF;
+   src: local('font'),
+       url('../fonts/font.woff2') format('woff2'),
+       url('../fonts/font.woff') format('woff'),
+       url('../fonts/font.ttf') format('ttf'),
+       url('../fonts/font.eot') format('eot');
+   font-display: swap;
+}
+
+$default-font: 'font';
+$accent-color: orange;
+$text-color: #333;
+
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+input,
+button,
+select, 
+textarea {
+	-webkit-appearance: none;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	overflow-x: hidden;
+	color: $text-color;
+}
+
+.overflow {
+	position: relative;
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1150px;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.button {
+	color: #fff;
+	padding: 15px 30px;
+	background: #000;
+	font-size: 18px;
+	letter-spacing: 1px;
+	transition: .3s;
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background: #000;
+		color: #fff;
+		transition: .3s;
+	}
+}
+
+
+@import "media";
