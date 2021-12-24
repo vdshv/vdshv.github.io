@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	  	if(autoplay) {
 	  		nextSlide();
 	  	}
-	  }, 6000)
+	  }, 4000)
 	  qs('.swiper-button-prev').onclick = function(evt) {
 	  	autoplay = false;
 	    qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-prev"));
