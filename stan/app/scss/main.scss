@@ -448,6 +448,9 @@
 			&::after {
 				display: none;
 			}
+			&.disabled {
+				pointer-events: none;
+			}
 		}
 		.swiper-button-next {
 			transform: rotate(180deg);

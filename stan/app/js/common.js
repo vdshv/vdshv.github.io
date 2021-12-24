@@ -113,10 +113,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	const animationDelay = 2500;
 
 	let autoplay = true;
+	let arrows = qsa('.swiper-button-next, .swiper-button-prev');
 
 
 	qs('.swiper-button-prev').onclick = function(evt) {
 		autoplay = false;
+		arrows.forEach(arrow => arrow.classList.add("disabled"));
 		qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-prev"));
 
 		setTimeout(function(){
@@ -124,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		}, swiperDelay);
 
 		setTimeout(function(){
-		  qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-prev"));
+			arrows.forEach(arrow => arrow.classList.remove("disabled"));
+		  	qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-prev"));
 		}, animationDelay);
 	};
 
@@ -141,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}, 4000)
 	}
 	function nextSlide () {
+		arrows.forEach(arrow => arrow.classList.add("disabled"));
 		qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-next"));
 
 	    setTimeout(function(){
@@ -148,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	    }, swiperDelay);
 
 	    setTimeout(function(){
+	      arrows.forEach(arrow => arrow.classList.remove("disabled"));
 	      qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-next"));
 	    }, animationDelay);
 	}
