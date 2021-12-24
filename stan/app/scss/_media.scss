@@ -173,15 +173,17 @@
 		&__audit {
 			padding-top: calc(80 / 768 * 100vw);
 			.swiper-button-next, .swiper-button-prev {
-				width: calc(240 / 4096 * 100vw);
-				background-size: auto 50%;
-				height: calc(480 / 4096 * 100vw);
+				width: calc(720 / 4096 * 100vw);
+				background-size: auto 30%;
+				height: calc(720 / 4096 * 100vw);
+				transform: translate3d(0, -50%, 0px);
 			}
 			.swiper-button-next {
-				right: 0;
+				right: calc(200 / 4096 * -100vw);
+				transform: translate3d(0, -50%, 0px) rotate(180deg);
 			}
 			 .swiper-button-prev {
-			 	left: 0;
+			 	left: calc(200 / 4096 * -100vw);
 			 }
 			.team-container {
 				max-width: calc(670 / 768 * 100vw);
