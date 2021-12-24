@@ -114,6 +114,9 @@
 					}
 				}
 				&:nth-child(4) {
+					&::after {
+						display: none;
+					}
 					&.in-view {
 						.round-btn {
 							opacity: 1;
