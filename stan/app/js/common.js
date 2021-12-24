@@ -103,34 +103,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	const auditSwiper = new Swiper(".team__swiper", {
 		slidesPerView: 1,
-		speed: 800,
+		speed: 2200,
 		loop: true,
 		allowTouchMove: false,
 		simulateTouch: false,
 	});
 	 
-	const swiperDelay = 200;
-	const animationDelay = 1000;
+	const swiperDelay = 300;
+	const animationDelay = 2500;
 
 	let autoplay = true;
 
 
 	qs('.swiper-button-prev').onclick = function(evt) {
 		autoplay = false;
-	qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-prev"));
+		qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-prev"));
 
-	setTimeout(function(){
-	  auditSwiper.slidePrev();
-	}, swiperDelay);
+		setTimeout(function(){
+		  auditSwiper.slidePrev();
+		}, swiperDelay);
 
-	setTimeout(function(){
-	  qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-prev"));
-	}, animationDelay);
+		setTimeout(function(){
+		  qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-prev"));
+		}, animationDelay);
 	};
 
 	qs('.swiper-button-next').onclick = function(evt){
 		autoplay = false;
-
 		nextSlide();
 	};
 

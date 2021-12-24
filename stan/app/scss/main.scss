@@ -437,6 +437,9 @@
 		.team-container {
 			max-width: calc(3550 / 4096 * 100vw);
 		}
+		.swiper-wrapper {
+			transition-timing-function: cubic-bezier(0.55, 0, 0.09, 1);
+		}
 		.swiper-button-next, .swiper-button-prev {
 			margin: 0;
 			width: calc(200 / 4096 * 100vw);
@@ -476,14 +479,14 @@
 		}
 		&.swiper-slide-active {
 			transform: scale3d(1,1,1);
-			transition: .6s .4s ease;
+			transition: 1s 1.2s ease-in-out;
 		}
 		&.scale-down-prev {
 			transform: scale3d(.9,.9,1);
 			transition: .3s ease-out;
 			>div {
 				transform: translate3d(100%, 0px, 0px);
-				transition: .8s .2s ease-in;
+				transition: 2.2s .3s cubic-bezier(0.55, 0, 0.09, 1);
 			}
 		}
 		&.scale-down-next {
@@ -491,7 +494,7 @@
 			transition: .3s ease-out;
 			>div {
 				transform: translate3d(14%, 0px, 0px);
-				transition: .6s .2s ease;
+				transition: 2.2s .3s cubic-bezier(0.55, 0, 0.09, 1);
 			}
 		}
 		&-top {
