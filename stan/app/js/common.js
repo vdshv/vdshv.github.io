@@ -1,8 +1,5 @@
 history.scrollRestoration = "manual";
 
-window.onload = () => {
-	document.scrollingElement.scrollTop = 0;
-};
 document.addEventListener("DOMContentLoaded", function() {
 	var isTouchDevice = (('ontouchstart' in window)
 	         || (navigator.MaxTouchPoints > 0)
@@ -13,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	} else {
 	isTouchDevice = false;
 	}
-
 
 	// SCROLLING ANIM
 	let options = {

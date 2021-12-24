@@ -1,12 +1,10 @@
 .lazyload,
 .lazyloading {
-	-webkit-filter: blur(2px);
-		filter: blur(2px);
+	opacity: 0;
 }
 .lazyloaded {
-	-webkit-filter: blur(0);
-	filter: blur(0);
-	transition: filter 150ms, -webkit-filter 150ms;
+	opacity: 1;
+	transition: opacity .3s;
 }
 .ta-center {
 	text-align: center;
@@ -56,6 +54,17 @@
 		padding-bottom: calc(230 / 4096 * 100vw);
 		background: #000;
 		overflow: hidden;
+		.lazyload,
+		.lazyloading {
+			opacity: 1;
+			-webkit-filter: blur(2px);
+				filter: blur(2px);
+		}
+		.lazyloaded {
+			-webkit-filter: blur(0);
+			filter: blur(0);
+			transition: filter 150ms, -webkit-filter 150ms;
+		}
 		&-img {
 			display: block;
 			height: auto;
