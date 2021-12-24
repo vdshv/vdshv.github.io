@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		simulateTouch: false,
 	});
 	 
-	const swiperDelay = 300;
-	const animationDelay = 2500;
+	const swiperDelay = 200;
+	const animationDelay = 2400;
 
 	let autoplay = true;
 	let arrows = qsa('.swiper-button-next, .swiper-button-prev');
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if(autoplay) {
 				nextSlide();
 			}
-		}, 4000)
+		}, 5000)
 	}
 	function nextSlide () {
 		arrows.forEach(arrow => arrow.classList.add("disabled"));
