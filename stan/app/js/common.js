@@ -86,6 +86,54 @@ document.addEventListener("DOMContentLoaded", function() {
 	// END TEAM HERO SCROLL ANIMATION
 
 
+
+	 var auditSwiper = new Swiper(".team__swiper", {
+	    slidesPerView: 1,
+	    speed: 800,
+	    loop: true,
+	    allowTouchMove: false,
+	    simulateTouch: false,
+	    effect: 'creative',
+	  });
+
+	  const swiperDelay = 200;
+	  const animationDelay = 1000;
+
+	  qs('.swiper-button-prev').onclick = function(evt) {
+	    qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-prev"));
+
+	    setTimeout(function(){
+	      auditSwiper.slidePrev();
+	    }, swiperDelay);
+
+	    setTimeout(function(){
+	      qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-prev"));
+	    }, animationDelay);
+	  };
+
+	  qs('.swiper-button-next').onclick = function(evt){
+	   	qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-next"));
+
+   	    setTimeout(function(){
+   	      auditSwiper.slideNext();
+   	    }, swiperDelay);
+
+   	    setTimeout(function(){
+   	      qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-next"));
+   	    }, animationDelay);
+	  };
+
+	 //  let heights = Array(...qsa('.team__swiper .swiper-slide')).map(function (slide) {
+	 //    return slide.clientHeight;
+	 //  })
+	  
+
+	 //  let maxHeight = Math.max.apply(null, heights);
+		// // alert(maxHeight);
+	 //  qs('.team__swiper').style.height = maxHeight + 'px';
+
+
+
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
 	}
