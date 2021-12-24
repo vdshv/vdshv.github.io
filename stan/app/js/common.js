@@ -101,13 +101,20 @@ document.addEventListener("DOMContentLoaded", function() {
 	    loop: true,
 	    allowTouchMove: false,
 	    simulateTouch: false,
-	    effect: 'creative',
 	  });
 		 
 	  const swiperDelay = 200;
 	  const animationDelay = 1000;
 
+
+	  let autoplay = true;
+	  setInterval(() => {
+	  	if(autoplay) {
+	  		nextSlide();
+	  	}
+	  }, 6000)
 	  qs('.swiper-button-prev').onclick = function(evt) {
+	  	autoplay = false;
 	    qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-prev"));
 	    
 	    setTimeout(function(){
@@ -120,6 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	  };
 
 	  qs('.swiper-button-next').onclick = function(evt){
+	  	autoplay = false;
+
+	  	nextSlide();
+	  };
+	 function nextSlide () {
 	   	qsa(".swiper-slide-active, .swiper-slide-duplicate-active").forEach(slide => slide.classList.add("scale-down-next"));
 
    	    setTimeout(function(){
@@ -129,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
    	    setTimeout(function(){
    	      qsa(".swiper-slide").forEach(slide => slide.classList.remove("scale-down-next"));
    	    }, animationDelay);
-	  };
+	 }
 
 
 	function qs (selector, searchIn) {

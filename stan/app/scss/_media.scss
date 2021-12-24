@@ -87,6 +87,7 @@
 						content: '';
 						right: auto;
 						left: calc(670 / 2 / 768 * 100vw);
+						transition: transform 1s .8s ease-out;
 					}
 					span {
 						min-width: calc(96 / 768 * 100vw);
@@ -308,10 +309,11 @@
 		&__person {
 			display: flex;
 			align-items: center;
-			width: 53%;
+			width: 54%;
 			padding-right: calc(20 / 768 * 100vw);
 			img {
 				min-width: calc(130 / 768 * 100vw);
+				height: calc(130 / 768 * 100vw);
 				margin: 0;
 				margin-right: calc(16 / 768 * 100vw);
 				border: 5px solid #fff;
@@ -328,7 +330,7 @@
 			}
 			&-tags {
 				position: relative;
-				width: 47%;
+				width: 46%;
 				padding-left: calc(50 / 768 * 100vw);
 				margin: 0;
 				display: flex;
@@ -427,7 +429,7 @@
 		}
 		&__person {
 			h3 {
-				font-size: 12px;
+				font-size: 11px;
 			}
 			&-tags {
 				padding-left: 15px;
