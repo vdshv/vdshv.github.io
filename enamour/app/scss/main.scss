@@ -25,7 +25,6 @@
 
 $a: #A0393A;
 body {
-	font-size: 1rem;
 	min-width: 320px;
 	position: relative;
 	font-size: 22px;
@@ -45,9 +44,7 @@ body {
 .bg-darker {
 	background: #151515;
 }
-.mob{
-	display: none;
-}
+
 .flex {
 	display: flex;
 	flex-direction: row;
@@ -194,6 +191,66 @@ section {
 			}
 		}
 	}
+	&__mob-nav {
+		background: linear-gradient(270.21deg, rgba(34, 34, 34, 0.6) 8.39%, rgba(34, 34, 34, 0.8) 87.03%);
+		backdrop-filter: blur(20px);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 4;
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: .3s;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			.wrap {
+				transform: translate3d(0%, 0px, 0px);
+			}
+		}
+		.wrap {
+			display: flex;
+			transform: translate3d(-100%, 0px, 0px);
+			transition: transform 1s .3s cubic-bezier(0.25, 1, 0.5, 1);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		a {
+			font-family: "canela";
+			font-size: 40px;
+			margin-bottom: 24px;
+		}
+		.separator {
+			display: block;
+			width: 255px;
+			margin: 24px auto 48px;
+			opacity: .2;
+			border-top: 1px solid #C6C6C6;
+		}
+		.close {
+			position: absolute;
+			width: 24px;
+			top: 16px;
+			left: 24px;
+		}
+	}
+	&__social {
+		margin-top: 60px;
+		a {
+			width: 24px;
+		}
+	}
 }
 img,svg {
 	display: block;
@@ -244,6 +301,10 @@ img,svg {
 			}
 		}
 	}
+	p {
+		max-width: 810px;
+		margin: 0 auto;
+	}
 }
 .footer {
 	padding: 63px 25px 75px;
@@ -269,17 +330,10 @@ img,svg {
 		}
 	}
 }
-
-
-@media (max-width: 1100px) {
-	
+.mob{
+	display: none;
 }
-@media (max-width:850px) {
-	
-}
-@media (max-width:767px) {
 
-}
 
 
 
