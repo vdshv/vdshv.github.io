@@ -27,6 +27,15 @@
 		&-max-none {
 			max-width: 100%;
 		}
+		&-bg-lighter {
+			background: #313131;
+		}
+		&-bg-gradient {
+			background: linear-gradient(180deg, #222222 9.67%, #151515 100%);
+		}
+		&-bg-darker {
+			background: #222222;
+		}
 	}
 	p.mob-max-none {
 		max-width: 100%;
@@ -49,6 +58,11 @@
 	}
 	section {
 		padding: 32px 25px;
+	}
+	.btn {
+		width: 100%;
+		text-align: center;
+
 	}
 	.header {
 		padding: 19px 25px;
@@ -78,11 +92,19 @@
 		    margin: 10px 0 32px;
 		}
 	}
+	p {
+		color: #fff;
+	}
 	.text-image {
 		padding: 0;
+
 		.cont {
 			padding: 32px 25px;
 		}
+
+	}
+	.designed {
+		padding-bottom: 25px;
 	}
 	.links {
 		padding-bottom: 45px;
@@ -95,6 +117,64 @@
 				h3 {
 					display: none;
 				}
+			}
+		}
+	}
+	.how {
+		background: #f8f8f8;
+		padding-top: 42px;
+		h3 {
+			color: #222222;
+			font-size: 24px;
+			text-align: center;
+			margin-bottom: 24px;
+		}
+		&__line, &__line-active {
+			top: 15px;
+			width: 3px;
+			left: 15px;
+			height: calc(100% - 15px);
+		}
+		&__line-active {
+			background: #B96664;
+			left: 0;
+		}
+		&__number {
+			width: 32px;
+			min-width: 32px;
+			height: 32px;
+			margin-right: 5px;
+			background: #DADADA;
+			border: none;
+			font-size: 16px;
+			color: #313131;
+			margin-top: 15px;
+			&.active {
+				background: #B96664;
+			}
+		}
+		&__item {
+			margin-bottom: 16px;
+			&.in-view {
+				.how__box {
+					h4 {
+						color: #B96664;
+					}
+				}
+			}
+		}
+		&__box {
+			padding: 16px;
+			border: none;
+
+			h4 {
+				font-size: 18px;
+				text-transform: capitalize;
+				margin-bottom: 5px;
+				line-height: 30px;
+			}
+			p {
+				font-size: 16px;
 			}
 		}
 	}

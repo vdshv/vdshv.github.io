@@ -317,6 +317,9 @@ img,svg {
 	background: #FAFAFA;
 	&-banner {
 		padding: 175px 25px;
+		.img-cover {
+			object-position: 10% center;
+		}
 
 		h2 {
 			color: #151515;
@@ -384,16 +387,11 @@ img,svg {
 					transition: .3s;
 				}
 			}
-			.how__number {
-				// background: #6281AF;
-				// transition: .3s;
-				// border-color: #6281AF;
-				// color: #fff;
-			}
 		}
 	}
 	&__box {
 		opacity: .6;
+		background: #fff;
 		padding: 24px;
 		transition: .3s;
 		border: 1px solid #C9D5EB;
@@ -422,6 +420,9 @@ img,svg {
 	}
 }
 .offer {
+	.img-cover {
+		object-position: 25% center;
+	}
 	h2 {
 		font-size: 50px;
 		margin-bottom: 24px;
