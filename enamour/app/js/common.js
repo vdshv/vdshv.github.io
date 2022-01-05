@@ -15,12 +15,89 @@ document.addEventListener("DOMContentLoaded", function() {
 			hamb = qs('.header__hamb'),
 			menu = qs('.header__mob-nav'),
 			close = qs('.header .close');
-			
+
 	hamb.onclick = () => {
 		menu.classList.add('active');
 	}
 	close.onclick = () => {
 		menu.classList.remove('active');
+	}
+
+	// SCROLLING ANIM
+
+	// let options = isTouchDevice ? { threshold: 0.2 } : { threshold: 0.4 };
+	let options = {threshold: 0.7};
+
+	let callback = function(entries, observer) {
+	    entries.forEach(entry => {
+	    	if (entry.isIntersecting){
+	    		entry.target.classList.add('in-view');
+	    	} else {
+	    		entry.target.classList.remove('in-view');
+	    	}
+      	});
+	};
+	let observer = new IntersectionObserver(callback, options),
+		animated = qsa('.animated');
+
+	animated.forEach(el => {
+		if (observer) {
+			observer.observe(el)
+		} else {
+			el.classList.add('in-view');
+		}
+		
+	});
+	// END SCROLLING ANIM
+
+
+	// LINE SCROLL ANIMATION
+	let line = qs('.how__line'),
+		lineHeight,
+		lineActive = qs('.how__line-active'),
+		scale = 0,
+		numbers = qsa('.how__number');
+
+	const raf = window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame ||
+	    window.oRequestAnimationFrame ||
+	    window.msRequestAnimationFrame;
+
+	(function init() {
+
+	    (function step() {
+	    	lineHeight = qs('.how__line').clientHeight;
+	    	scale = (rectBottom(line) - lineHeight - window.innerHeight/2) / -lineHeight;
+
+	    	if(inViewport(line)) {
+	    		lineActive.style.transform = `scale3d(1,${scale},1)`;
+	    	} else {
+
+	    	}
+	    	numbers.forEach((num)=>{
+	    		if(rectTop(num)<=0) {
+	    			num.classList.add('active');
+	    		} else {
+	    			num.classList.remove('active');
+	    		}
+	    	})
+	    	// console.log(rectTop(numbers[0]));
+	    	
+           	raf(step);
+	    })();
+	})();
+	function rectBottom (el) {
+		var rect = el.getBoundingClientRect();
+		return rect.bottom;
+	}
+	function rectTop (el) {
+		var rect = el.getBoundingClientRect();
+		return rect.top - window.innerHeight/2;
+	}
+	function inViewport (el) {
+		var rect = el.getBoundingClientRect();
+		return rect.bottom >= 0 && rect.top - window.innerHeight <= 0;
 	}
 
 	function qs (selector, searchIn) {

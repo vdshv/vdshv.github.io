@@ -20,6 +20,9 @@
 		display: block;
 		&-tal {
 			text-align: left;
+			h2 {
+				text-align: center;
+			}
 		}
 		&-max-none {
 			max-width: 100%;
