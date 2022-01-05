@@ -192,6 +192,9 @@ section {
 			&:last-child {
 				margin-right: 0;
 			}
+			&.active {
+				color: #A0393A;
+			}
 		}
 	}
 	&__mob-nav {
@@ -233,6 +236,9 @@ section {
 			font-family: "canela";
 			font-size: 40px;
 			margin-bottom: 24px;
+			&.active {
+				color: #A0393A;
+			}
 		}
 		.separator {
 			display: block;
@@ -334,7 +340,7 @@ img,svg {
 		position: absolute;
 		width: 1px;
 		height: 100%;
-		background: #C6C6C6;
+		background: #C9D5EB;
 		left: 34px;
 		top: 0;
 		z-index: 1;
@@ -343,7 +349,7 @@ img,svg {
 	&__line-active {
 		transform: scale3d(1, 0.1, 1);
 		transform-origin: center top;
-		background: #6281AF;
+		background: #B96664;
 		left: 0;
 		z-index: 2;
 	}
@@ -363,9 +369,9 @@ img,svg {
 		color: #222222;
 		transition: .3s;
 		&.active {
-			background: #6281AF;
+			background: #A0393A;
 			transition: .3s;
-			border-color: #6281AF;
+			border-color:#A0393A;
 			color: #fff;
 		}
 	}
@@ -383,7 +389,7 @@ img,svg {
 				opacity: 1;
 				transition: .3s;
 				h4 {
-					color: #6281AF;
+					color: #A0393A;
 					transition: .3s;
 				}
 			}

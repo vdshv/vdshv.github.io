@@ -63,14 +63,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	    window.oRequestAnimationFrame ||
 	    window.msRequestAnimationFrame;
 
-	(function init() {
+	if (line) (function init() {
 
 	    (function step() {
 	    	lineHeight = qs('.how__line').clientHeight;
 	    	scale = (rectBottom(line) - lineHeight - window.innerHeight/2) / -lineHeight;
 
 	    	if(inViewport(line)) {
-	    		lineActive.style.transform = `scale3d(1,${scale},1)`;
+	    		lineActive.style.transform = `scaleY(${scale})`;
 	    	} else {
 
 	    	}

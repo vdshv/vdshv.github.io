@@ -36,6 +36,9 @@
 		&-bg-darker {
 			background: #222222;
 		}
+		&-blue {
+			color: #C6D6ED;
+		}
 	}
 	p.mob-max-none {
 		max-width: 100%;
@@ -85,11 +88,15 @@
 	.hero {
 		height: auto;
 		min-height: auto;
-		padding: 85px 20px 50px;
+		padding: 85px 20px 32px;
 		
 		p {
 			font-size: 20px;
-		    margin: 10px 0 32px;
+		    margin: 10px 0 0;
+		}
+		.btn {
+			margin: 32px 0 18px;
+
 		}
 	}
 	p {
@@ -133,6 +140,7 @@
 			top: 15px;
 			width: 3px;
 			left: 15px;
+			background: #C6C6C6;
 			height: calc(100% - 15px);
 		}
 		&__line-active {
@@ -150,7 +158,7 @@
 			color: #313131;
 			margin-top: 15px;
 			&.active {
-				background: #B96664;
+				// background: #B96664;
 			}
 		}
 		&__item {
@@ -158,7 +166,7 @@
 			&.in-view {
 				.how__box {
 					h4 {
-						color: #B96664;
+						// color: #B96664;
 					}
 				}
 			}
