@@ -49,6 +49,23 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 	// END SCROLLING ANIM
 
+	let questions = qsa('.question');
+
+	if (questions.length) {
+		questions.forEach(el => {
+			el.onclick = (e) => {
+				let answer = el.nextElementSibling;
+				if(el.classList.contains('active')) {
+					el.classList.remove('active');
+					answer.style.height = '0px';
+				} else {
+					el.classList.add('active');
+					answer.style.height = answer.scrollHeight + 'px';
+				}
+			};
+		})
+		qs('.answer').style.height = qs('.answer').scrollHeight + 'px';
+	} 
 
 	// LINE SCROLL ANIMATION
 	let line = qs('.how__line'),

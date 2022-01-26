@@ -28,11 +28,14 @@
 
  <main class="page team">
     <div class="team__hero  _scr-item _view _active _half _lite">
-       <img class="team__hero-img lazyload" 
-          srcset="img/team/webp/blurred/hero-mob.webp 767w,
-                   img/team/webp/blurred/hero.webp" 
-          data-srcset="img/team/webp/hero-mob.webp 767w,
-                       img/team/webp/hero.webp">
+
+      <picture>
+         <source srcset="img/team/webp/hero-mob.webp" media="(max-width: 992px)" type="image/webp">
+         <source srcset="img/team/webp/hero2k.webp" media="(max-width: 2055px)" type="image/webp">
+         <source srcset="img/team/webp/hero4k.webp" media="(min-width: 2055px)" type="image/webp">
+         <img class="team__hero-img" src="img/team/webp/hero4k.webp">
+      </picture>
+
        <h1 class="team__hero-title">Our Reputation <br> is Built on Results</h1>
     </div>
 
@@ -89,8 +92,8 @@
        <div class="team-meet__grid">
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/1.webp">
-               <img class="lazyload" data-src="img/team/hq/1.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/1.webp">
+               <img class="lazyload" src="img/team/hq/1.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Maria D.</h6>
@@ -100,8 +103,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/2.webp">
-               <img class="lazyload" data-src="img/team/hq/2.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/2.webp">
+               <img class="lazyload" src="img/team/hq/2.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Stanislav T.</h6>
@@ -110,8 +113,8 @@
 
           </div>
           <div><picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/3.webp">
-               <img class="lazyload" data-src="img/team/hq/3.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/3.webp">
+               <img class="lazyload" src="img/team/hq/3.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Anna O.</h6>
@@ -121,8 +124,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/4.webp">
-               <img class="lazyload" data-src="img/team/hq/4.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/4.webp">
+               <img class="lazyload" src="img/team/hq/4.jpg">
              </picture>
              <!-- <img src="" alt=""> -->
              <div class="team-meet__text animated">
@@ -133,8 +136,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/5.webp">
-               <img class="lazyload" data-src="img/team/hq/5.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/5.webp">
+               <img class="lazyload" src="img/team/hq/5.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Daria A.</h6>
@@ -150,8 +153,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/6.webp">
-               <img class="lazyload" data-src="img/team/hq/6.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/6.webp">
+               <img class="lazyload" src="img/team/hq/6.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Stan K.</h6>
@@ -161,8 +164,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/7.webp">
-               <img class="lazyload" data-src="img/team/hq/7.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/7.webp">
+               <img class="lazyload" src="img/team/hq/7.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Daria C.</h6>
@@ -172,8 +175,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/8.webp">
-               <img class="lazyload" data-src="img/team/hq/8.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/8.webp">
+               <img class="lazyload" src="img/team/hq/8.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Dmitriy P.</h6>
@@ -183,8 +186,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/9.webp">
-               <img class="lazyload" data-src="img/team/hq/9.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/9.webp">
+               <img class="lazyload" src="img/team/hq/9.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Yana L.</h6>
@@ -194,8 +197,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/10.webp">
-               <img class="lazyload" data-src="img/team/hq/10.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/10.webp">
+               <img class="lazyload" src="img/team/hq/10.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Elena R.</h6>
@@ -205,8 +208,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/11.webp">
-               <img class="lazyload" data-src="img/team/hq/11.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/11.webp">
+               <img class="lazyload" src="img/team/hq/11.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Valeria R.</h6>
@@ -216,8 +219,8 @@
           </div>
           <div>
              <picture>
-               <source type="image/webp" data-srcset="img/team/hq/webp/12.webp">
-               <img class="lazyload" data-src="img/team/hq/12.jpg">
+               <source type="image/webp" srcset="img/team/hq/webp/12.webp">
+               <img class="lazyload" src="img/team/hq/12.jpg">
              </picture>
              <div class="team-meet__text animated">
                 <h6>Sergey G.</h6>
@@ -318,7 +321,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/1.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/1.webp 767w,
                                             img/team/audit-images/webp/1.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -455,7 +458,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/2.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/2.webp 767w,
                                             img/team/audit-images/webp/2.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -591,7 +594,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/3.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/3.webp 767w,
                                             img/team/audit-images/webp/3.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -727,7 +730,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/4.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/4.webp 767w,
                                             img/team/audit-images/webp/4.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -864,7 +867,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/5.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/5.webp 767w,
                                             img/team/audit-images/webp/5.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -1001,7 +1004,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/6.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/6.webp 767w,
                                             img/team/audit-images/webp/6.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -1137,7 +1140,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/7.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/7.webp 767w,
                                             img/team/audit-images/webp/7.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -1273,7 +1276,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/8.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/8.webp 767w,
                                             img/team/audit-images/webp/8.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -1412,7 +1415,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/9.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/9.webp 767w,
                                             img/team/audit-images/webp/9.webp" class="lazyload" alt="">
                             </div>
                          </div>
@@ -1550,7 +1553,7 @@
                             </div>
                             
                             <div class="team__middle-img">
-                               <img data-srcset="img/team/audit-images/webp/mob/10.webp 767w,
+                               <img srcset="img/team/audit-images/webp/mob/10.webp 767w,
                                             img/team/audit-images/webp/10.webp" class="lazyload" alt="">
                             </div>
                          </div>

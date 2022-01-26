@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title></title>
+	<meta name="description" content="">
+	
+	<!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
+	<!-- <link rel="icon" href="" type="image/x-icon"> -->
+
+	<!-- PRELOAD FONTS -->
+	<!-- <link rel="preload" as="font" href="fonts/Canela-Regular.woff2" type="font/woff2" crossorigin="anonymous"> -->
+	<!-- <link rel="preload" as="font" href="fonts/F37Ginger.woff2" type="font/woff2" crossorigin="anonymous"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<!-- CRITICAL CSS -->
+	<style>
+		
+	</style>
+	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
+	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
+	<!-- SCRITICAL CSS  -->
+</head>
+<body>
+	<div class="overflow">
+
+		<header class="header header-profile bg-dark relative">
+			<div class="cont cont-lg flex jcsb aic">
+				<div class="flex aic">
+					<div class="header__hamb mob">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M3 6H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+
+					</div>
+					<a href="/" class="header__logo">
+						<svg width="161" height="34" viewBox="0 0 161 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13.152 6.57581V10.73C13.152 10.73 12.2351 9.84457 10.6602 9.59959C10.0933 9.51209 9.40731 9.44909 8.58487 9.44909H2.56881V15.7626L7.90242 15.7591C11.9236 15.7416 14.2964 15.2867 15.3709 14.3242L15.9973 13.7608L15.1329 17.3725H14.9264C13.2605 17.3725 11.8081 17.3725 10.4432 17.369L0 17.3655L0.0139986 17.089C0.258981 12.6269 0.258981 5.89686 0.0139986 1.43469L0 1.1582H15.0104V4.60545L14.5729 4.20998C12.9525 2.74709 10.7197 2.75059 8.64436 2.76809C8.45888 2.76809 8.27689 2.77158 8.0949 2.77158L2.57231 2.76809V7.84621H8.58487C11.2412 7.85321 12.1756 7.35625 13.152 6.57581Z" fill="white"/>
+						<path d="M39.026 1.43551L39.04 1.15903H36.7652L36.7792 1.43551C36.8982 3.72084 36.9647 6.65363 36.9647 9.6949L36.9612 12.7152C32.4325 9.20144 27.5608 4.98775 23.1932 0.812555L22.7102 0.350586L22.7732 1.46351C23.0182 5.91868 23.0182 12.6382 22.7732 17.0934L22.7592 17.3698H25.034L25.02 17.0934C24.901 14.815 24.8345 11.8927 24.8345 8.86546L24.838 5.84868C28.8768 9.00195 33.3389 12.6452 38.6095 17.7653L39.0995 18.2413L39.0225 17.0934C38.7775 12.6277 38.7775 5.89768 39.026 1.43551Z" fill="white"/>
+						<path d="M56.5151 2.45682C56.1476 1.77437 55.7801 1.09192 55.4092 0.409469L55.1887 0L49.2321 10.1598C47.7972 12.5606 46.2958 14.9754 45.0044 16.9633L44.7419 17.3692H47.1043L47.1778 17.2292C47.8602 15.9483 48.6966 14.4539 49.7256 12.6656H59.5773C60.5678 14.4504 61.3727 15.9833 61.9817 17.2222L62.0552 17.3692H65.1629L64.8935 16.9633C61.8137 12.2876 59.1189 7.28997 56.5151 2.45682ZM54.8667 3.97921L58.7094 11.1012H50.6425L54.8667 3.97921Z" fill="white"/>
+						<path d="M90.3762 1.15828H88.7628L88.6858 1.27378C86.341 4.77352 83.2612 9.1237 80.5944 12.7039C77.6127 8.73173 74.5609 4.37805 72.5835 1.27728L72.5065 1.15479H70.8267L70.8407 1.43127C71.0856 5.89344 71.0856 12.6234 70.8407 17.0856L70.8267 17.3621H73.1015L73.0875 17.0856C72.951 14.7268 72.8845 11.724 72.902 8.62674V6.27141C75.6038 9.90064 77.8331 13.0364 79.877 16.0882L80.094 16.4102L81.5604 14.2683C83.5237 11.437 85.7426 8.34326 87.7234 5.67295L87.7269 8.99421C87.7549 12.1405 87.6779 14.9368 87.4994 17.0786L87.4749 17.3621H90.3727L90.3482 17.0786C89.9807 12.6199 89.9807 5.89694 90.3482 1.43826L90.3762 1.15828Z" fill="white"/>
+						<path d="M106.35 0.269287C100.015 0.269287 96.3336 3.47155 96.2566 9.06064C96.3371 14.6427 100.015 17.845 106.35 17.845C112.684 17.845 116.363 14.6427 116.443 9.05364C116.363 3.47155 112.684 0.269287 106.35 0.269287ZM106.336 1.87917C111.473 1.87917 113.773 4.09801 113.787 9.07814C113.773 14.0618 111.473 16.2841 106.336 16.2841C101.209 16.2841 98.9094 14.0618 98.8849 9.08164C98.9094 4.10151 101.205 1.87917 106.336 1.87917Z" fill="white"/>
+						<path d="M135.198 1.43533C135.3 3.38119 135.366 5.901 135.384 8.53631L135.377 10.7516C135.412 12.225 134.946 13.492 134.033 14.4194C133.067 15.4028 131.632 15.9523 130.103 15.9453C128.598 15.9453 127.191 15.3853 126.235 14.4089C125.329 13.4814 124.867 12.2145 124.902 10.7411L124.899 8.53281C124.916 5.89751 124.983 3.37419 125.084 1.42833L125.098 1.15186H122.333L122.347 1.42833C122.452 3.37419 122.515 5.90101 122.533 8.53981L122.54 10.7901C122.54 15.4448 126.47 17.5656 130.12 17.5656C133.791 17.5656 137.743 15.4448 137.743 10.7936L137.746 8.54331C137.764 5.901 137.83 3.37419 137.932 1.42833L137.946 1.15186H135.181L135.198 1.43533Z" fill="white"/>
+						<path d="M160.09 16.6236C159.628 16.6026 159.113 15.8536 158.767 15.2902L156.324 11.3915C156.005 10.8805 155.694 10.485 155.365 10.177C158.123 9.79207 159.358 7.63623 159.327 5.65887C159.292 3.49603 157.759 1.16521 154.465 1.16171L144.334 1.1582L144.348 1.43469C144.484 3.81801 144.551 6.85578 144.533 9.98455C144.516 12.6444 144.453 15.1012 144.348 17.089L144.334 17.3655H147.099L147.085 17.089C146.983 15.1642 146.92 12.8018 146.899 10.2435H150.973C152.408 10.2435 153.192 11.017 153.923 12.1824L156.107 15.6366C157.097 17.201 158.116 17.369 158.508 17.369H160.755V16.6376L160.09 16.6236ZM146.91 2.76459L154.423 2.76809C156.17 2.76809 156.964 4.27997 156.964 5.68687C156.964 6.45331 156.73 7.19876 156.317 7.72722C155.858 8.31518 155.204 8.62666 154.427 8.62666H146.903L146.91 2.76459Z" fill="white"/>
+						<path d="M35.4981 28.401H35.0397L35.0292 28.415C34.2242 29.6189 33.1568 31.1238 32.2399 32.3522C31.2144 30.9873 30.1575 29.4824 29.4786 28.415L29.4681 28.3975H28.9851L28.9886 28.436C29.0726 29.9513 29.0726 32.2367 28.9886 33.7521L28.9851 33.7906H29.6431L29.6396 33.7521C29.5941 32.9506 29.5696 31.9287 29.5766 30.8788V29.9163C30.539 31.2043 31.3229 32.3067 32.0404 33.3811L32.0684 33.4231L32.5198 32.7616C33.2198 31.7537 34.0142 30.6478 34.7072 29.7134V31.0013C34.7177 32.0687 34.6897 33.0206 34.6302 33.7486L34.6267 33.7871H35.4911L35.4876 33.7486C35.3616 32.2332 35.3616 29.9478 35.4876 28.436L35.4981 28.401Z" fill="white"/>
+						<path d="M43.441 28.8067C43.3185 28.5757 43.1925 28.3483 43.0701 28.1173L43.0421 28.0613L41.0717 31.4245C40.5852 32.24 40.0743 33.0589 39.6368 33.7344L39.6018 33.7869H40.2703L40.2808 33.7694C40.5187 33.3249 40.8127 32.7929 41.1627 32.191H44.5679C44.9109 32.8104 45.1909 33.3389 45.4009 33.7659L45.4114 33.7869H46.3318L46.2968 33.7344C45.2434 32.149 44.3265 30.4481 43.441 28.8067ZM42.9336 29.1952L44.323 31.7745H41.4007L42.9336 29.1952Z" fill="white"/>
+						<path d="M48.7988 29.3878L48.8548 29.3423C49.3343 28.9643 49.8348 28.8383 50.8427 28.8383H51.5426V30.9242C51.5531 32.0826 51.5251 33.0625 51.4691 33.752L51.4656 33.7905H52.3301L52.3266 33.752C52.2601 32.9365 52.2251 31.9076 52.2321 30.9277V28.8383H52.9215C53.926 28.8383 54.4264 28.9643 54.9094 29.3423L54.9654 29.3878V28.4009H48.8023V29.3878H48.7988Z" fill="white"/>
+						<path d="M62.4263 28.1064C60.7044 28.1064 58.853 29.0234 58.853 31.0392C58.853 33.0481 60.7009 33.965 62.4193 33.965C63.4867 33.965 64.4071 33.629 64.8761 33.0656L64.8831 33.0551V32.0157L64.8166 32.1311C64.3371 32.9851 63.3082 33.5381 62.1988 33.5381H62.1673C60.9984 33.5241 59.6335 32.8626 59.6335 31.0392C59.6335 29.3279 60.9004 28.5474 62.1603 28.5334H62.1988C63.3152 28.5334 64.3441 29.0864 64.8166 29.9403L64.8831 30.0593V29.0199L64.8761 29.0094C64.4141 28.4529 63.4762 28.1064 62.4263 28.1064Z" fill="white"/>
+						<path d="M75.1084 28.4009H74.244L74.2475 28.4359C74.286 29.1848 74.3105 29.9408 74.3175 30.6232H70.1003C70.1108 29.8568 70.1423 29.0798 70.1913 28.4394L70.1948 28.4009H69.3303L69.3338 28.4359C69.4143 30.0318 69.4563 32.2646 69.3338 33.752L69.3303 33.7905H70.1948L70.1913 33.752C70.1318 33.0275 70.0968 32.0721 70.0968 31.0607H74.3245C74.3315 32.1071 74.307 33.038 74.2475 33.752L74.244 33.7905H75.1084L75.1049 33.752C74.9789 32.2366 74.9789 29.9513 75.1049 28.4394L75.1084 28.4009Z" fill="white"/>
+						<path d="M86.5938 28.401H86.1354L86.1249 28.415C85.3164 29.6259 84.249 31.1273 83.3356 32.3522C82.3101 30.9908 81.2567 29.4859 80.5743 28.415L80.5638 28.3975H80.0808L80.0843 28.436C80.1683 29.9513 80.1683 32.2367 80.0843 33.7521L80.0808 33.7906H80.7388L80.7353 33.7521C80.6898 32.9541 80.6653 31.9357 80.6723 30.8788V29.9163C81.6347 31.2043 82.4186 32.3067 83.1361 33.3811L83.1641 33.4231L83.6155 32.7616C84.3155 31.7537 85.1099 30.6478 85.8029 29.7134V31.0013C85.8134 32.0722 85.7854 33.0241 85.7259 33.7486L85.7224 33.7871H86.5868L86.5833 33.7486C86.4573 32.2332 86.4573 29.9478 86.5833 28.436L86.5938 28.401Z" fill="white"/>
+						<path d="M94.6799 28.8066C94.5574 28.5792 94.4349 28.3482 94.3089 28.1207L94.2809 28.0647L92.3071 31.428C91.8206 32.2434 91.3096 33.0623 90.8722 33.7378L90.8372 33.7903H91.5056L91.5161 33.7728C91.7541 33.3283 92.0411 32.8138 92.398 32.1944H95.8033C96.1463 32.8138 96.4262 33.3423 96.6362 33.7693L96.6467 33.7903H97.5672L97.5322 33.7378C96.4787 32.1454 95.5653 30.448 94.6799 28.8066ZM94.1724 29.1951L95.5653 31.7744H92.643L94.1724 29.1951Z" fill="white"/>
+						<path d="M104.336 30.3467L105.33 29.2758C105.733 28.8453 106.086 28.6039 106.506 28.4709L106.723 28.4009H105.484L102.576 31.5542C102.565 30.4202 102.597 29.2898 102.667 28.4394L102.67 28.4009H101.806L101.809 28.4359C101.89 30.0283 101.932 32.2611 101.809 33.7485L101.806 33.787H102.674L102.67 33.7485C102.632 33.3145 102.607 32.8211 102.593 32.2331L103.881 30.8402C104.606 31.7851 105.365 32.7966 106.016 33.7695L106.027 33.7835H107.021L106.972 33.7275C106.037 32.6111 105.18 31.5051 104.336 30.3467Z" fill="white"/>
+						<path d="M111.409 28.4009H110.545L110.548 28.4359C110.629 30.0283 110.671 32.2646 110.548 33.752L110.545 33.7905H111.409L111.406 33.752C111.28 32.2366 111.28 29.9513 111.406 28.4394L111.409 28.4009Z" fill="white"/>
+						<path d="M121.133 28.4394L121.136 28.4009H120.478L120.482 28.4359C120.524 29.2093 120.545 30.2068 120.545 31.2392V32.3731C118.984 31.1657 117.294 29.7098 115.785 28.2644L115.722 28.2014L115.736 28.4429C115.82 29.9548 115.82 32.2366 115.736 33.7485L115.733 33.787H116.391L116.387 33.752C116.345 32.9821 116.324 31.9881 116.324 30.9592V29.8253C117.721 30.9137 119.26 32.1666 121.087 33.9375L121.154 34.0005L121.136 33.752C121.052 32.2401 121.052 29.9548 121.133 28.4394Z" fill="white"/>
+						<path d="M130.584 30.7486L130.587 30.7871C130.619 31.34 130.643 32.012 130.657 32.7819C130.115 33.2264 129.376 33.4784 128.627 33.4784C127.35 33.4784 126.062 32.7154 126.062 31.0076C126.062 29.2927 127.354 28.5262 128.631 28.5262C129.744 28.5262 130.769 29.0722 131.249 29.9191L131.315 30.0346V29.0057L131.308 28.9952C130.846 28.4423 129.905 28.1028 128.851 28.1028C127.133 28.1028 125.285 29.0127 125.285 31.0076C125.285 32.9954 127.13 33.9018 128.844 33.9018C129.898 33.9018 130.839 33.5589 131.305 33.0094L131.312 32.9989L131.354 32.9919V32.9639C131.364 32.1835 131.396 31.431 131.448 30.7871L131.452 30.7486H130.584Z" fill="white"/>
+						<path d="M131.441 30.748H129.341L129.338 31.1785H130.08C130.08 31.1785 130.591 31.2065 130.619 31.5985L131.441 30.748Z" fill="white"/>
+						</svg>
+					</a>
+					
+					<nav class="header__mob-nav">
+						<div class="wrap">
+							<span class="close">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 6L6 18" stroke="#F8F8F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M6 6L18 18" stroke="#F8F8F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</span>
+
+							<a href="mathces.html">Matches</a>
+							<a class="active" onclick="this.closest('.header__mob-nav').classList.remove('active')">My account</a>
+						</div>
+					</nav>
+				</div>
+				<nav class="header__nav desktop">
+					<a href="mathces.html">Matches</a>
+					<a href="profile.html">My account</a>
+				</nav>
+			</div>
+		</header>
+		
+		<section class="profile">
+			<div class="cont cont-lg">
+				<div class="profile-top flex jcsb g24">
+					<div class="flex fdc g24">
+						<div class="flex aic g24 profile-name">
+							<h2>Irina, 30</h2>
+							<img class="lazyload" data-src="img/profile/verified.svg" alt="">
+						</div>
+						<div class="profile-icons">
+							<p class="flex aic profile-icon">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_356_439)">
+									<path d="M6.0013 6.66667C4.1633 6.66667 2.66797 5.17133 2.66797 3.33333C2.66797 1.49533 4.1633 0 6.0013 0C7.8393 0 9.33464 1.49533 9.33464 3.33333C9.33464 5.17133 7.8393 6.66667 6.0013 6.66667Z" fill="#B4BDCC"/>
+									<path d="M3.16667 7.99958C1.42 7.99958 0 9.41958 0 11.1662V13.4996C0 13.7729 0.226667 13.9996 0.5 13.9996H6.66667V11.8329C6.66667 10.5796 7.6 9.54625 8.80667 9.36625C8.98 8.85958 9.30667 8.43292 9.72667 8.12625C9.06 7.93558 9.024 7.99958 3.16667 7.99958Z" fill="#B4BDCC"/>
+									<path d="M14.8321 10.6667H13.9987V10.1667C13.9987 9.52333 13.4754 9 12.8321 9H11.1654C10.5221 9 9.99874 9.52333 9.99874 10.1667V10.6667H9.16541C8.83741 10.6667 8.54208 10.8033 8.33008 11.022L11.9987 12.936L15.6674 11.022C15.4554 10.8033 15.1601 10.6667 14.8321 10.6667ZM10.9987 10.6667V10.1667C10.9987 10.0747 11.0734 10 11.1654 10H12.8321C12.9241 10 12.9987 10.0747 12.9987 10.1667V10.6667H10.9987Z" fill="#B4BDCC"/>
+									<path d="M12.2313 13.9432C12.0867 14.0186 11.9133 14.0186 11.7693 13.9432L8 11.9766V14.8332C8 15.4766 8.52333 15.9999 9.16667 15.9999H14.8333C15.4767 15.9999 16 15.4766 16 14.8332V11.9766L12.2313 13.9432Z" fill="#B4BDCC"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_356_439">
+									<rect width="16" height="16" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>
+								Tech Entrepreneur and World traveler
+							</p>	
+							<p class="flex aic profile-icon">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_356_445)">
+									<path d="M12.7379 2.73992C11.7668 1.06417 10.0421 0.0403906 8.12411 0.00126563C8.04223 -0.000421875 7.95983 -0.000421875 7.87792 0.00126563C5.95998 0.0403906 4.23523 1.06417 3.26417 2.73992C2.27161 4.4528 2.24445 6.5103 3.19151 8.24376L7.15911 15.5059C7.16089 15.5091 7.16267 15.5123 7.16451 15.5155C7.33908 15.8189 7.6518 16 8.00108 16C8.35033 16 8.66305 15.8189 8.83758 15.5155C8.83942 15.5123 8.8412 15.5091 8.84298 15.5059L12.8106 8.24376C13.7576 6.5103 13.7304 4.4528 12.7379 2.73992V2.73992ZM8.00101 7.25002C6.76036 7.25002 5.75101 6.24067 5.75101 5.00002C5.75101 3.75936 6.76036 2.75002 8.00101 2.75002C9.24167 2.75002 10.251 3.75936 10.251 5.00002C10.251 6.24067 9.2417 7.25002 8.00101 7.25002Z" fill="#B4BDCC"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_356_445">
+									<rect width="16" height="16" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>
+
+								Los Angeles, US
+							</p>
+						</div>
+					</div>
+					<div class="profile-top-right flex g40">
+						<div class="profile-agent">
+							<h6>MATCHING AGENT</h6>
+							<div class="flex g12 aic">
+								<img class="lazyload" data-src="img/profile/agent.jpg" alt="">
+								<span>Loren Devereaux</span>
+							</div>
+						</div>
+						<div class="grid col2 g16 profile-buttons">
+							<a href="" class="btn">Propose Match</a>
+							<a href="" class="btn btn-flat">Go to B24</a>
+							<a href="" class="btn btn-flat">Switch to client view</a>
+							<a href="" class="btn btn-flat flex aic jcc">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.49935 0.416992C11.4115 0.416992 14.5827 3.5882 14.5827 7.50033C14.5827 11.4125 11.4115 14.5837 7.49935 14.5837C3.58722 14.5837 0.416016 11.4125 0.416016 7.50033H1.83268C1.83268 10.6297 4.36993 13.167 7.49935 13.167C10.6288 13.167 13.166 10.6297 13.166 7.50033C13.166 4.37091 10.6288 1.83366 7.49935 1.83366C5.55143 1.83366 3.83302 2.81612 2.81372 4.31283H4.66602V5.72949H0.416016V1.47949H1.83268V3.25033C3.12468 1.52908 5.18239 0.416992 7.49935 0.416992Z" fill="#A0393A"/>
+								</svg>
+
+								Refresh
+							</a>
+						</div>	
+					</div>
+				</div>
+				<div class="profile-gallery grid col3 g16">
+					<img src="img/profile/1.jpg" alt="" class="lazyload">
+					<img src="img/profile/2.jpg" alt="" class="lazyload">
+					<img src="img/profile/3.jpg" alt="" class="lazyload">
+				</div>
+
+				<div class="profile-data flex g16">
+					<div class="profile-tabs">
+						<div class="profile-division">
+							<div class="question active flex aic jcsb">
+								<h6>Core Stats</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div>
+										<span>Location</span>
+										<b>CA, Los Angeles 21152 (Venice Beach)</b>
+									</div>
+									<div>
+										<span>Work</span>
+										<b>Vp of sales at figma.com, loves her job</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Age</span>
+										<b>30 years, February 11, 1990</b>
+									</div>
+									<div>
+										<span>Relationship Status</span>
+										<b>Divorced</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Height</span>
+										<b>5'7.7' (1.76m)</b>
+									</div>
+									<div>
+										<span>Sexual Orientation</span>
+										<b>Bisexual</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span>Ethnicity preferences</span>
+										<div class="profile-info profile-info-list flex fw">
+											<b>White / Caucasian — Neutral</b>
+											<b>Black / African descrent — Neutral</b>
+											<b>Asian — Neutral</b>
+											<b>Indian / South Asian — Neutral</b>
+											<b>Middle Eastern — Neutral</b>
+											<b>Latino / Hispanic — Neutral</b>
+											<b>Native American — Neutral</b>
+											<b>Pasific Islander — Neutral</b>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-division">
+							<div class="question flex aic jcsb">
+								<h6>Income and Age Requirements</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div>
+										<span>Match  income requirement</span>
+										<b>$11</b>
+									</div>
+									<div>
+										<span>Minimum Age of Match</span>
+										<b>10</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Minimum Age of Match</span>
+										<b>$10</b>
+									</div>
+									<div>
+										<span>Maximim Age of match</span>
+										<b>92</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-division">
+							<div class="question flex aic jcsb">
+								<h6>Politics and Religion and Lifestyle</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div>
+										<span>Politics</span>
+										<b>Middle of the road</b>
+									</div>
+									<div>
+										<span>Religion</span>
+										<b>Middle of the road</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Drinking</span>
+										<b>Middle of the road</b>
+									</div>
+									<div>
+										<span>Smoking</span>
+										<b>Middle of the road</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Vegan</span>
+										<b>Middle of the road</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-division">
+							<div class="question flex aic jcsb">
+								<h6>Kids</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span>Has kids</span>
+										<b>Has kids splits with dad, every other weekend.</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Wants Kids </span>
+										<b>Ideally, her match wouldn't have kids.</b>
+									</div>
+									<div>
+										<span>Want Kids </span>
+										<b>Maybe - open to it</b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-division">
+							<div class="question flex aic jcsb">
+								<h6>Interview Core Notes</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">How do you spend your time?</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Tell me about your ideal match?</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Must-have qualities in a match?</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Nice to have qualities</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Deal breakers</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Personality Info</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Additional Info</span>
+										<p>Very very active- work out 5-6 days a week. Loves to weight train. Very spiritual. Meditates 2 times a day. Personal and Professional self development. LOVES to travel! Big foodie. Music is a large part of her life- traveling for concerts / restaurants. Family and friends are important. High growth start-ups and now starting her own entrepreneurial path. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-division">
+							<div class="question flex aic jcsb">
+								<h6>InterviewER's Observations</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Interviewer</span>
+										<p>Loren Deveraux</p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Physical Attractiveness</span>
+										<p>Loren Deveraux</p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Body Type</span>
+										<p>Loren Deveraux</p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Observations and Notes</span>
+										<p>Loren Deveraux</p>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div class="full">
+										<span class="bold">Client Fit</span>
+										<p>Loren Deveraux</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="profile-division">
+							<div class="question flex aic jcsb">
+								<h6>Contact info</h6>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect y="8" width="18" height="2" fill="#333333"/>
+								<rect x="8" y="18" width="18" height="2" transform="rotate(-90 8 18)" fill="#333333"/>
+								</svg>
+							</div>
+							<div class="answer">
+								<div class="profile-info flex g24">
+									<div>
+										<span>Phone</span>
+										<b>111 111 1111</b>
+									</div>
+									<div>
+										<span>Email</span>
+										<b>Middle of the road</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Instagram</span>
+										<b>Middle of the road</b>
+									</div>
+									<div>
+										<span>facebook</span>
+										<b>Middle of the road</b>
+									</div>
+								</div>
+								<div class="profile-info flex g24">
+									<div>
+										<span>Linkedin</span>
+										<b>Middle of the road</b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="profile-note shadow">
+						<h3>Matchmakers Note</h3>
+						<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</p>
+					</div>
+
+					<div class="profile-ask mob flex fdc g24">
+						<div class="shadow profile-ask-block">
+							<h4>Ask her About</h4>
+							<p class="profile-icon flex aic">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_440_259)">
+								<path d="M18.975 5.71584C18.9368 5.61447 18.8579 5.53373 18.7574 5.49317L17.0691 4.81202C16.9642 4.26661 16.5499 3.82979 16.0168 3.69208L15.9258 2.64297C15.9125 2.48946 15.8095 2.35842 15.6634 2.3092C15.5174 2.26003 15.3561 2.30201 15.2525 2.41617L14.8193 2.89411L14.5514 1.95683C14.5053 1.79527 14.3602 1.68184 14.1922 1.67603C14.0233 1.67004 13.8717 1.77326 13.8145 1.9313L11.8134 7.45156C11.8134 7.45156 4.4014 7.79756 4.3983 7.79773C2.8784 7.88906 1.43847 7.0758 0.730888 5.72566C0.631459 5.5361 0.397248 5.4629 0.207734 5.56228C0.018135 5.66167 -0.0549834 5.89588 0.0443594 6.08543C0.676932 7.29245 1.7973 8.14162 3.08196 8.4508C2.94859 8.60621 2.66206 8.99139 2.49451 9.59697C2.31232 10.2554 2.24665 11.3051 2.91656 12.6379L1.83003 14.1137C1.76656 14.1999 1.74158 14.3085 1.761 14.4138L2.2392 17.0069C2.27309 17.1906 2.43341 17.3241 2.62034 17.3241H3.10745C3.22238 17.3241 3.33137 17.2731 3.40505 17.1849C3.47868 17.0966 3.50934 16.9802 3.48876 16.8672L3.18595 15.2038L6.38976 12.7987C6.39541 12.7944 6.38434 12.8033 6.38976 12.7987C6.6961 12.5414 6.91847 12.258 7.07754 11.9667C8.74733 12.2598 11.0325 12.6565 12.4971 12.8924L13.1424 16.9968C13.1721 17.1853 13.3345 17.3241 13.5253 17.3241H13.9261C14.1402 17.3241 14.3137 17.1506 14.3137 16.9366V12.7702C14.6775 12.5217 14.8075 12.1062 14.8938 11.6992C14.8965 11.6864 15.756 7.71966 15.756 7.71966C15.918 7.74666 16.0816 7.76083 16.2464 7.76083C17.3813 7.76083 18.4206 7.09634 18.9587 6.0267C19.0073 5.92998 19.0133 5.81725 18.975 5.71584Z" fill="#4E7DB1"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_440_259">
+								<rect width="19" height="19" fill="white"/>
+								</clipPath>
+								</defs>
+								</svg>
+								Her dog
+
+							</p>
+							<p class="profile-icon flex aic">
+								<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.9512 15.6135C17.1259 15.0415 16.8168 14.4322 16.261 14.2525C13.7801 13.4503 12.7266 8.87887 12.4796 7.19306C12.4434 6.95434 12.3236 6.72278 12.3236 6.72278C11.868 5.83079 10.1435 5.41457 9.94939 5.39051C9.60079 5.34736 9.55647 5.07303 9.5418 4.97976C10.1508 4.54393 10.562 3.49165 10.562 2.54129C10.562 1.1378 10.418 0 8.55961 0C8.53466 0 8.43925 0 8.4143 0C6.55586 0 6.41192 1.1378 6.41192 2.54129C6.41192 3.49165 6.82316 4.54393 7.43211 4.97976C7.41744 5.07303 7.35957 5.352 7.02451 5.39051C6.81563 5.41463 4.83589 5.89536 4.56972 6.93331C4.56972 6.93331 4.537 7.08173 4.51719 7.19725C4.51455 7.2128 4.30944 8.78057 3.69566 10.4835C3.1721 11.9361 2.23416 13.7691 0.738932 14.2525C0.183079 14.4322 -0.125846 15.0416 0.0488021 15.6135C0.189223 16.0732 0.599326 16.3683 1.04341 16.3733C0.154243 16.8995 0.0241031 17.6331 0.0241031 18.0132C0.0241031 18.1643 0.100018 18.6555 0.446932 19.1081C0.758365 19.515 1.37929 20 2.56778 20C2.74613 20 2.9347 19.989 3.1284 19.9676C3.91896 19.8802 4.71616 19.7488 5.4869 19.6218C5.76668 19.5756 6.0462 19.5297 6.32617 19.4855C6.69897 19.4266 7.37117 19.3876 8.32365 19.3696H8.65019C9.60267 19.3876 10.2749 19.4266 10.6477 19.4855C10.9276 19.5297 11.2072 19.5756 11.4869 19.6218C12.2577 19.7488 13.0549 19.8802 13.8454 19.9676C14.0392 19.989 14.2278 20 14.4061 20C15.5946 20 16.2155 19.5149 16.5269 19.1081C16.8738 18.6555 16.9497 18.1643 16.9497 18.0132C16.9497 17.633 16.8196 16.8994 15.9302 16.3732C15.9352 16.3733 15.9402 16.3738 15.945 16.3738C16.3936 16.3738 16.8096 16.077 16.9512 15.6135ZM4.62582 15.4761C4.09072 15.6474 3.96785 15.6654 3.51011 15.7323C3.36116 15.7539 3.17805 15.7807 2.93551 15.8192C2.69799 15.8452 2.48021 15.8801 2.27948 15.922C3.65529 15.1399 4.76493 13.6488 5.58733 11.4721C5.63322 11.8962 5.66161 12.3633 5.66161 12.8769C5.66161 14.5525 4.83677 15.4085 4.62582 15.4761ZM14.0383 15.8192C13.7958 15.7807 13.613 15.7511 13.4637 15.7323C12.0222 15.5496 11.3122 14.5525 11.3122 12.8769C11.3122 12.3414 11.3429 11.8559 11.3923 11.4176C12.2198 13.6318 13.3414 15.1445 14.7357 15.9308C14.5237 15.8849 14.2922 15.847 14.0383 15.8192Z" fill="#4E7DB1"/>
+								</svg>
+
+								Self development
+
+							</p>
+							<p class="profile-icon flex aic">
+								<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_440_266)">
+								<path d="M8.58712 13.431C9.12048 13.965 9.11719 14.8242 8.58712 15.3543L7.38768 16.5537C6.86203 17.0807 5.99804 17.0873 5.46441 16.5537L0.445971 11.5353C-0.0840571 11.0049 -0.0840571 10.142 0.445971 9.61201L1.64542 8.41256C2.17548 7.88246 3.03464 7.8792 3.56868 8.41256L8.58712 13.431ZM0.648157 12.8423C0.525459 12.7196 0.321471 12.7421 0.226752 12.8875C-0.149503 13.465 -0.0334681 14.1612 0.397694 14.5924L2.40731 16.602C2.83474 17.0294 3.5304 17.1524 4.11197 16.7732C4.25742 16.6783 4.28023 16.4744 4.15746 16.3516L0.648157 12.8423ZM9.41192 5.7359C9.19943 5.52375 8.85503 5.52375 8.64254 5.7359L5.73571 8.64273C5.52323 8.85521 5.52323 9.19961 5.73571 9.4121L7.58758 11.264C7.79936 11.4757 8.14376 11.4765 8.35696 11.264L11.2638 8.35714C11.4763 8.14466 11.4763 7.80026 11.2638 7.58777L9.41192 5.7359ZM16.352 4.15697C16.4748 4.27977 16.6788 4.25689 16.7736 4.11138C17.1526 3.52967 17.0281 2.83384 16.6018 2.4075L14.5922 0.397882C14.1621 -0.0319206 13.4663 -0.15037 12.8881 0.226226C12.7427 0.320944 12.72 0.524966 12.8428 0.647699L16.352 4.15697ZM11.5351 0.446159C11.0047 -0.0838695 10.1419 -0.0842095 9.61182 0.446159L8.41237 1.64561C7.88231 2.17564 7.87901 3.0348 8.41237 3.56887L13.4308 8.58731C13.9654 9.12118 14.8246 9.11683 15.3541 8.58731L16.5535 7.38786C17.0836 6.85783 17.0836 5.99497 16.5535 5.4646L11.5351 0.446159Z" fill="#4E7DB1"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_440_266">
+								<rect width="17" height="17" fill="white"/>
+								</clipPath>
+								</defs>
+								</svg>
+
+								Which sport she is learning now
+							</p>
+							<p class="profile-icon flex aic">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.4915 0.508544C16.8035 -0.179393 15.6846 -0.167897 15.0109 0.534067L11.3235 4.37654L2.32492 1.39856L0.435937 3.28757L7.93659 7.90587L4.14126 11.8607L1.70736 11.4612L0 13.1685L3.5782 14.4218L4.83149 18L6.53885 16.2926L6.13926 13.8587L10.0941 10.0634L14.7124 17.5641L16.6014 15.675L13.6235 6.67642L17.4659 2.98906C18.1679 2.3154 18.1794 1.19652 17.4915 0.508544Z" fill="#4E7DB1"/>
+								</svg>
+								Travel
+							</p>
+							<p class="profile-icon flex aic">
+								<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_440_253)">
+								<path d="M13.534 2.91117C12.5023 1.13068 10.6697 0.042915 8.63187 0.00134473C8.54487 -0.000448242 8.45732 -0.000448242 8.37029 0.00134473C6.33248 0.042915 4.49993 1.13068 3.46818 2.91117C2.41358 4.7311 2.38473 6.91719 3.39098 8.759L7.60655 16.475C7.60845 16.4784 7.61034 16.4818 7.6123 16.4852C7.79777 16.8076 8.13003 17 8.50115 17C8.87222 17 9.20449 16.8075 9.38993 16.4852C9.39189 16.4818 9.39378 16.4784 9.39567 16.475L13.6112 8.759C14.6174 6.91719 14.5886 4.7311 13.534 2.91117ZM8.50108 7.70314C7.18288 7.70314 6.11045 6.63071 6.11045 5.31252C6.11045 3.99432 7.18288 2.92189 8.50108 2.92189C9.81928 2.92189 10.8917 3.99432 10.8917 5.31252C10.8917 6.63071 9.81931 7.70314 8.50108 7.70314Z" fill="#4E7DB1"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_440_253">
+								<rect width="17" height="17" fill="white"/>
+								</clipPath>
+								</defs>
+								</svg>
+								Living in Russia
+							</p>
+						</div>
+						<div class="shadow profile-insight">
+							<h3 class="flex aic">
+								<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12.4637 12.6638C13.5237 11.3986 14.039 10.2393 14.039 9.11976C14.039 7.07753 12.3775 5.41602 10.3353 5.41602C9.26864 5.41602 8.25294 5.87741 7.54849 6.68185L7.0195 7.28598L6.49051 6.68185C5.78611 5.87741 4.77036 5.41602 3.70375 5.41602C1.66151 5.41602 0 7.07753 0 9.11976C0 10.2394 0.515305 11.3986 1.57531 12.6638C2.73806 14.0516 4.56851 15.5477 7.0195 17.1142C9.47049 15.5478 11.3009 14.0516 12.4637 12.6638Z" fill="#A0393A"/>
+								<path d="M18.0409 0.0537109C16.2527 0.0537109 14.6498 0.842442 13.5576 2.08966C12.4655 0.842442 10.8625 0.0537109 9.07437 0.0537109C6.48373 0.0537109 4.27978 1.70716 3.45898 4.01616C4.73114 3.95593 6.04924 4.40617 7.01896 5.23353C7.93824 4.4492 9.1122 4.01016 10.3347 4.01016C13.1524 4.01016 15.4447 6.30248 15.4447 9.12018C15.4447 10.5635 14.8043 12.0597 13.5411 13.5674C12.8349 14.4103 11.9389 15.263 10.8364 16.1392C11.6657 16.7267 12.5709 17.3289 13.5576 17.9467C21.2082 13.1565 23.9995 9.29662 23.9995 6.01227C23.9995 2.7215 21.3317 0.0537109 18.0409 0.0537109Z" fill="#A0393A"/>
+								</svg>
+								Relationship insight
+							</h3>
+							<p>She is looking for words of affirmation and someone who prioritizes spending time with her.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer bg-darker">
+			<div class="cont cont-lg">
+				<div class="tac">
+					<a href="/" class="header__logo">
+						<svg width="161" height="34" viewBox="0 0 161 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13.152 6.57581V10.73C13.152 10.73 12.2351 9.84457 10.6602 9.59959C10.0933 9.51209 9.40731 9.44909 8.58487 9.44909H2.56881V15.7626L7.90242 15.7591C11.9236 15.7416 14.2964 15.2867 15.3709 14.3242L15.9973 13.7608L15.1329 17.3725H14.9264C13.2605 17.3725 11.8081 17.3725 10.4432 17.369L0 17.3655L0.0139986 17.089C0.258981 12.6269 0.258981 5.89686 0.0139986 1.43469L0 1.1582H15.0104V4.60545L14.5729 4.20998C12.9525 2.74709 10.7197 2.75059 8.64436 2.76809C8.45888 2.76809 8.27689 2.77158 8.0949 2.77158L2.57231 2.76809V7.84621H8.58487C11.2412 7.85321 12.1756 7.35625 13.152 6.57581Z" fill="white"/>
+						<path d="M39.026 1.43551L39.04 1.15903H36.7652L36.7792 1.43551C36.8982 3.72084 36.9647 6.65363 36.9647 9.6949L36.9612 12.7152C32.4325 9.20144 27.5608 4.98775 23.1932 0.812555L22.7102 0.350586L22.7732 1.46351C23.0182 5.91868 23.0182 12.6382 22.7732 17.0934L22.7592 17.3698H25.034L25.02 17.0934C24.901 14.815 24.8345 11.8927 24.8345 8.86546L24.838 5.84868C28.8768 9.00195 33.3389 12.6452 38.6095 17.7653L39.0995 18.2413L39.0225 17.0934C38.7775 12.6277 38.7775 5.89768 39.026 1.43551Z" fill="white"/>
+						<path d="M56.5151 2.45682C56.1476 1.77437 55.7801 1.09192 55.4092 0.409469L55.1887 0L49.2321 10.1598C47.7972 12.5606 46.2958 14.9754 45.0044 16.9633L44.7419 17.3692H47.1043L47.1778 17.2292C47.8602 15.9483 48.6966 14.4539 49.7256 12.6656H59.5773C60.5678 14.4504 61.3727 15.9833 61.9817 17.2222L62.0552 17.3692H65.1629L64.8935 16.9633C61.8137 12.2876 59.1189 7.28997 56.5151 2.45682ZM54.8667 3.97921L58.7094 11.1012H50.6425L54.8667 3.97921Z" fill="white"/>
+						<path d="M90.3762 1.15828H88.7628L88.6858 1.27378C86.341 4.77352 83.2612 9.1237 80.5944 12.7039C77.6127 8.73173 74.5609 4.37805 72.5835 1.27728L72.5065 1.15479H70.8267L70.8407 1.43127C71.0856 5.89344 71.0856 12.6234 70.8407 17.0856L70.8267 17.3621H73.1015L73.0875 17.0856C72.951 14.7268 72.8845 11.724 72.902 8.62674V6.27141C75.6038 9.90064 77.8331 13.0364 79.877 16.0882L80.094 16.4102L81.5604 14.2683C83.5237 11.437 85.7426 8.34326 87.7234 5.67295L87.7269 8.99421C87.7549 12.1405 87.6779 14.9368 87.4994 17.0786L87.4749 17.3621H90.3727L90.3482 17.0786C89.9807 12.6199 89.9807 5.89694 90.3482 1.43826L90.3762 1.15828Z" fill="white"/>
+						<path d="M106.35 0.269287C100.015 0.269287 96.3336 3.47155 96.2566 9.06064C96.3371 14.6427 100.015 17.845 106.35 17.845C112.684 17.845 116.363 14.6427 116.443 9.05364C116.363 3.47155 112.684 0.269287 106.35 0.269287ZM106.336 1.87917C111.473 1.87917 113.773 4.09801 113.787 9.07814C113.773 14.0618 111.473 16.2841 106.336 16.2841C101.209 16.2841 98.9094 14.0618 98.8849 9.08164C98.9094 4.10151 101.205 1.87917 106.336 1.87917Z" fill="white"/>
+						<path d="M135.198 1.43533C135.3 3.38119 135.366 5.901 135.384 8.53631L135.377 10.7516C135.412 12.225 134.946 13.492 134.033 14.4194C133.067 15.4028 131.632 15.9523 130.103 15.9453C128.598 15.9453 127.191 15.3853 126.235 14.4089C125.329 13.4814 124.867 12.2145 124.902 10.7411L124.899 8.53281C124.916 5.89751 124.983 3.37419 125.084 1.42833L125.098 1.15186H122.333L122.347 1.42833C122.452 3.37419 122.515 5.90101 122.533 8.53981L122.54 10.7901C122.54 15.4448 126.47 17.5656 130.12 17.5656C133.791 17.5656 137.743 15.4448 137.743 10.7936L137.746 8.54331C137.764 5.901 137.83 3.37419 137.932 1.42833L137.946 1.15186H135.181L135.198 1.43533Z" fill="white"/>
+						<path d="M160.09 16.6236C159.628 16.6026 159.113 15.8536 158.767 15.2902L156.324 11.3915C156.005 10.8805 155.694 10.485 155.365 10.177C158.123 9.79207 159.358 7.63623 159.327 5.65887C159.292 3.49603 157.759 1.16521 154.465 1.16171L144.334 1.1582L144.348 1.43469C144.484 3.81801 144.551 6.85578 144.533 9.98455C144.516 12.6444 144.453 15.1012 144.348 17.089L144.334 17.3655H147.099L147.085 17.089C146.983 15.1642 146.92 12.8018 146.899 10.2435H150.973C152.408 10.2435 153.192 11.017 153.923 12.1824L156.107 15.6366C157.097 17.201 158.116 17.369 158.508 17.369H160.755V16.6376L160.09 16.6236ZM146.91 2.76459L154.423 2.76809C156.17 2.76809 156.964 4.27997 156.964 5.68687C156.964 6.45331 156.73 7.19876 156.317 7.72722C155.858 8.31518 155.204 8.62666 154.427 8.62666H146.903L146.91 2.76459Z" fill="white"/>
+						<path d="M35.4981 28.401H35.0397L35.0292 28.415C34.2242 29.6189 33.1568 31.1238 32.2399 32.3522C31.2144 30.9873 30.1575 29.4824 29.4786 28.415L29.4681 28.3975H28.9851L28.9886 28.436C29.0726 29.9513 29.0726 32.2367 28.9886 33.7521L28.9851 33.7906H29.6431L29.6396 33.7521C29.5941 32.9506 29.5696 31.9287 29.5766 30.8788V29.9163C30.539 31.2043 31.3229 32.3067 32.0404 33.3811L32.0684 33.4231L32.5198 32.7616C33.2198 31.7537 34.0142 30.6478 34.7072 29.7134V31.0013C34.7177 32.0687 34.6897 33.0206 34.6302 33.7486L34.6267 33.7871H35.4911L35.4876 33.7486C35.3616 32.2332 35.3616 29.9478 35.4876 28.436L35.4981 28.401Z" fill="white"/>
+						<path d="M43.441 28.8067C43.3185 28.5757 43.1925 28.3483 43.0701 28.1173L43.0421 28.0613L41.0717 31.4245C40.5852 32.24 40.0743 33.0589 39.6368 33.7344L39.6018 33.7869H40.2703L40.2808 33.7694C40.5187 33.3249 40.8127 32.7929 41.1627 32.191H44.5679C44.9109 32.8104 45.1909 33.3389 45.4009 33.7659L45.4114 33.7869H46.3318L46.2968 33.7344C45.2434 32.149 44.3265 30.4481 43.441 28.8067ZM42.9336 29.1952L44.323 31.7745H41.4007L42.9336 29.1952Z" fill="white"/>
+						<path d="M48.7988 29.3878L48.8548 29.3423C49.3343 28.9643 49.8348 28.8383 50.8427 28.8383H51.5426V30.9242C51.5531 32.0826 51.5251 33.0625 51.4691 33.752L51.4656 33.7905H52.3301L52.3266 33.752C52.2601 32.9365 52.2251 31.9076 52.2321 30.9277V28.8383H52.9215C53.926 28.8383 54.4264 28.9643 54.9094 29.3423L54.9654 29.3878V28.4009H48.8023V29.3878H48.7988Z" fill="white"/>
+						<path d="M62.4263 28.1064C60.7044 28.1064 58.853 29.0234 58.853 31.0392C58.853 33.0481 60.7009 33.965 62.4193 33.965C63.4867 33.965 64.4071 33.629 64.8761 33.0656L64.8831 33.0551V32.0157L64.8166 32.1311C64.3371 32.9851 63.3082 33.5381 62.1988 33.5381H62.1673C60.9984 33.5241 59.6335 32.8626 59.6335 31.0392C59.6335 29.3279 60.9004 28.5474 62.1603 28.5334H62.1988C63.3152 28.5334 64.3441 29.0864 64.8166 29.9403L64.8831 30.0593V29.0199L64.8761 29.0094C64.4141 28.4529 63.4762 28.1064 62.4263 28.1064Z" fill="white"/>
+						<path d="M75.1084 28.4009H74.244L74.2475 28.4359C74.286 29.1848 74.3105 29.9408 74.3175 30.6232H70.1003C70.1108 29.8568 70.1423 29.0798 70.1913 28.4394L70.1948 28.4009H69.3303L69.3338 28.4359C69.4143 30.0318 69.4563 32.2646 69.3338 33.752L69.3303 33.7905H70.1948L70.1913 33.752C70.1318 33.0275 70.0968 32.0721 70.0968 31.0607H74.3245C74.3315 32.1071 74.307 33.038 74.2475 33.752L74.244 33.7905H75.1084L75.1049 33.752C74.9789 32.2366 74.9789 29.9513 75.1049 28.4394L75.1084 28.4009Z" fill="white"/>
+						<path d="M86.5938 28.401H86.1354L86.1249 28.415C85.3164 29.6259 84.249 31.1273 83.3356 32.3522C82.3101 30.9908 81.2567 29.4859 80.5743 28.415L80.5638 28.3975H80.0808L80.0843 28.436C80.1683 29.9513 80.1683 32.2367 80.0843 33.7521L80.0808 33.7906H80.7388L80.7353 33.7521C80.6898 32.9541 80.6653 31.9357 80.6723 30.8788V29.9163C81.6347 31.2043 82.4186 32.3067 83.1361 33.3811L83.1641 33.4231L83.6155 32.7616C84.3155 31.7537 85.1099 30.6478 85.8029 29.7134V31.0013C85.8134 32.0722 85.7854 33.0241 85.7259 33.7486L85.7224 33.7871H86.5868L86.5833 33.7486C86.4573 32.2332 86.4573 29.9478 86.5833 28.436L86.5938 28.401Z" fill="white"/>
+						<path d="M94.6799 28.8066C94.5574 28.5792 94.4349 28.3482 94.3089 28.1207L94.2809 28.0647L92.3071 31.428C91.8206 32.2434 91.3096 33.0623 90.8722 33.7378L90.8372 33.7903H91.5056L91.5161 33.7728C91.7541 33.3283 92.0411 32.8138 92.398 32.1944H95.8033C96.1463 32.8138 96.4262 33.3423 96.6362 33.7693L96.6467 33.7903H97.5672L97.5322 33.7378C96.4787 32.1454 95.5653 30.448 94.6799 28.8066ZM94.1724 29.1951L95.5653 31.7744H92.643L94.1724 29.1951Z" fill="white"/>
+						<path d="M104.336 30.3467L105.33 29.2758C105.733 28.8453 106.086 28.6039 106.506 28.4709L106.723 28.4009H105.484L102.576 31.5542C102.565 30.4202 102.597 29.2898 102.667 28.4394L102.67 28.4009H101.806L101.809 28.4359C101.89 30.0283 101.932 32.2611 101.809 33.7485L101.806 33.787H102.674L102.67 33.7485C102.632 33.3145 102.607 32.8211 102.593 32.2331L103.881 30.8402C104.606 31.7851 105.365 32.7966 106.016 33.7695L106.027 33.7835H107.021L106.972 33.7275C106.037 32.6111 105.18 31.5051 104.336 30.3467Z" fill="white"/>
+						<path d="M111.409 28.4009H110.545L110.548 28.4359C110.629 30.0283 110.671 32.2646 110.548 33.752L110.545 33.7905H111.409L111.406 33.752C111.28 32.2366 111.28 29.9513 111.406 28.4394L111.409 28.4009Z" fill="white"/>
+						<path d="M121.133 28.4394L121.136 28.4009H120.478L120.482 28.4359C120.524 29.2093 120.545 30.2068 120.545 31.2392V32.3731C118.984 31.1657 117.294 29.7098 115.785 28.2644L115.722 28.2014L115.736 28.4429C115.82 29.9548 115.82 32.2366 115.736 33.7485L115.733 33.787H116.391L116.387 33.752C116.345 32.9821 116.324 31.9881 116.324 30.9592V29.8253C117.721 30.9137 119.26 32.1666 121.087 33.9375L121.154 34.0005L121.136 33.752C121.052 32.2401 121.052 29.9548 121.133 28.4394Z" fill="white"/>
+						<path d="M130.584 30.7486L130.587 30.7871C130.619 31.34 130.643 32.012 130.657 32.7819C130.115 33.2264 129.376 33.4784 128.627 33.4784C127.35 33.4784 126.062 32.7154 126.062 31.0076C126.062 29.2927 127.354 28.5262 128.631 28.5262C129.744 28.5262 130.769 29.0722 131.249 29.9191L131.315 30.0346V29.0057L131.308 28.9952C130.846 28.4423 129.905 28.1028 128.851 28.1028C127.133 28.1028 125.285 29.0127 125.285 31.0076C125.285 32.9954 127.13 33.9018 128.844 33.9018C129.898 33.9018 130.839 33.5589 131.305 33.0094L131.312 32.9989L131.354 32.9919V32.9639C131.364 32.1835 131.396 31.431 131.448 30.7871L131.452 30.7486H130.584Z" fill="white"/>
+						<path d="M131.441 30.748H129.341L129.338 31.1785H130.08C130.08 31.1785 130.591 31.2065 130.619 31.5985L131.441 30.748Z" fill="white"/>
+						</svg>
+					</a>
+				</div>
+				<div class="footer__lists flex jcsb">
+					<div class="footer__links">
+						<a href="">Los Angeles Matchmaking</a>
+						<a href="">San Francisco Matchmaking</a>
+						<a href="">New York Matchmaking</a>
+						<a href="">New Jersey Matchmaking</a>
+					</div>
+					<div class="footer__links">
+						<a href="">Elite Matchmaking For Men</a>
+						<a href="">Elite Matchmaking For Women</a>
+					</div>
+					<div class="footer__links">
+						<a href="about.html">About Us</a>
+						<a href="">Privacy Policy</a>
+						<a href="">Terms & Conditions</a>
+						<a href="">Contact Us</a>
+					</div>
+					<div class="footer__social flex g24 aic">
+						<a href="">
+							<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.6653 2.12407C15.5749 1.78359 15.3967 1.47283 15.1484 1.22291C14.9001 0.972997 14.5905 0.792698 14.2507 0.70007C13.0033 0.363403 8 0.363403 8 0.363403C8 0.363403 2.99667 0.363403 1.74867 0.70007C1.40894 0.792861 1.09953 0.973225 0.851385 1.22312C0.603241 1.47302 0.425061 1.7837 0.334667 2.12407C0 3.38007 0 6.00007 0 6.00007C0 6.00007 0 8.62007 0.334667 9.87607C0.425057 10.2166 0.603317 10.5273 0.851594 10.7772C1.09987 11.0271 1.40945 11.2074 1.74933 11.3001C2.99667 11.6367 8 11.6367 8 11.6367C8 11.6367 13.0033 11.6367 14.2513 11.3001C14.5912 11.2075 14.9009 11.0272 15.1491 10.7773C15.3974 10.5274 15.5757 10.2166 15.666 9.87607C16 8.62007 16 6.00007 16 6.00007C16 6.00007 16 3.38007 15.6653 2.12407ZM6.36333 8.37874V3.6214L10.5453 6.00007L6.36333 8.37874Z" fill="#C5C5C5"/>
+							</svg>
+
+						</a>
+						<a href="">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16 8.04846C16 3.63046 12.418 0.0484619 8 0.0484619C3.582 0.0484619 0 3.63046 0 8.04846C0 12.0418 2.92533 15.3511 6.75 15.9511V10.3611H4.71867V8.0478H6.75V6.28646C6.75 4.2818 7.94467 3.1738 9.772 3.1738C10.6467 3.1738 11.5627 3.33046 11.5627 3.33046V5.29913H10.5533C9.55933 5.29913 9.24933 5.9158 9.24933 6.54846V8.04846H11.468L11.1133 10.3618H9.24933V15.9518C13.0747 15.3511 16 12.0411 16 8.04846Z" fill="#C5C5C5"/>
+							</svg>
+
+						</a>
+						<a href="">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8 0C5.82667 0 5.55533 0.01 4.702 0.048C3.85 0.088 3.27 0.222 2.76 0.42C2.234 0.624 1.78733 0.898 1.34267 1.34267C0.898 1.78733 0.623333 2.23333 0.42 2.76C0.222 3.27 0.0873333 3.85 0.048 4.702C0.008 5.55533 0 5.82667 0 8C0 10.1733 0.01 10.4447 0.048 11.298C0.088 12.1493 0.222 12.73 0.42 13.24C0.624 13.7653 0.898 14.2127 1.34267 14.6573C1.78733 15.1013 2.23333 15.3767 2.76 15.58C3.27067 15.7773 3.85067 15.9127 4.702 15.952C5.55533 15.992 5.82667 16 8 16C10.1733 16 10.4447 15.99 11.298 15.952C12.1493 15.912 12.73 15.7773 13.24 15.58C13.7653 15.376 14.2127 15.1013 14.6573 14.6573C15.1013 14.2127 15.3767 13.7673 15.58 13.24C15.7773 12.73 15.9127 12.1493 15.952 11.298C15.992 10.4447 16 10.1733 16 8C16 5.82667 15.99 5.55533 15.952 4.702C15.912 3.85067 15.7773 3.26933 15.58 2.76C15.376 2.234 15.1013 1.78733 14.6573 1.34267C14.2127 0.898 13.7673 0.623333 13.24 0.42C12.73 0.222 12.1493 0.0873333 11.298 0.048C10.4447 0.008 10.1733 0 8 0ZM8 1.44C10.1353 1.44 10.39 1.45067 11.2333 1.48733C12.0133 1.524 12.4367 1.65333 12.718 1.764C13.0927 1.90867 13.358 2.082 13.6393 2.36133C13.9187 2.64133 14.092 2.90733 14.2367 3.282C14.346 3.56333 14.4767 3.98667 14.512 4.76667C14.55 5.61067 14.5587 5.864 14.5587 8C14.5587 10.136 14.5487 10.39 14.5093 11.2333C14.4687 12.0133 14.3387 12.4367 14.2287 12.718C14.0793 13.0927 13.9093 13.358 13.6293 13.6393C13.35 13.9187 13.08 14.092 12.7093 14.2367C12.4293 14.346 11.9993 14.4767 11.2193 14.512C10.37 14.55 10.12 14.5587 7.98 14.5587C5.83933 14.5587 5.58933 14.5487 4.74067 14.5093C3.96 14.4687 3.53 14.3387 3.25 14.2287C2.87067 14.0793 2.61 13.9093 2.33067 13.6293C2.05 13.35 1.87067 13.08 1.73067 12.7093C1.62067 12.4293 1.49133 11.9993 1.45067 11.2193C1.42067 10.3793 1.41 10.12 1.41 7.99C1.41 5.85933 1.42067 5.59933 1.45067 4.74933C1.49133 3.96933 1.62067 3.54 1.73067 3.26C1.87067 2.88 2.05 2.62 2.33067 2.33933C2.61 2.06 2.87067 1.88 3.25 1.74067C3.53 1.63 3.95067 1.5 4.73067 1.46C5.58067 1.43 5.83067 1.42 7.97 1.42L8 1.44ZM8 3.892C5.73 3.892 3.892 5.732 3.892 8C3.892 10.27 5.732 12.108 8 12.108C10.27 12.108 12.108 10.268 12.108 8C12.108 5.73 10.268 3.892 8 3.892ZM8 10.6667C6.52667 10.6667 5.33333 9.47333 5.33333 8C5.33333 6.52667 6.52667 5.33333 8 5.33333C9.47333 5.33333 10.6667 6.52667 10.6667 8C10.6667 9.47333 9.47333 10.6667 8 10.6667ZM13.2307 3.73C13.2307 4.26 12.8 4.69 12.2707 4.69C11.7407 4.69 11.3107 4.25933 11.3107 3.73C11.3107 3.20067 11.7413 2.77067 12.2707 2.77067C12.7993 2.77 13.2307 3.20067 13.2307 3.73Z" fill="#C5C5C5"/>
+							</svg>
+
+						</a>
+						<a href="">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.9687 2.04681C15.3697 2.31054 14.7351 2.48463 14.0853 2.56347C14.7694 2.15231 15.2816 1.5075 15.5273 0.748139C14.8933 1.11814 14.1907 1.38747 13.4427 1.53747C12.9492 1.00976 12.2952 0.659754 11.5824 0.541807C10.8696 0.423861 10.1378 0.544573 9.50062 0.8852C8.86345 1.22583 8.35657 1.76731 8.0587 2.42556C7.76083 3.0838 7.68864 3.82199 7.85333 4.52547C5.12667 4.39681 2.71133 3.08681 1.09333 1.10814C0.799196 1.60802 0.645776 2.17816 0.649333 2.75814C0.649333 3.89814 1.22933 4.90014 2.108 5.48881C1.58724 5.47223 1.07798 5.33143 0.622667 5.07814V5.11814C0.622371 5.87573 0.884179 6.6101 1.36367 7.19664C1.84316 7.78319 2.51081 8.18579 3.25333 8.33614C2.7722 8.46506 2.26828 8.48442 1.77867 8.39281C1.98941 9.04481 2.39844 9.61476 2.94868 10.0231C3.49891 10.4315 4.1629 10.6579 4.848 10.6708C3.68769 11.5814 2.25498 12.0757 0.78 12.0741C0.52 12.0741 0.260667 12.0588 0 12.0295C1.50381 12.9924 3.25234 13.5035 5.038 13.5021C11.0733 13.5021 14.37 8.50481 14.37 4.17881C14.37 4.03881 14.37 3.89881 14.36 3.75881C15.004 3.29538 15.5595 2.72002 16 2.06014L15.9687 2.04681Z" fill="#C5C5C5"/>
+							</svg>
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- LAZYLOAD -->
+	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+	<!-- SLIDER -->
+	<!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script> -->
+	<!-- VIDEO PLAYER -->
+	<!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.min.js"></script> -->
+
+	<script src="js/common.js"></script>
+
+</body>
+</html>
