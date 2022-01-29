@@ -49,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 	// END SCROLLING ANIM
 
-	let questions = qsa('.question');
+
+
+
+	let questions = qsa('.question:not(.static)');
 
 	if (questions.length) {
 		questions.forEach(el => {
