@@ -629,6 +629,11 @@ img,svg {
 	&-data {
 		margin-top: 24px;
 	}
+	&-division:last-child {
+		.question::after {
+			display: none;
+		}
+	}
 	&-tabs {
 		width: calc((100% + 16px) / 3 * 2);
 		color: #333;
@@ -643,6 +648,17 @@ img,svg {
 			transition: .3s;
 			padding: 20px 16px;
 			gap: 20px;
+			position: relative;
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 16px;
+				width: calc(100% - 32px);
+				height: 1px;
+				background: #A4BCC8;
+				content: '';
+				transition: .2s;
+			}
 			&.static {
 				cursor: initial;
 				& + .answer {
@@ -673,6 +689,9 @@ img,svg {
 					visibility: visible;
 					opacity: 1;
 					transform: scaleY(1);
+				}
+				&::after {
+					background: transparent;
 				}
 			}
 		}

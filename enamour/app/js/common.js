@@ -126,6 +126,16 @@ document.addEventListener("DOMContentLoaded", function() {
 			};
 		})
 		qs('.answer').style.height = qs('.answer').scrollHeight + 'px';
+
+		window.onresize = () => {
+			qsa('.question.active:not(.static)').forEach(el => {
+				let answer = el.nextElementSibling;
+				answer.style.height = 'auto';
+				setTimeout(() => {
+					answer.style.height = answer.scrollHeight + 'px';
+				}, 300)
+			})
+		}
 	} 
 
 	// LINE SCROLL ANIMATION
