@@ -704,6 +704,22 @@ img,svg {
 			transition: .3s;
 		}
 	}
+	&-video {
+		width: 100%;
+		&-wrap {
+			padding-bottom: 56.25%;
+			position: relative;
+			iframe {
+				display: block;
+			    width: 100%;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    border: 0;
+			}
+		}
+	}
 	&-info {
 		padding: 20px 16px;
 		&:nth-child(2n) {
