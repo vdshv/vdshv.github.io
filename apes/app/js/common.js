@@ -19,11 +19,63 @@ document.addEventListener("DOMContentLoaded", function() {
 		centerX = pointerBox.left + parseInt(centers[0]) - window.pageXOffset;
 
 	window.onload = () => {
-		qs('.hero__apes').classList.add('active');
+		let apesAll = qs('.hero__apes');
+		let apes = qsa('.hero__apes img');
+		
+		apesAll.classList.add('active');
 
 		setTimeout(() => {
-			qs('.hero__apes').classList.remove('active');
-		}, 3500);
+			apes.forEach((ape) => {
+				ape.classList.add('active')
+				ape.dataset.visible = 'true'
+			});
+			apesAll.classList.remove('active');
+
+			initHeroApes()
+		}, 1000)
+
+		function initHeroApes(){
+			setInterval(() => {
+				let activeApes = [...apes].filter(ape=>ape.classList.contains('active'));
+
+				let currentInd = random(0, activeApes.length - 1);
+				let currentInd2 = random(0, activeApes.length - 1);
+
+				let current = activeApes[currentInd];
+				let current2 = activeApes[currentInd2];
+
+				hideRandom(current);
+				// hideRandom(current2);
+				// ignoreApe(currentInd);
+				setTimeout(() => {
+					showRandow(current);
+					// showRandow(current2);
+				}, 1500)
+			}, 1500);
+		}
+	}
+	function random(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+	function hideRandom (ape) {
+		// if(ape.dataset.visible) {
+			ape.classList.remove('active');
+		// 	ape.dataset.visible = ''
+		// } else {
+		// 	ape.classList.add('active');
+		// 	ape.dataset.visible = 'true'
+		// }
+	}
+	function showRandow (ape) {
+		// if(ape.dataset.visible) {
+		// 	ape.classList.remove('active');
+		// 	ape.dataset.visible = ''
+		// } else {
+			ape.classList.add('active');
+		// 	ape.dataset.visible = 'true'
+		// }
 	}
 
 	window.onmousemove = (e) => {
@@ -39,24 +91,21 @@ document.addEventListener("DOMContentLoaded", function() {
 	let options = { threshold: 0 },
 		titles = qsa('.slider__text'),
 		titlesW = [...titles].map(el => el.clientWidth),
-		titlesIn = [false, false],
 		titlesX = [0,0],
-		titlesDir = ['', '-'];
+		titlesDir = ['', '-'],
+		roadmapApes = qsa('.roadmap__img'),
+		animated = [...roadmapApes, ...titles],
 
 		contW = qs('.slider__texts').clientWidth;
 	
 	let callback = function(entries, observer) {
 	    entries.forEach(entry => {
-			if (entry.target.classList.contains('left')) {
-				titlesIn[0] = (entry.isIntersecting) ? true : false;
-			} else if(entry.target.classList.contains('right')) {
-				titlesIn[1] = (entry.isIntersecting) ? true : false;
-			}
+			entry.target.dataset.in_view = (entry.isIntersecting) ? 'true' : '';
       	});
 	};
 	
 	let observer = new IntersectionObserver(callback, options);
-	titles.forEach(el => {
+	animated.forEach(el => {
 		observer.observe(el);
 	});
 
@@ -67,8 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	    window.msRequestAnimationFrame;
 
 	var about = qs('.about'),
-		sticky = qs('.hero__info.sticky'),
-		x;
+		sticky = qs('.hero__info.sticky');
 
 	(function init() {
 	    (function step() {
@@ -79,11 +127,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	    	}
 
 	    	titles.forEach((el, ind) => {
-	    		if(titlesIn[ind]) {
+	    		if(el.dataset.in_view == 'true') {
 	    			let rect = el.getBoundingClientRect();
 	    			titlesX[ind] = (window.innerHeight - rect.top) * (contW - titlesW[ind]) / (window.innerHeight + rect.height);
 
-	    			titles[ind].style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
+	    			el.style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
+	    		}
+	    	})
+
+	    	roadmapApes.forEach((el, ind) => {
+	    		if(el.dataset.in_view) {
+	    			let rect = el.getBoundingClientRect(),
+	    				stepH = el.parentElement.clientHeight;
+	    			let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
+	    			// console.log(y);
+	    			
+	    			el.style.transform = `translate3d(0,${y}px,0)`;
 	    		}
 	    	})
 
