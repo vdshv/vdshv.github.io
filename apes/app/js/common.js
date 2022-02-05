@@ -18,8 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		centerY = pointerBox.top + parseInt(centers[1]) - window.pageYOffset,
 		centerX = pointerBox.left + parseInt(centers[0]) - window.pageXOffset;
 
-	window.onmousemove = (e) => {
+	window.onload = () => {
+		qs('.hero__apes').classList.add('active');
 
+		setTimeout(() => {
+			qs('.hero__apes').classList.remove('active');
+		}, 3500);
+	}
+
+	window.onmousemove = (e) => {
 		let x = e.pageX,
 			y = e.pageY,
 			radians = Math.atan2(x - centerX, y - centerY),
@@ -28,13 +35,40 @@ document.addEventListener("DOMContentLoaded", function() {
 		pointer.style.transform = "rotate("+degree+"deg)";
 	}
 
+	// let options = isTouchDevice ? { threshold: 0.4 } : { threshold: 0.7 };
+	let options = { threshold: 0 },
+		titles = qsa('.slider__text'),
+		titlesW = [...titles].map(el => el.clientWidth),
+		titlesIn = [false, false],
+		titlesX = [0,0],
+		titlesDir = ['', '-'];
+
+		contW = qs('.slider__texts').clientWidth;
+	
+	let callback = function(entries, observer) {
+	    entries.forEach(entry => {
+			if (entry.target.classList.contains('left')) {
+				titlesIn[0] = (entry.isIntersecting) ? true : false;
+			} else if(entry.target.classList.contains('right')) {
+				titlesIn[1] = (entry.isIntersecting) ? true : false;
+			}
+      	});
+	};
+	
+	let observer = new IntersectionObserver(callback, options);
+	titles.forEach(el => {
+		observer.observe(el);
+	});
+
 	const raf = window.requestAnimationFrame ||
 	    window.webkitRequestAnimationFrame ||
 	    window.mozRequestAnimationFrame ||
 	    window.oRequestAnimationFrame ||
 	    window.msRequestAnimationFrame;
-	let about = qs('.about'),
-		sticky = qs('.hero__info.sticky');
+
+	var about = qs('.about'),
+		sticky = qs('.hero__info.sticky'),
+		x;
 
 	(function init() {
 	    (function step() {
@@ -43,6 +77,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	    	} else {
 	    		sticky.classList.remove('active');
 	    	}
+
+	    	titles.forEach((el, ind) => {
+	    		if(titlesIn[ind]) {
+	    			let rect = el.getBoundingClientRect();
+	    			titlesX[ind] = (window.innerHeight - rect.top) * (contW - titlesW[ind]) / (window.innerHeight + rect.height);
+
+	    			titles[ind].style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
+	    		}
+	    	})
+
            	raf(step);
 	    })();
 	})();
@@ -51,6 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	  type: 'carousel',
 	  animationDuration: 800,
 	  perView: 3,
+	  autoplay: 5000,
+	  hoverpause: false,
 	  focusAt: 'center',
 	  gap: 70
 	})
@@ -69,7 +115,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	glide.go('=0');
 
-	
+
+	let questions = qsa('.faq__question');
+
+	questions.forEach(el => {
+		el.onclick = (e) => {
+			let answer = el.nextElementSibling;
+			if(el.classList.contains('active')) {
+				el.classList.remove('active');
+				answer.style.height = '0px';
+			} else {
+				el.classList.add('active');
+				answer.style.height = answer.scrollHeight + 'px';
+			}
+		};
+	})
+
 
 	function qs (selector, searchIn) {
 		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
