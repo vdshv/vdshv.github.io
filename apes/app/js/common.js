@@ -23,14 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		menu.classList.remove('active');
 	}
 
-
-	var pointer = qs(".hero__circle div"),
-		pointerBox = pointer.getBoundingClientRect(),
-		centerPoint = window.getComputedStyle(pointer).transformOrigin,
-		centers = centerPoint.split(" "),
-		centerY = pointerBox.top + parseInt(centers[1]) - window.pageYOffset,
-		centerX = pointerBox.left + parseInt(centers[0]) - window.pageXOffset;
-
 	window.onload = () => {
 		let apesAll = qs('.hero__apes');
 		let apes = qsa('.hero__apes img');
@@ -71,14 +63,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	  return Math.floor(Math.random() * (max - min + 1) + min);
 	}
 
-	window.onmousemove = (e) => {
-		let x = e.pageX,
-			y = e.pageY,
-			radians = Math.atan2(x - centerX, y - centerY),
-			degree = (radians * (180 / Math.PI) * -1) + 180; 
-	
-		pointer.style.transform = "rotate("+degree+"deg)";
+
+	if(!isTouchDevice) {
+		var pointer = qs(".hero__circle div"),
+			pointerBox = pointer.getBoundingClientRect(),
+			centerPoint = window.getComputedStyle(pointer).transformOrigin,
+			centers = centerPoint.split(" "),
+			centerY = pointerBox.top + parseInt(centers[1]) - window.pageYOffset,
+			centerX = pointerBox.left + parseInt(centers[0]) - window.pageXOffset;
+
+		window.onmousemove = (e) => {
+			let x = e.pageX,
+				y = e.pageY,
+				radians = Math.atan2(x - centerX, y - centerY),
+				degree = (radians * (180 / Math.PI) * -1) + 180; 
+		
+			pointer.style.transform = "rotate("+degree+"deg)";
+		}
 	}
+	
 
 	// let options = isTouchDevice ? { threshold: 0.4 } : { threshold: 0.7 };
 	let options = { threshold: 0 },
@@ -102,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		observer.observe(el);
 	});
 
+
 	const raf = window.requestAnimationFrame ||
 	    window.webkitRequestAnimationFrame ||
 	    window.mozRequestAnimationFrame ||
@@ -109,11 +113,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	    window.msRequestAnimationFrame;
 
 	var about = qs('.about'),
-		sticky = qs('.hero__info.sticky');
+		footer = qs('.footer'),
+		sticky = qs('.hero__info.sticky'),
+		conditionTarget = isTouchDevice ? footer : about; 
+		conditionValue = isTouchDevice ? window.innerHeight : 0;
 
 	(function init() {
 	    (function step() {
-	    	if(about.getBoundingClientRect().top <= 0) {
+	    	if(conditionTarget.getBoundingClientRect().top <= conditionValue) {
 	    		sticky.classList.add('active');
 	    	} else {
 	    		sticky.classList.remove('active');

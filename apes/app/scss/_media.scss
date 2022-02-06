@@ -202,6 +202,12 @@
 				bottom: 0;
 				top: auto;
 
+				&.active {
+					opacity: 0;
+					transform: translate3d(0, 100%, 0);
+					visibility: hidden;
+				}
+
 				h4 {
 					font-size: 14px;
 				}
@@ -326,7 +332,8 @@
 			top: auto;
 			bottom: 0;
 			gap: 0;
-		    left: 75%;
+		    left: calc(75% + 5px);
+
 		    div {
 		    	padding: 16px 8px;
 		    }
@@ -336,14 +343,8 @@
 		}
 	}
 	.glide__slide {
-		img {
-			// margin-bottom: 30%;
-		}
 		&.shifted {
 			transform: translate3d(0, 30%, 0);
-			img {
-				// margin-bottom: 0;
-			}
 		}
 	}
 	.glide__slides {
@@ -351,10 +352,244 @@
 	}
 
 	.rewards {
+		padding-top: 35px;
 		&__flex.flex {
 			flex-direction: column-reverse;
+			align-items: center;
 			>div {
 				width: 100%;
+				&:first-child {
+				    padding-right: 0;
+				}
+			}
+		}
+		&__title {
+			max-width: 272px;
+			margin-bottom: 20px;
+			span {
+				font-size: 15px;
+			}
+		}
+		&__info {
+			font-size: 13px;
+		}
+		&__list {
+			margin: 30px 0 5px;
+			>.flex {
+				max-width: 80%;
+				margin: 0 auto;	
+			}
+			h2 {
+				font-size: 42px;
+				min-width: 92px;
+				margin-right: 12px;
+				img {
+					width: 22px;
+					top: -11px;
+				}
+			}
+			h4 {
+				font-size: 15px;
+				padding-top: 25px;
+			}
+			p {
+				font-size: 11px;
+			}
+		}
+		&__img {
+			max-width: 215px;
+			margin: 0 auto;
+		}
+	}
+	.roadmap {
+		padding-top: 58px;
+		padding-bottom: 67px;
+		&__title {
+			max-width: 265px;
+			margin: 0 auto 60px;
+			.text-space {
+				font-size: 10px;
+			}
+		}
+		&__img {
+			max-width: 70px;
+			&-wrap {
+				align-self: flex-start;
+				padding: 0;
+			}
+		}
+		&__steps {
+			padding-bottom: 44rem;
+			&-line {
+				width: 8px;
+				border-radius: 10px;
+				border: 1px solid #000;
+			}
+		}
+		&__step {
+			gap: 8px;
+			&.active {
+				&::after {
+					width: 8px;
+					border-radius: 10px;
+				}
+			}
+			>div {
+				padding-bottom: 20px;
+				padding-top: 20px;
+			}
+			&:not(:first-child) {
+				.roadmap__img-wrap {
+					padding-top: 30px;
+				}
+			}
+			&:nth-child(2n) {
+				div:last-child {
+					padding-left: 20px;
+					margin-right: 0;
+				}
+				.roadmap__img {
+					margin-left: 25px
+				}
+			}
+			&:nth-child(3), &:nth-child(4) {
+				.roadmap__img {
+					max-width: 76px;
+				}
+			}
+			&:nth-child(2n - 1) {
+				div:first-child {
+					padding-right: 10px;
+				}
+			}
+		}
+		&__text {
+			border-bottom: 1px solid #000;
+			p {
+				font-size: 11px;
+				max-width: 100%;
+				img {
+					width: 8px;
+				}
+			}
+		}
+	}
+	.founders {
+		padding-top: 50px;
+		padding-bottom: 40px;
+		&__grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 22px 12px;
+		}
+		&__title {
+			margin-bottom: 40px;
+			p {
+				font-size: 15px;
+			}
+		}
+		h4 {
+			margin: 10px 0 4px;
+		}
+		p {
+			img {
+				width: 3px;
+				margin-right: 6px;
+			}
+		}
+	}
+	.faq {
+		padding-top: 40px;
+		padding-bottom: 50px;
+
+		.cont {
+			max-width: 100%;
+		}
+
+		&__title {
+			max-width: 130px;
+			margin-bottom: 30px;
+		}
+
+		&__item {
+			border-bottom: 1px solid #000;
+			margin-bottom: 20px;
+		}
+		&__question {
+			transition: .3s;
+			padding-bottom: 5px;
+			
+			h3,span {
+				font-size: 15px;
+			}
+		}
+		&__answer {
+			font-size: 12px;
+			&-wrap {
+				padding: 5px 0 10px;
+			}
+			img {
+				width: 3px;
+				position: relative;
+				top: -1px;
+			}
+			p {
+				margin-bottom: 3px;
+			}
+		}
+	}
+
+	.footer {
+		.cont.half {
+			flex-direction: column;
+			>div {
+				width: 100%;
+			}
+		}
+		&__left, &__right {
+			padding: 25px;
+		}
+		&__left.flex {
+			border-right: 0;
+			border-bottom: 1px solid #F7F7F7;
+			gap: 50px;
+			align-items: flex-start;
+			
+			p {
+				width: 60%;
+				flex-grow: initial;
+				font-size: 10px;
+				line-height: 1.8;
+			}
+			img {
+				max-width: 65px;
+				flex-grow: 1;
+			}
+		}
+		&__right.flex {
+			>div:first-child {
+				width: 40%;
+			}
+			>div:last-child {
+				width: 60%;
+			}
+		}
+		&__links {
+			a {
+				font-size: 12px;
+				display: block;
+				line-height: 2.4;
+			}
+		}
+		&__buttons {
+			.btn {
+				width: 100%;
+			}
+		}
+		&__bottom {
+			border-top: 1px solid #F7F7F7;
+			padding: 25px;
+			a,p {
+				font-size: 12px;
 			}
 		}
 	}
