@@ -11,6 +11,19 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
+	let header = qs('.header'),
+		hamb = qs('.header__hamb'),
+		menu = qs('.header__nav'),
+		close = qs('.header__close');
+
+	hamb.onclick = () => {
+		menu.classList.add('active');
+	}
+	close.onclick = () => {
+		menu.classList.remove('active');
+	}
+
+
 	var pointer = qs(".hero__circle div"),
 		pointerBox = pointer.getBoundingClientRect(),
 		centerPoint = window.getComputedStyle(pointer).transformOrigin,
@@ -44,12 +57,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				let current = activeApes[currentInd];
 				let current2 = activeApes[currentInd2];
 
-				hideRandom(current);
-				// hideRandom(current2);
-				// ignoreApe(currentInd);
+				current.classList.remove('active');
+
 				setTimeout(() => {
-					showRandow(current);
-					// showRandow(current2);
+					current.classList.add('active');
 				}, 1500)
 			}, 1500);
 		}
@@ -58,24 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	  min = Math.ceil(min);
 	  max = Math.floor(max);
 	  return Math.floor(Math.random() * (max - min + 1) + min);
-	}
-	function hideRandom (ape) {
-		// if(ape.dataset.visible) {
-			ape.classList.remove('active');
-		// 	ape.dataset.visible = ''
-		// } else {
-		// 	ape.classList.add('active');
-		// 	ape.dataset.visible = 'true'
-		// }
-	}
-	function showRandow (ape) {
-		// if(ape.dataset.visible) {
-		// 	ape.classList.remove('active');
-		// 	ape.dataset.visible = ''
-		// } else {
-			ape.classList.add('active');
-		// 	ape.dataset.visible = 'true'
-		// }
 	}
 
 	window.onmousemove = (e) => {
@@ -140,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	    			let rect = el.getBoundingClientRect(),
 	    				stepH = el.parentElement.clientHeight;
 	    			let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
-	    			// console.log(y);
 	    			
 	    			el.style.transform = `translate3d(0,${y}px,0)`;
 	    		}
@@ -152,12 +144,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var glide = new Glide('.glide', {
 	  type: 'carousel',
-	  animationDuration: 800,
+	  animationDuration: 1200,
 	  perView: 3,
 	  autoplay: 5000,
 	  hoverpause: false,
 	  focusAt: 'center',
-	  gap: 70
+	  gap: 70,
+	  breakpoints: {
+	    767: {
+	      gap: 12,
+	      perView: 2,
+	      touchAngle: 60
+	    }
+	  }
 	})
 	glide.on(['run'], function() {
 	  qsa('.glide__slide').forEach((el,ind) => {
