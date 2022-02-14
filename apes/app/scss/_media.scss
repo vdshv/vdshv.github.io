@@ -344,7 +344,7 @@
 			width: calc(100% + 40px);
 			position: relative;
 			left: 20px;
-			min-height: 162rem;
+			// min-height: 162rem;
 		}
 		&__text {
 			width: 70%;
@@ -441,7 +441,7 @@
 		}
 		&__img {
 			max-width: 215px;
-			min-height: 227px;
+			// min-height: 227px;
 			margin: 0 auto;
 		}
 	}
@@ -527,7 +527,7 @@
 			max-width: 450px;
 			margin: 0 auto;
 			&-img {
-			    min-height: 160.2rem;
+			    // min-height: 160.2rem;
 			}
 		}
 		&__title {

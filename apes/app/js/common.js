@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 			let scrollToY = offsetTop(qs(el.dataset.scroll));
 
+			if(el.dataset.scroll == '#about' && window.innerWidth < 768) {
+				scrollToY = offsetTop(qs(el.dataset.scroll)) - 60;
+			}
+
 			scrollTo(scrollToY);
 		}
 	})
