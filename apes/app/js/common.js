@@ -23,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		menu.classList.remove('active');
 	}
 
+	if(window.innerWidth < 768) {
+		var fullHeight = qs('.full-h');
+
+		fullHeight.style.height = window.innerHeight + 'px';
+	}
+
 	window.onload = () => {
 		let apesAll = qs('.hero__apes');
 		let apes = qsa('.hero__apes img');
@@ -56,7 +62,87 @@ document.addEventListener("DOMContentLoaded", function() {
 				}, 1500)
 			}, 1500);
 		}
+
+		let titles = qsa('.slider__text'),
+			titlesW = [...titles].map(el => el.clientWidth),
+			titlesX = [0,0],
+			titlesDir = ['', '-'],
+			roadmapApes = qsa('.roadmap__img'),
+			animated = [...roadmapApes, ...titles],
+			contW = qs('.slider__texts').clientWidth;
+
+		let options = { threshold: 0 };
+		
+		let callback = function(entries, observer) {
+		    entries.forEach(entry => {
+				entry.target.dataset.in_view = (entry.isIntersecting) ? 'true' : '';
+	      	});
+		};
+		
+		let observer = new IntersectionObserver(callback, options);
+		animated.forEach(el => {
+			observer.observe(el);
+		});
+
+		const raf = window.requestAnimationFrame ||
+		    window.webkitRequestAnimationFrame ||
+		    window.mozRequestAnimationFrame ||
+		    window.oRequestAnimationFrame ||
+		    window.msRequestAnimationFrame;
+
+		var about = qs('.about'),
+			scrolling = document.scrollingElement,
+			divider = qs('.divider'),
+			footer = qs('.footer'),
+			sticky = qs('.hero__info.sticky'),
+			smallDevice = window.innerWidth < 768;
+			conditionTarget = smallDevice ? footer : about; 
+			conditionValue = smallDevice ? window.innerHeight : 0;
+
+		(function init() {
+		    (function step() {
+		    	if(conditionTarget.getBoundingClientRect().top <= conditionValue) {
+		    		sticky.classList.add('active');
+		    	} else {
+		    		sticky.classList.remove('active');
+		    	}
+
+		    	if(scrolling.scrollTop > 0) {
+		    		divider.classList.add('active');
+		    	} else {
+		    		divider.classList.remove('active');
+		    	}
+
+		    	if(titles){
+		    		titles.forEach((el, ind) => {
+			    		if(el.dataset.in_view == 'true') {
+			    			let rect = el.getBoundingClientRect();
+			    			// titlesX[ind] = (window.innerHeight - rect.top) * (contW - titlesW[ind]) / (window.innerHeight + rect.height);
+			    			titlesX[ind] = (window.innerHeight - rect.top) * (qs('.slider__texts').clientWidth - titlesW[ind]) / (window.innerHeight + rect.height);
+
+			    			el.style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
+			    		}
+			    	})
+		    	} 
+
+		    	if(roadmapApes) {
+		    		roadmapApes.forEach((el, ind) => {
+		    			if(el.dataset.in_view) {
+		    				let rect = el.getBoundingClientRect(),
+		    					stepH = el.parentElement.clientHeight;
+		    				let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
+		    				
+		    				el.style.transform = `translate3d(0,${y}px,0)`;
+		    			}
+		    		})
+		    	}
+		    	
+
+	           	raf(step);
+		    })();
+		})();
 	}
+
 	function random(min, max) {
 	  min = Math.ceil(min);
 	  max = Math.floor(max);
@@ -83,77 +169,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	
 
-	// let options = isTouchDevice ? { threshold: 0.4 } : { threshold: 0.7 };
-	let options = { threshold: 0 },
-		titles = qsa('.slider__text'),
-		titlesW = [...titles].map(el => el.clientWidth),
-		titlesX = [0,0],
-		titlesDir = ['', '-'],
-		roadmapApes = qsa('.roadmap__img'),
-		animated = [...roadmapApes, ...titles],
-
-		contW = qs('.slider__texts').clientWidth;
-	
-	let callback = function(entries, observer) {
-	    entries.forEach(entry => {
-			entry.target.dataset.in_view = (entry.isIntersecting) ? 'true' : '';
-      	});
-	};
-	
-	let observer = new IntersectionObserver(callback, options);
-	animated.forEach(el => {
-		observer.observe(el);
-	});
-
-
-	const raf = window.requestAnimationFrame ||
-	    window.webkitRequestAnimationFrame ||
-	    window.mozRequestAnimationFrame ||
-	    window.oRequestAnimationFrame ||
-	    window.msRequestAnimationFrame;
-
-	var about = qs('.about'),
-		footer = qs('.footer'),
-		sticky = qs('.hero__info.sticky'),
-		conditionTarget = isTouchDevice ? footer : about; 
-		conditionValue = isTouchDevice ? window.innerHeight : 0;
-
-	(function init() {
-	    (function step() {
-	    	if(conditionTarget.getBoundingClientRect().top <= conditionValue) {
-	    		sticky.classList.add('active');
-	    	} else {
-	    		sticky.classList.remove('active');
-	    	}
-
-	    	titles.forEach((el, ind) => {
-	    		if(el.dataset.in_view == 'true') {
-	    			let rect = el.getBoundingClientRect();
-	    			titlesX[ind] = (window.innerHeight - rect.top) * (contW - titlesW[ind]) / (window.innerHeight + rect.height);
-
-	    			el.style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
-	    		}
-	    	})
-
-	    	roadmapApes.forEach((el, ind) => {
-	    		if(el.dataset.in_view) {
-	    			let rect = el.getBoundingClientRect(),
-	    				stepH = el.parentElement.clientHeight;
-	    			let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
-	    			
-	    			el.style.transform = `translate3d(0,${y}px,0)`;
-	    		}
-	    	})
-
-           	raf(step);
-	    })();
-	})();
-
 	var glide = new Glide('.glide', {
 	  type: 'carousel',
 	  animationDuration: 1200,
 	  perView: 3,
 	  autoplay: 5000,
+	  swipeThreshold: 30,
 	  hoverpause: false,
 	  focusAt: 'center',
 	  gap: 70,

@@ -16,7 +16,8 @@ var gulp          = require('gulp'),
 		rsync         = require('gulp-rsync'),
 		imageResize   = require('gulp-image-resize'),
 		imagemin      = require('gulp-imagemin'),
-		del           = require('del');
+		del           = require('del'),
+		htmlmin = require('gulp-htmlmin');
 
 // Local Server
 gulp.task('browser-sync', function() {
@@ -60,74 +61,52 @@ gulp.task('code', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
-// Deploy
-gulp.task('rsync', function() {
-	return gulp.src('app/**')
-	.pipe(rsync({
-		root: 'app/',
-		hostname: 'username@yousite.com',
-		destination: 'yousite/public_html/',
-		// include: ['*.htaccess'], // Includes files to deploy
-		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-		recursive: true,
-		archive: true,
-		silent: false,
-		compress: true
-	}))
+
+// Compress and serve HTML
+gulp.task('compress-html', function() {
+  return gulp.src('app/*.html')
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true
+  }))
+  .pipe(gulp.dest('dist'));
 });
 
-// Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
-// gulp.task('img1x', function() {
-// 	return gulp.src('app/img/_src/**/*.*')
-// 	.pipe(imageResize({ width: '50%' }))
-// 	.pipe(imagemin())
-// 	.pipe(gulp.dest('app/img/@1x/'))
-// });
-// gulp.task('img2x', function() {
-// 	return gulp.src('app/img/_src/**/*.*')
-// 	.pipe(imageResize({ width: '100%' }))
-// 	.pipe(imagemin())
-// 	.pipe(gulp.dest('app/img/@2x/'))
-// });
 
-// // Clean @*x IMG's
-// gulp.task('cleanimg', function() {
-// 	return del(['app/img/@*'], { force:true })
-// });
+// Serve img
+gulp.task('serve-img', function() {
+  return gulp.src('app/img/**/*')
+  .pipe(gulp.dest('dist/img'));
+});
 
-// If Gulp Version 3
-// if (gulpVersion == 3) {
 
-// 	// Img Processing Task for Gulp 3
-// 	gulp.task('img', ['img1x', 'img2x']);
-	
-// 	var taskArr = ['styles', 'scripts', 'browser-sync'];
-// 	gmWatch && taskArr.unshift('img');
+// Serve css
+gulp.task('serve-css', function() {
+  return gulp.src('app/css/*.css')
+  .pipe(gulp.dest('dist/css'));
+});
 
-// 	gulp.task('watch', taskArr, function() {
-// 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
-// 		gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
-// 		gulp.watch('app/*.html', ['code']);
-// 		gmWatch && gulp.watch('app/img/_src/**/*', ['img']);
-// 	});
-// 	gulp.task('default', ['watch']);
+// Serve fonts
+gulp.task('serve-fonts', function() {
+  return gulp.src('app/fonts/*')
+  .pipe(gulp.dest('dist/fonts'));
+});
 
-// };
+// Serve js
+gulp.task('serve-js', function() {
+  return gulp.src('app/js/scripts.js')
+  .pipe(gulp.dest('dist/js'));
+});
 
-// If Gulp Version 4
-// if (gulpVersion == 4) {
 
-	// Img Processing Task for Gulp 4
-	// gulp.task('img', gulp.parallel('img1x', 'img2x'));
+gulp.task('watch', function() {
+	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
+	gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
+	gulp.watch('app/*.html', gulp.parallel('code'));
+	// gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
+});
 
-	gulp.task('watch', function() {
-		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
-		gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
-		gulp.watch('app/*.html', gulp.parallel('code'));
-		// gmWatch && gulp.watch('app/img/_src/**/*', gulp.parallel('img')); // GraphicsMagick watching image sources if allowed.
-	});
-	// gmWatch ? gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch')) 
-	// 				: 
-	gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
+gulp.task('dist', gulp.parallel('compress-html', 'serve-img', 'serve-css', 'serve-fonts', 'serve-js'));
 
-// };
+gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
+
