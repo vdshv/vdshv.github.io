@@ -349,7 +349,7 @@ img,svg {
 
     .hero .full-h {
         padding-top: 60px;
-        padding-bottom: 60px
+        padding-bottom: 60px;
     }
 
     .hero .cont-sm.rel {
@@ -447,7 +447,7 @@ img,svg {
 </head>
 <body>
 
-	<section class="hero">
+	<section class="hero" id="home">
 		<div class="full-h  flex jcsb">
 			<header class="header rel">
 				<div class="cont cont-lg flex aic jcsb">
@@ -469,12 +469,12 @@ img,svg {
 						</div>
 
 						<div class="header__nav-cont flex">
-							<a class="mob" href="">Home</a>
-							<a href="">About</a>
-							<a href="">Rewards</a>
-							<a href="">Roadmap </a>
-							<a href="">Founders</a>
-							<a href="">FAQ’s</a>
+							<a class="mob" data-scroll="#home">Home</a>
+							<a data-scroll="#about">About</a>
+							<a data-scroll="#rewards">Rewards</a>
+							<a data-scroll="#roadmap">Roadmap </a>
+							<a data-scroll="#founders">Founders</a>
+							<a data-scroll="#faqs">FAQ’s</a>
 
 							<div class="footer__buttons mob">
 								<!-- <a class="btn btn-alt" href="">BUY NOW ON OPENSEA</a> -->
@@ -549,7 +549,7 @@ img,svg {
 				</p> -->
 
 				<div class="hero__input text-center">
-					<div class="flex jcc">
+				<!-- 	<div class="flex jcc">
 						<span class="decr rel">
 							<svg class="abs-center" width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0.876709 0.61438V3.71193H15.2151V0.61438H0.876709Z" fill="black"/>
@@ -561,7 +561,7 @@ img,svg {
 							<path d="M5.32824 6.61439H0.886475V9.71194H5.32824C6.01009 9.71194 6.47765 10.1795 6.47765 10.8613V15.3031H9.59468V10.8613C9.59468 10.1795 10.0817 9.71194 10.7441 9.71194H15.2248V6.61439H10.7441C10.0817 6.61439 9.59468 6.12735 9.59468 5.46499V0.984253H6.47765V5.46499C6.47765 6.12735 6.01009 6.61439 5.32824 6.61439Z" fill="black"/>
 							</svg>
 						</span>
-					</div>
+					</div> -->
 					<!-- <button class="btn hero__btn">MINT NOW</button> -->
 					<a class="btn hero__btn" href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>JOIN DISCORD</a>
 				</div>
@@ -593,7 +593,7 @@ img,svg {
 
 		<div class="cont cont-sm divider"></div>
 
-		<div class="cont cont-lg about">
+		<div class="cont cont-lg about" id="about">
 			<p class="about__title">
 				APE-OL is a community-driven <br>
 				derivative collection of IO.OOO<br>
@@ -616,8 +616,8 @@ img,svg {
 	<section class="slider">
 		<div class="cont rel">
 			<div class="slider__texts">
-				<img class="lazyload slider__text left" data-src="img/titles/2.svg" alt="">
-				<img class="lazyload slider__text right" data-src="img/titles/3.svg" alt="">
+				<img class="slider__text left" src="img/titles/2.svg" alt="">
+				<img class="slider__text right" src="img/titles/3.svg" alt="">
 			</div>
 
 			<div class="slider__glide glide abs-center">
@@ -649,7 +649,7 @@ img,svg {
 		</div>
 	</section>	
 
-	<section class="rewards">
+	<section class="rewards" id="rewards">
 		<div class="cont">
 			<div class="rewards__titles rewards__flex half flex aife">
 				<div class="text-center">
@@ -657,7 +657,7 @@ img,svg {
 				</div>
 
 				<div class="rewards__title">
-					<img class="lazyload" data-src="img/titles/4.svg" alt="">
+					<img src="img/titles/4.svg" alt="">
 					<p class="text-space desk">
 						TO APE-OL HOLDERS
 					</p>
@@ -708,7 +708,7 @@ img,svg {
 		</div>
 	</section>	
 
-	<section class="roadmap">
+	<section class="roadmap" id="roadmap">
 		<div class="cont">
 			<div class="roadmap__title">
 				<p class="text-reg text-space desk">25% CANVAS — 50% MERCH</p>
@@ -719,7 +719,7 @@ img,svg {
 					<span>50%</span>
 					<span>MERCH</span>
 				</p>
-				<img class="lazyload" data-src="img/titles/5.svg" alt="">
+				<img src="img/titles/5.svg" alt="">
 				<p class="text-reg text-space desk">75% METAVERSE — 100% BREEDING</p>
 				<p class="text-reg text-space flex mob jcsb">
 					<span>75%</span>
@@ -791,10 +791,10 @@ img,svg {
 		</div>
 	</section>
 
-	<section class="founders">
+	<section class="founders" id="founders">
 		<div class="cont">
 			<div class="founders__title">
-				<img class="lazyload" data-src="img/titles/6.svg" alt="">
+				<img src="img/titles/6.svg" alt="">
 				<p class="text-space desk">THE APE-OL TEAM</p>
 				<p class="text-space mob flex jcsb">
 					<span>THE </span>
@@ -805,22 +805,22 @@ img,svg {
 
 			<div class="founders__grid">
 				<div>
-					<img class="lazyload" data-src="img/apes/ape3.svg" alt="">
+					<img class="founders__grid-img lazyload" data-src="img/apes/ape3.svg" alt="">
 					<h4>Tim</h4>
 					<p><img class="lazyload" data-src="img/arrow-sm-w.svg" alt="">Visionary</p>
 				</div>
 				<div>
-					<img class="lazyload" data-src="img/apes/ape5.svg" alt="">
+					<img class="founders__grid-img lazyload" data-src="img/apes/ape5.svg" alt="">
 					<h4>Tom</h4>
 					<p><img class="lazyload" data-src="img/arrow-sm-w.svg" alt="">Artist</p>
 				</div>
 				<div>
-					<img class="lazyload" data-src="img/apes/ape2.svg" alt="">
+					<img class="founders__grid-img lazyload" data-src="img/apes/ape2.svg" alt="">
 					<h4>Timmy</h4>
 					<p><img class="lazyload" data-src="img/arrow-sm-w.svg" alt="">Developer</p>
 				</div>
 				<div>
-					<img class="lazyload" data-src="img/apes/ape4.svg" alt="">
+					<img class="founders__grid-img lazyload" data-src="img/apes/ape4.svg" alt="">
 					<h4>Tommy</h4>
 					<p><img class="lazyload" data-src="img/arrow-sm-w.svg" alt="">Community manager</p>
 				</div>
@@ -828,10 +828,10 @@ img,svg {
 		</div>
 	</section>
 
-	<section class="faq">
+	<section class="faq" id="faqs">
 		<div class="cont">
 			<div class="faq__title">
-				<img class="lazyload" data-src="img/titles/7.svg" alt="">
+				<img src="img/titles/7.svg" alt="">
 			</div>
 			
 	
@@ -1007,7 +1007,13 @@ img,svg {
 		</div>
 	</footer>
 
+	<script>
+		if(window.innerWidth < 768) {
+			var fullHeight = document.querySelector('.full-h');
 
+			fullHeight.style.height = window.innerHeight + 'px';
+		}
+	</script>
 	<!-- LAZYLOAD -->
 	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
 	<!-- SLIDER -->

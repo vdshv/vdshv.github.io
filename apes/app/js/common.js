@@ -11,6 +11,49 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
+	qsa('a[data-scroll]').forEach(el => {
+		el.onclick = (e) => {
+			e.preventDefault();
+			if(window.innerWidth < 768) {
+				qs('.header__nav').classList.remove('active');
+			}
+			let scrollToY = offsetTop(qs(el.dataset.scroll));
+
+			scrollTo(scrollToY);
+		}
+	})
+	const scrollRaf = window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame ||
+	    window.oRequestAnimationFrame ||
+	    window.msRequestAnimationFrame;
+
+	function scrollTo(to) {
+	    const start = window.scrollY || window.pageYOffset;
+	    const time = Date.now();
+	    const duration = Math.abs(start - to) / 2;
+
+	    (function step() {
+	        var dx = Math.min(1, (Date.now() - time) / duration)
+	        var pos = start + (to - start) * easeInOutCubic(dx)
+
+	        window.scrollTo(0, pos)
+
+	        if (dx < 1) {
+	            scrollRaf(step);
+	        }
+	    })()
+	}
+	function easeInOutCubic(x) {
+		return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+	}
+	function offsetTop(el) {
+	    var rect = el.getBoundingClientRect(),
+	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	    return rect.top + scrollTop;
+	}
+
+
 	let header = qs('.header'),
 		hamb = qs('.header__hamb'),
 		menu = qs('.header__nav'),
@@ -21,12 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 	close.onclick = () => {
 		menu.classList.remove('active');
-	}
-
-	if(window.innerWidth < 768) {
-		var fullHeight = qs('.full-h');
-
-		fullHeight.style.height = window.innerHeight + 'px';
 	}
 
 	window.onload = () => {
@@ -64,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		let titles = qsa('.slider__text'),
-			titlesW = [...titles].map(el => el.clientWidth),
 			titlesX = [0,0],
 			titlesDir = ['', '-'],
 			roadmapApes = qsa('.roadmap__img'),
@@ -116,9 +152,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		    	if(titles){
 		    		titles.forEach((el, ind) => {
 			    		if(el.dataset.in_view == 'true') {
-			    			let rect = el.getBoundingClientRect();
-			    			// titlesX[ind] = (window.innerHeight - rect.top) * (contW - titlesW[ind]) / (window.innerHeight + rect.height);
-			    			titlesX[ind] = (window.innerHeight - rect.top) * (qs('.slider__texts').clientWidth - titlesW[ind]) / (window.innerHeight + rect.height);
+			    			let rect = el.getBoundingClientRect()
+			    				winH = window.innerHeight;
+			    			titlesX[ind] = (winH - rect.top) * (contW - el.clientWidth) / (winH + rect.height);
 
 			    			el.style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
 			    		}
@@ -181,7 +217,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	  breakpoints: {
 	    767: {
 	      gap: 12,
+	      touchAngle: 60
+	    },
+	    500: {
 	      perView: 2,
+	      gap: 12,
 	      touchAngle: 60
 	    }
 	  }

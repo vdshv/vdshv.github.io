@@ -205,6 +205,8 @@ h4 {
 			font-size: 4.5rem;
 			overflow: hidden;
 			padding: 1.75rem 0;
+			cursor: pointer;
+
 			&::after, &::before  {
 				content: '';
 				position: absolute;
@@ -426,6 +428,7 @@ h4 {
 
 	&__img {
 		width: 55%;
+    	min-height: 82.5rem;
 	}
 	&__text {
 		width: 38.5%;
@@ -513,6 +516,7 @@ h4 {
 		display: block;
 		margin: 53rem auto 0;
 		max-width: 110rem;
+    	min-height: 116.58rem;
 	}
 	&__flex {
 		>div:first-child {
@@ -679,8 +683,9 @@ h4 {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 
-		img {
+		&-img {
 			margin-bottom: 6rem;
+	   	min-height: 78.2rem;
 		}
 		h4 {
 			font-size: 6rem;
