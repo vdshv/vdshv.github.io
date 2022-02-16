@@ -829,18 +829,34 @@ img,svg {
 		// max-width: 25%;
 	}
 }
+.backstory {
+	.cont {
+		max-width: 1100px;
+	}
+}
 .icons {
-	margin-bottom: 50px;
-	.glide__slide {
+	margin: 55px 0;
+	&.desktop .glide__slide,
+	&__flex {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
+	}
+	&__flex  {
+		div {
+			width: 50%;
+		}
+		img {
+			margin: 0 auto;
+		}
+
+		&:first-child {
+			margin-bottom: 25px;
+		}
 	}
 	img {
 		width: auto;
 		height: auto;
-		max-height: 35px;
-		max-width: 200px;
 	}
 }
 .team {

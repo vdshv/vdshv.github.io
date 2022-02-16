@@ -63,6 +63,9 @@
 	.tablet {
 		display: block;
 	}
+	.icons.desktop {
+		display: none;
+	}
 }
 @media (max-width:850px) {
 	
@@ -402,6 +405,24 @@
 			display: flex;
 			&.client-view {
 				flex-direction: column;
+			}
+		}
+	}
+	.icons {
+		img {
+			max-height: 25px;
+			max-width: 200px;
+		}
+	}
+}
+@media(max-width: 450px) {
+	.icons {
+		&__flex {
+			div {
+				width: auto;
+			}
+			img {
+				margin: 0;
 			}
 		}
 	}

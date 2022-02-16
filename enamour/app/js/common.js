@@ -54,60 +54,33 @@ document.addEventListener("DOMContentLoaded", function() {
 		  type: 'carousel',
 		  perView: 1,
 		  gap: 0
-		}).mount();
+		});
 
-		let glide3col = new Glide(qs('.glide.icons'), {
+		const glideArrows = document.querySelectorAll('.glide__arrow')
+
+		glideArrows.forEach(el => {
+		  el.onclick = () => {
+		    glide.go(el.dataset.glideDir)
+		  };
+		});
+
+		glide.mount();
+
+		let glide3col = new Glide(qs('.icons.desktop'), {
 		  type: 'slider',
 		  rewind: false,
 		  bound: true,
-		  perView: 5,
-		  startAt: 0,
-		  gap: 50,
-		  breakpoints: {
-		    1023: {
-		      perView: 3,
-		      gap: 40
-		    },
-		    767: {
-		      perView: 2
-		    },
-		    500: {
-		      perView: 1,
-		      gap: 0
-		    }
-		  }
-		})
-		function initBullets () {
-			let qty = qsa('.icons .glide__slide').length,
-				bullets = qs('.icons .glide__bullets');
+		  perView: 1,
+		  startAt: 0
+		}).mount();
 
-			if(window.innerWidth > 767) {
-				qty = qty - 2;
-			} else if (window.innerWidth > 500) {
-				qty = qty - 1;
-			} else {
-				qty = qty;
-			}
-			bullets.innerHTML = '';
-
-			for(let i = 0; i < qty; i++) {
-				let bullet = document.createElement("button");
-				bullet.classList.add('glide__bullet');
-				bullet.dataset.glideDir = `=${i}`;
-				bullet.onclick = () => {
-					glide3col.go(bullet.dataset.glideDir);
-				}
-				bullets.appendChild(bullet);
-			}
-		}
-
-		initBullets();
-		glide3col.mount();
-
-		window.onresize = () => {
-			glide3col.update();
-			initBullets();
-		}
+		let glideMob = new Glide(qs('.icons.tablet'), {
+		  type: 'slider',
+		  rewind: false,
+		  bound: true,
+		  perView: 1,
+		  startAt: 0
+		}).mount();
 	}
 
 	let questions = qsa('.question:not(.static)');
