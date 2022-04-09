@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://www.woozystill.com/sites/g/files/aaj11836/f/favicon.png">
+
+    <title>Still Woozy: Spotify Playlist Generator. New album "If This Isn't Nice, I Don't Know What Is" out now!"</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/cover/../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=block" rel="stylesheet">
+    <style>
+      body {
+        height: auto;
+        min-height: 100vh;
+        display: block;
+        font-family: 'Poppins';
+        font-weight: 400;
+        position: relative;
+      }
+      h1 {
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        font-size: 35px;
+        margin-bottom: 25px;
+      }
+      .background-image, .background-image img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .background-image {
+        filter: blur(6px);
+        -webkit-filter: blur(6px);
+      }
+      .background-image::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.3);
+        z-index: 2;
+      }
+      .background-image img {
+        object-fit: cover;
+      }
+      .cover-container {
+        max-width: none;
+        position: relative;
+        z-index: 2;
+        flex-flow: row wrap !important;
+        height: calc(100vh - 100px) !important;
+        padding-bottom: 60px !important;
+        align-items: center;
+        min-height: 530px;
+      }
+      .lead, .lead p {
+        margin: 0;        
+      }
+      .select-p {
+        display: inline;
+      }
+      .masthead {
+        position: relative;
+        z-index: 2;
+        background: #000;
+        padding: 15px 20px;
+        height: 100px;
+      }
+      .masthead svg {
+        display: block;
+        width: 100px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      main.cover {
+        width: 100%;
+        padding: 0;
+      }
+      main.cover span {
+        white-space: nowrap;
+        display: inline-block;
+        margin: 5px 4px;
+      }
+      main.cover .placeholder {
+        width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+      select {
+          -webkit-appearance: none;
+          background: transparent;
+          border: none;
+          color: #fff;
+          padding: 3px 12px;
+          font-family: inherit;
+          font-weight: inherit;
+          text-shadow: inherit;
+          position: relative;
+          z-index: 3;
+          transition: width .3s ease;
+      }
+      label svg {
+        position: absolute;
+        top: 11px;
+        right: 12px;
+        width: 10px;
+      }
+      label {
+        position: relative;
+        background: rgba(0,0,0,.4);
+        border-radius: 5px;
+        margin: 0;
+      }
+      select:focus {
+        outline: none;
+      }
+      .btn {
+        margin-top: 30px;
+      }
+      footer {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+      }
+      .mastfoot {
+          color: rgba(255, 255, 255, .7);
+      }
+      footer p {
+        margin: 0;
+      }
+      @media (max-width: 767px) {
+        .masthead {
+          background: none;
+        }
+        h1 {
+          font-size: 20px;
+        }
+        .select-p {
+          font-size: 16px;
+        }
+        .cover-container {
+            padding: 0 15px 80px !important;
+            min-height: 570px; 
+        }
+        main.cover span {
+          margin: 5px 0;
+        }
+        select {
+          padding: 6px 4px 6px 10px;
+        }
+        label svg {
+          right: 8px;
+        }
+        .btn {
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-center">
+    <div class="background-image">
+      <picture>
+      <source srcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_mobile-sm_9x16/public/promo/202106/banner-cover-mob.jpg?itok=q_vdaLTx 1x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_mobile-md_9x16/public/promo/202106/banner-cover-mob.jpg?itok=YTCjY9P7 1.5x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_mobile-lg_9x16/public/promo/202106/banner-cover-mob.jpg?itok=VF1Pcy-N 2x" media="(max-width: 320px)">
+      <source srcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_mobile-md_9x16/public/promo/202106/banner-cover-mob.jpg?itok=YTCjY9P7 1x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_tablet_9x16/public/promo/202106/banner-cover-mob.jpg?itok=R2pnA4gt 1.5x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_tablet_9x16/public/promo/202106/banner-cover-mob.jpg?itok=R2pnA4gt 2x" media="(max-width: 480px)">
+      <source srcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_mobile-lg_9x16/public/promo/202106/banner-cover-mob.jpg?itok=VF1Pcy-N 1x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_tablet_9x16/public/promo/202106/banner-cover-mob.jpg?itok=R2pnA4gt 1.5x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-sm_9x16/public/promo/202106/banner-cover-mob.jpg?itok=srkj2AF9 2x" media="(max-width: 600px)">
+      <source srcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_tablet_16x9/public/promo/202106/banner-cover.jpg?itok=lgIxGizG 1x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-lg_16x9/public/promo/202106/banner-cover.jpg?itok=Ye-ed6k6 1.5x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_tablet_2x_16x9/public/promo/202106/banner-cover.jpg?itok=i6YJVE-P 2x" media="(max-width: 960px)">
+      <source srcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-sm_16x9/public/promo/202106/banner-cover.jpg?itok=DXJTQTdH 1x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_tablet_2x_16x9/public/promo/202106/banner-cover.jpg?itok=i6YJVE-P 1.5x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-sm_2x_16x9/public/promo/202106/banner-cover.jpg?itok=euU9IDcP 2x" media="(max-width: 1200px)">
+      <source srcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-lg_16x9/public/promo/202106/banner-cover.jpg?itok=Ye-ed6k6 1x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-sm_2x_16x9/public/promo/202106/banner-cover.jpg?itok=euU9IDcP 1.5x, https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-lg_2x_16x9/public/promo/202106/banner-cover.jpg?itok=rc_viVuX 2x" media="(min-width: 1201px)">
+
+      <img srcset="" alt="" title="" data-pfsrcset="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-lg_8x3/public/promo/202106/banner-cover.jpg?itok=4bDCN26I 1600w" src="https://www.woozystill.com/sites/g/files/aaj11836/f/styles/suzuki_breakpoints_image_desktop-lg_2x_16x9/public/promo/202106/banner-cover.jpg?itok=rc_viVuX" style="" width="1600">
+      </picture>
+    </div>
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <svg width="101" height="71" viewBox="0 0 101 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.6947 0.397437C24.4419 1.18758 20.5285 4.61153 19.4203 8.51347C19.1708 9.41091 19.1208 11.3033 19.3305 12.2301C19.64 13.586 20.3188 14.7956 21.407 15.9369C22.2156 16.7758 23.164 17.4587 25.0209 18.5122C28.8544 20.6875 30.4717 21.9751 31.2404 23.4774C31.48 23.9456 31.5099 24.131 31.5099 24.9504C31.5099 25.8088 31.49 25.9259 31.1705 26.5307C30.4517 27.9061 29.2937 28.745 28.0857 28.745C26.109 28.745 24.0725 27.0867 20.2789 22.3653C19.2107 21.0387 18.1026 19.7413 17.8131 19.4779C17.224 18.9511 15.7166 18.1903 14.898 18.0147C14.5785 17.9366 13.9895 17.9074 13.4305 17.9366C12.6318 17.9757 12.4022 18.0342 11.7633 18.3268C9.27747 19.4877 7.50047 22.775 7.50047 26.2087C7.50047 28.8718 8.70843 31.5934 10.7949 33.6322C12.542 35.3393 14.8081 36.4416 17.7731 37.0366C19.8596 37.4463 21.0775 37.4073 23.4735 36.8415C28.6547 35.6027 32.5981 32.6762 33.9458 29.0767C34.3851 27.9158 34.5548 26.9404 34.5548 25.6917C34.5548 23.2433 33.8859 21.4679 32.3385 19.8193C31.2004 18.6097 30.2021 17.9854 27.916 17.0392C26.3387 16.3856 25.4701 15.9271 24.6216 15.3028C23.0941 14.1908 22.8146 13.7518 22.7048 12.3569C22.555 10.3376 23.9427 8.73783 26.119 8.42567C27.1373 8.27935 28.2754 8.50371 31.0307 9.37189C33.8659 10.2693 34.6846 10.4449 35.8526 10.3864C36.5314 10.3571 36.8309 10.2888 37.2702 10.084C37.9291 9.77184 38.6179 9.07925 39.0172 8.34763C39.2768 7.86965 39.2968 7.73308 39.2968 6.78686C39.2968 5.77235 39.2868 5.74309 38.8675 4.91393C37.8891 2.98247 35.5231 1.2266 33.0074 0.553515C31.9891 0.280379 29.7729 0.20234 28.6947 0.397437Z" fill="white"/>
+        <path d="M48.022 4.46521C46.275 4.70908 44.0388 5.92844 42.5213 7.45019C42.2118 7.76235 41.6328 8.40617 41.2435 8.89391C40.355 10.006 39.5963 10.64 38.6578 11.079C37.979 11.3911 37.8292 11.4204 36.811 11.4594C35.623 11.4985 35.2935 11.4497 32.3086 10.7571C30.1722 10.2596 29.2338 10.1425 28.3952 10.2986C27.1573 10.523 26.2189 11.0497 25.7896 11.7618C25.4601 12.3179 25.4302 13.1373 25.7097 13.8689C26.2987 15.3711 27.4767 16.1125 31.1106 17.2441C34.8143 18.3951 36.2419 19.8388 36.5514 22.7458C36.7411 24.5212 36.5414 25.7795 35.5431 29.0377C34.8343 31.3788 34.6346 32.4031 34.6346 33.6712C34.6346 34.5394 34.6746 34.8515 34.8543 35.31C35.2636 36.3733 36.0023 37.0659 37.2303 37.5341C37.6995 37.7195 37.999 37.7585 38.9474 37.7585C40.0455 37.7682 40.1254 37.7585 40.7643 37.4463C42.8108 36.4611 44.1486 33.3981 44.1386 29.6912C44.1286 27.3403 43.869 26.4526 42.3217 23.4969C40.7743 20.5314 40.6545 19.8876 41.4731 19.0194C42.0022 18.4537 42.9606 18.0147 44.6178 17.5855C49.22 16.3759 52.4046 14.1518 53.3331 11.5082C53.6625 10.5815 53.6625 9.18655 53.3331 8.21107C52.9836 7.15755 52.4346 6.21133 51.8256 5.61628C51.1667 4.96271 50.6476 4.68957 49.7391 4.49447C49.0104 4.34815 48.8406 4.34815 48.022 4.46521Z" fill="white"/>
+        <path d="M62.7172 4.65055C61.6091 4.81638 60.8004 5.23584 60.0817 6.01623C59.5426 6.60152 59.1832 7.30387 58.8937 8.33788C58.724 8.96219 58.684 9.3914 58.674 10.7961C58.6641 12.7471 58.7239 13.1178 59.4627 16.4539C60.5409 21.2826 60.9103 23.4872 61.1099 26.2088C61.3395 29.3596 61.629 30.1107 62.6573 30.1107C62.8869 30.1107 63.6956 29.9156 64.4742 29.6815C66.6905 28.9889 67.2196 28.9108 69.1463 28.9108C70.8435 28.9108 71.5323 28.9791 75.0863 29.4864C77.652 29.8571 80.0779 29.8766 81.176 29.5449C82.3141 29.1937 83.0529 28.784 83.7217 28.1207C84.6502 27.2233 84.8598 26.4331 84.4904 25.2625C84.2608 24.5504 83.8914 23.9749 83.1826 23.2433C82.0545 22.0825 80.9863 21.624 79.399 21.624C78.1811 21.624 77.2626 21.8386 74.657 22.736C72.3609 23.5262 71.0232 23.8091 70.0548 23.731C69.6655 23.692 69.346 23.653 69.326 23.6335C69.3061 23.614 69.4059 23.1457 69.5357 22.5897C69.8252 21.3703 70.0348 20.229 70.2645 18.6C70.514 16.8148 70.514 12.4934 70.2645 11.1375C70.0149 9.82062 69.4758 8.25984 68.9766 7.43068C68.1979 6.14304 66.9101 5.14805 65.5624 4.80663C64.8336 4.62129 63.416 4.54325 62.7172 4.65055Z" fill="white"/>
+        <path d="M52.784 15.7711C51.7557 16.0735 51.0569 17.1465 50.8273 18.7561C50.6576 20.0339 50.7474 20.59 52.0153 25.8868C52.794 29.0962 53.1034 31.7983 52.9936 34.4028C52.9038 36.3635 52.7141 37.2902 52.0253 39.1242C51.2566 41.1337 51.0669 42.0116 51.2066 42.87C51.566 44.938 53.3231 46.372 56.4378 47.1231C57.8454 47.4645 58.8837 47.5718 60.7405 47.5718C64.1049 47.5718 66.2013 46.9573 68.6272 45.26C72.6404 42.4311 74.9066 38.4998 74.2477 35.4758C73.9482 34.1102 73.0098 32.5787 72.0115 31.847C71.2328 31.2618 70.6538 31.0569 69.6854 31.0081C68.0183 30.9301 66.3311 31.5739 63.1565 33.5249C61.1099 34.7833 60.0717 35.2808 59.3928 35.3393C58.704 35.3978 58.4245 35.2515 58.115 34.6467C57.8953 34.2077 57.8654 34.0516 57.8754 33.0371C57.8854 32.4226 57.9852 31.1935 58.105 30.3058C58.2348 29.4181 58.3646 28.2085 58.4045 27.6232C58.4444 27.0282 58.5842 25.8381 58.714 24.9601C58.9336 23.5067 58.9436 23.2725 58.8338 22.3361C58.6241 20.4631 57.7057 18.3073 56.6075 17.1075C55.6691 16.0735 53.8821 15.4492 52.784 15.7711Z" fill="white"/>
+        <path d="M45.8557 18.161C45.1868 18.3464 44.8274 18.5219 44.3882 18.9121C42.9606 20.1315 42.691 22.1702 43.8091 23.2043C44.2584 23.6237 44.7975 23.7993 45.686 23.7993C46.6444 23.8091 47.3032 23.614 48.1119 23.0872C49.9088 21.9069 50.3481 19.6047 48.9405 18.6585C48.1418 18.1122 46.8041 17.8976 45.8557 18.161Z" fill="white"/>
+        <path d="M47.5229 24.7845C46.5645 25.0284 45.8158 25.8088 45.3965 27.0086C45.1269 27.789 45.0271 28.706 44.9372 31.1349C44.8075 34.8515 44.4481 36.1977 42.6411 39.8655C40.934 43.309 40.5447 44.4503 40.5447 45.855C40.5546 47.0939 40.9639 47.7474 42.0421 48.2352C42.8408 48.5961 44.3283 48.6546 45.2267 48.3522C47.9322 47.4645 49.6892 44.2942 50.6875 38.5486C50.8972 37.3293 50.9371 32.5299 50.7374 30.7448C50.4479 28.0134 49.8589 26.0527 49.0902 25.2528C48.601 24.7553 48.1718 24.6285 47.5229 24.7845Z" fill="white"/>
+        <path d="M82.4838 30.3058C80.7767 30.657 78.9897 31.6519 78.0713 32.7738C76.0447 35.232 76.1345 38.9193 78.2909 41.9628C79.1095 43.1236 80.1278 43.9918 81.7351 44.8795C84.0112 46.1476 84.8099 46.7915 85.4189 47.8157C85.7882 48.4498 85.8082 48.5961 85.5287 48.9083L85.2891 49.1814L82.8532 49.2399C80.2176 49.3082 79.8083 49.3765 78.9598 49.9033C78.6802 50.0788 78.3907 50.3715 78.211 50.6641C77.9515 51.0933 77.9315 51.2104 77.9315 52.1079C77.9315 52.976 77.9615 53.1419 78.211 53.6296C78.7701 54.7612 80.1278 55.8244 82.3141 56.8487C83.9114 57.5998 84.8997 57.912 85.908 57.9803C89.6218 58.2339 93.1258 55.3074 96.1407 49.4155C97.9377 45.9233 99.4751 41.4361 99.9942 38.1487C100.204 36.8903 100.154 34.793 99.9044 33.8663C99.4851 32.325 98.6765 31.291 97.5583 30.8813C96.8196 30.6082 95.4918 30.657 94.6233 30.9789C93.8846 31.2618 92.9861 32.0617 92.5867 32.8128C91.9378 34.0029 91.5585 35.788 91.5585 37.6707C91.5485 39.1242 91.3988 41.2214 91.259 41.7385C91.1891 41.9726 91.0693 42.236 90.9894 42.3237C90.7898 42.5384 90.4004 42.5481 90.3206 42.3433C90.2906 42.2555 90.2607 40.8703 90.2607 39.251C90.2607 36.1099 90.2008 35.4661 89.8014 34.276C89.2524 32.6469 87.5852 31.1154 85.6684 30.5009C84.9297 30.257 83.2126 30.1595 82.4838 30.3058Z" fill="white"/>
+        <path d="M3.3375 32.8908C1.84003 33.3395 0.662023 34.7833 0.252715 36.6464C0.0231027 37.6804 0.112951 39.251 0.452378 40.402C0.811771 41.6116 1.81008 43.5333 3.71686 46.6939C6.91147 52.0005 7.35073 52.976 8.34904 57.034C9.32739 60.9457 9.94634 62.3602 10.9047 62.8479C11.6834 63.2381 12.492 62.9065 13.6002 61.7359C14.3988 60.897 14.8081 60.1458 15.5868 58.1559C15.9163 57.3267 16.2756 56.4585 16.3954 56.2342C16.7948 55.444 17.3838 54.9855 18.0027 54.9855C18.9511 54.9855 19.2706 55.8244 19.63 59.1801C19.7997 60.7799 19.9295 61.414 20.189 61.931C20.5983 62.7211 21.2672 62.887 22.2256 62.448C23.4635 61.8724 24.2622 60.8482 25.7197 58.0095C26.2588 56.9658 26.8777 55.8244 27.1173 55.4733C28.1955 53.8442 29.5333 52.976 32.7578 51.8152C35.8127 50.7129 37.2702 49.8447 38.2086 48.5766C38.8875 47.6499 39.0971 46.9963 39.0971 45.7672C39.0871 44.6747 38.8974 43.943 38.2785 42.7432C37.5297 41.28 35.8426 39.3875 34.3351 38.3145C32.8477 37.261 30.3818 36.9001 28.3353 37.4366C27.2172 37.7195 26.0292 38.6364 25.3803 39.6997C24.6415 40.9288 24.2721 42.392 23.783 46.1281C23.4435 48.7132 23.2139 49.8545 22.8446 50.7909L22.595 51.425L22.4352 51.0641C22.0858 50.2642 22.0359 49.8057 22.0759 47.7182C22.1757 43.2505 22.1058 42.4798 21.4968 41.397C20.9378 40.3923 19.6799 39.7582 18.2323 39.7485C17.5735 39.7485 17.3838 39.7875 16.8347 40.0509C14.9679 40.9483 13.7998 43.7089 13.2308 48.5961C13.101 49.7082 12.9612 48.801 12.8914 46.3525C12.8215 43.7187 12.6518 42.753 11.8831 40.5679C10.4056 36.3343 8.08948 33.5444 5.54378 32.8908C4.84496 32.7152 3.90654 32.7152 3.3375 32.8908Z" fill="white"/>
+        <path d="M73.8484 43.9235C72.5306 44.2357 70.9433 45.1722 68.4974 47.0939C66.2712 48.84 65.8619 49.0156 63.6656 49.2302C61.1598 49.4838 59.8221 50.5373 59.5126 52.5371C59.1931 54.488 60.1116 56.4097 61.6889 57.1316C63.0367 57.7559 65.0832 57.5608 66.2412 56.6926C66.6106 56.4195 66.98 55.9122 67.7587 54.6051C68.0682 54.0881 68.3976 53.6784 68.6472 53.5028L69.0365 53.2199L69.1863 53.493C69.2562 53.6394 69.346 54.0588 69.376 54.4197C69.4159 54.9465 69.3759 55.2099 69.1963 55.6879C68.5873 57.3364 67.3294 58.5753 63.0067 61.8139C61.2696 63.1211 60.3612 64.0185 59.9219 64.8574C59.1632 66.3304 59.4926 67.101 61.1399 67.7156C62.4876 68.2033 68.9866 69.7641 71.143 70.1055C74.677 70.6713 79.0496 69.9007 82.0046 68.1838C83.1726 67.5107 84.4205 66.2719 84.8897 65.3257C85.0894 64.9257 85.2991 64.3599 85.359 64.077C85.7084 62.4285 85.1892 60.2824 84.171 59.1508C83.2625 58.1461 82.1144 57.6974 80.4273 57.6876C79.0995 57.6779 79.0197 57.7071 75.9848 58.985C73.499 60.0288 72.0914 60.5751 72.0315 60.5165C72.0015 60.497 72.1712 60.2044 72.4008 59.8629C73.4191 58.3802 75.7851 52.5956 76.7834 49.1424C77.0829 48.1181 77.1029 47.962 77.063 46.9475C76.9831 45.1722 76.4141 44.1381 75.3558 43.8845C74.7868 43.7382 74.5971 43.748 73.8484 43.9235Z" fill="white"/>
+        <path d="M50.2483 47.5621C48.0021 48.1181 46.3648 49.6301 45.4264 52.0103C44.6677 53.932 44.3982 55.9805 44.468 59.3947C44.508 61.4627 44.5379 61.8529 44.7276 62.4968C45.7259 65.8232 48.3415 68.057 51.2266 68.057C53.7324 68.0473 55.8189 66.6621 57.2065 64.0575C59.0534 60.5848 59.4128 55.7269 58.075 52.2444C57.1965 49.9423 55.7789 48.3913 53.942 47.6987C53.0336 47.3572 51.3364 47.289 50.2483 47.5621ZM50.7674 56.2439C51.1368 56.6439 51.3963 58.8289 51.2366 60.1849C51.0769 61.5408 50.5677 62.2919 50.0187 62.009C49.5395 61.7554 49.2799 60.4775 49.3498 58.6631C49.3997 57.4242 49.6293 56.7219 50.1484 56.3024C50.4978 56.0098 50.5478 56.0098 50.7674 56.2439Z" fill="white"/>
+        <path d="M37.1304 52.342C35.8925 52.6054 35.3135 52.8004 34.3851 53.2784C31.0407 54.9953 28.3153 58.5265 27.7662 61.8432C27.5965 62.8772 27.6864 64.4965 27.9659 65.3744C28.0857 65.7451 28.3952 66.4475 28.6448 66.9255C30.252 69.9885 33.6263 70.8567 37.1504 69.13C39.5663 67.9497 41.2734 65.7939 42.3416 62.5943C43.9289 57.8925 43.0504 53.9125 40.1553 52.5371C39.3067 52.1371 38.3783 52.0786 37.1304 52.342ZM36.5314 59.3947C36.8609 59.7166 36.4815 60.8189 35.633 62.0578C34.7045 63.404 33.8859 63.8917 33.3368 63.404C32.7878 62.9162 33.3867 61.7944 35.2236 59.8825C35.6929 59.4045 35.8725 59.2777 36.1121 59.2777C36.2819 59.2777 36.4616 59.3264 36.5314 59.3947Z" fill="white"/>
+        </svg>
+
+        <!--<nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Contact</a>-->
+        </nav>
+      </div>
+    </header>
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">How are you feeling today? <br>We'll take you to a Spotify playlist. <br>Curated just for you by Still Woozy.</h1>
+        <div class="lead">
+          <p class="select-p">
+          Today, I'm
+          <span>
+            <label for="a">
+              <select name="a" id="a">
+                <option value="in the zone">in the zone</option>
+                <option value="cruisin with the windows down">cruisin with the windows down</option>
+                <option value="absolutely vibing">absolutely vibing</option>
+                <option value="staring at the ceiling">staring at the ceiling</option>
+              </select> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+            </label>
+            , 
+          </span>
+
+          <br>
+
+          and I feel like
+          <span>
+            <label for="b">
+              <select name="b" id="b">
+                <option value="chilling out">chilling out</option>
+                <option value="singing at the top of my lungs">singing at the top of my lungs</option>
+                <option value="basking in the sun with friends">basking in the sun with friends</option>
+                <option value="shit">shit</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+            </label>
+            . 
+          </span>
+
+          <br>
+
+          if that's not 
+          <span>
+            <label for="c">
+              <select name="c" id="c">
+                <option value="zen af">zen af</option>
+                <option value="immaculate vibes">immaculate vibes</option>
+                <option value="midsommar (but only the good parts)">midsommar (but only the good parts)</option>
+                <option value="big sad">big sad</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+            </label>
+          ,
+          </span>
+
+          <br>
+          I don't know what is.
+          <span class="placeholder">
+            <label>
+              <select>
+                <option value="blank"></option>
+              </select>
+            </label>
+          </span>
+        </p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Go to my Spotify playlist</a>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Please see UMG's <a href="https://getbootstrap.com/">Privacy Policy</a> and <a href="https://twitter.com/mdo">Terms and Conditions</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+   <!--  <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script> -->
+    <script>
+      $(function(){
+        let urls = [
+          'https://open.spotify.com/playlist/6PqdoD8rDw8ObeTWQpQ9tB',
+          'https://open.spotify.com/playlist/7msQCVaPHnz30dbfPpPdVu',
+          'https://open.spotify.com/playlist/3LbX67x7MvUCmkH7Bn104T',
+          'https://open.spotify.com/playlist/6yPXvE4UPvNoCi5itenDmK'
+        ];
+        let redirectUrl;
+
+        $('#b').change(function(){
+          redirectUrl = urls[$('#b option:selected').index()];
+          $('.lead .btn').attr('src', redirectUrl);
+        })
+        $('.btn').click(function(){
+          let arr = redirectUrl.split('/'),
+              id = arr[arr.length - 1],
+              cookie = `playlist=${id}; SameSite=Strict;`;
+
+          document.cookie = cookie;
+
+          window.open(redirectUrl, '_blank');
+          window.open('confirmation.html', '_self');
+
+          
+        })
+
+        $('select').change(function(){
+          var text = $(this).find('option:selected').text()
+          var clone = $('<select/>').append($('<option/>').text(text))
+          $(this).after(clone)
+          $(this).width(clone.width() + 20)
+          clone.remove()
+        })
+        setTimeout(function(){
+          $('select').change();
+        }, 200)
+      })
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAG1ubW2mKjzvRgNjrN4nY_qhFWgsEajws",
+        authDomain: "still-woozy.firebaseapp.com",
+        projectId: "still-woozy",
+        storageBucket: "still-woozy.appspot.com",
+        messagingSenderId: "835450245033",
+        appId: "1:835450245033:web:6810b60a882feabc653eb8"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </body>
+</html>
