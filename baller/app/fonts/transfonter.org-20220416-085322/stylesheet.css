@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('subset-NeueMontreal-Regular.eot');
+    src: url('subset-NeueMontreal-Regular.eot?#iefix') format('embedded-opentype'),
+        url('subset-NeueMontreal-Regular.woff2') format('woff2'),
+        url('subset-NeueMontreal-Regular.woff') format('woff'),
+        url('subset-NeueMontreal-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('subset-RightGrotesk-Bold.eot');
+    src: url('subset-RightGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+        url('subset-RightGrotesk-Bold.woff2') format('woff2'),
+        url('subset-RightGrotesk-Bold.woff') format('woff'),
+        url('subset-RightGrotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('subset-RightGrotesk-NarrowRegular.eot');
+    src: url('subset-RightGrotesk-NarrowRegular.eot?#iefix') format('embedded-opentype'),
+        url('subset-RightGrotesk-NarrowRegular.woff2') format('woff2'),
+        url('subset-RightGrotesk-NarrowRegular.woff') format('woff'),
+        url('subset-RightGrotesk-NarrowRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('subset-RightGrotesk-Regular.eot');
+    src: url('subset-RightGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+        url('subset-RightGrotesk-Regular.woff2') format('woff2'),
+        url('subset-RightGrotesk-Regular.woff') format('woff'),
+        url('subset-RightGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('subset-RightGrotesk-Light.eot');
+    src: url('subset-RightGrotesk-Light.eot?#iefix') format('embedded-opentype'),
+        url('subset-RightGrotesk-Light.woff2') format('woff2'),
+        url('subset-RightGrotesk-Light.woff') format('woff'),
+        url('subset-RightGrotesk-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('subset-RightGrotesk-NarrowBold.eot');
+    src: url('subset-RightGrotesk-NarrowBold.eot?#iefix') format('embedded-opentype'),
+        url('subset-RightGrotesk-NarrowBold.woff2') format('woff2'),
+        url('subset-RightGrotesk-NarrowBold.woff') format('woff'),
+        url('subset-RightGrotesk-NarrowBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Right Grotesk';
+    src: url('subset-RightGrotesk-Medium.eot');
+    src: url('subset-RightGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+        url('subset-RightGrotesk-Medium.woff2') format('woff2'),
+        url('subset-RightGrotesk-Medium.woff') format('woff'),
+        url('subset-RightGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

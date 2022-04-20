@@ -1,4 +1,9 @@
 history.scrollRestoration = "manual";
+
+window.onload = () => {
+	console.log('fdsf');
+	qs('.hero').style.height = `calc(100vh - ${ qs('.header').clientHeight }px)`;
+}
 document.addEventListener("DOMContentLoaded", function() {
 	// DETECT TOUCH
 	var isTouchDevice = (('ontouchstart' in window)
@@ -11,213 +16,140 @@ document.addEventListener("DOMContentLoaded", function() {
 	isTouchDevice = false;
 	}
 
-	qsa('a[data-scroll]').forEach(el => {
+	let questions = qsa('.faq__question');
+
+	questions.forEach(el => {
 		el.onclick = (e) => {
-			e.preventDefault();
-			if(window.innerWidth < 768) {
-				qs('.header__nav').classList.remove('active');
+			let answer = el.nextElementSibling;
+			if(el.classList.contains('active')) {
+				el.classList.remove('active');
+				answer.style.height = '0px';
+			} else {
+				el.classList.add('active');
+				answer.style.height = answer.scrollHeight + 'px';
 			}
-			let scrollToY = offsetTop(qs(el.dataset.scroll));
-
-			if(el.dataset.scroll == '#about' && window.innerWidth < 768) {
-				scrollToY = offsetTop(qs(el.dataset.scroll)) - 60;
-			}
-
-			scrollTo(scrollToY);
-		}
-	})
-	const scrollRaf = window.requestAnimationFrame ||
-	    window.webkitRequestAnimationFrame ||
-	    window.mozRequestAnimationFrame ||
-	    window.oRequestAnimationFrame ||
-	    window.msRequestAnimationFrame;
-
-	function scrollTo(to) {
-	    const start = window.scrollY || window.pageYOffset;
-	    const time = Date.now();
-	    const duration = Math.abs(start - to) / 2;
-
-	    (function step() {
-	        var dx = Math.min(1, (Date.now() - time) / duration)
-	        var pos = start + (to - start) * easeInOutCubic(dx)
-
-	        window.scrollTo(0, pos)
-
-	        if (dx < 1) {
-	            scrollRaf(step);
-	        }
-	    })()
-	}
-	function easeInOutCubic(x) {
-		return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-	}
-	function offsetTop(el) {
-	    var rect = el.getBoundingClientRect(),
-	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	    return rect.top + scrollTop;
-	}
-
-
-	let header = qs('.header'),
-		hamb = qs('.header__hamb'),
-		menu = qs('.header__nav'),
-		close = qs('.header__close');
-
-	hamb.onclick = () => {
-		menu.classList.add('active');
-	}
-	close.onclick = () => {
-		menu.classList.remove('active');
-	}
-
-	window.onload = () => {
-		let apesAll = qs('.hero__apes');
-		let apes = qsa('.hero__apes img');
-		
-		apesAll.classList.add('active');
-
-		setTimeout(() => {
-			apes.forEach((ape) => {
-				ape.classList.add('active')
-				ape.dataset.visible = 'true'
-			});
-			apesAll.classList.remove('active');
-
-			initHeroApes()
-		}, 1000)
-
-		function initHeroApes(){
-			setInterval(() => {
-				let activeApes = [...apes].filter(ape=>ape.classList.contains('active'));
-
-				let currentInd = random(0, activeApes.length - 1);
-				let currentInd2 = random(0, activeApes.length - 1);
-
-				let current = activeApes[currentInd];
-				let current2 = activeApes[currentInd2];
-
-				current.classList.remove('active');
-
-				setTimeout(() => {
-					current.classList.add('active');
-				}, 1500)
-			}, 1500);
-		}
-
-		let titles = qsa('.slider__text'),
-			titlesX = [0,0],
-			titlesDir = ['', '-'],
-			roadmapApes = qsa('.roadmap__img'),
-			animated = [...roadmapApes, ...titles],
-			contW = qs('.slider__texts').clientWidth;
-
-		let options = { threshold: 0 };
-		
-		let callback = function(entries, observer) {
-		    entries.forEach(entry => {
-				entry.target.dataset.in_view = (entry.isIntersecting) ? 'true' : '';
-	      	});
 		};
+	})
+
+	// qsa('a[data-scroll]').forEach(el => {
+	// 	el.onclick = (e) => {
+	// 		e.preventDefault();
+	// 		if(window.innerWidth < 768) {
+	// 			qs('.header__nav').classList.remove('active');
+	// 		}
+	// 		let scrollToY = offsetTop(qs(el.dataset.scroll));
+
+	// 		if(el.dataset.scroll == '#about' && window.innerWidth < 768) {
+	// 			scrollToY = offsetTop(qs(el.dataset.scroll)) - 60;
+	// 		}
+
+	// 		scrollTo(scrollToY);
+	// 	}
+	// })
+	// const scrollRaf = window.requestAnimationFrame ||
+	//     window.webkitRequestAnimationFrame ||
+	//     window.mozRequestAnimationFrame ||
+	//     window.oRequestAnimationFrame ||
+	//     window.msRequestAnimationFrame;
+
+	// function scrollTo(to) {
+	//     const start = window.scrollY || window.pageYOffset;
+	//     const time = Date.now();
+	//     const duration = Math.abs(start - to) / 2;
+
+	//     (function step() {
+	//         var dx = Math.min(1, (Date.now() - time) / duration)
+	//         var pos = start + (to - start) * easeInOutCubic(dx)
+
+	//         window.scrollTo(0, pos)
+
+	//         if (dx < 1) {
+	//             scrollRaf(step);
+	//         }
+	//     })()
+	// }
+	// function easeInOutCubic(x) {
+	// 	return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+	// }
+	// function offsetTop(el) {
+	//     var rect = el.getBoundingClientRect(),
+	//     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	//     return rect.top + scrollTop;
+	// }
+
+
+	// let header = qs('.header'),
+	// 	hamb = qs('.header__hamb'),
+	// 	menu = qs('.header__nav'),
+	// 	close = qs('.header__close');
+
+	// hamb.onclick = () => {
+	// 	menu.classList.add('active');
+	// }
+	// close.onclick = () => {
+	// 	menu.classList.remove('active');
+	// }
+
+	// window.onload = () => {
+
+		// let roadmapApes = qsa('.roadmap__img'),
+		// 	animated = [...roadmapApes];
+
+		// let options = { threshold: 0 };
 		
-		let observer = new IntersectionObserver(callback, options);
-		animated.forEach(el => {
-			observer.observe(el);
-		});
+		// let callback = function(entries, observer) {
+		//     entries.forEach(entry => {
+		// 		entry.target.dataset.in_view = (entry.isIntersecting) ? 'true' : '';
+	 //      	});
+		// };
+		
+		// let observer = new IntersectionObserver(callback, options);
+		// animated.forEach(el => {
+		// 	observer.observe(el);
+		// });
 
-		const raf = window.requestAnimationFrame ||
-		    window.webkitRequestAnimationFrame ||
-		    window.mozRequestAnimationFrame ||
-		    window.oRequestAnimationFrame ||
-		    window.msRequestAnimationFrame;
+		// const raf = window.requestAnimationFrame ||
+		//     window.webkitRequestAnimationFrame ||
+		//     window.mozRequestAnimationFrame ||
+		//     window.oRequestAnimationFrame ||
+		//     window.msRequestAnimationFrame;
 
-		var about = qs('.about'),
-			scrolling = document.scrollingElement,
-			divider = qs('.divider'),
-			footer = qs('.footer'),
-			sticky = qs('.hero__info.sticky'),
-			smallDevice = window.innerWidth < 768;
-			conditionTarget = smallDevice ? footer : about; 
-			conditionValue = smallDevice ? window.innerHeight : 0;
-
-		(function init() {
-		    (function step() {
-		    	if(conditionTarget.getBoundingClientRect().top <= conditionValue) {
-		    		sticky.classList.add('active');
-		    	} else {
-		    		sticky.classList.remove('active');
-		    	}
-
-		    	if(scrolling.scrollTop > 0) {
-		    		divider.classList.add('active');
-		    	} else {
-		    		divider.classList.remove('active');
-		    	}
-
-		    	if(titles){
-		    		titles.forEach((el, ind) => {
-			    		if(el.dataset.in_view == 'true') {
-			    			let rect = el.getBoundingClientRect()
-			    				winH = window.innerHeight;
-			    			titlesX[ind] = (winH - rect.top) * (contW - el.clientWidth) / (winH + rect.height);
-
-			    			el.style.transform = `translate3d(${titlesDir[ind]}${titlesX[ind]}px,0,0)`;
-			    		}
-			    	})
-		    	} 
-
-		    	if(roadmapApes) {
-		    		roadmapApes.forEach((el, ind) => {
-		    			if(el.dataset.in_view) {
-		    				let rect = el.getBoundingClientRect(),
-		    					stepH = el.parentElement.clientHeight;
-		    				let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
+		// (function init() {
+		//     (function step() {
+		//     	if(roadmapApes) {
+		//     		roadmapApes.forEach((el, ind) => {
+		//     			if(el.dataset.in_view) {
+		//     				let rect = el.getBoundingClientRect(),
+		//     					stepH = el.parentElement.clientHeight;
+		//     				let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
 		    				
-		    				el.style.transform = `translate3d(0,${y}px,0)`;
-		    			}
-		    		})
-		    	}
+		//     				el.style.transform = `translate3d(0,${y}px,0)`;
+		//     			}
+		//     		})
+		//     	}
 		    	
 
-	           	raf(step);
-		    })();
-		})();
-	}
+	 //           	raf(step);
+		//     })();
+		// })();
+	// }
 
 	function random(min, max) {
 	  min = Math.ceil(min);
 	  max = Math.floor(max);
 	  return Math.floor(Math.random() * (max - min + 1) + min);
 	}
-
-
-	if(!isTouchDevice) {
-		var pointer = qs(".hero__circle div"),
-			pointerBox = pointer.getBoundingClientRect(),
-			centerPoint = window.getComputedStyle(pointer).transformOrigin,
-			centers = centerPoint.split(" "),
-			centerY = pointerBox.top + parseInt(centers[1]) - window.pageYOffset,
-			centerX = pointerBox.left + parseInt(centers[0]) - window.pageXOffset;
-
-		window.onmousemove = (e) => {
-			let x = e.pageX,
-				y = e.pageY,
-				radians = Math.atan2(x - centerX, y - centerY),
-				degree = (radians * (180 / Math.PI) * -1) + 180; 
-		
-			pointer.style.transform = "rotate("+degree+"deg)";
-		}
-	}
 	
 
 	var glide = new Glide('.glide', {
 	  type: 'carousel',
 	  animationDuration: 1200,
-	  perView: 3,
+	  perView: 6,
 	  autoplay: 5000,
 	  swipeThreshold: 30,
 	  hoverpause: false,
 	  focusAt: 'center',
-	  gap: 70,
+	  gap: 30,
 	  breakpoints: {
 	    767: {
 	      gap: 12,
@@ -245,28 +177,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	glide.go('=0');
 
-
-	let questions = qsa('.faq__question');
-
-	questions.forEach(el => {
-		el.onclick = (e) => {
-			let answer = el.nextElementSibling;
-			if(el.classList.contains('active')) {
-				el.classList.remove('active');
-				answer.style.height = '0px';
-			} else {
-				el.classList.add('active');
-				answer.style.height = answer.scrollHeight + 'px';
-			}
-		};
+	qsa('.glide__arrows div').forEach(el => {
+		el.onclick = () => {
+			glide.go(el.dataset.glideDir)
+		}
 	})
-
-
-	function qs (selector, searchIn) {
-		return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
-	}
-	function qsa (selector, searchIn) {
-		return searchIn ? searchIn.querySelectorAll(selector) : document.querySelectorAll(selector)
-	}
-
+	
 });
+
+function qs (selector, searchIn) {
+	return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
+}
+function qsa (selector, searchIn) {
+	return searchIn ? searchIn.querySelectorAll(selector) : document.querySelectorAll(selector)
+}

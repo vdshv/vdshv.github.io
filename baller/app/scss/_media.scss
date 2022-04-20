@@ -1,68 +1,68 @@
-@media (max-width: 1365px) {
-	.cont {
-		max-width: 85%;
-		&-lg {
-			max-width: 90%;
-		}
-	}
-	.header {
-		&__nav {
-			a {
-				font-size: 13px;
-			}
-		}
-	}
-	.text-reg, .tab-text, .btn, .rewards__list p, .founders h4, .faq__answer {
-		font-size: 13px;
-	}
-	.founders p {
-		font-size: 11px;
-	}
+// @media (max-width: 1365px) {
+// 	.cont {
+// 		max-width: 85%;
+// 		&-lg {
+// 			max-width: 90%;
+// 		}
+// 	}
+// 	.header {
+// 		&__nav {
+// 			a {
+// 				font-size: 13px;
+// 			}
+// 		}
+// 	}
+// 	.text-reg, .tab-text, .btn, .rewards__list p, .founders h4, .faq__answer {
+// 		font-size: 13px;
+// 	}
+// 	.founders p {
+// 		font-size: 11px;
+// 	}
 	
-	.footer__right.half .footer__buttons {
-		width: 70%;
-	}
-	.footer {
-		&__left {
-			p {
-				font-size: 10px;
-			}
-		}
-		&__right {
-			a {
-				font-size: 12px;
-				// line-height: 2;
-			}
-		}
-		&__bottom {
-			a,p {
-				font-size: 12px;
-			}
-		}
-	}
-	.soc-icons {
-		gap: 5px;
-		a {
-			width: 30px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		svg {
-			max-width: 20px;
-			max-height: 20px
-		}
-	}
-}
+// 	.footer__right.half .footer__buttons {
+// 		width: 70%;
+// 	}
+// 	.footer {
+// 		&__left {
+// 			p {
+// 				font-size: 10px;
+// 			}
+// 		}
+// 		&__right {
+// 			a {
+// 				font-size: 12px;
+// 				// line-height: 2;
+// 			}
+// 		}
+// 		&__bottom {
+// 			a,p {
+// 				font-size: 12px;
+// 			}
+// 		}
+// 	}
+// 	.soc-icons {
+// 		gap: 5px;
+// 		a {
+// 			width: 30px;
+// 			display: flex;
+// 			align-items: center;
+// 			justify-content: center;
+// 		}
+// 		svg {
+// 			max-width: 20px;
+// 			max-height: 20px
+// 		}
+// 	}
+// }
 
-@media (max-width: 1366px) and (orientation: portrait)  {
-	.hero {
-		.full-h {
-			height: auto;
-			min-height: 70vw;
-		}
-	}
-}
+// @media (max-width: 1366px) and (orientation: portrait)  {
+// 	.hero {
+// 		.full-h {
+// 			height: auto;
+// 			min-height: 70vw;
+// 		}
+// 	}
+// }
 
 @media (max-width: 767px) {
 	.cont {
