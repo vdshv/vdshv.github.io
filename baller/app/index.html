@@ -21,6 +21,8 @@
 	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
 	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
 	<!-- SCRITICAL CSS  -->
+
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
 </head>
 <body>
 
@@ -31,8 +33,8 @@
 					<img class="lazyload" src="img/png/logo.png" data-src="img/logo.svg" alt="">
 				</div>
 
-				<!-- <div class="header__nav abs-center"> -->
-					<!-- <div class="mob flex jcsb aic">
+				<div class="header__nav-mob mob">
+					<div class="header__top flex jcsb aic">
 						<div class="header__logo">
 							<img class="lazyload" src="img/png/logo.png" data-src="img/logo.svg" alt="">
 						</div>
@@ -43,26 +45,64 @@
 							</svg>
 
 						</div>
-					</div> -->
-
-
-					<div class="header__nav flex aic">
-						<!-- <a class="mob" data-scroll="#home">Home</a> -->
-						<a data-scroll="#Presentation">Presentation</a>
-						<a data-scroll="#Collection">Collection</a>
-						<a data-scroll="#Roadmap">Roadmap</a>
-						<a data-scroll="#Team">Team</a>
-						<a data-scroll="#FAQ">FAQ</a>
-						<a data-scroll="#Contact">Contact</a>
-						<a href="whitelist.html" class="btn btn-sm">Whitelist</a>
-
-						<!-- <div class="footer__buttons mob">
-							<a class="btn btn-alt" href="">BUY NOW ON OPENSEA</a>
-							<a class="btn btn-alt" href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>JOIN DISCORD</a>
-						</div> -->
 					</div>
 
-				<!-- </div> -->
+					<div class="header__links">
+						<a href=""><span>.01</span>Home</a>
+						<a href=""><span>.02</span>Lamar Odom</a>
+						<a href=""><span>.03</span>Baller Heads Club</a>
+						<a href=""><span>.04</span>Roadmap 1.0</a>
+						<a href=""><span>.05</span>BH. Team®</a>
+						<a href=""><span>.06</span>FAQ’s</a>
+						<a href=""><span>.07</span>Contact</a>
+						<a href=""><span>.08</span>Whitelist</a>
+					</div>
+
+					<div class="footer__buttons flex jcsb">
+						<a class="btn btn-alt" href="">BUY NOW ON OPENSEA</a>
+						<a class="btn btn-alt" href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>JOIN DISCORD</a>
+
+						<div class="footer__soc flex jcsb">
+							<a href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>
+								<svg xmlns="http://www.w3.org/2000/svg" width="30.52" height="30.52" viewBox="0 0 30.52 30.52">
+								  <path d="M1656.238,1388.195a15.26,15.26,0,1,0,15.26,15.26A15.262,15.262,0,0,0,1656.238,1388.195Zm-7.731,15.773.064-.1,3.971-6.211a.137.137,0,0,1,.238.019c.662,1.486,1.236,3.335.968,4.486a6.913,6.913,0,0,1-.782,1.706,2.924,2.924,0,0,1-.149.253.134.134,0,0,1-.113.058h-4.081A.135.135,0,0,1,1648.507,1403.968Zm17.692,2.136a.137.137,0,0,1-.082.128,4.906,4.906,0,0,0-1.8,1.224c-1.117,1.554-1.968,3.775-3.875,3.775h-7.954a5.111,5.111,0,0,1-5.1-5.121v-.091a.136.136,0,0,1,.138-.135h4.431a.153.153,0,0,1,.147.168,1.492,1.492,0,0,0,.158.852,1.559,1.559,0,0,0,1.4.867h2.194v-1.713h-2.17a.139.139,0,0,1-.112-.219c.024-.037.048-.074.079-.116.2-.293.5-.745.79-1.261a10.108,10.108,0,0,0,.547-1.092c.03-.067.055-.138.082-.2.043-.119.085-.232.116-.342.031-.094.058-.192.082-.283a4.425,4.425,0,0,0,.1-1c0-.137-.006-.28-.018-.415s-.025-.3-.043-.448c-.012-.131-.036-.263-.061-.4-.033-.2-.076-.4-.125-.595l-.018-.076c-.037-.138-.071-.266-.113-.4-.125-.428-.266-.846-.418-1.236-.055-.156-.116-.306-.18-.452-.092-.226-.187-.43-.272-.623-.046-.088-.082-.167-.119-.25s-.086-.183-.131-.271c-.031-.068-.067-.132-.092-.193l-.268-.494a.087.087,0,0,1,.1-.128l1.679.454h.012l.22.064.244.068.088.024v-.995a.867.867,0,0,1,.864-.873.838.838,0,0,1,.607.257.874.874,0,0,1,.254.616v1.48l.18.049a.243.243,0,0,1,.039.021c.043.031.107.08.187.141.064.049.131.11.21.174.162.131.357.3.568.491.055.049.11.1.162.15.271.253.576.549.869.879.083.094.162.186.245.287s.167.2.241.3c.1.131.2.268.3.412.043.067.094.137.134.2a6.368,6.368,0,0,1,.327.553c.042.085.085.18.122.271a3.773,3.773,0,0,1,.256.76.839.839,0,0,1,.037.168v.012a1.426,1.426,0,0,1,.03.235,2.632,2.632,0,0,1-.042.785c-.025.109-.055.213-.092.326s-.076.217-.125.324a4.457,4.457,0,0,1-.336.637c-.043.077-.1.156-.143.232s-.113.156-.162.229c-.07.1-.144.193-.22.281a3.042,3.042,0,0,1-.21.266c-.1.125-.205.241-.312.354a2.7,2.7,0,0,1-.2.216c-.067.077-.137.144-.2.2-.107.107-.193.186-.266.256l-.174.156a.13.13,0,0,1-.092.036h-1.336v1.713h1.681a1.566,1.566,0,0,0,1.023-.379,12.42,12.42,0,0,0,1.037-1.019.118.118,0,0,1,.065-.04l4.642-1.343a.136.136,0,0,1,.173.131v.983Z" transform="translate(-1640.978 -1388.195)" fill="#fcf3b6"/>
+								</svg>
+							</a>
+							<a href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>
+								<svg xmlns="http://www.w3.org/2000/svg" width="37.214" height="26.763" viewBox="0 0 37.214 26.763">
+								  <path d="M1722.836,1393.784a15.753,15.753,0,0,0-8.953-3.345l-.446.509a21.2,21.2,0,0,1,7.933,4.047,25.977,25.977,0,0,0-9.59-3.059,26.946,26.946,0,0,0-6.436.064,3.132,3.132,0,0,0-.542.064,23.89,23.89,0,0,0-7.232,2.007c-1.179.541-1.88.924-1.88.924s2.644-2.517,8.379-4.174l-.318-.382a15.753,15.753,0,0,0-8.953,3.345,42.668,42.668,0,0,0-4.588,18.575s2.676,4.62,9.717,4.843c0,0,1.179-1.434,2.135-2.644a9.913,9.913,0,0,1-5.576-3.76s.319.223.893.542a.424.424,0,0,0,.127.1c.1.064.191.1.287.16a18.657,18.657,0,0,0,2.326,1.083,26.669,26.669,0,0,0,4.683,1.37,22.33,22.33,0,0,0,8.252.032,20.967,20.967,0,0,0,4.62-1.37,18.231,18.231,0,0,0,3.664-1.88,10.05,10.05,0,0,1-5.767,3.791c.956,1.211,2.1,2.581,2.1,2.581,7.042-.223,9.75-4.843,9.75-4.843A42.669,42.669,0,0,0,1722.836,1393.784Zm-19.977,15.612a3.549,3.549,0,0,1,0-7.073,3.549,3.549,0,0,1,0,7.073Zm11.629,0a3.549,3.549,0,1,1,3.25-3.536A3.416,3.416,0,0,1,1714.488,1409.4Z" transform="translate(-1690.21 -1390.439)" fill="#fcf3b6"/>
+								</svg>
+							</a>
+							<a href="https://twitter.com/Apeolnft" target="_blank" noopener noreferrer>
+								<svg xmlns="http://www.w3.org/2000/svg" width="33.517" height="27.239" viewBox="0 0 33.517 27.239">
+								  <path d="M1756.725,1417.44c12.649,0,19.565-10.479,19.565-19.565q0-.447-.019-.889a14.009,14.009,0,0,0,3.43-3.561,13.7,13.7,0,0,1-3.949,1.083,6.905,6.905,0,0,0,3.024-3.8,13.786,13.786,0,0,1-4.367,1.669,6.883,6.883,0,0,0-11.718,6.271,19.52,19.52,0,0,1-14.174-7.184,6.883,6.883,0,0,0,2.129,9.18,6.832,6.832,0,0,1-3.114-.86c0,.029,0,.057,0,.088a6.88,6.88,0,0,0,5.517,6.741,6.865,6.865,0,0,1-3.1.118,6.884,6.884,0,0,0,6.423,4.776,13.912,13.912,0,0,1-10.181,2.848,19.467,19.467,0,0,0,10.541,3.089" transform="translate(-1746.184 -1390.201)" fill="#fcf3b6"/>
+								</svg>
+							</a>
+							<a href="https://www.instagram.com/ape.ol/" target="_blank" noopener noreferrer>
+								<svg xmlns="http://www.w3.org/2000/svg" width="29.731" height="29.731" viewBox="0 0 29.731 29.731">
+								  <g transform="translate(-1796.746 -1388.955)">
+								    <path d="M1811.612,1391.633c3.969,0,4.439.015,6.007.087a8.209,8.209,0,0,1,2.76.512,4.923,4.923,0,0,1,2.821,2.821,8.209,8.209,0,0,1,.512,2.76c.072,1.568.087,2.038.087,6.007s-.015,4.44-.087,6.007a8.211,8.211,0,0,1-.512,2.761,4.924,4.924,0,0,1-2.821,2.821,8.239,8.239,0,0,1-2.76.512c-1.568.071-2.038.086-6.007.086s-4.44-.015-6.007-.086a8.233,8.233,0,0,1-2.76-.512,4.923,4.923,0,0,1-2.822-2.821,8.266,8.266,0,0,1-.512-2.761c-.071-1.567-.086-2.037-.086-6.007s.015-4.439.086-6.007a8.264,8.264,0,0,1,.512-2.76,4.922,4.922,0,0,1,2.822-2.821,8.2,8.2,0,0,1,2.76-.512c1.567-.072,2.038-.087,6.007-.087m0-2.678c-4.037,0-4.544.017-6.129.089a10.922,10.922,0,0,0-3.609.691,7.6,7.6,0,0,0-4.347,4.348,10.888,10.888,0,0,0-.691,3.608c-.073,1.586-.09,2.092-.09,6.129s.017,4.544.09,6.129a10.894,10.894,0,0,0,.691,3.609,7.6,7.6,0,0,0,4.347,4.348,10.922,10.922,0,0,0,3.609.69c1.585.073,2.092.09,6.129.09s4.543-.017,6.129-.09a10.915,10.915,0,0,0,3.608-.69,7.6,7.6,0,0,0,4.348-4.348,10.919,10.919,0,0,0,.691-3.609c.072-1.585.089-2.091.089-6.129s-.017-4.543-.089-6.129a10.913,10.913,0,0,0-.691-3.608,7.6,7.6,0,0,0-4.348-4.348,10.915,10.915,0,0,0-3.608-.691c-1.586-.072-2.092-.089-6.129-.089Z" fill="#fcf3b6"/>
+								    <path d="M1811.612,1396.187a7.633,7.633,0,1,0,7.634,7.633A7.633,7.633,0,0,0,1811.612,1396.187Zm0,12.589a4.956,4.956,0,1,1,4.955-4.956A4.955,4.955,0,0,1,1811.612,1408.776Z" fill="#fcf3b6"/>
+								    <circle cx="1.784" cy="1.784" r="1.784" transform="translate(1817.763 1394.101)" fill="#fcf3b6"/>
+								  </g>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="header__nav desk flex aic">
+					<!-- <a class="mob" data-scroll="#home">Home</a> -->
+					<a data-scroll="#Presentation">Presentation</a>
+					<a data-scroll="#Collection">Collection</a>
+					<a data-scroll="#Roadmap">Roadmap</a>
+					<a data-scroll="#Team">Team</a>
+					<a data-scroll="#FAQ">FAQ</a>
+					<a data-scroll="#Contact">Contact</a>
+					<a href="whitelist.html" class="btn btn-sm">Whitelist</a>
+				</div>
+
 			</div>
 			
 			
@@ -99,7 +139,7 @@
 				</a>
 			</div>
 
-			<!-- <div class="header__hamb mob"></div> -->
+			<div class="header__hamb mob"></div>
 		</div>
 
 		<div class="header__bar">
@@ -159,17 +199,24 @@
 
 	<section class="hero rel">
 		<div class="hero__title text-center">
-			<h1>BALLER HEADS CLUB</h1>
+			<h1>BALLER<br class="mob"> HEADS CLUB</h1>
 			<span>BY LAMAR ODOM</span>
 		</div>
 
-		<div class="hero__logo hidden"></div>
-		<div class="hero__logo abs-center flex aic jcc center">
+		<div class="mob hero__mob-img abs-center">
+			<img src="img/heads.png">
+		</div>
+		<div class="hero__logo hidden desk"></div>
+		<div class="hero__logo abs-center flex aic jcc center desk">
 			<img class="lazyload" src="img/png/logo.png" data-src="img/logo.svg" alt="">
 		</div>
 
 		<div class="hero__input text-center">
-			<p>↓↓↓</p>
+			<p class="flex hero__arrows jcc">
+				<img src="img/arrow.svg" alt="">
+				<img src="img/arrow.svg" alt="">
+				<img src="img/arrow.svg" alt="">
+			</p>
 			<div class="flex jcc">
 				<span class="decr rel">
 					<svg class="abs-center" width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,41 +235,62 @@
 		</div>
 	</section>
 
-	<section class="about flex">
-		<div class="about__left">
-			<h2>Lamar Odom</h2>
-			<div class="flex aifs about__flex">
-				<span class="arrow h3-arrow">↓</span>
+	<section class="about">
 
-				<div>
-					<div class="about__title">
-						<h3>NBA legend &<br>playmaker of the <br>NFT community.</h3>
-						<p class="about__text">Welcome to the first ever Web3 basketball club! I am taking you into the metaverse to build the biggest basketball team (community) where fans and athletes unite. Let’s play, give back, and have fun. See y’all on the court! - Lamar</p>
-						<!-- <a href="" class="flex ai"><span class="arrow-link">↓</span> Sit dolor amet ipsum </a> -->
-					</div>
-					
-					<div class="about__links flex jcsb">
-						<div class="flex aifs">
-							<span class="arrow">↓</span>
-							<div>
-								<p>
-									.HEAD COACH
-								</p>
-								<a href="">@LAMARODOM</a>
-							</div>
-							
+		<h2>Lamar Odom</h2>
+		<div class="about__wrap flex">
+			<div class="about__left">
+				
+				<div class="flex aifs about__flex">
+					<img class="arrow h3-arrow" src="img/arrow.svg" alt="">
+
+					<div>
+						<div class="about__title">
+							<h3>NBA legend &<br>playmaker of the <br>NFT community.</h3>
+							<p class="about__text">Welcome to the first ever Web3 basketball club! I am taking you into the metaverse to build the biggest basketball team (community) where fans and athletes unite. Let’s play, give back, and have fun. See y’all on the court! - Lamar</p>
+							<!-- <a href="" class="flex ai"><span class="arrow-link">↓</span> Sit dolor amet ipsum </a> -->
 						</div>
-						<div class="flex aifs">
-							<span class="arrow">↓</span>
-							<div>
-								<p>	
-									.NFT COLLECTION
-								</p>
-								<a href="">BALLER HEADS.2022</a>
+						
+						<div class="about__links flex jcsb">
+							<div class="flex aifs">
+								<img class="arrow" src="img/arrow.svg" alt="">
+								<div>
+									<p>
+										.HEAD COACH
+									</p>
+									<a href="">@LAMARODOM</a>
+								</div>
+								
+							</div>
+							<div class="flex aifs">
+								<img class="arrow" src="img/arrow.svg" alt="">
+								<div>
+									<p>	
+										.NFT COLLECTION
+									</p>
+									<a href="">BALLER HEADS.2022</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="about__right rel">
+				<div class="rel about__video cursor">
+					<div class="about__controls abs-full">
+						<img class="play abs-center" src="img/play.svg">
+						<img class="pause abs-center" src="img/pause.svg">
+					</div>
+
+					<video id="player" playsinline controls data-poster="img/poster.jpg" data-plyr-config='{ "controls": ""}'>
+					  <source src="video/0.mp4" type="video/mp4" />
+					  <!-- <source src="/path/to/video.webm" type="video/webm" /> -->
+
+					  <!-- Captions are optional -->
+					  <!-- <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default /> -->
+					</video>
+				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -264,22 +332,61 @@
 			</div>	
 		</div>
 
-		<h4><span class="slash">/</span>RARITY TIERS</h4>
+		<h4 class="desk"><span class="slash">/</span>RARITY TIERS</h4>
 
-		<div class="cont rarity text-center">
+		<div class="flex jcsb aic mob">
+			<h4><span class="slash">/</span>RARITY TIERS</h4>
+
+			<div class="glide__arrows rarity__arrows flex" data-glide-el="controls">
+				<div data-glide-dir="<" class="back">
+					<svg width="43" height="39" viewBox="0 0 43 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.761688 21.6797H27.7539C30.4492 21.6797 32.4804 21.6016 34.7461 21.2891L34.8633 21.875C32.1679 23.0078 29.8242 24.3359 27.4804 25.8203L16.6211 32.8125V38.5547L42.2461 20.4688V18.2031L16.6211 0.117188V5.85938L27.4804 12.8516C29.707 14.2578 32.1679 15.625 34.8633 16.7578L34.7461 17.3828C32.4804 17.0703 30.4492 16.9922 27.7539 16.9922H0.761688V21.6797Z" fill="white"/>
+					</svg>
+				</div>
+				<div data-glide-dir=">" class="forward">
+					<svg width="43" height="39" viewBox="0 0 43 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.761688 21.6797H27.7539C30.4492 21.6797 32.4804 21.6016 34.7461 21.2891L34.8633 21.875C32.1679 23.0078 29.8242 24.3359 27.4804 25.8203L16.6211 32.8125V38.5547L42.2461 20.4688V18.2031L16.6211 0.117188V5.85938L27.4804 12.8516C29.707 14.2578 32.1679 15.625 34.8633 16.7578L34.7461 17.3828C32.4804 17.0703 30.4492 16.9922 27.7539 16.9922H0.761688V21.6797Z" fill="white"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div class="rarity__glide glide mob">
+			<div class="glide__track" data-glide-el="track">
+				<div class="glide__slides">
+					<div class="glide__slide">
+						<div class="rarity__img"><img src="img/rarity/1.png" alt=""></div>
+						<h4>COMMON<img class="arrow" src="img/arrow.svg" alt=""><span>6.000</span></h4>
+						<span class="note">(random colors)</span>
+					</div>
+					<div class="glide__slide">
+						<div class="rarity__img"><img src="img/rarity/2.png" alt=""></div>
+						<h4>RARE<img class="arrow" src="img/arrow.svg" alt=""><span>3.500</span></h4>
+						<span class="note">(custom backgrounds)</span>
+					</div>
+					<div class="glide__slide">
+						<div class="rarity__img"><img src="img/rarity/3.png" alt=""></div>
+						<h4>LEGENDARY<img class="arrow" src="img/arrow.svg" alt=""><span>499</span></h4>
+						<span class="note">(gold background)</span>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="cont rarity text-center desk">
 			<div>
 				<div class="rarity__img"><img src="img/rarity/1.png" alt=""></div>
-				<h4>COMMON<span class="arrow">↓</span><span>6.000</span></h4>
+				<h4>COMMON<img class="arrow" src="img/arrow.svg" alt=""><span>6.000</span></h4>
 				<span class="note">(random colors)</span>
 			</div>
 			<div>
 				<div class="rarity__img"><img src="img/rarity/2.png" alt=""></div>
-				<h4>RARE<span class="arrow">↓</span><span>3.500</span></h4>
+				<h4>RARE<img class="arrow" src="img/arrow.svg" alt=""><span>3.500</span></h4>
 				<span class="note">(custom backgrounds)</span>
 			</div>
 			<div>
 				<div class="rarity__img"><img src="img/rarity/3.png" alt=""></div>
-				<h4>LEGENDARY<span class="arrow">↓</span><span>499</span></h4>
+				<h4>LEGENDARY<img class="arrow" src="img/arrow.svg" alt=""><span>499</span></h4>
 				<span class="note">(gold background)</span>
 			</div>
 		</div>
@@ -288,63 +395,63 @@
 
 		<div class="cont trait rarity text-center">
 			<div>
-				<div class="rarity__img"><img src="img/rarity/1.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/background.png" alt=""></div>
 				<div class="trait__text">
-					<h4>BACKGROUND<p><span class="arrow">↓</span><span>000</span><p></h4>
+					<h4>BACKGROUND<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span><p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/2.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/skin.png" alt=""></div>
 				<div class="trait__text">
-					<h4>SKIN<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>SKIN<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/3.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/hat.png" alt=""></div>
 				<div class="trait__text">
-					<h4>HAT<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>HAT<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/1.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/Eyes_Fire.png" alt=""></div>
 				<div class="trait__text">
-					<h4>EYES<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>EYES<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/2.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/Glasses_3.png" alt=""></div>
 				<div class="trait__text">
-					<h4>EYE<br> ACCESSORIES<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>EYE<br> ACCESSORIES<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/3.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/eyebrows.png" alt=""></div>
 				<div class="trait__text">
-					<h4>EYEBROWS<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>EYEBROWS<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/3.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/Mouth_Grin_WestAll.png" alt=""></div>
 				<div class="trait__text">
-					<h4>MOUTH<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>MOUTH<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/1.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/beard.png" alt=""></div>
 				<div class="trait__text">
-					<h4>BEARD<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>BEARD<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/2.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/otheraccessories.png" alt=""></div>
 				<div class="trait__text">
-					<h4>OTHER<br> ACCESSORIES<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>OTHER<br> ACCESSORIES<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 			<div>
-				<div class="rarity__img"><img src="img/rarity/3.png" alt=""></div>
+				<div class="rarity__img"><img src="img/traits/unique.png" alt=""></div>
 				<div class="trait__text">
-					<h4>UNIQUE THEME<p><span class="arrow">↓</span><span>000</span></p></h4>
+					<h4>UNIQUE THEME<p><img class="arrow" src="img/arrow.svg" alt=""><span>000</span></p></h4>
 				</div>
 			</div>
 		</div>
@@ -432,11 +539,11 @@
 			<div class="community__flex flex jcsb aic">
 				<div class="community__side">
 					<div class="community__item">
-						<p><span class="arrow">↓</span>01</p>
+						<p><img class="arrow" src="img/arrow.svg" alt="">01</p>
 						<p>Join an exclusive community<br> of NBA fans, athletes, <br>rising stars & legends.</p>
 					</div>
 					<div class="community__item">
-						<p><span class="arrow">↓</span>02</p>
+						<p><img class="arrow" src="img/arrow.svg" alt="">02</p>
 						<p>Support young aspiring<br> athletes and charities<br> of your choice.</p>
 					</div>
 				</div>
@@ -447,11 +554,11 @@
 
 				<div class="community__side">
 					<div class="community__item">
-						<p><span class="arrow">↓</span>03</p>
+						<p><img class="arrow" src="img/arrow.svg" alt="">03</p>
 						<p>Discuss ball & exchange<br> inside information<br> with the team.</p>
 					</div>
 					<div class="community__item">
-						<p><span class="arrow">↓</span>04</p>
+						<p><img class="arrow" src="img/arrow.svg" alt="">04</p>
 						<p>“Talk, Play, & Hang Out with me”<br> — Lamar Odom</p>
 					</div>
 				</div>
@@ -460,84 +567,137 @@
 	</section>
 
 	<section class="about team flex">
-		<div class="about__left team__left">
+		<div class="team__left">
 			<h2>COACHES’ BOX</h2>
-			<div class="flex aifs about__flex">
-				<span class="arrow h3-arrow">↓</span>
+			<div class="team__mob flex">
+				<div class="team__right flex aic jcc mob">
+					<img src="img/slider/5.png">
+				</div>
+				<div class="flex aifs about__flex team__flex">
+					<img class="arrow h3-arrow" src="img/arrow.svg" alt="">
 
-				<div class="flex-grow">
-					<div class="about__title">
-						<h3>HEAD COACH<br><b>FOUNDER</b> <br>LAMAR ODOM</h3>
-						<div class="flex aic">
-							<p class="about__text">(Legendary playmaker & 2-times NBA champion)</p>
-							<div class="team__soc header__soc flex">
-								<a href="https://twitter.com/Apeolnft" target="_blank" noopener noreferrer>
-									<svg xmlns="http://www.w3.org/2000/svg" width="33.517" height="27.239" viewBox="0 0 33.517 27.239">
-									  <path d="M1756.725,1417.44c12.649,0,19.565-10.479,19.565-19.565q0-.447-.019-.889a14.009,14.009,0,0,0,3.43-3.561,13.7,13.7,0,0,1-3.949,1.083,6.905,6.905,0,0,0,3.024-3.8,13.786,13.786,0,0,1-4.367,1.669,6.883,6.883,0,0,0-11.718,6.271,19.52,19.52,0,0,1-14.174-7.184,6.883,6.883,0,0,0,2.129,9.18,6.832,6.832,0,0,1-3.114-.86c0,.029,0,.057,0,.088a6.88,6.88,0,0,0,5.517,6.741,6.865,6.865,0,0,1-3.1.118,6.884,6.884,0,0,0,6.423,4.776,13.912,13.912,0,0,1-10.181,2.848,19.467,19.467,0,0,0,10.541,3.089" transform="translate(-1746.184 -1390.201)" fill="#ffffff"/>
-									</svg>
-								</a>
-								<a href="https://www.instagram.com/ape.ol/" target="_blank" noopener noreferrer>
-									<svg xmlns="http://www.w3.org/2000/svg" width="29.731" height="29.731" viewBox="0 0 29.731 29.731">
-									  <g transform="translate(-1796.746 -1388.955)">
-									    <path d="M1811.612,1391.633c3.969,0,4.439.015,6.007.087a8.209,8.209,0,0,1,2.76.512,4.923,4.923,0,0,1,2.821,2.821,8.209,8.209,0,0,1,.512,2.76c.072,1.568.087,2.038.087,6.007s-.015,4.44-.087,6.007a8.211,8.211,0,0,1-.512,2.761,4.924,4.924,0,0,1-2.821,2.821,8.239,8.239,0,0,1-2.76.512c-1.568.071-2.038.086-6.007.086s-4.44-.015-6.007-.086a8.233,8.233,0,0,1-2.76-.512,4.923,4.923,0,0,1-2.822-2.821,8.266,8.266,0,0,1-.512-2.761c-.071-1.567-.086-2.037-.086-6.007s.015-4.439.086-6.007a8.264,8.264,0,0,1,.512-2.76,4.922,4.922,0,0,1,2.822-2.821,8.2,8.2,0,0,1,2.76-.512c1.567-.072,2.038-.087,6.007-.087m0-2.678c-4.037,0-4.544.017-6.129.089a10.922,10.922,0,0,0-3.609.691,7.6,7.6,0,0,0-4.347,4.348,10.888,10.888,0,0,0-.691,3.608c-.073,1.586-.09,2.092-.09,6.129s.017,4.544.09,6.129a10.894,10.894,0,0,0,.691,3.609,7.6,7.6,0,0,0,4.347,4.348,10.922,10.922,0,0,0,3.609.69c1.585.073,2.092.09,6.129.09s4.543-.017,6.129-.09a10.915,10.915,0,0,0,3.608-.69,7.6,7.6,0,0,0,4.348-4.348,10.919,10.919,0,0,0,.691-3.609c.072-1.585.089-2.091.089-6.129s-.017-4.543-.089-6.129a10.913,10.913,0,0,0-.691-3.608,7.6,7.6,0,0,0-4.348-4.348,10.915,10.915,0,0,0-3.608-.691c-1.586-.072-2.092-.089-6.129-.089Z" fill="#ffffff"/>
-									    <path d="M1811.612,1396.187a7.633,7.633,0,1,0,7.634,7.633A7.633,7.633,0,0,0,1811.612,1396.187Zm0,12.589a4.956,4.956,0,1,1,4.955-4.956A4.955,4.955,0,0,1,1811.612,1408.776Z" fill="#ffffff"/>
-									    <circle cx="1.784" cy="1.784" r="1.784" transform="translate(1817.763 1394.101)" fill="#ffffff"/>
-									  </g>
-									</svg>
-								</a>
+					<div class="flex-grow">
+						<div class="about__title">
+							<h3>HEAD COACH<br><b>FOUNDER</b> <br>LAMAR ODOM</h3>
+							<div class="flex aic team__text">
+								<p class="about__text">(Legendary playmaker & 2-times NBA champion)</p>
+								<div class="team__soc header__soc flex">
+									<a href="https://twitter.com/Apeolnft" target="_blank" noopener noreferrer>
+										<svg xmlns="http://www.w3.org/2000/svg" width="33.517" height="27.239" viewBox="0 0 33.517 27.239">
+										  <path d="M1756.725,1417.44c12.649,0,19.565-10.479,19.565-19.565q0-.447-.019-.889a14.009,14.009,0,0,0,3.43-3.561,13.7,13.7,0,0,1-3.949,1.083,6.905,6.905,0,0,0,3.024-3.8,13.786,13.786,0,0,1-4.367,1.669,6.883,6.883,0,0,0-11.718,6.271,19.52,19.52,0,0,1-14.174-7.184,6.883,6.883,0,0,0,2.129,9.18,6.832,6.832,0,0,1-3.114-.86c0,.029,0,.057,0,.088a6.88,6.88,0,0,0,5.517,6.741,6.865,6.865,0,0,1-3.1.118,6.884,6.884,0,0,0,6.423,4.776,13.912,13.912,0,0,1-10.181,2.848,19.467,19.467,0,0,0,10.541,3.089" transform="translate(-1746.184 -1390.201)" fill="#ffffff"/>
+										</svg>
+									</a>
+									<a href="https://www.instagram.com/ape.ol/" target="_blank" noopener noreferrer>
+										<svg xmlns="http://www.w3.org/2000/svg" width="29.731" height="29.731" viewBox="0 0 29.731 29.731">
+										  <g transform="translate(-1796.746 -1388.955)">
+										    <path d="M1811.612,1391.633c3.969,0,4.439.015,6.007.087a8.209,8.209,0,0,1,2.76.512,4.923,4.923,0,0,1,2.821,2.821,8.209,8.209,0,0,1,.512,2.76c.072,1.568.087,2.038.087,6.007s-.015,4.44-.087,6.007a8.211,8.211,0,0,1-.512,2.761,4.924,4.924,0,0,1-2.821,2.821,8.239,8.239,0,0,1-2.76.512c-1.568.071-2.038.086-6.007.086s-4.44-.015-6.007-.086a8.233,8.233,0,0,1-2.76-.512,4.923,4.923,0,0,1-2.822-2.821,8.266,8.266,0,0,1-.512-2.761c-.071-1.567-.086-2.037-.086-6.007s.015-4.439.086-6.007a8.264,8.264,0,0,1,.512-2.76,4.922,4.922,0,0,1,2.822-2.821,8.2,8.2,0,0,1,2.76-.512c1.567-.072,2.038-.087,6.007-.087m0-2.678c-4.037,0-4.544.017-6.129.089a10.922,10.922,0,0,0-3.609.691,7.6,7.6,0,0,0-4.347,4.348,10.888,10.888,0,0,0-.691,3.608c-.073,1.586-.09,2.092-.09,6.129s.017,4.544.09,6.129a10.894,10.894,0,0,0,.691,3.609,7.6,7.6,0,0,0,4.347,4.348,10.922,10.922,0,0,0,3.609.69c1.585.073,2.092.09,6.129.09s4.543-.017,6.129-.09a10.915,10.915,0,0,0,3.608-.69,7.6,7.6,0,0,0,4.348-4.348,10.919,10.919,0,0,0,.691-3.609c.072-1.585.089-2.091.089-6.129s-.017-4.543-.089-6.129a10.913,10.913,0,0,0-.691-3.608,7.6,7.6,0,0,0-4.348-4.348,10.915,10.915,0,0,0-3.608-.691c-1.586-.072-2.092-.089-6.129-.089Z" fill="#ffffff"/>
+										    <path d="M1811.612,1396.187a7.633,7.633,0,1,0,7.634,7.633A7.633,7.633,0,0,0,1811.612,1396.187Zm0,12.589a4.956,4.956,0,1,1,4.955-4.956A4.955,4.955,0,0,1,1811.612,1408.776Z" fill="#ffffff"/>
+										    <circle cx="1.784" cy="1.784" r="1.784" transform="translate(1817.763 1394.101)" fill="#ffffff"/>
+										  </g>
+										</svg>
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					
-					<div class="team__links about__links flex">
-						<div class="flex aifs">
-							<span class="arrow">↓</span>
-							<div>
-								<p>
-									<span>Assistant Coach 1</span>PROJECT <br>MANAGEMENT
-								</p>
-								<a class="team__link" href="">CREATIC LABS</a>
+						
+						<div class="team__links about__links flex desk">
+							<div class="flex aifs">
+								<img class="arrow" src="img/arrow.svg" alt="">
+								<div>
+									<p>
+										<span>Assistant Coach 1</span>PROJECT <br>MANAGEMENT
+									</p>
+									<a class="team__link" href="">CREATIC LABS</a>
 
-								<a class="team__globe" href=""><svg xmlns="http://www.w3.org/2000/svg" width="34.126" height="34.119" viewBox="0 0 34.126 34.119">
-								  <path d="M173.746,9586.907v.015h1.137v-.015a17.055,17.055,0,0,0,0-34.09v-.015h-1.137v.015a17.054,17.054,0,0,0,0,34.09Zm-12.071-7.378h4.508a13.4,13.4,0,0,0,3.423,5.544,15.986,15.986,0,0,1-7.932-5.544Zm28.546-10.235h-6.246a30.317,30.317,0,0,0-1.156-7.961h4.93a15.818,15.818,0,0,1,2.473,7.961Zm-16.475,10.235v6.225c-2.886-.289-5.01-2.771-6.336-6.225Zm-6.734-1.138a28.521,28.521,0,0,1-1.22-7.961h7.954v7.961Zm7.871,7.364v-6.227h6.352c-.189.493-.388.972-.607,1.422-1.017,2.073-2.823,4.52-5.745,4.8Zm0-7.364v-7.961h7.948a28.4,28.4,0,0,1-1.2,7.961Zm9.092-7.961h6.248a15.828,15.828,0,0,1-2.462,7.961h-4.942a30.287,30.287,0,0,0,1.156-7.961Zm-1.137-1.137h-7.955v-7.961h6.734a28.485,28.485,0,0,1,1.221,7.961Zm-7.955-9.1v-6.226c2.886.289,5.011,2.773,6.336,6.226Zm-1.137-6.226v6.226H167.41C168.736,9556.743,170.86,9554.259,173.746,9553.97Zm0,7.363v7.961h-7.954a28.521,28.521,0,0,1,1.22-7.961Zm-9.085,7.961h-6.255a15.815,15.815,0,0,1,2.474-7.961h4.933a29.908,29.908,0,0,0-1.152,7.961Zm-.007,1.137a30.282,30.282,0,0,0,1.157,7.961H160.88a15.818,15.818,0,0,1-2.473-7.961Zm21.191,10.412a15.815,15.815,0,0,1-6.831,4.242,13.385,13.385,0,0,0,3.436-5.555h4.514a16.073,16.073,0,0,1-1.119,1.313Zm1.11-20.646h-4.5a13.381,13.381,0,0,0-3.423-5.543,15.979,15.979,0,0,1,7.926,5.543Zm-17.337-5.547a11.649,11.649,0,0,0-2.639,3.626,18.911,18.911,0,0,0-.8,1.921h-4.508a15.97,15.97,0,0,1,7.943-5.547Z" transform="translate(-157.249 -9552.803)" fill="#fff"/>
-								</svg></a>
+									<a class="team__globe" href=""><svg xmlns="http://www.w3.org/2000/svg" width="34.126" height="34.119" viewBox="0 0 34.126 34.119">
+									  <path d="M173.746,9586.907v.015h1.137v-.015a17.055,17.055,0,0,0,0-34.09v-.015h-1.137v.015a17.054,17.054,0,0,0,0,34.09Zm-12.071-7.378h4.508a13.4,13.4,0,0,0,3.423,5.544,15.986,15.986,0,0,1-7.932-5.544Zm28.546-10.235h-6.246a30.317,30.317,0,0,0-1.156-7.961h4.93a15.818,15.818,0,0,1,2.473,7.961Zm-16.475,10.235v6.225c-2.886-.289-5.01-2.771-6.336-6.225Zm-6.734-1.138a28.521,28.521,0,0,1-1.22-7.961h7.954v7.961Zm7.871,7.364v-6.227h6.352c-.189.493-.388.972-.607,1.422-1.017,2.073-2.823,4.52-5.745,4.8Zm0-7.364v-7.961h7.948a28.4,28.4,0,0,1-1.2,7.961Zm9.092-7.961h6.248a15.828,15.828,0,0,1-2.462,7.961h-4.942a30.287,30.287,0,0,0,1.156-7.961Zm-1.137-1.137h-7.955v-7.961h6.734a28.485,28.485,0,0,1,1.221,7.961Zm-7.955-9.1v-6.226c2.886.289,5.011,2.773,6.336,6.226Zm-1.137-6.226v6.226H167.41C168.736,9556.743,170.86,9554.259,173.746,9553.97Zm0,7.363v7.961h-7.954a28.521,28.521,0,0,1,1.22-7.961Zm-9.085,7.961h-6.255a15.815,15.815,0,0,1,2.474-7.961h4.933a29.908,29.908,0,0,0-1.152,7.961Zm-.007,1.137a30.282,30.282,0,0,0,1.157,7.961H160.88a15.818,15.818,0,0,1-2.473-7.961Zm21.191,10.412a15.815,15.815,0,0,1-6.831,4.242,13.385,13.385,0,0,0,3.436-5.555h4.514a16.073,16.073,0,0,1-1.119,1.313Zm1.11-20.646h-4.5a13.381,13.381,0,0,0-3.423-5.543,15.979,15.979,0,0,1,7.926,5.543Zm-17.337-5.547a11.649,11.649,0,0,0-2.639,3.626,18.911,18.911,0,0,0-.8,1.921h-4.508a15.97,15.97,0,0,1,7.943-5.547Z" transform="translate(-157.249 -9552.803)" fill="#fff"/>
+									</svg></a>
+								</div>
+								
 							</div>
-							
-						</div>
-						<div class="flex aifs">
-							<span class="arrow">↓</span>
-							<div>
-								<p>
-									<span>Assistant Coach 2</span>DEVELOPMENT<br>TEAM
-								</p>
-								<a class="team__link" href="">LAKE HOUSE GROUP</a>
+							<div class="flex aifs">
+								<img class="arrow" src="img/arrow.svg" alt="">
+								<div>
+									<p>
+										<span>Assistant Coach 2</span>DEVELOPMENT<br>TEAM
+									</p>
+									<a class="team__link" href="">LAKE HOUSE GROUP</a>
 
-								<a class="team__globe" href=""><svg xmlns="http://www.w3.org/2000/svg" width="34.126" height="34.119" viewBox="0 0 34.126 34.119">
-								  <path d="M173.746,9586.907v.015h1.137v-.015a17.055,17.055,0,0,0,0-34.09v-.015h-1.137v.015a17.054,17.054,0,0,0,0,34.09Zm-12.071-7.378h4.508a13.4,13.4,0,0,0,3.423,5.544,15.986,15.986,0,0,1-7.932-5.544Zm28.546-10.235h-6.246a30.317,30.317,0,0,0-1.156-7.961h4.93a15.818,15.818,0,0,1,2.473,7.961Zm-16.475,10.235v6.225c-2.886-.289-5.01-2.771-6.336-6.225Zm-6.734-1.138a28.521,28.521,0,0,1-1.22-7.961h7.954v7.961Zm7.871,7.364v-6.227h6.352c-.189.493-.388.972-.607,1.422-1.017,2.073-2.823,4.52-5.745,4.8Zm0-7.364v-7.961h7.948a28.4,28.4,0,0,1-1.2,7.961Zm9.092-7.961h6.248a15.828,15.828,0,0,1-2.462,7.961h-4.942a30.287,30.287,0,0,0,1.156-7.961Zm-1.137-1.137h-7.955v-7.961h6.734a28.485,28.485,0,0,1,1.221,7.961Zm-7.955-9.1v-6.226c2.886.289,5.011,2.773,6.336,6.226Zm-1.137-6.226v6.226H167.41C168.736,9556.743,170.86,9554.259,173.746,9553.97Zm0,7.363v7.961h-7.954a28.521,28.521,0,0,1,1.22-7.961Zm-9.085,7.961h-6.255a15.815,15.815,0,0,1,2.474-7.961h4.933a29.908,29.908,0,0,0-1.152,7.961Zm-.007,1.137a30.282,30.282,0,0,0,1.157,7.961H160.88a15.818,15.818,0,0,1-2.473-7.961Zm21.191,10.412a15.815,15.815,0,0,1-6.831,4.242,13.385,13.385,0,0,0,3.436-5.555h4.514a16.073,16.073,0,0,1-1.119,1.313Zm1.11-20.646h-4.5a13.381,13.381,0,0,0-3.423-5.543,15.979,15.979,0,0,1,7.926,5.543Zm-17.337-5.547a11.649,11.649,0,0,0-2.639,3.626,18.911,18.911,0,0,0-.8,1.921h-4.508a15.97,15.97,0,0,1,7.943-5.547Z" transform="translate(-157.249 -9552.803)" fill="#fff"/>
-								</svg></a>
+									<a class="team__globe" href=""><svg xmlns="http://www.w3.org/2000/svg" width="34.126" height="34.119" viewBox="0 0 34.126 34.119">
+									  <path d="M173.746,9586.907v.015h1.137v-.015a17.055,17.055,0,0,0,0-34.09v-.015h-1.137v.015a17.054,17.054,0,0,0,0,34.09Zm-12.071-7.378h4.508a13.4,13.4,0,0,0,3.423,5.544,15.986,15.986,0,0,1-7.932-5.544Zm28.546-10.235h-6.246a30.317,30.317,0,0,0-1.156-7.961h4.93a15.818,15.818,0,0,1,2.473,7.961Zm-16.475,10.235v6.225c-2.886-.289-5.01-2.771-6.336-6.225Zm-6.734-1.138a28.521,28.521,0,0,1-1.22-7.961h7.954v7.961Zm7.871,7.364v-6.227h6.352c-.189.493-.388.972-.607,1.422-1.017,2.073-2.823,4.52-5.745,4.8Zm0-7.364v-7.961h7.948a28.4,28.4,0,0,1-1.2,7.961Zm9.092-7.961h6.248a15.828,15.828,0,0,1-2.462,7.961h-4.942a30.287,30.287,0,0,0,1.156-7.961Zm-1.137-1.137h-7.955v-7.961h6.734a28.485,28.485,0,0,1,1.221,7.961Zm-7.955-9.1v-6.226c2.886.289,5.011,2.773,6.336,6.226Zm-1.137-6.226v6.226H167.41C168.736,9556.743,170.86,9554.259,173.746,9553.97Zm0,7.363v7.961h-7.954a28.521,28.521,0,0,1,1.22-7.961Zm-9.085,7.961h-6.255a15.815,15.815,0,0,1,2.474-7.961h4.933a29.908,29.908,0,0,0-1.152,7.961Zm-.007,1.137a30.282,30.282,0,0,0,1.157,7.961H160.88a15.818,15.818,0,0,1-2.473-7.961Zm21.191,10.412a15.815,15.815,0,0,1-6.831,4.242,13.385,13.385,0,0,0,3.436-5.555h4.514a16.073,16.073,0,0,1-1.119,1.313Zm1.11-20.646h-4.5a13.381,13.381,0,0,0-3.423-5.543,15.979,15.979,0,0,1,7.926,5.543Zm-17.337-5.547a11.649,11.649,0,0,0-2.639,3.626,18.911,18.911,0,0,0-.8,1.921h-4.508a15.97,15.97,0,0,1,7.943-5.547Z" transform="translate(-157.249 -9552.803)" fill="#fff"/>
+									</svg></a>
+								</div>
+								
 							</div>
-							
-						</div>
 
-						<div class="flex aifs">
-							<span class="arrow">↓</span>
-							<div>
-								<p>
-									<span>Assistant Coach 3</span>ART<br>DESIGNER
-								</p>
-								<a class="team__link" href="">APETOMIC STUDIO</a>
+							<div class="flex aifs">
+								<img class="arrow" src="img/arrow.svg" alt="">
+								<div>
+									<p>
+										<span>Assistant Coach 3</span>ART<br>DESIGNER
+									</p>
+									<a class="team__link" href="">APETOMIC STUDIO</a>
 
-								<a class="team__globe" href=""><svg xmlns="http://www.w3.org/2000/svg" width="34.126" height="34.119" viewBox="0 0 34.126 34.119">
-								  <path d="M173.746,9586.907v.015h1.137v-.015a17.055,17.055,0,0,0,0-34.09v-.015h-1.137v.015a17.054,17.054,0,0,0,0,34.09Zm-12.071-7.378h4.508a13.4,13.4,0,0,0,3.423,5.544,15.986,15.986,0,0,1-7.932-5.544Zm28.546-10.235h-6.246a30.317,30.317,0,0,0-1.156-7.961h4.93a15.818,15.818,0,0,1,2.473,7.961Zm-16.475,10.235v6.225c-2.886-.289-5.01-2.771-6.336-6.225Zm-6.734-1.138a28.521,28.521,0,0,1-1.22-7.961h7.954v7.961Zm7.871,7.364v-6.227h6.352c-.189.493-.388.972-.607,1.422-1.017,2.073-2.823,4.52-5.745,4.8Zm0-7.364v-7.961h7.948a28.4,28.4,0,0,1-1.2,7.961Zm9.092-7.961h6.248a15.828,15.828,0,0,1-2.462,7.961h-4.942a30.287,30.287,0,0,0,1.156-7.961Zm-1.137-1.137h-7.955v-7.961h6.734a28.485,28.485,0,0,1,1.221,7.961Zm-7.955-9.1v-6.226c2.886.289,5.011,2.773,6.336,6.226Zm-1.137-6.226v6.226H167.41C168.736,9556.743,170.86,9554.259,173.746,9553.97Zm0,7.363v7.961h-7.954a28.521,28.521,0,0,1,1.22-7.961Zm-9.085,7.961h-6.255a15.815,15.815,0,0,1,2.474-7.961h4.933a29.908,29.908,0,0,0-1.152,7.961Zm-.007,1.137a30.282,30.282,0,0,0,1.157,7.961H160.88a15.818,15.818,0,0,1-2.473-7.961Zm21.191,10.412a15.815,15.815,0,0,1-6.831,4.242,13.385,13.385,0,0,0,3.436-5.555h4.514a16.073,16.073,0,0,1-1.119,1.313Zm1.11-20.646h-4.5a13.381,13.381,0,0,0-3.423-5.543,15.979,15.979,0,0,1,7.926,5.543Zm-17.337-5.547a11.649,11.649,0,0,0-2.639,3.626,18.911,18.911,0,0,0-.8,1.921h-4.508a15.97,15.97,0,0,1,7.943-5.547Z" transform="translate(-157.249 -9552.803)" fill="#fff"/>
-								</svg></a>
+									<a class="team__globe" href=""><svg xmlns="http://www.w3.org/2000/svg" width="34.126" height="34.119" viewBox="0 0 34.126 34.119">
+									  <path d="M173.746,9586.907v.015h1.137v-.015a17.055,17.055,0,0,0,0-34.09v-.015h-1.137v.015a17.054,17.054,0,0,0,0,34.09Zm-12.071-7.378h4.508a13.4,13.4,0,0,0,3.423,5.544,15.986,15.986,0,0,1-7.932-5.544Zm28.546-10.235h-6.246a30.317,30.317,0,0,0-1.156-7.961h4.93a15.818,15.818,0,0,1,2.473,7.961Zm-16.475,10.235v6.225c-2.886-.289-5.01-2.771-6.336-6.225Zm-6.734-1.138a28.521,28.521,0,0,1-1.22-7.961h7.954v7.961Zm7.871,7.364v-6.227h6.352c-.189.493-.388.972-.607,1.422-1.017,2.073-2.823,4.52-5.745,4.8Zm0-7.364v-7.961h7.948a28.4,28.4,0,0,1-1.2,7.961Zm9.092-7.961h6.248a15.828,15.828,0,0,1-2.462,7.961h-4.942a30.287,30.287,0,0,0,1.156-7.961Zm-1.137-1.137h-7.955v-7.961h6.734a28.485,28.485,0,0,1,1.221,7.961Zm-7.955-9.1v-6.226c2.886.289,5.011,2.773,6.336,6.226Zm-1.137-6.226v6.226H167.41C168.736,9556.743,170.86,9554.259,173.746,9553.97Zm0,7.363v7.961h-7.954a28.521,28.521,0,0,1,1.22-7.961Zm-9.085,7.961h-6.255a15.815,15.815,0,0,1,2.474-7.961h4.933a29.908,29.908,0,0,0-1.152,7.961Zm-.007,1.137a30.282,30.282,0,0,0,1.157,7.961H160.88a15.818,15.818,0,0,1-2.473-7.961Zm21.191,10.412a15.815,15.815,0,0,1-6.831,4.242,13.385,13.385,0,0,0,3.436-5.555h4.514a16.073,16.073,0,0,1-1.119,1.313Zm1.11-20.646h-4.5a13.381,13.381,0,0,0-3.423-5.543,15.979,15.979,0,0,1,7.926,5.543Zm-17.337-5.547a11.649,11.649,0,0,0-2.639,3.626,18.911,18.911,0,0,0-.8,1.921h-4.508a15.97,15.97,0,0,1,7.943-5.547Z" transform="translate(-157.249 -9552.803)" fill="#fff"/>
+									</svg></a>
+								</div>
+								
 							</div>
-							
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			<div class="team__links-mob mob">
+				<div class="team__item">
+					<div class="flex half jcsb">
+						<div class="team__item-span">
+							<img class="arrow" src="img/arrow.svg" alt="">
+							<span>Assistant Coach 1</span>
+						</div>
+						<div>
+							<span>PROJECT <br>MANAGEMENT</span>
+						</div>
+					</div>
+					<a href="" class="flex half jcsb">
+						<img src="img/globe.svg" alt="">
+						<b>CREATIC LABS</b>
+					</a>
+				</div>
+				<div class="team__item">
+					<div class="flex half jcsb">
+						<div class="team__item-span">
+							<img class="arrow" src="img/arrow.svg" alt="">
+							<span>Assistant Coach 2</span>
+						</div>
+						<div>
+							<span>DEVELOPMENT<br>TEAM</span>
+						</div>
+					</div>
+					<a href="" class="flex half jcsb">
+						<img src="img/globe.svg" alt="">
+						<b>LAKE HOUSE GROUP</b>
+					</a>
+				</div>
+				<div class="team__item">
+					<div class="flex half jcsb">
+						<div class="team__item-span">
+							<img class="arrow" src="img/arrow.svg" alt="">
+							<span>Assistant Coach 3</span>
+						</div>
+						<div>
+							<span>ART<br>DESIGNER</span>
+						</div>
+					</div>
+					<a href="" class="flex half jcsb">
+						<img src="img/globe.svg" alt="">
+						<b>APETOMIC STUDIO</b>
+					</a>
+				</div>
+			</div>
 		</div>
-		<div class="team__right flex aic jcc">
+		<div class="team__right flex aic jcc desk">
 			<img src="img/slider/5.png">
 		</div>
 	</section>
@@ -549,7 +709,7 @@
 			<div class="faq__item">
 				<div class="faq__question flex jcsb	aic">
 					<h5><span>/ 01</span>SUPPLY ?</h5>
-					<span class="faq__arr">↓</span>
+					<img class="faq__arrow" src="img/arrow.svg" alt="">
 				</div>
 				<div class="faq__answer">
 					<div class="faq__answer-wrap">
@@ -560,7 +720,7 @@
 			<div class="faq__item">
 				<div class="faq__question flex jcsb	aic">
 					<h5><span>/ 02</span>MINT DATE ?</h5>
-					<span class="faq__arr">↓</span>
+					<img class="faq__arrow" src="img/arrow.svg" alt="">
 				</div>
 				<div class="faq__answer">
 					<div class="faq__answer-wrap">
@@ -571,7 +731,7 @@
 			<div class="faq__item">
 				<div class="faq__question flex jcsb	aic">
 					<h5><span>/ 03</span>PRICE ?</h5>
-					<span class="faq__arr">↓</span>
+					<img class="faq__arrow" src="img/arrow.svg" alt="">
 				</div>
 				<div class="faq__answer">
 					<div class="faq__answer-wrap">
@@ -582,7 +742,7 @@
 			<div class="faq__item">
 				<div class="faq__question flex jcsb	aic">
 					<h5><span>/ 04</span>HOW MANY CAN I MINT ?</h5>
-					<span class="faq__arr">↓</span>
+					<img class="faq__arrow" src="img/arrow.svg" alt="">
 				</div>
 				<div class="faq__answer">
 					<div class="faq__answer-wrap">
@@ -593,7 +753,7 @@
 			<div class="faq__item">
 				<div class="faq__question flex jcsb	aic">
 					<h5><span>/ 05</span>HOW TO MINT ?</h5>
-					<span class="faq__arr">↓</span>
+					<img class="faq__arrow" src="img/arrow.svg" alt="">
 				</div>
 				<div class="faq__answer">
 					<div class="faq__answer-wrap">
@@ -607,7 +767,7 @@
 			<div class="faq__item">
 				<div class="faq__question flex jcsb	aic">
 					<h5><span>/ 06</span>DO YOU OWN THE IP OF THE MINTED NFT ?</h5>
-					<span class="faq__arr">↓</span>
+					<img class="faq__arrow" src="img/arrow.svg" alt="">
 				</div>
 				<div class="faq__answer">
 					<div class="faq__answer-wrap">
@@ -628,23 +788,33 @@
 	</section>
 
 	<footer class="footer">
-		<div class="flex half">
+		<div class="flex half footer__flex">
 			<div class="footer__left flex aifs jcsb">
 				<!-- class="lazyload" src="img/png/logo.png" data- -->
 				<img src="img/logo.svg">
 				<div>
-					<p class="text-space desk">
+					<p class="text-space">
 						The Baller Heads Club is an exclusive basketball community where players, fans & legends unite as a TEAM and disrupt the metaverse. The head coach and founder is LAMAR ODOM, two-times NBA Champion with the Los Angeles Lakers. Buy one of the 9,999 NFT to be a Baller Heads and unlock a series of benefits, both virtual and in real life. Play, Talk & Hang Out with NBA stars & give back to charities that matter to you.
 					</p>
-					<b>GAME PLAN</b>
-					<p>LAUNCH 🏀 JUMP BALL 🏀 ENABLE THE COMMUNITY</p>
-					<p>25% MINTED 🏀 3-POINTER 🏀 GIVE BACK TO 3 ASPIRING ATHLETES</p>
-					<p>50% MINTED 🏀 SLAM DUNK 🏀 UNLOCK A VIRTUAL BASKETBALL COURT</p>
-					<p>75% MINTED 🏀 SWOOSH 🏀 GET IRL BENEFITS AND MEET LAMAR ODOM</p>
+					<div class="desk">
+						<b>GAME PLAN</b>
+						<p>LAUNCH 🏀 JUMP BALL 🏀 ENABLE THE COMMUNITY</p>
+						<p>25% MINTED 🏀 3-POINTER 🏀 GIVE BACK TO 3 ASPIRING ATHLETES</p>
+						<p>50% MINTED 🏀 SLAM DUNK 🏀 UNLOCK A VIRTUAL BASKETBALL COURT</p>
+						<p>75% MINTED 🏀 SWOOSH 🏀 GET IRL BENEFITS AND MEET LAMAR ODOM</p>
+					</div>
+					
 				</div>
 			</div>
+			<div class="mob">
+				<b>GAME PLAN</b>
+				<p>LAUNCH 🏀 JUMP BALL 🏀 ENABLE THE COMMUNITY</p>
+				<p>25% MINTED 🏀 3-POINTER 🏀 GIVE BACK TO 3 ASPIRING ATHLETES</p>
+				<p>50% MINTED 🏀 SLAM DUNK 🏀 UNLOCK A VIRTUAL BASKETBALL COURT</p>
+				<p>75% MINTED 🏀 SWOOSH 🏀 GET IRL BENEFITS AND MEET LAMAR ODOM</p>
+			</div>
 			<div class="footer__right flex half">
-				<div class="flex jcsb">
+				<div class="flex jcsb desk">
 					<div class="footer__links">
 						<a href="">PRESENTATION</a>
 						<a href="">COLLECTION</a>
@@ -660,17 +830,35 @@
 						<a href="">LICENSE</a>
 					</div>
 				</div>
+
+				<div class="mob flex jcsb footer__links-mob">
+					<div>
+						<a href="">PRESENTATION</a>
+						<a href="">COLLECTION</a>
+						<a href="">RARITY & TRAIT</a>
+					</div>
+					<div>
+						<a href="">ROADMAP</a>
+						<a href="">TEAM</a>
+						<a href="">FAQ’S</a>
+					</div>
+					<div>
+						<a href="">CONTACT</a>
+						<a href="">WHITELIST</a>
+						<a href="">LICENSE</a>
+					</div>
+				</div>
 				
 				<div class="footer__buttons flex jcsb">
-					<!-- <a class="btn btn-alt" href="">BUY NOW ON OPENSEA</a> -->
+					<a class="btn btn-alt" href="">BUY NOW ON OPENSEA</a>
 					<a class="btn btn-alt" href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>JOIN DISCORD</a>
 
 					<div class="footer__soc flex jcsb">
-				<!-- 		<a href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>
+						<a href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>
 							<svg xmlns="http://www.w3.org/2000/svg" width="30.52" height="30.52" viewBox="0 0 30.52 30.52">
 							  <path d="M1656.238,1388.195a15.26,15.26,0,1,0,15.26,15.26A15.262,15.262,0,0,0,1656.238,1388.195Zm-7.731,15.773.064-.1,3.971-6.211a.137.137,0,0,1,.238.019c.662,1.486,1.236,3.335.968,4.486a6.913,6.913,0,0,1-.782,1.706,2.924,2.924,0,0,1-.149.253.134.134,0,0,1-.113.058h-4.081A.135.135,0,0,1,1648.507,1403.968Zm17.692,2.136a.137.137,0,0,1-.082.128,4.906,4.906,0,0,0-1.8,1.224c-1.117,1.554-1.968,3.775-3.875,3.775h-7.954a5.111,5.111,0,0,1-5.1-5.121v-.091a.136.136,0,0,1,.138-.135h4.431a.153.153,0,0,1,.147.168,1.492,1.492,0,0,0,.158.852,1.559,1.559,0,0,0,1.4.867h2.194v-1.713h-2.17a.139.139,0,0,1-.112-.219c.024-.037.048-.074.079-.116.2-.293.5-.745.79-1.261a10.108,10.108,0,0,0,.547-1.092c.03-.067.055-.138.082-.2.043-.119.085-.232.116-.342.031-.094.058-.192.082-.283a4.425,4.425,0,0,0,.1-1c0-.137-.006-.28-.018-.415s-.025-.3-.043-.448c-.012-.131-.036-.263-.061-.4-.033-.2-.076-.4-.125-.595l-.018-.076c-.037-.138-.071-.266-.113-.4-.125-.428-.266-.846-.418-1.236-.055-.156-.116-.306-.18-.452-.092-.226-.187-.43-.272-.623-.046-.088-.082-.167-.119-.25s-.086-.183-.131-.271c-.031-.068-.067-.132-.092-.193l-.268-.494a.087.087,0,0,1,.1-.128l1.679.454h.012l.22.064.244.068.088.024v-.995a.867.867,0,0,1,.864-.873.838.838,0,0,1,.607.257.874.874,0,0,1,.254.616v1.48l.18.049a.243.243,0,0,1,.039.021c.043.031.107.08.187.141.064.049.131.11.21.174.162.131.357.3.568.491.055.049.11.1.162.15.271.253.576.549.869.879.083.094.162.186.245.287s.167.2.241.3c.1.131.2.268.3.412.043.067.094.137.134.2a6.368,6.368,0,0,1,.327.553c.042.085.085.18.122.271a3.773,3.773,0,0,1,.256.76.839.839,0,0,1,.037.168v.012a1.426,1.426,0,0,1,.03.235,2.632,2.632,0,0,1-.042.785c-.025.109-.055.213-.092.326s-.076.217-.125.324a4.457,4.457,0,0,1-.336.637c-.043.077-.1.156-.143.232s-.113.156-.162.229c-.07.1-.144.193-.22.281a3.042,3.042,0,0,1-.21.266c-.1.125-.205.241-.312.354a2.7,2.7,0,0,1-.2.216c-.067.077-.137.144-.2.2-.107.107-.193.186-.266.256l-.174.156a.13.13,0,0,1-.092.036h-1.336v1.713h1.681a1.566,1.566,0,0,0,1.023-.379,12.42,12.42,0,0,0,1.037-1.019.118.118,0,0,1,.065-.04l4.642-1.343a.136.136,0,0,1,.173.131v.983Z" transform="translate(-1640.978 -1388.195)" fill="#fcf3b6"/>
 							</svg>
-						</a> -->
+						</a>
 						<a href="https://discord.com/invite/YBU27bGr" target="_blank" noopener noreferrer>
 							<svg xmlns="http://www.w3.org/2000/svg" width="37.214" height="26.763" viewBox="0 0 37.214 26.763">
 							  <path d="M1722.836,1393.784a15.753,15.753,0,0,0-8.953-3.345l-.446.509a21.2,21.2,0,0,1,7.933,4.047,25.977,25.977,0,0,0-9.59-3.059,26.946,26.946,0,0,0-6.436.064,3.132,3.132,0,0,0-.542.064,23.89,23.89,0,0,0-7.232,2.007c-1.179.541-1.88.924-1.88.924s2.644-2.517,8.379-4.174l-.318-.382a15.753,15.753,0,0,0-8.953,3.345,42.668,42.668,0,0,0-4.588,18.575s2.676,4.62,9.717,4.843c0,0,1.179-1.434,2.135-2.644a9.913,9.913,0,0,1-5.576-3.76s.319.223.893.542a.424.424,0,0,0,.127.1c.1.064.191.1.287.16a18.657,18.657,0,0,0,2.326,1.083,26.669,26.669,0,0,0,4.683,1.37,22.33,22.33,0,0,0,8.252.032,20.967,20.967,0,0,0,4.62-1.37,18.231,18.231,0,0,0,3.664-1.88,10.05,10.05,0,0,1-5.767,3.791c.956,1.211,2.1,2.581,2.1,2.581,7.042-.223,9.75-4.843,9.75-4.843A42.669,42.669,0,0,0,1722.836,1393.784Zm-19.977,15.612a3.549,3.549,0,0,1,0-7.073,3.549,3.549,0,0,1,0,7.073Zm11.629,0a3.549,3.549,0,1,1,3.25-3.536A3.416,3.416,0,0,1,1714.488,1409.4Z" transform="translate(-1690.21 -1390.439)" fill="#fcf3b6"/>
@@ -706,6 +894,7 @@
 			fullHeight.style.height = window.innerHeight + 'px';
 		}
 	</script>
+	<script defer src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
 	<!-- LAZYLOAD -->
 	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
 	<!-- SLIDER -->

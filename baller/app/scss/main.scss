@@ -217,7 +217,6 @@ h5 {
 .arrow {
 	display: inline-block;
 	transform: rotate(-135deg);
-	line-height: 1.5;
 	&-link {
 		transform: rotate(-90deg);
 		margin-right: 3rem;
@@ -225,9 +224,9 @@ h5 {
 	}
 }
 .h3-arrow {
-	font-size: 22rem;
-	font-family: 'narrow';
-	line-height: 1.7;
+	width: 9rem;
+	top: 11rem;
+	position: relative;
 }
 
 .text {
@@ -481,16 +480,18 @@ h5 {
 			width: 35.4rem;
 		}
 	}
+
 	&__input {
-		p {
-			font-size: 12rem;
-			font-weight: 300;
-			margin-bottom: 5rem;
-			line-height: 1;
-		}
 		.flex {
 			gap: 1.5rem;
 			margin-bottom: 3rem;
+		}
+		.hero__arrows {
+			margin-bottom: 6rem;
+
+			img {
+				width: 5rem;
+			}
 		}
 		span {
 			font-size: 5.5rem;
@@ -531,6 +532,52 @@ h5 {
 	&__flex {
 		gap: 7.5rem;
 	}
+	&__video {
+		&.playing {
+			.about__controls {
+				opacity: 0;
+				visibility: hidden;
+			}
+			.play {
+				display: none;
+			}
+			.pause {
+				display: block;
+			}
+			&.cursor {
+				&:hover {
+					.about__controls {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+			&.clicked {
+				.about__controls {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	&__controls {
+		background: rgba(0, 0, 0, .3);
+		z-index: 3;
+		transition: .2s;
+		img {
+			width: 12rem;
+			cursor: pointer;
+		}
+		.pause {
+			display: none;
+		}
+	}
+	&__left {
+		width: 66%;
+	}
+	&__right {
+		width: 34%;
+	}	
 	&__title {
 		a,p {
 			font-size: 6rem;
@@ -552,6 +599,11 @@ h5 {
 		margin-top: 20rem;
 		.flex {
 			gap: 3rem;
+		}
+		.arrow {
+			width: 3rem;
+			position: relative;
+			top: 3.8rem;
 		}
 		* {
 			font-size: 7rem;
@@ -578,16 +630,17 @@ h5 {
 	}
 }
 
-.glide {
+.slider__glide {
 	margin-bottom: 25rem;
-}
-.glide__slide {
-	transition: transform .35s;
-	&.shifted {
-		transform: translate3d(0, 15%, 0);
-		transition: transform .5s .4s;
+	.glide__slide {
+		transition: transform .35s;
+		&.shifted {
+			transform: translate3d(0, 15%, 0);
+			transition: transform .5s .4s;
+		}
 	}
 }
+
 
 .rarity {
 	display: grid;
@@ -604,10 +657,11 @@ h5 {
 	h4 {
 		margin: 0;
 	}
-	span:first-child {
-		margin: 0 3rem 0 1rem;
+	.arrow {
+		margin: 0 2.3rem;
 		position: relative;
-		top: 2.4rem;
+		width: 5rem;
+		top: 0.5rem;
 	}
 	.note {
 		font-size: 4.5rem;
@@ -643,9 +697,10 @@ h5 {
 		align-items: center;
 		justify-content: center;
 	}
-	span:first-child {
-		margin: 0 2rem 0 0;
-		top: 1.7rem;
+	.arrow {
+		width: 2.4rem;
+		margin: 0 1rem 0 0;
+		top: 0;
 	}
 }
 
@@ -786,10 +841,10 @@ h5 {
 			margin-bottom: 17rem;
 		}
 		.arrow {
-			margin-right: 2rem;
-			margin-left: -1.5rem;
+			width: 3rem;
+			margin-right: 1.5rem;
 			position: relative;
-			top: 2rem;
+			top: 0rem;
 		}
 	}
 	&__img {
@@ -832,6 +887,9 @@ h5 {
 	}
 	&__links {
 		gap: 9rem;
+		.arrow {
+			top: 2rem;
+		}
 		span {
 			text-transform: uppercase;
 			font-weight: 500;
@@ -882,7 +940,7 @@ h5 {
 		}
 		
 		&.active {
-			.faq__arr {
+			.faq__arrow {
 				transform: rotate(180deg);
 			}
 			& + .faq__answer {
@@ -892,14 +950,9 @@ h5 {
 			}
 		}
 	}
-	&__arr {
+	&__arrow {
 		transition: transform .25s;
-		font-size: 12rem;
-		font-weight: 300;
-		line-height: 1;
-		position: relative;
-		top: -1rem;
-		transform-origin: 50% 65%;
+		width: 6rem;
 	}
 	&__answer {
 		height: 0;

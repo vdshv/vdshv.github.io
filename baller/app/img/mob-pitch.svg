@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="784.14" height="1280.944" viewBox="0 0 784.14 1280.944">
+  <g id="Group_177" data-name="Group 177" transform="translate(-1867.557 0.561)">
+    <g id="Group_25" data-name="Group 25">
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="205.648" cy="205.648" r="205.648" transform="translate(2053.979 420.937)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+      <path id="Path_51" data-name="Path 51" d="M2651.447-.561c0,216.4-175.423,391.819-391.819,391.819S1867.808,215.835,1867.808-.561" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+      <path id="Path_52" data-name="Path 52" d="M1867.808,1250.891c0-216.4,175.424-391.82,391.82-391.82s391.819,175.424,391.819,391.82" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+      <g id="Group_24" data-name="Group 24">
+        <path id="Path_53" data-name="Path 53" d="M2130.575,1119.365a129.052,129.052,0,0,1,258.1,0" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5"/>
+        <path id="Path_54" data-name="Path 54" d="M2388.679,1119.365a129.052,129.052,0,0,1-258.1,0" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="0.5" stroke-dasharray="50"/>
+      </g>
+      <line id="Line_19" data-name="Line 19" x2="169.352" transform="translate(1884.628 625.232)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+      <line id="Line_20" data-name="Line 20" x2="169.352" transform="translate(2465.276 625.232)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5"/>
+    </g>
+    <rect id="Rectangle_22" data-name="Rectangle 22" width="750" height="1280.383" transform="translate(1884.628 0)" fill="none"/>
+  </g>
+</svg>
