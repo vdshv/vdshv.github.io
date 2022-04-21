@@ -274,6 +274,7 @@
 				}
 			}
 			span {
+				background: #000;
 				line-height: 30px;
 				text-align: center;
 				min-width: 36px;
@@ -291,6 +292,7 @@
 			}
 			.btn {
 				width: 100%;
+				background: #000;
 			}
 		}
 	}
@@ -372,6 +374,9 @@
 		h4 {
 			margin: 0;
 			font-size: 25px;
+			span,.arrow {
+				display: none;
+			}
 		}
 		.arrow {
 			width: 13px;

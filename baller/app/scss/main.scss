@@ -656,6 +656,9 @@ h5 {
 	}
 	h4 {
 		margin: 0;
+		span,.arrow {
+			display: none;
+		}
 	}
 	.arrow {
 		margin: 0 2.3rem;
