@@ -764,6 +764,17 @@
 			}
 		}
 	}
+	.spacer {
+		margin-top: 125px;
+	}
+	.whitelist {
+		&__wrap {
+			padding-bottom: 50px;
+			>div {
+				height: 500px !important;
+			}
+		}
+	}
 }
 
 // @media (max-width: 500px) {

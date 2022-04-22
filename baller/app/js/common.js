@@ -12,10 +12,13 @@ isTouchDevice = false;
 
 var mobSize = window.innerWidth < 768 ? true : false;
 
-if(mobSize) {
-	qs('.hero').style.height = window.innerHeight + 'px';
-} else {
-	qs('.hero').style.height = `calc(100vh - ${ qs('.header').clientHeight }px)`;
+let hero = qs('.hero');
+if(hero) {
+	if(mobSize) {
+		hero.style.height = window.innerHeight + 'px';
+	} else {
+		hero.style.height = `calc(100vh - ${ qs('.header').clientHeight }px)`;
+	}
 }
 
 // window.onload = () => {
@@ -40,35 +43,104 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 	})
 
-	const player = new Plyr('#player');
-
 	let video = qs('.about__video');
-	if(isTouchDevice) {
-		video.classList.remove('cursor');
+	if(video) {
+		const player = new Plyr('#player');
 
-		video.onclick = () => {
-			if(video.classList.contains('playing') && !video.classList.contains('clicked')) {
-				video.classList.add('clicked');
+		if(isTouchDevice) {
+			video.classList.remove('cursor');
 
-				setTimeout(()=> {
-					video.classList.remove('clicked');
-				}, 1000)
+			video.onclick = () => {
+				if(video.classList.contains('playing') && !video.classList.contains('clicked')) {
+					video.classList.add('clicked');
+
+					setTimeout(()=> {
+						video.classList.remove('clicked');
+					}, 1000)
+				}
 			}
 		}
-	}
 
-	qs('.play').onclick = () => {
-		player.play();
-		qs('.about__video').classList.add('playing');
-	}
-	qs('.pause').onclick = () => {
-		player.pause();
-		qs('.about__video').classList.remove('playing');
-	}
+		qs('.play').onclick = () => {
+			player.play();
+			qs('.about__video').classList.add('playing');
+		}
+		qs('.pause').onclick = () => {
+			player.pause();
+			qs('.about__video').classList.remove('playing');
+		}
 
-	player.on('ended', (event) => {
-	  	qs('.about__video').classList.remove('playing');
-	});
+		player.on('ended', (event) => {
+		  	qs('.about__video').classList.remove('playing');
+		});
+
+
+		var glide = new Glide('.slider__glide', {
+		  type: 'carousel',
+		  animationDuration: 1200,
+		  perView: 6,
+		  autoplay: 5000,
+		  swipeThreshold: 30,
+		  hoverpause: false,
+		  focusAt: 'center',
+		  gap: 30,
+		  breakpoints: {
+		    767: {
+		      gap: 25,
+		      touchAngle: 60
+		    },
+		    500: {
+		      perView: 2.3,
+		      gap: 15,
+		      touchAngle: 60
+		    }
+		  }
+		})
+		glide.on(['run'], function() {
+		  qsa('.glide__slide').forEach((el,ind) => {
+		  	el.classList.remove('shifted');
+
+		  	if(glide.index % 2 && ind % 2 == 0) {
+	  			el.classList.add('shifted');
+		  	} else if (glide.index % 2 == 0 && ind % 2) {
+		  		el.classList.add('shifted');
+		  	}
+		  });
+		})
+		glide.mount();
+
+		glide.go('=0');
+
+		qsa('.slider__arrows div').forEach(el => {
+			el.onclick = () => {
+				glide.go(el.dataset.glideDir)
+			}
+		})
+
+
+		var glideRarity = new Glide('.rarity__glide', {
+		  type: 'slider',
+		  animationDuration: 1200,
+		  perView: 1,
+		  autoplay: 5000,
+		  swipeThreshold: 30,
+		  hoverpause: false,
+		  focusAt: 'center',
+		  gap: 0
+		  
+		})
+
+		glideRarity.mount();
+
+		glideRarity.go('=0');
+
+		qsa('.rarity__arrows div').forEach(el => {
+			el.onclick = () => {
+				glideRarity.go(el.dataset.glideDir)
+			}
+		})
+	}
+	
 
 
 	// qsa('a[data-scroll]').forEach(el => {
@@ -116,7 +188,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	//     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 	//     return rect.top + scrollTop;
 	// }
-
+	// qsa('a').forEach(el => {
+	// 	el.onclick = (e) => {
+	// 		if(el.href.indexOf('http') == -1) {
+	// 			document.body.classList.add('leaving');
+	// 			setTimeout(() => {
+	// 				// window.open(el.href);
+	// 			}, 200)
+	// 		}
+	// 	}
+	// })
 
 	let hamb = qs('.header__hamb'),
 		menu = qs('.header__nav-mob'),
@@ -144,122 +225,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.documentElement.scrollTop = scrolled;
 		menu.classList.remove('active');
 	}
-
-	// window.onload = () => {
-
-		// let roadmapApes = qsa('.roadmap__img'),
-		// 	animated = [...roadmapApes];
-
-		// let options = { threshold: 0 };
-		
-		// let callback = function(entries, observer) {
-		//     entries.forEach(entry => {
-		// 		entry.target.dataset.in_view = (entry.isIntersecting) ? 'true' : '';
-	 //      	});
-		// };
-		
-		// let observer = new IntersectionObserver(callback, options);
-		// animated.forEach(el => {
-		// 	observer.observe(el);
-		// });
-
-		// const raf = window.requestAnimationFrame ||
-		//     window.webkitRequestAnimationFrame ||
-		//     window.mozRequestAnimationFrame ||
-		//     window.oRequestAnimationFrame ||
-		//     window.msRequestAnimationFrame;
-
-		// (function init() {
-		//     (function step() {
-		//     	if(roadmapApes) {
-		//     		roadmapApes.forEach((el, ind) => {
-		//     			if(el.dataset.in_view) {
-		//     				let rect = el.getBoundingClientRect(),
-		//     					stepH = el.parentElement.clientHeight;
-		//     				let y = (window.innerHeight - rect.top) * (stepH - rect.height) / (window.innerHeight + stepH);
-		    				
-		//     				el.style.transform = `translate3d(0,${y}px,0)`;
-		//     			}
-		//     		})
-		//     	}
-		    	
-
-	 //           	raf(step);
-		//     })();
-		// })();
-	// }
-
-	function random(min, max) {
-	  min = Math.ceil(min);
-	  max = Math.floor(max);
-	  return Math.floor(Math.random() * (max - min + 1) + min);
-	}
-	
-
-	var glide = new Glide('.slider__glide', {
-	  type: 'carousel',
-	  animationDuration: 1200,
-	  perView: 6,
-	  autoplay: 5000,
-	  swipeThreshold: 30,
-	  hoverpause: false,
-	  focusAt: 'center',
-	  gap: 30,
-	  breakpoints: {
-	    767: {
-	      gap: 25,
-	      touchAngle: 60
-	    },
-	    500: {
-	      perView: 2.3,
-	      gap: 15,
-	      touchAngle: 60
-	    }
-	  }
-	})
-	glide.on(['run'], function() {
-	  qsa('.glide__slide').forEach((el,ind) => {
-	  	el.classList.remove('shifted');
-
-	  	if(glide.index % 2 && ind % 2 == 0) {
-  			el.classList.add('shifted');
-	  	} else if (glide.index % 2 == 0 && ind % 2) {
-	  		el.classList.add('shifted');
-	  	}
-	  });
-	})
-	glide.mount();
-
-	glide.go('=0');
-
-	qsa('.slider__arrows div').forEach(el => {
-		el.onclick = () => {
-			glide.go(el.dataset.glideDir)
-		}
-	})
-
-
-	var glideRarity = new Glide('.rarity__glide', {
-	  type: 'slider',
-	  animationDuration: 1200,
-	  perView: 1,
-	  autoplay: 5000,
-	  swipeThreshold: 30,
-	  hoverpause: false,
-	  focusAt: 'center',
-	  gap: 0
-	  
-	})
-
-	glideRarity.mount();
-
-	glideRarity.go('=0');
-
-	qsa('.rarity__arrows div').forEach(el => {
-		el.onclick = () => {
-			glideRarity.go(el.dataset.glideDir)
-		}
-	})
 	
 });
 
