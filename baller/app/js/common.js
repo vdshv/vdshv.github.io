@@ -140,54 +140,84 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		})
 	}
-	
 
 
-	// qsa('a[data-scroll]').forEach(el => {
-	// 	el.onclick = (e) => {
-	// 		e.preventDefault();
-	// 		if(window.innerWidth < 768) {
-	// 			qs('.header__nav').classList.remove('active');
-	// 		}
-	// 		let scrollToY = offsetTop(qs(el.dataset.scroll));
 
-	// 		if(el.dataset.scroll == '#about' && window.innerWidth < 768) {
-	// 			scrollToY = offsetTop(qs(el.dataset.scroll)) - 60;
-	// 		}
+	const scrollRaf = window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame ||
+	    window.oRequestAnimationFrame ||
+	    window.msRequestAnimationFrame;
 
-	// 		scrollTo(scrollToY);
-	// 	}
-	// })
-	// const scrollRaf = window.requestAnimationFrame ||
-	//     window.webkitRequestAnimationFrame ||
-	//     window.mozRequestAnimationFrame ||
-	//     window.oRequestAnimationFrame ||
-	//     window.msRequestAnimationFrame;
+	function scrollTo(to) {
+	    const start = window.scrollY || window.pageYOffset;
+	    const time = Date.now();
+	    const duration = Math.abs(start - to) / 2;
 
-	// function scrollTo(to) {
-	//     const start = window.scrollY || window.pageYOffset;
-	//     const time = Date.now();
-	//     const duration = Math.abs(start - to) / 2;
+	    (function step() {
+	        var dx = Math.min(1, (Date.now() - time) / duration)
+	        var pos = start + (to - start) * easeInOutCubic(dx)
 
-	//     (function step() {
-	//         var dx = Math.min(1, (Date.now() - time) / duration)
-	//         var pos = start + (to - start) * easeInOutCubic(dx)
+	        window.scrollTo(0, pos)
 
-	//         window.scrollTo(0, pos)
+	        if (dx < 1) {
+	            scrollRaf(step);
+	        }
+	    })()
+	}
+	function easeInOutCubic(x) {
+		return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+	}
+	function offsetTop(el) {
+	    var rect = el.getBoundingClientRect(),
+	    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	    return rect.top + scrollTop;
+	}
 
-	//         if (dx < 1) {
-	//             scrollRaf(step);
-	//         }
-	//     })()
-	// }
-	// function easeInOutCubic(x) {
-	// 	return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-	// }
-	// function offsetTop(el) {
-	//     var rect = el.getBoundingClientRect(),
-	//     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-	//     return rect.top + scrollTop;
-	// }
+	function scrollFunc(scrTo) {
+		if(window.innerWidth < 768) {
+			document.scrollingElement.style.height = 'auto';
+			document.scrollingElement.style.overflow = 'unset';
+			document.body.style.height = 'auto';
+			document.body.style.overflow = 'unset';
+
+			scrollToY = offsetTop(qs(scrTo)) - qs('.header').clientHeight;
+			qs('.header__nav-mob').classList.remove('active');
+		} else {
+			scrollToY = offsetTop(qs(scrTo)) - qs('.header').clientHeight;
+
+			if(scrTo == '#Rarity') {
+				scrollToY = offsetTop(qs(scrTo)) - qs('.header').clientHeight - 30;
+			}
+		}
+		scrollTo(scrollToY);
+	}
+
+
+	let scrollToY;
+
+	qsa('a[data-scroll]').forEach(el => {
+		el.onclick = (e) => {
+
+			e.preventDefault();
+
+			if(window.location.href.indexOf('whitelist') !== -1 ) {
+				localStorage.setItem('scrollTo', el.dataset.scroll);
+				window.location.href = "/";
+			}
+
+			scrollFunc(el.dataset.scroll);
+		}
+	})
+
+	if(localStorage.getItem('scrollTo')) {
+		setTimeout(() => {
+			scrollFunc(localStorage.getItem('scrollTo'));
+
+			localStorage.removeItem('scrollTo');
+		}, 500)
+	}
+
 	// qsa('a').forEach(el => {
 	// 	el.onclick = (e) => {
 	// 		if(el.href.indexOf('http') == -1) {

@@ -591,10 +591,10 @@ h5 {
 		}
 	}
 	&__left {
-		width: 66%;
+		width: 60%;
 	}
 	&__right {
-		width: 34%;
+		width: 40%;
 	}	
 	&__title {
 		a,p {
@@ -1048,6 +1048,7 @@ h5 {
 			font-size: 4.6rem;
 			display: block;
 			line-height: 11rem;
+			cursor: pointer;
 		}
 	}
 	&__buttons {
