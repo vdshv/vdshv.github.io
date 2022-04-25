@@ -84,12 +84,9 @@
 
 	h2 {
 		font-size: 75px;
-		line-height: 0.85;
-		padding-top: 15px;
+		padding-top: 16px;
+		padding-bottom: 16px;
 		text-align: center;
-		&::after {
-			margin-top: 28px;
-		}
 	}
 
 	h3 {
@@ -97,7 +94,7 @@
 	}
 	.h3-arrow {
 		width: 20px;
-		top: 21px;
+		top: 16px;
 	}
 	h4 {
 		font-size: 18px;
@@ -121,7 +118,7 @@
 		display: block;
 		margin: 0 auto;
 		border-radius: 20px;
-		padding: 4px 0 7px;
+		padding: 6px 0;
 		font-size: 16px;
 		max-width: 220px;
 	}
@@ -153,7 +150,7 @@
 				font-size: 12px;
 				padding-bottom: 3px;
 			}
-			svg {
+			img {
 				width: 9px;
 			}
 			@keyframes sale {
@@ -188,7 +185,7 @@
 			&::after {
 				display: none;
 			}
-			svg {
+			img {
 				width: 20px;
 			}
 		}
@@ -249,6 +246,7 @@
 		}
 		&__mob-img {
 			width: 70%;
+			max-width: 350px;
 		}
 		&__title {
 			font-family: 'narrow';
@@ -326,9 +324,6 @@
 				max-width: 100%;
 			}
 		}
-		h2 {
-			// margin-bottom: 14rem;
-		}
 		h3 {
 			margin-bottom: 15px;
 		}
@@ -347,16 +342,12 @@
 
 	.glide__arrows {
 		gap: 0;
-		margin-top: -20px;
 		>div {
 			padding: 10px;
 		}
-		svg {
+		img {
 			width: 18px;
 		}
-	}
-	.rarity__arrows {
-		margin-top: 0;
 	}
 
 	.glide {
@@ -366,7 +357,9 @@
 	.club {
 		margin-top: 45px;
 	}
-
+	.rarity__img {
+		margin-bottom: 6px;
+	}
 	.rarity__glide, .trait {
 		max-width: 270px;
 		margin: 0 auto 50px;
@@ -585,7 +578,7 @@
 			a {
 				padding: 10px 6px;
 			}
-			svg {
+			img {
 			    max-width: 15px;
 			    max-height: 15px;
 			}
@@ -752,7 +745,7 @@
 				align-items: center;
 				justify-content: center;
 			}
-			svg {
+			img {
 				max-width: 20px;
 				max-height: 18px;
 			}

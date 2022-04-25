@@ -1,4 +1,4 @@
-history.scrollRestoration = "manual";
+// history.scrollRestoration = "manual";
 
 var isTouchDevice = (('ontouchstart' in window)
          || (navigator.MaxTouchPoints > 0)

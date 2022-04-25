@@ -188,18 +188,11 @@ img,svg {
 
 h2 {
 	font-size: 36rem;
-	line-height: .8;
+	line-height: .95;
 	border-top: 1px solid rgba(255, 255, 255, .5);
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
 	font-family: 'narrow';  
 	font-weight: 400;
-	&::after {
-		content: '';
-		width: 100%;
-		height: 1px;
-		background: rgba(255, 255, 255, .5);
-		display: block;
-		margin-top: 6rem;
-	}
 }
 
 h3 {
@@ -243,20 +236,11 @@ h5 {
 }
 .h3-arrow {
 	width: 9rem;
-	top: 11rem;
+	top: 9rem;
 	position: relative;
 }
 
 .text {
-	// &-space {
-	// 	text-align: justify;
-	//    -moz-text-align-last: justify;
- //    	text-align-last: justify;
-	// }
-	// &-reg {
-	// 	font-family: 'RightGrotesk-Medium';
-	// 	font-size: 16px;
-	// }
 	&-center {
 		text-align: center;
 	}
@@ -289,7 +273,7 @@ h5 {
 	border-radius: 5rem;
 	font-size: 5.6rem;
 	font-weight: 500;
-	padding: 1.2rem 0 2rem;
+	padding: 1.6rem 0;
 	cursor: pointer;
 	display: inline-block;
 	text-align: center;
@@ -307,22 +291,6 @@ h5 {
 		text-transform: initial;
 		min-width: auto;
 	}
-	// &-reverse {
-	// 	color: #fff;
-	// 	background: #000;
-	// 	&:hover {
-	// 		color: #000;
-	// 		background: transparent;
-	// 	}
-	// }
-	// &-alt {
-	// 	border: 1px solid #fff;
-	// 	color: #fff;
-	// 	&:hover {
-	// 		background: #fff;
-	// 		color: #000;
-	// 	}
-	// }
 }
 .header {
 	position: sticky;
@@ -361,8 +329,7 @@ h5 {
 				transform: translate3d(-100%, 0, 0);
 			}
 			&.btn {
-				padding: 0 3.5rem;
-				line-height: 1.6;
+				padding: 1rem 3.5rem;
 				&::after, &::before {
 					display: none;
 				}
@@ -391,14 +358,15 @@ h5 {
 			gap: 8px;
 			margin-right: 15px;
 			line-height: 1;
+			img {
+				width: 2.3rem;
+				transform: rotate(-90deg);
+			}
 		}
 		span {
 			white-space: nowrap;
 		}
-		.arr {
-			width: 2.3rem;
-		}
-		svg {
+		img {
 			max-width: 7rem;
 			max-height: 6rem;
 		}
@@ -427,23 +395,20 @@ h5 {
 			display: inline-flex;
 			justify-content: space-evenly;
 			border-right: 1px solid #000;
-			padding: 2px 0;
-			// padding: 2px 14rem;
+			padding: 4px 0;
 			width: calc(100% / 3);
 		}
 
 		b {
 			font-size: 5rem;
-			padding-bottom: 2px;
 		}
 		span {
 			font-size: 4rem;
 			font-weight: 500;
-			padding-bottom: 3px;
+			padding-bottom: 2px;
 		}
-		svg {
+		img {
 			width: 4rem;
-			// margin: 0 10rem;
 		}
 	}
 }
@@ -619,9 +584,9 @@ h5 {
 			gap: 3rem;
 		}
 		.arrow {
-			width: 3rem;
+			width: 3.5rem;
 			position: relative;
-			top: 3.8rem;
+			top: 3rem;
 		}
 		* {
 			font-size: 7rem;
@@ -636,15 +601,18 @@ h5 {
 }
 
 .glide__arrows {
-	gap: 5rem;
-	svg {
+	gap: 8rem;
+	img {
 		width: 8rem;
 	}
 	div {
 		cursor: pointer;
 	}
 	.back {
-		transform: rotate(-180deg);
+		transform: rotate(90deg);
+	}
+	.forward {
+		transform: rotate(-90deg);
 	}
 }
 
@@ -667,14 +635,15 @@ h5 {
 		border: 1px solid rgba(255,255,255,.5);
 		border-radius: 20rem;
 		overflow: hidden;
-		padding-bottom: 4rem;
+		padding-bottom: 5rem;
 	}
 	&__img {
 		border-bottom: 1px solid rgba(255,255,255,.5);
+		margin-bottom: 2.5rem;
 	}
 	h4 {
 		margin: 0;
-		span,.arrow {
+		span,.arrow, p {
 			display: none;
 		}
 	}
@@ -845,7 +814,7 @@ h5 {
 				border: 1px solid #fff;
 				border-radius: 20rem;
 				line-height: 1;
-				padding: 0 7rem 3rem;
+				padding: 1.5rem 7rem;
 			}
 		}
 	}
@@ -884,7 +853,7 @@ h5 {
 		a {
 			margin: 0;
 		}
-		svg {
+		img {
 		    max-width: 6rem;
 		    max-height: 5rem;
 		}
@@ -909,7 +878,7 @@ h5 {
 	&__links {
 		gap: 9rem;
 		.arrow {
-			top: 2rem;
+			top: 1rem;
 		}
 		span {
 			text-transform: uppercase;
@@ -954,9 +923,13 @@ h5 {
 		h5 {
 			font-size: 9rem;
 			font-weight: 700;
+			display: flex;
+			padding-right: 8rem;
+
 			span {
 				margin-right: 6rem;
 				font-weight: 400;
+				white-space: nowrap;
 			}
 		}
 		
@@ -1055,16 +1028,17 @@ h5 {
 		flex-direction: column;
 		padding-top: 3rem;
 	}
-	&__soc {
-		path {
-			fill: #fff;
-		}
-	}
 	&__bottom {
 		border-top: 1px solid rgba(255, 255, 255, .5);
 		padding: 5rem 0 6rem;
 		p {
 			font-size: 14px;
+		}
+	}
+	&__soc {
+		img {
+			max-width: 7rem;
+			max-height: 6rem;
 		}
 	}
 }
