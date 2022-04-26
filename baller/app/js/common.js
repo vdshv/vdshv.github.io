@@ -1,4 +1,4 @@
-// history.scrollRestoration = "manual";
+history.scrollRestoration = "manual";
 
 var isTouchDevice = (('ontouchstart' in window)
          || (navigator.MaxTouchPoints > 0)
@@ -10,23 +10,18 @@ isTouchDevice = true;
 isTouchDevice = false;
 }
 
-var mobSize = window.innerWidth < 768 ? true : false;
+document.addEventListener("DOMContentLoaded", function() {
 
-let hero = qs('.hero');
-if(hero) {
+	var mobSize = window.innerWidth < 768 ? true : false;
+	let hero = document.querySelector('.hero');
+
 	if(mobSize) {
 		hero.style.height = window.innerHeight + 'px';
 	} else {
-		hero.style.height = `calc(100vh - ${ qs('.header').clientHeight }px)`;
+		hero.style.height = `calc(100vh - ${ document.querySelector('.header').clientHeight }px)`;
 	}
-}
 
-// window.onload = () => {
-
-// }
-document.addEventListener("DOMContentLoaded", function() {
-	// DETECT TOUCH
-	
+	document.body.classList.remove('blocked');
 
 	let questions = qsa('.faq__question');
 

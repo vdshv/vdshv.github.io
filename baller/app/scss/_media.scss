@@ -238,11 +238,10 @@
 	.hero {
 		max-height: none;
 		justify-content: space-between;
-		background: url('../img/mob-pitch.svg') no-repeat center center / cover;
 		padding: 55px 0 70px;
 
-		&::before, &::after {
-			display: none;
+		&__bg img {
+			object-fit: cover;
 		}
 		&__mob-img {
 			width: 70%;
@@ -425,9 +424,6 @@
 		padding-top: 40px;
 		padding-bottom: 30px;
 
-		&::before, &::after {
-			background: url('../img/mob-bg.svg') no-repeat top center / 100% auto;
-		}
 		&::after {
 			background: rgba(255, 255, 255, .4);
 		}
@@ -436,8 +432,8 @@
 			border-top: none;
 		}
 		&-title {
-			h2::after {
-				opacity: 1;
+			h2 {
+				border-bottom: 1px solid rgba(255, 255, 255, .5);
 			}
 		}
 		

@@ -23,6 +23,7 @@
   display: flex;
   flex-wrap: nowrap;
   will-change: transform;
+  cursor: grab;
 }
 .glide__slides--dragging {
   user-select: none;
