@@ -1,2 +1,16 @@
-@import "vars";
+@media (max-width: 1365px) {
+	
+}
 
+@media (max-width: 1023px) {
+	
+}
+
+@media (max-width: 767px) {
+	section {
+
+	}
+	.flex-mob {
+		flex-direction: column;
+	}
+}

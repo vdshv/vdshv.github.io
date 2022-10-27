@@ -1,0 +1,223 @@
+@font-face { 
+    font-family: 'stempel';  
+    font-weight: 400;  
+    font-style: normal;
+    unicode-range: U+000-5FF;
+    src: url('../fonts/stempelgaramondltstd-roman-webfont.woff2') format('woff2'),
+        url('../fonts/stempelgaramondltstd-roman-webfont.woff') format('woff'),
+        url('../fonts/stempelgaramondltstd-roman-webfont.ttf') format('ttf'),
+        url('../fonts/stempelgaramondltstd-roman-webfont.eot') format('eot');
+    font-display: swap;
+ }
+ @font-face { 
+    font-family: 'stempel';  
+    font-weight: 400;  
+    font-style: italic;
+    unicode-range: U+000-5FF;
+    src: url('../fonts/stempelgaramondltstd-italic-webfont.woff2') format('woff2'),
+        url('../fonts/stempelgaramondltstd-italic-webfont.woff') format('woff'),
+        url('../fonts/stempelgaramondltstd-italic-webfont.ttf') format('ttf'),
+        url('../fonts/stempelgaramondltstd-italic-webfont.eot') format('eot');
+    font-display: swap;
+ }
+ @font-face { 
+    font-family: 'grotesk';  
+    font-weight: 500;  
+    font-style: normal;
+    unicode-range: U+000-5FF;
+    src: url('../fonts/NeueHaasDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/NeueHaasDisplay-Medium.woff') format('woff'),
+        url('../fonts/NeueHaasDisplay-Medium.ttf') format('ttf'),
+        url('../fonts/NeueHaasDisplay-Medium.eot') format('eot');
+    font-display: swap;
+ }
+ 
+ $accent: #EB4733;
+ $footer: #660018;
+ 
+ * {
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+ }
+ a {
+     text-decoration: none;
+     color: #000;
+ }
+ li {
+     list-style: none;
+ }
+ input,
+ button,
+ select, 
+ textarea {
+     -webkit-appearance: none;
+     
+     font-family: 'stempel';  
+    &:focus {
+        outline: none;
+    }
+ }
+ 
+ body {
+     font-size: 22px;
+     min-width: 320px;
+     position: relative;
+     line-height: 1.32;
+     overflow-x: hidden;
+     color: #000;
+     font-family: 'stempel';
+ }
+
+.cont {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+
+header,section,footer {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+img,svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.flex {
+	display: flex;
+	&.jcsb {
+		justify-content: space-between;
+	}
+	&.jcc {
+		justify-content: center;
+	}
+	&.jcfe {
+		justify-content: flex-end;
+	}
+	&.aic {
+		align-items: center;
+	}
+	&.aife {
+		align-items: flex-end;
+	}
+	&.aifs {
+		align-items: flex-start;
+	}
+	&__half {
+        width: 50%;
+	}
+
+}
+
+.color-accent {
+    color: $accent;
+}
+
+.text {
+	&-center {
+		text-align: center;
+	}
+
+    &-accent {
+        font-size: 40px;
+        color: $accent;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+    }
+
+    &-label {
+        font-family: 'grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+    }
+
+    &-italic {
+        font-style: italic;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+    span {
+        font-style: italic;
+    }
+}
+h1 {
+    font-size: 80px;
+    line-height: 1.2;
+    &.lg {
+        font-size: 120px;
+    }
+}
+
+h2 {   
+    line-height: 1;
+    &.lg {
+        font-size: 88px;
+    }
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+.rel {
+	position: relative;
+}
+.abs-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0px);
+}
+.abs-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.btn {
+	color: #fff;
+	background: $footer;
+	font-size: 22px;
+    display: block;
+    width: 100%;
+	cursor: pointer;
+	transition: .3s;
+
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		background: #000;
+		color: #fff;
+		transition: .3s;
+	}
+}

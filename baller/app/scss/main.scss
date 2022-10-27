@@ -498,6 +498,29 @@ h5 {
     width: 100%
 }
 
+
+.plyr:focus {
+    outline: 0
+}
+
+.plyr__poster {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .2s ease;
+    width: 100%;
+    z-index: 1
+}
+
+.plyr--stopped.plyr__poster-enabled .plyr__poster {
+    opacity: 1
+}
+
 .about {
 	&__flex {
 		gap: 7.5rem;

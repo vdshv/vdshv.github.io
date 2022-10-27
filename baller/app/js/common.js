@@ -253,6 +253,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 });
 
+qsa('.boost-pfs-filter-option').forEach((el) => {
+	if([...qsa('.boost-pfs-filter-option-item', el)].some(item => item.classList.contains('selected'))) {
+		console.log('contains selected' + el);
+	}
+})
+
+qsa('.boost-pfs-filter-button').forEach((el) => {
+	el.onclick = () => {
+
+		if(el.getAttribute('aria-checked') == "true") {
+
+		} else {
+
+		}
+	}
+})
+
+qs('.mobile-filter').onclick = () => {
+	qs('.collection-content.grid__item--sidebar').classList.add('active');
+}
+window.onclick = (e) => {
+	if(!e.target.closest('.collection-content.grid__item--sidebar')) {
+		qs('.collection-content.grid__item--sidebar').classList.remove('active');
+	}
+}
+
 function qs (selector, searchIn) {
 	return searchIn ? searchIn.querySelector(selector) : document.querySelector(selector)
 }
