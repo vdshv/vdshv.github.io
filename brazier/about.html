@@ -26,7 +26,9 @@
 	
 	<header class="header">
 		<div class="cont flex aic jcsb">
-			<img data-src="img/logo.svg" alt="BRAZIER" class="header__logo lazyload">
+			<a href="#" class="header__logo">
+				<img data-src="img/logo.svg" alt="BRAZIER" class="lazyload">
+			</a>
 
 			<nav class="flex aic header__nav">
 				<a href="index.html">Home</a>
@@ -36,7 +38,7 @@
 			</nav>
 
 			<div class="header__actions flex aic">
-				<a href="">Cart</a>
+				<a class="header__cart" href="">Cart</a>
 
 				<div class="header__select">
 					<select>
@@ -49,6 +51,142 @@
 			</div>
 		</div>
 	</header>
+
+	<div class="sidecart abs-full">
+		<div class="sidecart__overlay abs-full"></div>
+
+		<div class="sidecart__content abs-full">
+			<div class="sidecart__head flex jcsb aic">
+				<h5>Cart</h5>
+				<div class="sidecart__close"><img src="" alt="" class="lazyload" data-src="img/close.svg"></div>
+			</div>
+
+			<ul class="sidecart__list">
+
+				<!-- {% for product in cart.line_items %}
+				{% endfor %}
+				{{ product.image }} -->
+
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+
+			</ul>
+
+			<div class="sidecart__summary">
+				<p>Free delivery worldwide on all orders, duties included. <br>
+					Returns accepted within 60 days of purchase. <br>
+					Free returns within the EU.</p>
+				<div class="flex jcsb aic sidecart__total">
+					<h5>Total (6 items)</h5>
+					<div class="sidecart__summary-price flex aic">
+						<p>€1,450</p>
+						<span>incl. shipping</span>
+					</div>
+				</div>
+
+				<button class="btn">
+					Checkout
+				</button>
+			</div>
+		</div>
+	</div>
 
 	<section class="about-hero">
         <div class="cont rel about-hero__cont">
@@ -66,7 +204,7 @@
 	</section>
 
 	<section class="about-content">
-        <div class="cont flex">
+        <div class="cont flex aifs">
             <div class="about-content__left flex__half">
                 <p>Brazier was born from a hope, a desire to rewrite men’s accessories by taking pages out of the women’s repertoire.</p>
             </div>
@@ -91,13 +229,59 @@
         </div>
     </section>
 
-	
-<!-- 
-	<section class="">
-	</section>
-
 	<footer class="footer">
-	</footer> -->
+		<div class="cont flex">
+			<div class="footer__newsletter">
+				<h4>Newsletter</h4>
+				<p>Sign up to our newsletter to enjoy 5% off your first order</p>
+
+				<form class="">
+					<input type="email" placeholder="Enter your email">
+					<button type="submit">
+						<svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.65" d="M0.429245 11C0.561321 11 0.693396 10.8667 0.792453 10.8L3.86321 8.23333C6.27358 6.23333 7 5.53333 7 5.4C7 5.2 5.61321 4.1 5.08491 3.66667C1.78302 0.833334 0.627358 0 0.429245 0C0.29717 0 0.132075 0.333333 0.132075 0.5C0.132075 0.666667 0.792453 1.56667 2.08019 3.06667C3.36792 4.6 4.0283 5.36667 4.0283 5.4C4.0283 5.83333 3.43396 6.33333 1.88208 8.2C1.12264 9.1 0 10.5 0 10.6333C0 10.7667 0.165094 11 0.429245 11Z" fill="white"/>
+						</svg>
+					</button>
+				</form>
+			</div>
+
+			<nav class="footer__nav flex jcsb">
+				<div>
+					<h6 class="text-italic">Site</h6>
+					<a href="">Home</a>
+					<a href="">Home</a>
+					<a href="">Home</a>
+					<a href="">Commitments</a>
+				</div>
+
+				<div>
+					<h6 class="text-italic">Support</h6>
+					<a href="">Legal</a>
+					<a href="">Privacy policy</a>
+				</div>
+
+				<div>
+					<div class="footer__contact">
+						<h6 class="text-italic">Enquiries</h6>
+						<a href="mailto:info@brazier.ch">info@brazier.ch</a>
+					</div>
+					
+					<div class="footer__contact">
+						<h6 class="text-italic">Socials</h6>
+						<a href="">Home</a>
+						<a href="">Home</a>
+						<a href="">Home</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</footer>
+
+	<div class="footer__bottom">
+		<div class="cont">
+			<p>2022 BRAZIER. ALL RIGHT RESERVED</p>
+		</div>
+	</div>
 
 
 
@@ -108,7 +292,7 @@
 	<!-- VIDEO PLAYER -->
 	<!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.min.js"></script> -->
 
-	<script src="js/scripts.min.js"></script>
+	<script src="js/scripts.js"></script>
 
 </body>
 </html>

@@ -9,6 +9,18 @@
         url('../fonts/stempelgaramondltstd-roman-webfont.eot') format('eot');
     font-display: swap;
  }
+
+ @font-face { 
+    font-family: 'stempel';  
+    font-weight: 700;  
+    font-style: normal;
+    unicode-range: U+000-5FF;
+    src: url('../fonts/bold/stempel.woff2') format('woff2'),
+        url('../fonts/bold/stempel.ttf') format('ttf'),
+        url('../fonts/bold/stempel.eot') format('eot');
+    font-display: swap;
+ }
+
  @font-face { 
     font-family: 'stempel';  
     font-weight: 400;  
@@ -42,7 +54,7 @@
  }
  a {
      text-decoration: none;
-     color: #000;
+     color: inherit;
  }
  li {
      list-style: none;
@@ -52,7 +64,9 @@
  select, 
  textarea {
      -webkit-appearance: none;
-     
+     appearance: none;
+     border: none;
+     background: none;
      font-family: 'stempel';  
     &:focus {
         outline: none;
@@ -62,9 +76,9 @@
  body {
      font-size: 22px;
      min-width: 320px;
-     position: relative;
+    //  position: relative;
      line-height: 1.32;
-     overflow-x: hidden;
+    //  overflow-x: hidden;
      color: #000;
      font-family: 'stempel';
  }
@@ -123,6 +137,25 @@ img,svg {
 }
 
 .text {
+    padding-top: 240px;
+    padding-bottom: 200px;
+
+    &__wrap {
+        max-width: 970px;
+    }
+    h1 {
+        margin-bottom: 135px;
+        display: block;
+    }
+    b {
+        display: block;
+        margin-top: 64px;
+    }
+    p {
+        display: block;
+        margin-top: 24px;
+    }
+
 	&-center {
 		text-align: center;
 	}
@@ -144,14 +177,47 @@ img,svg {
         text-transform: uppercase;
     }
 
-    &-italic {
+    &-link {
+        display: inline-block;
         font-style: italic;
+        position: relative;
+        overflow: hidden;
+        padding: 6px 0;
+
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1.5px;
+            background: #000;
+            bottom: 10px;
+            left: 0;
+        }
+        &::after {
+            transform: translate3d(-100%, 0, 0);
+        }
+        &::before {
+            transform: translate3d(100%, 0, 0);
+            transition: transform .3s 0s;
+        }
+        &:hover::after {
+            transform: translate3d(0, 0, 0);
+            transition: transform .3s;
+        }
+        &:hover::before {
+            transform: translate3d(0, 0, 0);
+            transition: transform 0s .3s;
+        }
+    }
+
+    b {
+        font-weight: 700;
     }
 }
 
 h1,h2,h3,h4,h5,h6 {
     font-weight: 400;
-    span {
+    em {
         font-style: italic;
     }
 }
@@ -171,19 +237,19 @@ h2 {
 }
 
 h3 {
-
+    font-size: 42px;
 }
 
 h4 {
-
+    font-size: 32px;
 }
 
 h5 {
-
+    font-size: 22px;
 }
 
 h6 {
-
+    font-size: 16px;
 }
 
 .rel {
@@ -209,6 +275,7 @@ h6 {
 	font-size: 22px;
     display: block;
     width: 100%;
+    line-height: 60px;
 	cursor: pointer;
 	transition: .3s;
 
@@ -216,8 +283,49 @@ h6 {
 		outline: none;
 	}
 	&:hover {
-		background: #000;
+		background: #530114;
 		color: #fff;
 		transition: .3s;
+	}
+}
+
+.tab {
+    border-top: 1px solid rgba(0,0,0,.35);
+
+	&__title {
+		cursor: pointer;
+		transition: .3s;
+		user-select: none;
+		padding: 6px 0;
+		
+		img {
+            width: 9px;
+			transition: transform .25s;
+		}
+		&.active {
+			img {
+				transform: rotate(180deg);
+			}
+			& + .tab__content {
+				visibility: visible;
+				opacity: 1;
+				transform: scaleY(1);
+			}
+		}
+	}
+	&__content {
+		height: 0;
+		position: relative;
+		opacity: 0;
+		visibility: hidden;
+		transform: scaleY(.2);
+		transform-origin: center top;
+		transition: .3s;
+		&-wrap {
+			padding: 4px 0 20px;
+		}
+        p {
+            font-size: 16px;
+        }
 	}
 }

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title></title>
+	<meta name="description" content="">
+	
+	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="icon" href="" type="image/x-icon">
+
+	<!-- PRELOAD FONTS -->
+	<!-- <link rel="preload" as="font" href="fonts/font.woff2" type="font/woff2" crossorigin="anonymous"> -->
+
+	<!-- CRITICAL CSS -->
+	<style>
+		
+	</style>
+    <link rel="stylesheet" href="css/main.css">
+	<!-- <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+	<!-- <noscript><link rel="stylesheet" href="css/main.css"></noscript> -->
+	<script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>	
+	<!-- SCRITICAL CSS  -->
+</head>
+<body>
+	
+	<header class="header">
+		<div class="cont flex aic jcsb">
+			<a href="#" class="header__logo">
+				<img data-src="img/logo.svg" alt="BRAZIER" class="lazyload">
+			</a>
+
+			<nav class="flex aic header__nav">
+				<a href="index.html">Home</a>
+				<a href="">Shop</a>
+				<a href="about.html">About</a>
+				<a href="commitments.html">Commitments</a>
+			</nav>
+
+			<div class="header__actions flex aic">
+				<a class="header__cart" href="">Cart</a>
+
+				<div class="header__select">
+					<select>
+						<option value="En">En</option>
+						<option value="Fr">Fr</option>
+					</select>
+					<img data-src="img/arr.svg" class="lazyload" alt="">
+				</div>
+				
+			</div>
+		</div>
+	</header>
+
+	<div class="sidecart abs-full">
+		<div class="sidecart__overlay abs-full"></div>
+
+		<div class="sidecart__content abs-full">
+			<div class="sidecart__head flex jcsb aic">
+				<h5>Cart</h5>
+				<div class="sidecart__close"><img src="" alt="" class="lazyload" data-src="img/close.svg"></div>
+			</div>
+
+			<ul class="sidecart__list">
+
+				<!-- {% for product in cart.line_items %}
+				{% endfor %}
+				{{ product.image }} -->
+
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+				<li class="flex jcsb">
+					<div class="sidecart__prod flex">
+						<img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+						<div>
+							<h5>Umlaut</h5>
+							<p>€540</p>
+						</div>
+					</div>
+
+					<div class="sidecart__remove"><img src="" alt="" class="lazyload" data-src="img/remove.svg"></div>
+				</li>
+
+			</ul>
+
+			<div class="sidecart__summary">
+				<p>Free delivery worldwide on all orders, duties included. <br>
+					Returns accepted within 60 days of purchase. <br>
+					Free returns within the EU.</p>
+				<div class="flex jcsb aic sidecart__total">
+					<h5>Total (6 items)</h5>
+					<div class="sidecart__summary-price flex aic">
+						<p>€1,450</p>
+						<span>incl. shipping</span>
+					</div>
+				</div>
+
+				<button class="btn">
+					Checkout
+				</button>
+			</div>
+		</div>
+	</div>
+
+    <section class="prod">
+        <div class="cont flex prod__flex">
+            <div class="prod__images">
+                <img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+                <img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+                <img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+                <img src="" alt="" class="lazyload" data-src="img/shop.jpg">
+            </div>
+
+            <div class="prod__data">
+                <div class="prod__data-wrap">
+                    <span class="text-label prod__vendor">VERT</span>
+                    <h1>Cédille</h1>
+    
+                    <div class="prod__price">
+                        <p>€540</p>
+                    </div>
+                    
+                    <div class="prod__descr">
+                        <p>Outlining our views in a minuscule landscape of trenches, the subtle engraver always prints on demand.</p>
+                    </div>
+    
+                    <div class="prod__swatches flex aic">
+                        <input checked type="radio" name="prod-color" id="color1" hidden>
+                        <label for="color1" style="background:#304431">
+                        </label>
+    
+                        <input type="radio" name="prod-color" id="color2" hidden>
+                        <label for="color2" style="background: #4E5B6C;">
+                        </label>
+                        
+                        <input type="radio" name="prod-color" id="color3" hidden>
+                        <label for="color3" style="background: #A53336;">
+                        </label>
+                    </div>  
+                </div>
+
+                <div class="prod__buttons">
+                    <button class="btn">Pre-order</button>
+                </div>  
+                
+                <div class="prod__tabs">
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Details
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    — Dimensions : 375 x 275 x 75mm<br>
+                                    — Strap : 45cm<br>
+                                    — Weight : 1045g
+                                    — Made in : Andalucia<br>
+                                    — Lining : Suede-like fiery red lining
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Leather and care
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    Italian calf leather with crocodile embossing. Tanned with proteins and resins from renewable energies. <br> Rigid and resistant, it will face the daily aggressions without a second thought. <br> <br>Clean it when necessary with a soft cloth and universal cream to guarantee an optimal life span.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Details
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    — Dimensions : 375 x 275 x 75mm<br>
+                                    — Strap : 45cm<br>
+                                    — Weight : 1045g
+                                    — Made in : Andalucia<br>
+                                    — Lining : Suede-like fiery red lining
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Leather and care
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    Italian calf leather with crocodile embossing. Tanned with proteins and resins from renewable energies. <br> Rigid and resistant, it will face the daily aggressions without a second thought. <br> <br>Clean it when necessary with a soft cloth and universal cream to guarantee an optimal life span.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Details
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    — Dimensions : 375 x 275 x 75mm<br>
+                                    — Strap : 45cm<br>
+                                    — Weight : 1045g
+                                    — Made in : Andalucia<br>
+                                    — Lining : Suede-like fiery red lining
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Leather and care
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    Italian calf leather with crocodile embossing. Tanned with proteins and resins from renewable energies. <br> Rigid and resistant, it will face the daily aggressions without a second thought. <br> <br>Clean it when necessary with a soft cloth and universal cream to guarantee an optimal life span.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Details
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    — Dimensions : 375 x 275 x 75mm<br>
+                                    — Strap : 45cm<br>
+                                    — Weight : 1045g
+                                    — Made in : Andalucia<br>
+                                    — Lining : Suede-like fiery red lining
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="tab">
+                        <span class="tab__title text-label flex jcsb aic">
+                            Leather and care
+                            <img data-src="img/arr.svg" class="lazyload" alt="">
+                        </span>
+                        <div class="tab__content">
+                            <div class="tab__content-wrap">
+                                <p>
+                                    Italian calf leather with crocodile embossing. Tanned with proteins and resins from renewable energies. <br> Rigid and resistant, it will face the daily aggressions without a second thought. <br> <br>Clean it when necessary with a soft cloth and universal cream to guarantee an optimal life span.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<footer class="footer">
+		<div class="cont flex">
+			<div class="footer__newsletter">
+				<h4>Newsletter</h4>
+				<p>Sign up to our newsletter to enjoy 5% off your first order</p>
+
+				<form class="">
+					<input type="email" placeholder="Enter your email">
+					<button type="submit">
+						<svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.65" d="M0.429245 11C0.561321 11 0.693396 10.8667 0.792453 10.8L3.86321 8.23333C6.27358 6.23333 7 5.53333 7 5.4C7 5.2 5.61321 4.1 5.08491 3.66667C1.78302 0.833334 0.627358 0 0.429245 0C0.29717 0 0.132075 0.333333 0.132075 0.5C0.132075 0.666667 0.792453 1.56667 2.08019 3.06667C3.36792 4.6 4.0283 5.36667 4.0283 5.4C4.0283 5.83333 3.43396 6.33333 1.88208 8.2C1.12264 9.1 0 10.5 0 10.6333C0 10.7667 0.165094 11 0.429245 11Z" fill="white"/>
+						</svg>
+					</button>
+				</form>
+			</div>
+
+			<nav class="footer__nav flex jcsb">
+				<div>
+					<h6 class="text-italic">Site</h6>
+					<a href="">Home</a>
+					<a href="">Home</a>
+					<a href="">Home</a>
+					<a href="">Commitments</a>
+				</div>
+
+				<div>
+					<h6 class="text-italic">Support</h6>
+					<a href="">Legal</a>
+					<a href="">Privacy policy</a>
+				</div>
+
+				<div>
+					<div class="footer__contact">
+						<h6 class="text-italic">Enquiries</h6>
+						<a href="mailto:info@brazier.ch">info@brazier.ch</a>
+					</div>
+					
+					<div class="footer__contact">
+						<h6 class="text-italic">Socials</h6>
+						<a href="">Home</a>
+						<a href="">Home</a>
+						<a href="">Home</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</footer>
+
+	<div class="footer__bottom">
+		<div class="cont">
+			<p>2022 BRAZIER. ALL RIGHT RESERVED</p>
+		</div>
+	</div>
+
+	
+<!-- 
+	<section class="">
+	</section>
+
+	<footer class="footer">
+	</footer> -->
+
+
+
+	<!-- LAZYLOAD -->
+	<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+	<!-- SLIDER -->
+	<!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script> -->
+	<!-- VIDEO PLAYER -->
+	<!-- <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.min.js"></script> -->
+
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>
