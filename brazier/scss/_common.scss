@@ -126,6 +126,12 @@ img,svg {
 	&.aifs {
 		align-items: flex-start;
 	}
+    &.col {
+        flex-direction: column;
+    }
+    &__grow {
+        flex-grow: 1;
+    }
 	&__half {
         width: 50%;
 	}
