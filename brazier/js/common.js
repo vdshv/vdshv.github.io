@@ -110,16 +110,24 @@ document.addEventListener("DOMContentLoaded", function() {
 		segmentsOverlay = qsa('.commitments-sticky .text-image__overlay'),
 		rectEl = {};
 
+	let parallax = [...qsa('.parallax img')].map(el => {
+						return {
+							el: el,
+							scroll: el.dataset.scroll
+						}
+					}),
+		scrollTop = 0,
+		scrollModified = 0;
+
 	const raf = window.requestAnimationFrame ||
 	    window.webkitRequestAnimationFrame ||
 	    window.mozRequestAnimationFrame ||
 	    window.oRequestAnimationFrame ||
 	    window.msRequestAnimationFrame;
 
-	if (segments.length) (function init() {
+	if (segments || parallax) (function init() {
 
 	    (function step() {
-
 			segments.forEach((el, ind) => {
 				rectEl = rect(el);
 
@@ -127,6 +135,12 @@ document.addEventListener("DOMContentLoaded", function() {
 					segmentsOverlay[ind - 1].style.opacity = rectEl.offset * 100 / rectEl.base + '%';
 				}
 			});
+
+			scrollTop = document.scrollingElement.scrollTop;
+			parallax.forEach(el => {
+				scrollModified = scrollTop * el.scroll;
+				el.el.style.transform = `translate3d(0, ${scrollModified}px, 0)`;
+			})
 	    	
            	raf(step);
 	    })();
@@ -163,8 +177,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		title.innerHTML = titleArr.join('');
 		qsa('.hero__title span:not(.inline)').forEach((el, ind) => {
-			el.style.animationDelay = (1 + (0.05 * ind)) + 's';
-			el.style.transitionDelay = (1.3 + (0.06 * ind)) + 's';
+			el.style.animationDelay = (0 + (0.05 * ind)) + 's';
+			el.style.transitionDelay = (.3 + (0.06 * ind)) + 's';
 		})
 
 

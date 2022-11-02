@@ -47,6 +47,9 @@
  $accent: #EB4733;
  $footer: #660018;
  
+ html {
+    font-size: calc(100vw / 1440);
+ }
  * {
      box-sizing: border-box;
      padding: 0;
@@ -74,11 +77,9 @@
  }
  
  body {
-     font-size: 22px;
+     font-size: 22rem;
      min-width: 320px;
-    //  position: relative;
      line-height: 1.32;
-    //  overflow-x: hidden;
      color: #000;
      font-family: 'stempel';
  }
@@ -87,7 +88,7 @@
 	display: block;
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1300px;
+	max-width: 1300rem;
 }
 
 header,section,footer {
@@ -96,8 +97,8 @@ header,section,footer {
 }
 
 section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 120rem;
+    padding-bottom: 120rem;
 }
 
 img,svg {
@@ -143,23 +144,23 @@ img,svg {
 }
 
 .text {
-    padding-top: 240px;
-    padding-bottom: 200px;
+    padding-top: 240rem;
+    padding-bottom: 200rem;
 
     &__wrap {
-        max-width: 970px;
+        max-width: 970rem;
     }
     h1 {
-        margin-bottom: 135px;
+        margin-bottom: 135rem;
         display: block;
     }
     b {
         display: block;
-        margin-top: 64px;
+        margin-top: 64rem;
     }
     p {
         display: block;
-        margin-top: 24px;
+        margin-top: 24rem;
     }
 
 	&-center {
@@ -167,7 +168,7 @@ img,svg {
 	}
 
     &-accent {
-        font-size: 40px;
+        font-size: 40rem;
         color: $accent;
         line-height: 1.2;
         letter-spacing: 0.05em;
@@ -177,8 +178,8 @@ img,svg {
         font-family: 'grotesk';
         font-style: normal;
         font-weight: 500;
-        font-size: 15px;
-        line-height: 22px;
+        font-size: 15rem;
+        line-height: 22rem;
         letter-spacing: 0.3em;
         text-transform: uppercase;
     }
@@ -228,34 +229,34 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 h1 {
-    font-size: 80px;
-    line-height: 1.2;
+    font-size: 80rem;
+    line-height: 1.15;
     &.lg {
-        font-size: 120px;
+        font-size: 120rem;
     }
 }
 
 h2 {   
     line-height: 1;
     &.lg {
-        font-size: 88px;
+        font-size: 88rem;
     }
 }
 
 h3 {
-    font-size: 42px;
+    font-size: 42rem;
 }
 
 h4 {
-    font-size: 32px;
+    font-size: 32rem;
 }
 
 h5 {
-    font-size: 22px;
+    font-size: 22rem;
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 16rem;
 }
 
 .rel {
@@ -278,10 +279,10 @@ h6 {
 .btn {
 	color: #fff;
 	background: $footer;
-	font-size: 22px;
+	font-size: 22rem;
     display: block;
     width: 100%;
-    line-height: 60px;
+    line-height: 60rem;
 	cursor: pointer;
 	transition: .3s;
 
