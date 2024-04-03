@@ -24,63 +24,63 @@ function initMap() {
     mapTypeId: "terrain",
   });
   // Create an ElevationService.
-  const elevator = new google.maps.ElevationService();
+  // const elevator = new google.maps.ElevationService();
 
-  // Draw the path, using the Visualization API and the Elevation service.
-  displayPathElevation(path, elevator, map);
+  // // Draw the path, using the Visualization API and the Elevation service.
+  // displayPathElevation(path, elevator, map);
 }
 
-function displayPathElevation(path, elevator, map) {
-  // Display a polyline of the elevation path.
-  new google.maps.Polyline({
-    path: path,
-    strokeColor: "#0000CC",
-    strokeOpacity: 0.4,
-    map: map,
-  });
-  // Create a PathElevationRequest object using this array.
-  // Ask for 256 samples along that path.
-  // Initiate the path request.
-  elevator
-    .getElevationAlongPath({
-      path: path,
-      samples: 256,
-    })
-    .then(plotElevation)
-    .catch((e) => {
-      const chartDiv = document.getElementById("elevation_chart");
+// function displayPathElevation(path, elevator, map) {
+//   // Display a polyline of the elevation path.
+//   new google.maps.Polyline({
+//     path: path,
+//     strokeColor: "#0000CC",
+//     strokeOpacity: 0.4,
+//     map: map,
+//   });
+//   // Create a PathElevationRequest object using this array.
+//   // Ask for 256 samples along that path.
+//   // Initiate the path request.
+//   elevator
+//     .getElevationAlongPath({
+//       path: path,
+//       samples: 256,
+//     })
+//     .then(plotElevation)
+//     .catch((e) => {
+//       const chartDiv = document.getElementById("elevation_chart");
 
-      // Show the error code inside the chartDiv.
-      chartDiv.innerHTML = "Cannot show elevation: request failed because " + e;
-    });
-}
+//       // Show the error code inside the chartDiv.
+//       chartDiv.innerHTML = "Cannot show elevation: request failed because " + e;
+//     });
+// }
 
-// Takes an array of ElevationResult objects, draws the path on the map
-// and plots the elevation profile on a Visualization API ColumnChart.
-function plotElevation({ results }) {
-  const chartDiv = document.getElementById("elevation_chart");
-  // Create a new chart in the elevation_chart DIV.
-  const chart = new google.visualization.ColumnChart(chartDiv);
-  // Extract the data from which to populate the chart.
-  // Because the samples are equidistant, the 'Sample'
-  // column here does double duty as distance along the
-  // X axis.
-  const data = new google.visualization.DataTable();
+// // Takes an array of ElevationResult objects, draws the path on the map
+// // and plots the elevation profile on a Visualization API ColumnChart.
+// function plotElevation({ results }) {
+//   const chartDiv = document.getElementById("elevation_chart");
+//   // Create a new chart in the elevation_chart DIV.
+//   const chart = new google.visualization.ColumnChart(chartDiv);
+//   // Extract the data from which to populate the chart.
+//   // Because the samples are equidistant, the 'Sample'
+//   // column here does double duty as distance along the
+//   // X axis.
+//   const data = new google.visualization.DataTable();
 
-  data.addColumn("string", "Sample");
-  data.addColumn("number", "Elevation");
+//   data.addColumn("string", "Sample");
+//   data.addColumn("number", "Elevation");
 
-  for (let i = 0; i < results.length; i++) {
-    data.addRow(["", results[i].elevation]);
-  }
+//   for (let i = 0; i < results.length; i++) {
+//     data.addRow(["", results[i].elevation]);
+//   }
 
-  // Draw the chart using the data within its DIV.
-  chart.draw(data, {
-    height: 150,
-    legend: "none",
-    // @ts-ignore TODO update to newest visualization library
-    titleY: "Elevation (m)",
-  });
-}
+//   // Draw the chart using the data within its DIV.
+//   chart.draw(data, {
+//     height: 150,
+//     legend: "none",
+//     // @ts-ignore TODO update to newest visualization library
+//     titleY: "Elevation (m)",
+//   });
+// }
 
-window.initMap = initMap;
+// window.initMap = initMap;
